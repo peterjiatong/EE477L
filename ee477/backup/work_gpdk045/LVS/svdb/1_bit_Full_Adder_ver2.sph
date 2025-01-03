@@ -1,0 +1,35 @@
+# Placement Hierarchy File (sph)
+# 
+# 
+# 
+% INV_1X_in_buffer 2
+MPM0 M 4
+MNM0 M 4
+% INV_1X 2
+MNM0 M 4
+MPM0 M 4
+% NAND2_1X 3
+MPM1 M 4
+MPM0 M 4
+MNM1 M 4
+MNM0 M 4
+% XOR2_1X 3
+MPM3 M 4
+MPM2 M 4
+MPM1 M 4
+MPM0 M 4
+MNM3 M 4
+MNM2 M 4
+MNM1 M 4
+MNM0 M 4
+XI12 INV_1X_in_buffer 2
+XI13 INV_1X_in_buffer 2
+% 1_bit_Full_Adder_ver2 5
+XI1 XOR2_1X 3
+XI0 XOR2_1X 3
+XI7 NAND2_1X 3
+XI5 NAND2_1X 3
+XI4 NAND2_1X 3
+XI3 NAND2_1X 3
+XI2 NAND2_1X 3
+XI6 INV_1X 2

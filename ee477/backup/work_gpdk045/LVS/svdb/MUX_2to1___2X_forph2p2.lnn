@@ -1,0 +1,39 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary MUX_2to1___2X_forph2p2
+% M2_M1_CDNS_1 1
+% M1_PO_CDNS_2 1
+% M1_PO_CDNS_3 1
+% M3_M2_CDNS_5 1
+% M2_M1_CDNS_6 1
+% M1_PO_CDNS_7 1
+% pmos1v_CDNS_8 5
+1 S_source_0
+2 D_drain_1
+5 B
+% nmos1v_CDNS_9 3
+1 S_source_0
+2 D_drain_1
+% pmos1v_CDNS_11 5
+1 S_source_0
+2 D_drain_1
+5 B
+% nmos1v_CDNS_12 3
+1 S_source_0
+2 D_drain_1
+% nmos1v_CDNS_13 4
+1 D_drain_1
+% nmos1v_CDNS_14 4
+1 S_source_0
+% pmos1v_CDNS_15 5
+1 D_drain_1
+5 B
+% pmos1v_CDNS_16 5
+1 S_source_0
+5 B
+% MUX_2to1___2X_forph2p2 6
+1 S
+2 A
+3 B
+6 vdd!
+7 out
+8 gnd!

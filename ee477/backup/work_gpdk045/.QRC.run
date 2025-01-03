@@ -1,0 +1,6 @@
+#!/bin/sh -f
+#--------------------------------------------------------------------------------------
+# THE RUN FILE created by Cadence Extraction Quantus UI Version 22.1.1-p041
+#--------------------------------------------------------------------------------------
+
+qrc  -log_file /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/qrc.ph3_sytolic_array.log -cmd /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/qrc.ph3_sytolic_array.ccl 

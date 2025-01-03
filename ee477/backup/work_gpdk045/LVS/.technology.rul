@@ -1,0 +1,1 @@
+technology "gpdk045_pvs" -ruleSet "default" -techLib "/home/viterbi/01/tongjia/work_gpdk045/pvtech.lib";

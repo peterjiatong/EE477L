@@ -1,0 +1,79 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : XOR2_1X                                      *
+* Netlisted  : Sun Nov  3 04:30:14 2024                     *
+* Pegasus Version: 22.21-s012 Fri Mar 10 17:36:33 PST 2023  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: M2_M1_CDNS_1                                    *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt M2_M1_CDNS_1 1
+** N=1 EP=1 FDC=0
+.ends M2_M1_CDNS_1
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: M1_PO_CDNS_2                                    *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt M1_PO_CDNS_2 1
+** N=1 EP=1 FDC=0
+.ends M1_PO_CDNS_2
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_3                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_3 S_source_0 2 D_drain_1 4
+** N=4 EP=4 FDC=1
+M0 D_drain_1 2 S_source_0 4 g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521 $X=0 $Y=0 $dt=0
+.ends nmos1v_CDNS_3
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pmos1v_CDNS_4                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pmos1v_CDNS_4 S_source_0 D_drain_1 3 4 B
+*.DEVICECLIMB
+** N=5 EP=5 FDC=0
+.ends pmos1v_CDNS_4
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: XOR2_1X                                         *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt XOR2_1X A B OUT gnd! vdd!
+** N=10 EP=5 FDC=12
+X0 1 M2_M1_CDNS_1 $T=1040 1920 0 90 $X=910 $Y=1840
+X1 2 M2_M1_CDNS_1 $T=1960 1580 0 90 $X=1830 $Y=1500
+X2 3 M2_M1_CDNS_1 $T=3270 3070 0 0 $X=3190 $Y=2940
+X3 4 M2_M1_CDNS_1 $T=3360 690 0 90 $X=3230 $Y=610
+X4 1 M2_M1_CDNS_1 $T=3460 1920 0 90 $X=3330 $Y=1840
+X5 3 M2_M1_CDNS_1 $T=3790 3050 0 0 $X=3710 $Y=2920
+X6 2 M2_M1_CDNS_1 $T=4520 1580 0 90 $X=4390 $Y=1500
+X7 3 M2_M1_CDNS_1 $T=4720 3050 0 0 $X=4640 $Y=2920
+X8 4 M2_M1_CDNS_1 $T=5550 690 0 90 $X=5420 $Y=610
+X9 3 M2_M1_CDNS_1 $T=5650 3050 0 0 $X=5570 $Y=2920
+X10 A M1_PO_CDNS_2 $T=580 2010 0 90 $X=460 $Y=1910
+X11 B M1_PO_CDNS_2 $T=1490 1580 0 90 $X=1370 $Y=1480
+X12 1 M1_PO_CDNS_2 $T=3880 1920 0 90 $X=3760 $Y=1820
+X13 2 M1_PO_CDNS_2 $T=4800 1580 0 90 $X=4680 $Y=1480
+X14 gnd! A 1 gnd! nmos1v_CDNS_3 $T=650 860 0 0 $X=230 $Y=660
+X15 gnd! B 2 gnd! nmos1v_CDNS_3 $T=1580 860 0 0 $X=1160 $Y=660
+X16 gnd! B 4 gnd! nmos1v_CDNS_3 $T=3020 860 0 0 $X=2600 $Y=660
+X17 8 1 OUT gnd! nmos1v_CDNS_3 $T=3950 860 0 0 $X=3530 $Y=660
+X18 8 2 gnd! gnd! nmos1v_CDNS_3 $T=4880 860 0 0 $X=4460 $Y=660
+X19 4 A OUT gnd! nmos1v_CDNS_3 $T=5810 860 0 0 $X=5390 $Y=660
+X20 vdd! 1 A gnd! vdd! pmos1v_CDNS_4 $T=650 2490 0 0 $X=230 $Y=2290
+X21 vdd! 2 B gnd! vdd! pmos1v_CDNS_4 $T=1580 2490 0 0 $X=1160 $Y=2290
+X22 vdd! 3 B gnd! vdd! pmos1v_CDNS_4 $T=3020 2500 0 0 $X=2600 $Y=2300
+X23 3 OUT 1 gnd! vdd! pmos1v_CDNS_4 $T=3950 2500 0 0 $X=3530 $Y=2300
+X24 3 OUT 2 gnd! vdd! pmos1v_CDNS_4 $T=4880 2500 0 0 $X=4460 $Y=2300
+X25 3 vdd! A gnd! vdd! pmos1v_CDNS_4 $T=5810 2500 0 0 $X=5390 $Y=2300
+M0 1 A vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=17.6861 scb=0.0184591 scc=0.000433664 $X=650 $Y=2490 $dt=1
+M1 2 B vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.886 scb=0.00790338 scc=9.25552e-05 $X=1580 $Y=2490 $dt=1
+M2 3 B vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=3020 $Y=2500 $dt=1
+M3 OUT 1 3 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=3950 $Y=2500 $dt=1
+M4 OUT 2 3 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.4303 scb=0.0076702 scc=8.89363e-05 $X=4880 $Y=2500 $dt=1
+M5 vdd! A 3 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=13.4703 scb=0.0111981 scc=0.000115614 $X=5810 $Y=2500 $dt=1
+.ends XOR2_1X

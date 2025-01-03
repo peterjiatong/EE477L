@@ -1,0 +1,26 @@
+; radix specifies the number of bit of the vector.
+radix 4 4 
+; io defines the vector as an input or output vector.
+io i i 
+; vname assigns the name to the vector.
+vname A[3:0] B[3:0] 
+; tunit sets the time unit.
+tunit ns
+; trise specifies the rise time of each input vector.
+trise 0.01
+; tfall specifies the fall time of each input vector.
+tfall 0.01
+; vih specifies the logic high voltage of each input vector.
+vih 1.0
+; vil specifies the logic low voltage of each input vector
+vil 0.0
+; period 1.0
+
+
+0 0 0 
+1 2 3
+2 D 5 
+3 0 E 
+4 9 2 
+5 F F 
+6 0 0

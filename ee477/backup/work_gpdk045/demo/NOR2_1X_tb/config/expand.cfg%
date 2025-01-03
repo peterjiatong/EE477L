@@ -1,0 +1,20 @@
+//Revision 4
+//NOTE
+// Default template for spectre
+// Note:
+//      Please remember to replace Top Cell Library, Cell, and View
+//      fields with the actual names used by your design.
+//END_NOTE
+
+config NOR2_1X_tb;
+design EE477L.NOR2_1X_tb:schematic;
+liblist GSCLIB045, analogLib, basic, EE477L, gpdk045, gsclib045, gsclib045_tech;
+
+viewlist spectre, cmos_sch, \cmos.sch , schematic, veriloga, ahdl, pspice, dspf;
+stoplist spectre;
+
+
+cell EE477L.NOR2_1X binding :schematic;
+
+
+endconfig

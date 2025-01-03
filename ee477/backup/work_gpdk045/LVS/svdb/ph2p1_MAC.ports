@@ -1,0 +1,34 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary ph2p1_MAC
+Z2 13 Z2 57330 38495 metal1_conn
+B1 39 B1 6725 56520 metal1_conn
+Z9 26 Z9 47085 9365 metal1_conn
+gnd! 27 gnd! 47700 11040 metal1_conn
+gnd! 27 gnd! 47705 25680 metal1_conn
+gnd! 27 gnd! 47695 18360 metal1_conn
+gnd! 27 gnd! 18525 54960 metal1_conn
+A0 40 A0 29050 56520 metal1_conn
+Cin 41 Cin 21440 31075 metal1_conn
+Z0 28 Z0 57325 53085 metal1_conn
+Z4 29 Z4 57330 23725 metal1_conn
+A8 42 A8 280 2140 metal1_conn
+Z8 17 Z8 47095 16685 metal1_conn
+Z7 30 Z7 47090 24105 metal1_conn
+A9 43 A9 22260 2135 metal1_conn
+A3 32 A3 1080 56545 metal1_conn
+Z1 20 Z1 57325 45790 metal1_conn
+B0 33 B0 2405 56520 metal1_conn
+B2 34 B2 2410 49195 metal1_conn
+RST 21 RST 48325 52940 metal1_conn
+Z5 22 Z5 57335 16700 metal1_conn
+B3 35 B3 2410 46080 metal1_conn
+Z6 23 Z6 57330 9215 metal1_conn
+vdd! 36 vdd! 18520 58500 metal1_conn
+vdd! 36 vdd! 47700 7500 metal1_conn
+vdd! 36 vdd! 47700 22020 metal1_conn
+vdd! 36 vdd! 47700 29220 metal1_conn
+vdd! 36 vdd! 47695 14700 metal1_conn
+A2 37 A2 11120 56520 metal1_conn
+Z3 25 Z3 57330 31115 metal1_conn
+CLK 12 CLK 48315 56980 metal1_conn
+A1 38 A1 20250 56520 metal1_conn

@@ -1,0 +1,43 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary 1_bit_Full_Adder_ver1
+% M3_M2_CDNS_1 1
+% M2_M1_CDNS_2 1
+% M4_M3_CDNS_3 1
+% M2_M1_CDNS_4 1
+% M3_M2_CDNS_5 1
+% M1_PO_CDNS_6 1
+% cellTmpl_CDNS_9 6
+% NAND2_1X 6
+1 vdd!
+2 gnd!
+3 in_a
+4 in_b
+5 out
+% NAND2_2X 6
+1 vdd!
+2 gnd!
+3 in_a
+4 in_b
+5 out
+% M2_M1_CDNS_14 1
+% nmos1v_CDNS_16 4
+1 S_source_0
+3 D_drain_1
+% pmos1v_CDNS_17 5
+1 S_source_0
+3 D_drain_1
+5 B
+% XOR2_1X 10
+1 A
+2 B
+3 vdd!
+4 gnd!
+5 OUT
+% 1_bit_Full_Adder_ver1 7
+1 B
+2 Cin
+3 Cout
+4 A
+7 vdd!
+8 gnd!
+10 S

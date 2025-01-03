@@ -1,0 +1,120 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary 10badder
+% M4_M3_CDNS_1 1
+% M3_M2_CDNS_2 1
+% M2_M1_CDNS_3 1
+% M2_M1_CDNS_5 1
+% M1_PO_CDNS_8 1
+% M3_M2_CDNS_9 1
+% M2_M1_CDNS_10 1
+% M1_PO_CDNS_11 1
+% M2_M1_CDNS_12 1
+% M1_PO_CDNS_13 1
+% M3_M2_CDNS_14 1
+% pmos1v_CDNS_16 5
+1 S_source_0
+3 D_drain_1
+5 B
+% nmos1v_CDNS_17 4
+1 S_source_0
+2 D_drain_1
+% pmos1v_CDNS_19 5
+1 S_source_0
+3 D_drain_1
+5 B
+% nmos1v_CDNS_20 3
+1 S_source_0
+2 D_drain_1
+% nmos1v_CDNS_21 4
+1 D_drain_1
+% nmos1v_CDNS_22 4
+1 S_source_0
+% pmos1v_CDNS_23 5
+1 D_drain_1
+5 B
+% pmos1v_CDNS_24 5
+1 S_source_0
+5 B
+% MUX_2to1___2X 12
+1 S
+2 gnd!
+3 vdd!
+4 A
+5 B
+6 out
+% cellTmpl_CDNS_27 2
+% NAND_1X_small 6
+1 vdd!
+2 gnd!
+% XOR1 10
+1 vdd!
+2 gnd!
+% NAND_2X_small1 6
+1 vdd!
+2 gnd!
+3 out
+% full_adder1_small 16
+1 inA
+2 inB
+3 vdd!
+4 gnd!
+5 Cin_
+6 S
+7 Cout
+% FA_4bit 19
+1 vdd!
+2 B0
+3 A0
+4 B1
+5 A1
+6 B2
+7 A2
+8 B3
+9 A3
+10 gnd!
+11 Cin_rrr
+12 S0
+13 S1
+14 S2
+15 S3
+16 Cout3
+% INV_1X_small 4
+1 in
+2 vdd!
+3 gnd!
+4 out
+% 10badder 34
+6 Cin
+17 in_B_1
+18 in_B_3
+19 in_B_5
+20 in_B_7
+21 in_A_0
+22 in_B_2
+23 in_A_4
+24 in_B_6
+25 vdd!
+30 in_B_0
+31 in_B_4
+38 gnd!
+39 in_A_1
+40 in_A_2
+41 in_A_3
+42 in_A_5
+43 in_A_6
+44 in_A_7
+45 in_B_8
+46 in_A_8
+47 S8
+48 in_A_9
+49 in_B_9
+50 S9
+51 Cout
+52 S0
+53 S1
+54 S2
+55 S3
+56 S4
+57 S5
+58 S6
+59 S7

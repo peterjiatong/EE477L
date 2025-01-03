@@ -1,0 +1,66 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : ph1p3_DFF                                    *
+* Netlisted  : Thu Nov  7 22:31:47 2024                     *
+* Pegasus Version: 22.21-s012 Fri Mar 10 17:36:33 PST 2023  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: INV_1X_small_layout                             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt INV_1X_small_layout in vdd! gnd! out
+*.DEVICECLIMB
+** N=4 EP=4 FDC=1
+M0 out in gnd! gnd! g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.90901 scb=0.00884432 scc=0.000225386 $X=780 $Y=900 $dt=0
+.ends INV_1X_small_layout
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_8                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_8 S_source_0 D_drain_1 3 4
+** N=4 EP=4 FDC=1
+M0 D_drain_1 3 S_source_0 4 g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521 $X=0 $Y=0 $dt=0
+.ends nmos1v_CDNS_8
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ph1p3_clk_part                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ph1p3_clk_part CLK vdd! gnd! D Out 6
+*.DEVICECLIMB
+** N=6 EP=6 FDC=2
+X2 gnd! 6 CLK gnd! nmos1v_CDNS_8 $T=710 860 0 0 $X=290 $Y=660
+X3 D Out 6 gnd! nmos1v_CDNS_8 $T=1890 860 0 0 $X=1470 $Y=660
+.ends ph1p3_clk_part
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ph1p3_DFF                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ph1p3_DFF CLK D Q gnd! vdd!
+** N=15 EP=5 FDC=26
+X24 CLK vdd! gnd! 1 INV_1X_small_layout $T=0 0 0 0 $X=0 $Y=0
+X25 Q vdd! gnd! 5 INV_1X_small_layout $T=3800 40 1 0 $X=3800 $Y=-3760
+X26 3 vdd! gnd! 7 INV_1X_small_layout $T=3800 0 0 0 $X=3800 $Y=0
+X27 7 vdd! gnd! 8 INV_1X_small_layout $T=5200 0 0 0 $X=5200 $Y=0
+X28 2 vdd! gnd! Q INV_1X_small_layout $T=7600 40 1 0 $X=7600 $Y=-3760
+X29 CLK vdd! gnd! 5 2 12 ph1p3_clk_part $T=1400 40 1 0 $X=1400 $Y=-3760
+X30 CLK vdd! gnd! D 3 13 ph1p3_clk_part $T=1400 0 0 0 $X=1400 $Y=0
+X31 1 vdd! gnd! 7 2 14 ph1p3_clk_part $T=5200 40 1 0 $X=5200 $Y=-3760
+X32 1 vdd! gnd! 8 3 15 ph1p3_clk_part $T=6600 0 0 0 $X=6600 $Y=0
+M0 1 CLK vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=15.5779 scb=0.0149308 scc=0.000240309 $X=780 $Y=2430 $dt=1
+M1 12 CLK vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.4559 scb=0.00793674 scc=0.000107477 $X=2110 $Y=-2900 $dt=1
+M2 13 CLK vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.4559 scb=0.00793674 scc=0.000107477 $X=2110 $Y=2460 $dt=1
+M3 2 CLK 5 vdd! g45p1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=11.0214 scb=0.00904448 scc=0.000163241 $X=3290 $Y=-2660 $dt=1
+M4 3 CLK D vdd! g45p1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=11.0214 scb=0.00904448 scc=0.000163241 $X=3290 $Y=2460 $dt=1
+M5 5 Q vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.6403 scb=0.00827174 scc=0.000129767 $X=4580 $Y=-2870 $dt=1
+M6 7 3 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.6403 scb=0.00827174 scc=0.000129767 $X=4580 $Y=2430 $dt=1
+M7 14 1 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.4559 scb=0.00793674 scc=0.000107477 $X=5910 $Y=-2900 $dt=1
+M8 8 7 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.6403 scb=0.00827174 scc=0.000129767 $X=5980 $Y=2430 $dt=1
+M9 2 1 7 vdd! g45p1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=11.0214 scb=0.00904448 scc=0.000163241 $X=7090 $Y=-2660 $dt=1
+M10 15 1 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.6253 scb=0.00797597 scc=0.000107482 $X=7310 $Y=2460 $dt=1
+M11 Q 2 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=15.7239 scb=0.0151885 scc=0.000250442 $X=8380 $Y=-2870 $dt=1
+M12 3 1 8 vdd! g45p1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=18.1453 scb=0.0194268 scc=0.000476439 $X=8490 $Y=2460 $dt=1
+.ends ph1p3_DFF

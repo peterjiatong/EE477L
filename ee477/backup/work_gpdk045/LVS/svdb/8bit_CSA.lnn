@@ -1,0 +1,111 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary 8bit_CSA
+% M3_M2_CDNS_1 1
+% M2_M1_CDNS_2 1
+% M4_M3_CDNS_3 1
+% M3_M2_CDNS_4 1
+% M2_M1_CDNS_5 1
+% M5_M4_CDNS_6 1
+% M4_M3_CDNS_7 1
+% M1_PO_CDNS_8 1
+% M2_M1_CDNS_16 1
+% nmos1v_CDNS_18 4
+1 S_source_0
+3 D_drain_1
+% pmos1v_CDNS_19 5
+1 S_source_0
+3 D_drain_1
+5 B
+% XOR2_1X 10
+1 A
+2 B
+3 vdd!
+4 gnd!
+5 OUT
+% cellTmpl_CDNS_11 2
+% NAND2_1X 6
+1 in_a
+2 vdd!
+3 gnd!
+4 in_b
+5 out
+% NAND2_2X 6
+1 vdd!
+2 gnd!
+3 in_a
+4 in_b
+5 out
+% 1_bit_Full_Adder_ver1 12
+1 A
+2 B
+3 Cin
+4 gnd!
+5 vdd!
+6 Cout
+7 S
+% INV_1X 4
+1 out
+2 vdd!
+3 gnd!
+4 in
+% AND4_1x 12
+1 B
+2 A
+3 vdd!
+4 gnd!
+5 C
+6 D
+7 OUT
+% MUX_1X 12
+1 vdd!
+2 S
+3 gnd!
+4 A
+5 B
+6 Out
+% 4bit_CSA 28
+1 A0
+2 B0
+3 C0
+4 vdd!
+5 gnd!
+6 S0
+7 A1
+8 B1
+9 S1
+10 A2
+11 B2
+12 S2
+13 A3
+14 B3
+15 S3
+16 Cout
+% 8bit_CSA 28
+2 A0
+3 B0
+4 Cin
+5 vdd!
+6 gnd!
+7 S0
+8 A1
+9 B1
+10 S1
+11 A2
+12 B2
+13 S2
+14 A3
+15 B3
+16 S3
+17 A4
+18 B4
+19 S4
+20 A5
+21 B5
+22 S5
+23 A6
+24 B6
+25 S6
+26 A7
+27 B7
+28 S7
+29 Cout

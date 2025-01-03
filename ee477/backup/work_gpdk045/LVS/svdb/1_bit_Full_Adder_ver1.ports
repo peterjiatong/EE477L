@@ -1,0 +1,9 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary 1_bit_Full_Adder_ver1
+Cout 3 Cout 18660 790 metal3_conn
+B 1 B 1790 585 metal3_conn
+A 4 A 1165 2990 metal4_conn
+vdd! 7 vdd! 9535 3560 metal1_conn
+S 10 S 18460 1680 metal1_conn
+gnd! 8 gnd! 9510 135 metal1_conn
+Cin 2 Cin 385 3280 metal3_conn

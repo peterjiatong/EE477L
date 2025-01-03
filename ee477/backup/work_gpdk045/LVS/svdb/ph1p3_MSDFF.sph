@@ -1,0 +1,27 @@
+# Placement Hierarchy File (sph)
+# 
+# 
+# 
+% INV_1X 2
+MNM0 M 4
+MPM0 M 4
+% ph1p3_clk_part 3
+MNM0 M 4
+MPM0 M 4
+XI0 INV_1X 2
+% NAND2_1X 3
+MPM1 M 4
+MPM0 M 4
+MNM0 M 4
+MNM1 M 4
+% ph1p3_MSDFF 4
+XI11 NAND2_1X 3
+XI13 ph1p3_clk_part 3
+XI18 ph1p3_clk_part 3
+XI9 ph1p3_clk_part 3
+XI15 ph1p3_clk_part 3
+XI19 INV_1X 2
+XI12 INV_1X 2
+XI22 INV_1X 2
+XI17 INV_1X 2
+XI16 INV_1X 2

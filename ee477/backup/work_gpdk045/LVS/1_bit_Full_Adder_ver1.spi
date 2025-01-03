@@ -1,0 +1,84 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : 1_bit_Full_Adder_ver1                        *
+* Netlisted  : Sun Nov  3 05:04:30 2024                     *
+* Pegasus Version: 22.21-s012 Fri Mar 10 17:36:33 PST 2023  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: cellTmpl_CDNS_9                                 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt cellTmpl_CDNS_9 2 3 5 6 8
+*.DEVICECLIMB
+** N=14 EP=5 FDC=2
+M0 5 3 2 2 g45n1svt L=4.5e-08 W=1.2e-07 AD=7.2e-15 AS=1.68e-14 PD=3.6e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05 $X=500 $Y=570 $dt=0
+M1 8 6 5 2 g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=7.2e-15 PD=5.2e-07 PS=3.6e-07 fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05 $X=710 $Y=570 $dt=0
+.ends cellTmpl_CDNS_9
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NAND2_1X                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NAND2_1X vdd! gnd! in_a in_b out
+** N=6 EP=5 FDC=4
+X2 gnd! in_a 6 in_b out cellTmpl_CDNS_9 $T=120 150 0 0 $X=0 $Y=10
+M0 out in_a vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.84e-14 AS=3.36e-14 PD=8e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=21.6767 scb=0.0202328 scc=0.0021948 $X=620 $Y=2080 $dt=1
+M1 vdd! in_b out vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.84e-14 PD=7.6e-07 PS=8e-07 fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=21.6767 scb=0.0202328 scc=0.0021948 $X=1030 $Y=2080 $dt=1
+.ends NAND2_1X
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: NAND2_2X                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt NAND2_2X vdd! gnd! in_a in_b out
+** N=6 EP=5 FDC=4
+X2 gnd! in_a 6 in_b out cellTmpl_CDNS_9 $T=120 140 0 0 $X=0 $Y=0
+M0 out in_a vdd! vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=7.68e-14 AS=6.72e-14 PD=1.28e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=3.45e-07 sca=15.9511 scb=0.0138709 scc=0.00113792 $X=620 $Y=2070 $dt=1
+M1 vdd! in_b out vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=7.68e-14 PD=1.24e-06 PS=1.28e-06 fw=4.8e-07 sa=3.45e-07 sb=1.4e-07 sca=15.9511 scb=0.0138709 scc=0.00113792 $X=1030 $Y=2070 $dt=1
+.ends NAND2_2X
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_16                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_16 S_source_0 2 D_drain_1 4
+** N=4 EP=4 FDC=1
+M0 D_drain_1 2 S_source_0 4 g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521 $X=0 $Y=0 $dt=0
+.ends nmos1v_CDNS_16
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: XOR2_1X                                         *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt XOR2_1X A B vdd! gnd! OUT 6 7 8
+*.DEVICECLIMB
+** N=10 EP=8 FDC=8
+X14 gnd! A 6 gnd! nmos1v_CDNS_16 $T=650 860 0 0 $X=230 $Y=660
+X15 gnd! B 7 gnd! nmos1v_CDNS_16 $T=1580 860 0 0 $X=1160 $Y=660
+X16 gnd! B 9 gnd! nmos1v_CDNS_16 $T=3020 860 0 0 $X=2600 $Y=660
+X17 10 6 OUT gnd! nmos1v_CDNS_16 $T=3950 860 0 0 $X=3530 $Y=660
+X18 10 7 gnd! gnd! nmos1v_CDNS_16 $T=4880 860 0 0 $X=4460 $Y=660
+X19 9 A OUT gnd! nmos1v_CDNS_16 $T=5810 860 0 0 $X=5390 $Y=660
+M0 8 B vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=3020 $Y=2500 $dt=1
+M1 OUT 6 8 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=3950 $Y=2500 $dt=1
+.ends XOR2_1X
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: 1_bit_Full_Adder_ver1                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt 1_bit_Full_Adder_ver1 A B Cin Cout S gnd! vdd!
+** N=23 EP=7 FDC=36
+X28 vdd! gnd! B A 9 NAND2_1X $T=8400 -10 0 0 $X=8400 $Y=0
+X29 vdd! gnd! 9 6 Cout NAND2_1X $T=10400 -10 0 0 $X=10400 $Y=0
+X30 vdd! gnd! 5 Cin 6 NAND2_2X $T=6400 0 0 0 $X=6400 $Y=0
+X31 A B vdd! gnd! 5 11 12 22 XOR2_1X $T=0 0 0 0 $X=0 $Y=0
+X32 Cin 5 vdd! gnd! S 13 14 23 XOR2_1X $T=12400 0 0 0 $X=12400 $Y=0
+M0 11 A vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=17.6861 scb=0.0184591 scc=0.000433664 $X=650 $Y=2490 $dt=1
+M1 12 B vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.886 scb=0.00790338 scc=9.25552e-05 $X=1580 $Y=2490 $dt=1
+M2 5 12 22 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=4880 $Y=2500 $dt=1
+M3 vdd! A 22 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05 $X=5810 $Y=2500 $dt=1
+M4 13 Cin vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.327 scb=0.00769864 scc=9.24832e-05 $X=13050 $Y=2490 $dt=1
+M5 14 5 vdd! vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.327 scb=0.00769864 scc=9.24832e-05 $X=13980 $Y=2490 $dt=1
+M6 S 14 23 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.6998 scb=0.00776618 scc=8.8963e-05 $X=17280 $Y=2500 $dt=1
+M7 vdd! Cin 23 vdd! g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=15.8514 scb=0.0153841 scc=0.000245782 $X=18210 $Y=2500 $dt=1
+.ends 1_bit_Full_Adder_ver1

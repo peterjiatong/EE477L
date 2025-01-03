@@ -1,0 +1,255 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary ph2p2_processing_element
+% M4_M3_CDNS_1 1
+% M3_M2_CDNS_2 1
+% M2_M1_CDNS_3 1
+% M5_M4_CDNS_4 1
+% M4_M3_CDNS_5 1
+% M1_PO_CDNS_6 1
+% M3_M2_CDNS_7 1
+% M2_M1_CDNS_8 1
+% M3_M2_CDNS_9 1
+% M3_M2_CDNS_10 1
+% M4_M3_CDNS_11 1
+% M4_M3_CDNS_12 1
+% M2_M1_CDNS_13 1
+% M5_M4_CDNS_14 1
+% M1_PO_CDNS_15 1
+% M1_PO_CDNS_16 1
+% M2_M1_CDNS_17 1
+% cellTmpl_CDNS_18 2
+% INV_1X_new 4
+1 vdd
+2 gnd
+% nmos1v_CDNS_19 4
+1 S_source_0
+3 D_drain_1
+% pmos1v_CDNS_20 5
+1 S_source_0
+3 D_drain_1
+5 B
+% cellTmpl_CDNS_21 2
+% NAND2_1X_small 6
+2 vdd!
+3 gnd!
+5 out
+% AND 6
+1 in_A
+2 vdd!
+3 gnd!
+4 in_B
+5 out
+% M1_PO_CDNS_22 1
+% M1_PO_CDNS_23 1
+% M3_M2_CDNS_24 1
+% M2_M1_CDNS_25 1
+% M2_M1_CDNS_26 1
+% cellTmpl_CDNS_27 2
+% pmos1v_CDNS_28 5
+1 S_source_0
+3 D_drain_1
+5 B
+% nmos1v_CDNS_29 4
+1 S_source_0
+3 D_drain_1
+% XOR_small 10
+1 in_A
+2 vdd!
+3 gnd!
+4 in_B
+5 out
+% half_adder 9
+1 inA
+2 gnd!
+3 vdd!
+4 inB
+5 S
+6 C
+% cellTmpl_CDNS_33 2
+% NAND_1X_small 6
+1 vdd!
+2 gnd!
+% NAND_2X_small1 6
+1 vdd!
+2 gnd!
+3 out
+% cellTmpl_CDNS_39 2
+% XOR1 10
+1 vdd!
+2 gnd!
+% full_adder1_small 16
+1 inA
+2 vdd!
+3 inB
+4 gnd!
+5 Cin_
+6 S
+7 Cout
+% multiplier 50
+1 a3
+2 gnd!
+3 b0
+4 b2
+5 b3
+6 vdd!
+7 a2
+8 a1
+9 b1
+10 z6
+11 a0
+12 z7
+13 z3
+14 z0
+15 z5
+16 z4
+17 z2
+18 z1
+% nmos1v_CDNS_31 4
+1 D_drain_1
+% nmos1v_CDNS_32 4
+1 S_source_0
+% cellTmpl_CDNS_43 6
+% pmos1v_CDNS_44 5
+1 D_drain_1
+5 B
+% pmos1v_CDNS_45 5
+1 S_source_0
+5 B
+% MUX_2to1___2X 12
+1 S
+2 A
+3 vdd!
+4 gnd!
+5 B
+6 out
+% FA_4bit 19
+1 B0
+2 B1
+3 B2
+4 B3
+5 vdd!
+6 A0
+7 gnd!
+8 A1
+9 A2
+10 A3
+11 Cin_rrr
+12 S0
+13 S1
+14 S2
+15 S3
+16 Cout3
+% INV_1X_small 4
+1 in
+2 vdd!
+3 gnd!
+4 out
+% 10badder 59
+1 in_A_8
+2 Cin
+3 vdd!
+4 gnd!
+5 in_B_8
+6 in_A_4
+7 in_A_0
+8 in_B_7
+9 in_B_6
+10 in_B_5
+11 in_B_3
+12 in_B_2
+13 in_B_1
+14 in_B_0
+15 in_A_1
+16 in_A_2
+17 in_A_3
+18 in_B_4
+19 in_A_5
+20 in_A_6
+21 in_A_7
+22 S8
+23 in_B_9
+24 in_A_9
+25 S0
+26 S3
+27 S2
+28 S1
+29 S7
+30 S6
+31 S5
+32 S4
+33 S9
+34 Cout
+% cellTmpl_CDNS_46 4
+% INV_1X_small_layout 4
+1 in
+2 vdd!
+3 gnd!
+4 out
+% ph1p3_clk_part 6
+1 CLK
+2 vdd!
+3 gnd!
+4 D
+5 Out
+% cellTmpl_CDNS_48 2
+% ph1p3_MSDFF 17
+1 vdd!
+2 CLK
+3 gnd!
+4 RST
+5 D
+6 Q
+% cellTmpl_CDNS_49 2
+% MUX_2to1___2X_ph2p2 12
+1 S
+2 A
+3 vdd!
+4 gnd!
+5 B
+6 out
+% ph2p2_processing_element 45
+1 gnd!
+15 CLK
+17 Sel_reg
+18 A3
+19 B3
+20 B2
+21 B0
+22 B1
+23 A2
+24 A1
+26 A0
+33 RST
+41 vdd!
+42 Cin
+43 A8
+44 A9
+46 A_reg3
+47 B_reg0
+48 A_reg2
+49 B_reg1
+50 A_reg1
+51 B_reg2
+52 A_reg0
+53 B_reg3
+54 Sel
+55 Sum_in6
+56 Sum_out6
+57 Sum_in9
+58 Sum_out9
+59 Sum_in5
+60 Sum_out5
+61 Sum_in8
+62 Sum_out8
+63 Sum_in4
+64 Sum_out4
+65 Sum_in7
+66 Sum_out7
+67 Sum_in3
+68 Sum_out3
+69 Sum_in2
+70 Sum_out2
+71 Sum_in1
+72 Sum_out1
+73 Sum_in0
+74 Sum_out0

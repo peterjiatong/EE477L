@@ -1,0 +1,13 @@
+#4                               
+M: M
+= D D
+= G G
+= S S
+= B B
+#5                               
+INV_2X: INV_2X
+= in in
+= out out
+= vdd! vdd!
+= vdd! X0/B
+= gnd! gnd!

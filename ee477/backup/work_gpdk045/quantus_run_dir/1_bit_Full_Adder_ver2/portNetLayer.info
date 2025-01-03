@@ -1,0 +1,7 @@
+vdd!	metal1_0conn	12655	3560
+S	metal1_0conn	12730	1590
+B	metal3_0conn	2400	535
+gnd!	metal1_0conn	12625	135
+Cout	metal1_0conn	25530	1515
+A	metal4_0conn	1210	2260
+Cin	metal3_0conn	300	3250

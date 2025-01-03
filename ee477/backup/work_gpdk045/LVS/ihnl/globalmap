@@ -1,0 +1,36 @@
+CADENCE IHNL11140
+$model
+project_demo/NAND_1X_small/schematic NAND_1X_small
+project_demo/ph3_sytolic_array/schematic ph3_sytolic_array
+project_demo/1bitFulladder1/schematic 1bitFulladder1
+project_demo/AND/schematic AND
+project_demo/ph2p2_processing_element/schematic ph2p2_processing_element
+project_demo/full_adder1_small/schematic full_adder1_small
+project_demo/FA_4bit/schematic FA_4bit
+project_demo/INV_1X_new/schematic INV_1X_new
+project_demo/carry_skip_adder_4bits/schematic carry_skip_adder_4bits
+project_demo/MUX_2to1___2X/schematic MUX_2to1___2X
+project_demo/carry_skip_adder_8bits_project/schematic carry_skip_adder_8bits_project
+project_demo/INV_1X_small/schematic INV_1X_small
+project_demo/NAND2_2X/schematic NAND2_2X
+project_demo/ph2p3_Matrix_vector_Multiplication/schematic ph2p3_Matrix_vector_Multiplication
+project_demo/INV_2X/schematic INV_2X
+project_demo/XOR/schematic XOR
+project_demo/10badder/schematic 10badder
+project_demo/NAND_2X_small1/schematic NAND_2X_small1
+project_demo/ph2p1_MAC/schematic ph2p1_MAC
+project_demo/INV_1X_in_buffer_small/schematic INV_1X_in_buffer_small
+project_demo/half_adder/schematic half_adder
+project_demo/XOR1/schematic XOR1
+project_demo/ph1p3_MSDFF/schematic ph1p3_MSDFF
+project_demo/INV_1X/schematic INV_1X
+project_p1/multiplier/schematic multiplier
+project_demo/ph1p3_clk_part/schematic ph1p3_clk_part
+project_demo/NAND2_1X/schematic NAND2_1X
+$endmodel
+$net
+gnd! gnd!
+vdd! vdd!
+$endnet
+$param
+$endparam

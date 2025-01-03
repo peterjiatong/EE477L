@@ -1,0 +1,14 @@
+# XXXX: Net Cross Reference (nxf) (File format 1)
+# XXXX: Layout Primary INV_2X
+# XXXX: End of header.
+% M 4 M 4 
+0 D 0 D
+0 G 0 G
+0 S 0 S
+0 B 0 B
+% INV_2X 4 INV_2X 4 
+0 in 0 in
+0 out 0 out
+0 vdd! 0 vdd!
+0 X0/B 0 vdd!
+0 gnd! 0 gnd!

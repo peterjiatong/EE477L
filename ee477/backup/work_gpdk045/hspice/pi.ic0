@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "L-2016.06 linux64"
+* "format" "HSP"
+* "rundate" "18:51:13 12/04/2024 "
+* "netlist" "pi.sp "
+* "runtitle" "spice pi wire delay"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ in =   0.            
++ out =  72.9328m       
++ vdd =   1.0000        
++ x = 979.6442m       
++ y = 979.6442m       
+***   END: Saved Operating Point ***                     

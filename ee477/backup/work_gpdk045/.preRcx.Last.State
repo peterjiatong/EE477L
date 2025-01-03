@@ -1,0 +1,14 @@
+
+
+vuipreRcxFormTable = '(
+	runName  "ph3_sytolic_array"
+	runDir  "/home/viterbi/01/tongjia/work_gpdk045/LVS/svdb"
+	assuraTech  "/home/viterbi/01/tongjia/work_gpdk045/tech.def"
+	tech  "qrc_tech_typical"
+	mapFile  ""
+	netProp  5
+	instProp  6
+	devProp  7
+)
+
+

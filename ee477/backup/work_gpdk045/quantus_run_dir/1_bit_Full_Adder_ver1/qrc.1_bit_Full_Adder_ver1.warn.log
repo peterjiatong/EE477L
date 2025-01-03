@@ -1,0 +1,28 @@
+INFO (CAPGEN-41199): 
+
+
+Techgen -trans results will be written to directory: /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/1_bit_Full_Adder_ver1
+
+INFO (CAPGEN-41809):  Lvs connect via bp_0tap via10_0cap via10_0nocap ind_0via_0diva via10_0nodev Via9 Via8 Via7 Via6 Via5 Via4 Via3 Via2 Via1 cont_0poly cont_0pdiff cont_0ndiff ptap ntap nb_0tap are not mapped in layer_setup file.
+
+WARNING (RCXSPIC-27104): p2lvsfile in tech directory does not have resistance 
+ temperature coefficients (TC1, TC2). ?temperature is ignored 
+
+WARNING (RCXSPIC-27297): cap_ground net cannot be set to gnd! as in the CCL because the name collides with a net name in lnn file.
+
+WARNING (AGDSEXT-30124): The <design>.props file is not available. The CCL option "input_db calibre/pvs/pegasus -device_properties_file <filename>" can be used to specify the .props file. 
+
+INFO (AGDSEXT-30016): 
+setting dbunit 5e-10 1 5e-10
+
+    Summary for demo/1_bit_Full_Adder_ver1/av_extracted
+    
+    instance count totals:
+    
+        lib              cell             view                    total
+        analogLib        pcapacitor       symbol                   1839
+        analogLib        presistor        symbol                    220
+        gpdk045          nmos1v           ivpcell                    18
+        gpdk045          pmos1v           ivpcell                    18
+    
+    Extracted view creation has completed.

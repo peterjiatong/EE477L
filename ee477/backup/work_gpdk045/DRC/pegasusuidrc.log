@@ -1,0 +1,1702 @@
+Running: /usr/local/cadence/PEGASUS222/tools.lnx86/Pegasus/bin/64bit/pegasusvirt \
+  -isPegasus \
+  -mode drc \
+  -global_log_file /home/viterbi/01/tongjia/work_gpdk045/DRC/pegasusuidrc.log \
+  -control /home/viterbi/01/tongjia/work_gpdk045/DRC/pegasusdrcctl \
+  -cell_tree /home/viterbi/01/tongjia/work_gpdk045/DRC/cell_tree.txt \
+  -layLibName project_demo \
+  -layCellName ph3_sytolic_array \
+  -layViewName layout \
+  -igds /home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.gds.gz \
+  -layScale 0.0005 \
+  -layTechLib gpdk045 \
+  -convertPin geometryAndText \
+  -replaceBusBitChar nil \
+  -noConvertHalfWidthPath nil \
+  -layHierDepth 32 \
+  -layMaxVertices 2048 \
+  -enableColoring yes \
+  -rulesFile /home/viterbi/01/tongjia/work_gpdk045/DRC/.technology.rul \
+  -log_dir LOGS \
+  -df2_version ICADVM20.1.0 \
+  -sign IPVS_1733708609_126101 \
+  -run_dir /home/viterbi/01/tongjia/work_gpdk045/DRC \
+  -no_rules_check
+
+
+
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.05s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 10/11/2023 09:18 (sjfhw316) $
+          : sub-version  ICADVM20.1-64b.500.34 
+Started at: 08-Dec-2024  17:43:34
+User Name : tongjia
+Host Name : viterbi-scf2
+Directory : /home/viterbi/01/tongjia/work_gpdk045
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 5.0 (22-Feb-2016)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+INFO (XSTRM-217): Reading the layer map file, /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/gpdk045/gpdk045.layermap
+WARNING (XSTRM-333): The '-enableColoring' option will be ignored during XStream Out. This is because there is no color entry in the layer map and the object map file.
+INFO (XSTRM-280): The output file will be a compressed file because the file name has extension .gz
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 project_demo
+strmFile                                /home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.gds.gz
+topCell                                 ph3_sytolic_array
+view                                    layout
+runDir                                  /home/viterbi/01/tongjia/work_gpdk045/DRC
+logFile                                 /home/viterbi/01/tongjia/work_gpdk045/DRC/PIPO1.LOG
+techLib                                 gpdk045
+hierDepth                               32
+maxVertices                             2048
+layerMap                                /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/gpdk045/gpdk045.layermap
+userSkillFile                           /home/viterbi/01/tongjia/work_gpdk045/DRC/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+convertPin                              geometryAndText
+
+INFO (XSTRM-223): 1. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_1.
+INFO (XSTRM-223): 2. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_2.
+INFO (XSTRM-223): 3. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_3.
+INFO (XSTRM-223): 4. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_4.
+INFO (XSTRM-223): 5. Translating stdVia gpdk045/M5_M4/layout as STRUCTURE M5_M4_CDNS_5.
+INFO (XSTRM-223): 6. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_6.
+INFO (XSTRM-223): 7. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_7.
+INFO (XSTRM-223): 8. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_8.
+INFO (XSTRM-223): 9. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_9.
+INFO (XSTRM-223): 10. Translating stdVia gpdk045/M5_M4/layout as STRUCTURE M5_M4_CDNS_10.
+INFO (XSTRM-223): 11. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_11.
+INFO (XSTRM-223): 12. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_12.
+INFO (XSTRM-223): 13. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_13.
+INFO (XSTRM-223): 14. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_14.
+INFO (XSTRM-223): 15. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_15.
+INFO (XSTRM-223): 16. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_16.
+INFO (XSTRM-223): 17. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_17.
+INFO (XSTRM-223): 18. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_18.
+INFO (XSTRM-223): 19. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_19.
+INFO (XSTRM-223): 20. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_20.
+INFO (XSTRM-223): 21. Translating cellView project_demo/INV_1X_new/layout as STRUCTURE INV_1X_new.
+INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
+INFO (XSTRM-223): 22. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_21.
+INFO (XSTRM-223): 23. Translating cellView project_demo/NAND2_1X_small/layout as STRUCTURE NAND2_1X_small.
+INFO (XSTRM-223): 24. Translating cellView project_demo/AND/layout as STRUCTURE AND.
+INFO (XSTRM-223): 25. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_22.
+INFO (XSTRM-223): 26. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_23.
+INFO (XSTRM-223): 27. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_24.
+INFO (XSTRM-223): 28. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_25.
+INFO (XSTRM-223): 29. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_26.
+INFO (XSTRM-223): 30. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_27.
+INFO (XSTRM-223): 31. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_28.
+INFO (XSTRM-223): 32. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_29.
+INFO (XSTRM-223): 33. Translating cellView project_demo/XOR_small/layout as STRUCTURE XOR_small.
+INFO (XSTRM-223): 34. Translating cellView project_demo/half_adder/layout as STRUCTURE half_adder.
+INFO (XSTRM-317): The 'project_demo/half_adder/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (6695, 2320). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/half_adder/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (6695, 2320). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-223): 35. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_30.
+INFO (XSTRM-223): 36. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_31.
+INFO (XSTRM-223): 37. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_32.
+INFO (XSTRM-223): 38. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_33.
+INFO (XSTRM-223): 39. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_34.
+INFO (XSTRM-223): 40. Translating cellView project_demo/NAND_1X_small/layout as STRUCTURE NAND_1X_small.
+INFO (XSTRM-223): 41. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_35.
+INFO (XSTRM-223): 42. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_36.
+INFO (XSTRM-223): 43. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_37.
+INFO (XSTRM-223): 44. Translating cellView gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_38.
+INFO (XSTRM-223): 45. Translating cellView project_demo/NAND_2X_small1/layout as STRUCTURE NAND_2X_small1.
+INFO (XSTRM-223): 46. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_39.
+INFO (XSTRM-223): 47. Translating cellView project_demo/XOR1/layout as STRUCTURE XOR1.
+INFO (XSTRM-223): 48. Translating cellView project_demo/full_adder1_small/layout as STRUCTURE full_adder1_small.
+INFO (XSTRM-223): 49. Translating cellView project_p1/multiplier/layout as STRUCTURE multiplier.
+INFO (XSTRM-223): 50. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_40.
+INFO (XSTRM-223): 51. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_41.
+INFO (XSTRM-223): 52. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_42.
+INFO (XSTRM-223): 53. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_43.
+INFO (XSTRM-223): 54. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_44.
+INFO (XSTRM-223): 55. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_45.
+INFO (XSTRM-223): 56. Translating cellView project_demo/MUX_2to1___2X/layout as STRUCTURE MUX_2to1___2X.
+INFO (XSTRM-223): 57. Translating cellView project_demo/FA_4bit/layout as STRUCTURE FA_4bit.
+INFO (XSTRM-317): The 'project_demo/FA_4bit/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (140, -15). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-223): 58. Translating cellView project_demo/INV_1X_small/layout as STRUCTURE INV_1X_small.
+INFO (XSTRM-223): 59. Translating cellView project_demo/carry_skip_adder_8bits_project/layout as STRUCTURE carry_skip_adder_8bits_project.
+INFO (XSTRM-223): 60. Translating cellView project_demo/10badder/layout as STRUCTURE 10badder.
+INFO (XSTRM-223): 61. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_46.
+INFO (XSTRM-223): 62. Translating cellView project_demo/INV_1X_small_layout/layout as STRUCTURE INV_1X_small_layout.
+INFO (XSTRM-223): 63. Translating cellView gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_47.
+INFO (XSTRM-223): 64. Translating cellView project_demo/ph1p3_clk_part/layout as STRUCTURE ph1p3_clk_part.
+INFO (XSTRM-223): 65. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_48.
+INFO (XSTRM-223): 66. Translating cellView project_demo/ph1p3_MSDFF/layout as STRUCTURE ph1p3_MSDFF.
+INFO (XSTRM-223): 67. Translating cellView gsclib045_tech/cellTmpl/layout as STRUCTURE cellTmpl_CDNS_49.
+INFO (XSTRM-223): 68. Translating cellView project_demo/ph2p1_MAC/layout as STRUCTURE ph2p1_MAC.
+INFO (XSTRM-223): 69. Translating cellView project_demo/MUX_2to1___2X_ph2p2/layout as STRUCTURE MUX_2to1___2X_ph2p2.
+INFO (XSTRM-223): 70. Translating cellView project_demo/ph2p2_processing_element/layout as STRUCTURE ph2p2_processing_element.
+INFO (XSTRM-223): 71. Translating cellView project_demo/ph2p3_Matrix_vector_Multiplication/layout as STRUCTURE ph2p3_Matrix_vector_Multiplication.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48105, 148060). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48100, 131355). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48100, 58135). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48105, 74840). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48100, 204565). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'project_demo/ph2p3_Matrix_vector_Multiplication/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (48105, 221270). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-223): 72. Translating cellView project_demo/ph3_sytolic_array/layout as STRUCTURE ph3_sytolic_array.
+
+Summary of Objects Translated:
+	Scalar Instances:                       201
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  18
+	Rectangles:                             1254
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Stitch:                                 0
+	Standard Vias                           2000
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               4531
+	Text:                                   0
+	TextDisplay:                            450
+	Cells:                                  72
+
+Elapsed Time: 2.7s   User Time: 0.5s   CPU Time: 0.2s   Peak VM: 11000KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.
+
+
+Pegasus 22.21-s012 cYRW7I1koHT2/XVH1CzscA 2024-12-08 17:43:37 152406 viterbi-scf2
+Copyright 2023 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+INFO:    Command Line Options: --log_dir LOGS -top_cell ph3_sytolic_array -ui_data --control /home/viterbi/01/tongjia/work_gpdk045/DRC/pegasusdrcctl /home/viterbi/01/tongjia/work_gpdk045/DRC/.technology.rul
+INFO:    Launch host CPU: Model: Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz, OS: CentOS Linux release 7.9.2009 (Core), Logical cores: 112, Physical cores: 56, Cache: 19712 KB, CPU Speed: 3210.49 MHz
+         Launch host Memory: MemTotal: 1031303 MB,  MemFree: 464134 MB,  SwapTotal: 0 MB,  SwapFree: 0 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 2576 MB
+INFO:    Current path: /home/viterbi/01/tongjia/work_gpdk045/DRC
+INFO:    Run directory same as current path
+INFO:    Log directory: /home/viterbi/01/tongjia/work_gpdk045/DRC/LOGS
+INFO:    Setting LAYOUT_PRIMARY to: ph3_sytolic_array 
+INFO:    PVL parsing results:
+WARNING: In technology 'gpdk045_pvs', the rule set 'default' is not a Pegasus rule set.
+It will be accepted for this run but should be changed to a pegasusRuleSet.
+WARNING: LAYOUT_PATH at line 20 in file /home/viterbi/01/tongjia/work_gpdk045/pvs/./pvlDRC.rul is skipped. It is set in control file.
+WARNING: Cmd-line override: LAYOUT_PRIMARY "ph3_sytolic_array";
+WARNING: RESULTS_DB -ascii at line 22 in file /home/viterbi/01/tongjia/work_gpdk045/pvs/./pvlDRC.rul is skipped. It is set in control file.
+WARNING: TEXT_DEPTH at line 27 in file /home/viterbi/01/tongjia/work_gpdk045/pvs/./pvlDRC.rul is skipped. It is set in control file.
+
+INFO:    See "/home/viterbi/01/tongjia/work_gpdk045/DRC/LOGS/pvl.log" for additional details.
+
+INFO:    Checking out 1 license(s) of feature: 'Pegasus_DRC' version 22.2
+INFO:    License checkout successful ... 2024-12-08 17:44:17
+
+INFO:    Checking out 1 license(s) of feature: 'Pegasus_16nm' version 22.2
+INFO:    License checkout successful ... 2024-12-08 17:44:17
+INFO:    Worker 0 started on host viterbi-scf2 with 1 cpu(s)
+         CPU: Model: Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz, OS: CentOS Linux release 7.9.2009 (Core), Logical cores: 112, Physical cores: 56, Cache: 19712 KB, CPU Speed: 3212.71 MHz
+         Memory: MemTotal: 1031303 MB,  MemFree: 463649 MB,  SwapTotal: 0 MB,  SwapFree: 0 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 2576 MB
+
+INFO:    Gdsii input summary
+         File name: /home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.gds.gz
+         File size: 79516
+         Version: 5.0
+         Library name: project_demo
+         Last modified: 2024-12-8 17:40:25
+         Last accessed: 2024-12-8 17:43:34
+         Database unit in user units: 0.0005
+         Database unit in meters: 5e-10
+         Magnification: 1 
+
+INFO:    Cell Summary:
+         ----------------------------------------------------------------------------
+             CELL                                  INSTANCE    GEOMETRY      LABELS        HREF        FREF
+         ----------------------------------------------------------------------------
+         M3_M2_CDNS_1                                     0           3           0         236        5585
+         M2_M1_CDNS_2                                     0           3           0         174        2737
+         M4_M3_CDNS_3                                     0           3           0          70         337
+         M3_M2_CDNS_4                                     0           3           0          95        1225
+         M5_M4_CDNS_5                                     0           3           0         175        1018
+         M4_M3_CDNS_6                                     0           3           0         148         775
+         M3_M2_CDNS_7                                     0           3           0         219        2463
+         M2_M1_CDNS_8                                     0           3           0         116       12431
+         M2_M1_CDNS_9                                     0           3           0         211        5136
+         M5_M4_CDNS_10                                    0           3           0         105         582
+         M3_M2_CDNS_11                                    0           3           0          52         596
+         M4_M3_CDNS_12                                    0           3           0         112        2144
+         M4_M3_CDNS_13                                    0           3           0          51         672
+         M1_PO_CDNS_14                                    0           4           0          92        3360
+         M1_PO_CDNS_16                                    0           3           0          30        9184
+         nmos1v_CDNS_19                                   0          14           4          11        7216
+         pmos1v_CDNS_20                                   0          17           4          10        6000
+         cellTmpl_CDNS_21                                 0          21           0           2        1840
+         NAND2_1X_small                                   7          16           3           2         624
+         cellTmpl_CDNS_46                                 0          15           0           1        1520
+         INV_1X_small_layout                              4          11           4           5        1520
+         pmos1v_CDNS_47                                   0          15           4           1        1216
+         ph1p3_clk_part                                   7          21           5           4        1216
+         cellTmpl_CDNS_48                                 0          13           0           1         304
+         ph1p3_MSDFF                                     44          53           6          19         304
+         M1_PO_CDNS_15                                    0           3           0          50        1936
+         M2_M1_CDNS_17                                    0           3           0          50        1936
+         cellTmpl_CDNS_18                                 0          19           0           2         416
+         INV_1X_new                                       4           8           2           1         320
+         AND                                              2          11           7          17         320
+         M1_PO_CDNS_22                                    0           3           0           2         128
+         M1_PO_CDNS_23                                    0           3           0           2         128
+         M3_M2_CDNS_24                                    0           3           0           2         128
+         M2_M1_CDNS_25                                    0           3           0           3         192
+         M2_M1_CDNS_26                                    0           3           0           2         128
+         cellTmpl_CDNS_27                                 0          47           0           1          64
+         pmos1v_CDNS_28                                   0          21           4          12        3392
+         nmos1v_CDNS_29                                   0          16           4          12        3392
+         XOR_small                                       29          59           5           1          64
+         half_adder                                      11          21           6           4          64
+         pmos1v_CDNS_30                                   0          14           3           1         672
+         nmos1v_CDNS_31                                   0          13           3           5        1056
+         nmos1v_CDNS_32                                   0          13           3           5        1056
+         cellTmpl_CDNS_33                                 0          21           0           2         960
+         pmos1v_CDNS_34                                   0          17           4           1         672
+         NAND_1X_small                                    5          20           2           8         672
+         pmos1v_CDNS_35                                   0          21           4           1         288
+         pmos1v_CDNS_36                                   0          16           3           1         288
+         nmos1v_CDNS_37                                   0          15           3           1         288
+         nmos1v_CDNS_38                                   0          15           3           1         288
+         NAND_2X_small1                                   5          21           3           1         288
+         cellTmpl_CDNS_39                                 0          41           0           1         704
+         XOR1                                            25          65           6          10         704
+         full_adder1_small                               31          61           9          14         288
+         multiplier                                     309         629          24           1          16
+         M2_M1_CDNS_40                                    0           3           0           1          16
+         M4_M3_CDNS_41                                    0           3           0           1          16
+         M3_M2_CDNS_42                                    0           3           0           1          16
+         cellTmpl_CDNS_43                                 0          35           0           2         192
+         pmos1v_CDNS_44                                   0          16           3           4         384
+         pmos1v_CDNS_45                                   0          16           3           4         384
+         MUX_2to1___2X                                   29          89           6           2          32
+         FA_4bit                                         25          65          20           2          32
+         INV_1X_small                                     4          10           4           6          96
+         carry_skip_adder_8bits_project                 161         347          44           1          16
+         10badder                                        17          60          34           1          16
+         cellTmpl_CDNS_49                                 0          11           0           1          16
+         ph2p1_MAC                                      279         826          32           1          16
+         MUX_2to1___2X_ph2p2                             29          89           6          10         160
+         ph2p2_processing_element                       197         266          45           4          16
+         ph2p3_Matrix_vector_Multiplication             328         863          85           4           4
+         ph3_sytolic_array                              649        1639         205           1           1
+         ----------------------------------------------------------------------------
+         TOTAL CELL = 72;  INSTANCE = 2201;  GEOMETRY = 5788;  LABEL = 615
+
+INFO:    Layer Summary:
+         ----------------------------------------------------------------------------
+             LAYER                              ID       HPN      HTC        FPN       FTC
+         ----------------------------------------------------------------------------
+         Bondpad                              1000         0         0         0         0
+         CapMetal                             1001         0         0         0         0
+         Cont                                 1002       206         0    194832         0
+         ESDdummy                             1003         0         0         0         0
+         INDdummy                             1004         0         0         0         0
+         M1Resdum                             1005         0         0         0         0
+         M2Resdum                             1006         0         0         0         0
+         M3Resdum                             1007         0         0         0         0
+         M4Resdum                             1008         0         0         0         0
+         M5Resdum                             1009         0         0         0         0
+         M6Resdum                             1010         0         0         0         0
+         M7Resdum                             1011         0         0         0         0
+         M8Resdum                             1012         0         0         0         0
+         M9Resdum                             1013         0         0         0         0
+         M10Resdum                            1014         0         0         0         0
+         M11Resdum                            1015         0         0         0         0
+         Metal1                               1016      1514         0    226805         0
+         Metal2                               1017      1034         0     61965         0
+         Metal3                               1018      1266         0     30947         0
+         Metal4                               1019       543         0     11900         0
+         Metal5                               1020       571         0      5004         0
+         Metal6                               1021         0         0         0         0
+         Metal7                               1022         0         0         0         0
+         Metal8                               1023         0         0         0         0
+         Metal9                               1024         0         0         0         0
+         Metal10                              1025         0         0         0         0
+         Metal11                              1026         0         0         0         0
+         NPNdummy                             1027         0         0         0         0
+         Nburied                              1028         0         0         0         0
+         Nhvt                                 1029         0         0         0         0
+         Nimp                                 1030        30         0     38624         0
+         Nlvt                                 1031         0         0         0         0
+         Nwell                                1032        18         0     19312         0
+         Nzvt                                 1033         0         0         0         0
+         Oxide                                1034        63         0     91808         0
+         Oxide_thk                            1035         0         0         0         0
+         PNPdummy                             1036         0         0         0         0
+         Phvt                                 1037         0         0         0         0
+         Pimp                                 1038        36         0     38624         0
+         Plvt                                 1039         0         0         0         0
+         Poly                                 1040       487         0    184512         0
+         Psub                                 1041         0         0         0         0
+         ResWdum                              1042         0         0         0         0
+         Resdum                               1043         0         0         0         0
+         SiProt                               1044         0         0         0         0
+         Via1                                 1045         7         0     22576         0
+         Via2                                 1046         6         0     10013         0
+         Via3                                 1047         5         0      3944         0
+         Via4                                 1048         2         0      1600         0
+         Via5                                 1049         0         0         0         0
+         Via6                                 1050         0         0         0         0
+         Via7                                 1051         0         0         0         0
+         Via8                                 1052         0         0         0         0
+         Via9                                 1053         0         0         0         0
+         Via10                                1054         0         0         0         0
+         metal1_conn_text                     1055         0       584         0     82801
+         metal2_conn_text                     1056         0         0         0         0
+         metal3_conn_text                     1057         0         0         0         0
+         metal4_conn_text                     1058         0         1         0        16
+         metal5_conn_text                     1059         0         0         0         0
+         metal6_conn_text                     1060         0         0         0         0
+         metal7_conn_text                     1061         0         0         0         0
+         metal8_conn_text                     1062         0         0         0         0
+         metal9_conn_text                     1063         0         0         0         0
+         metal10_conn_text                    1064         0         0         0         0
+         metal11_conn_text                    1065         0         0         0         0
+         poly_conn_text                       1066         0        30         0     53184
+         ----------------------------------------------------------------------------
+
+INFO:    CHIP EXTENT: -390 0 255880 293040
+
+
+INFO:    Ports ...
+         ========================================================================
+
+INFO:    Texts For Connectivity ...
+         ========================================================================
+         vdd! (1.585, 0.115) 1055 ph3_sytolic_array
+         Sum3_out9 (127.675, 116.177) 1055 ph3_sytolic_array
+         Sum3_out8 (127.668, 119.845) 1055 ph3_sytolic_array
+         Sum3_out7 (127.582, 123.498) 1055 ph3_sytolic_array
+         Sum3_out6 (127.588, 114.517) 1055 ph3_sytolic_array
+         Sum3_out5 (127.662, 118.175) 1055 ph3_sytolic_array
+         Sum3_out4 (127.582, 121.835) 1055 ph3_sytolic_array
+         Sum3_out3 (127.585, 125.485) 1055 ph3_sytolic_array
+         Sum3_out2 (127.675, 129.157) 1055 ph3_sytolic_array
+         Sum3_out1 (127.580, 132.815) 1055 ph3_sytolic_array
+         Sum3_out0 (127.590, 136.475) 1055 ph3_sytolic_array
+         Sum3_in9 (127.183, 6.610) 1055 ph3_sytolic_array
+         Sum3_in8 (127.188, 10.270) 1055 ph3_sytolic_array
+         Sum3_in7 (127.183, 13.925) 1055 ph3_sytolic_array
+         Sum3_in6 (127.177, 4.495) 1055 ph3_sytolic_array
+         Sum3_in5 (127.185, 8.155) 1055 ph3_sytolic_array
+         Sum3_in4 (127.180, 11.815) 1055 ph3_sytolic_array
+         Sum3_in3 (127.188, 15.475) 1055 ph3_sytolic_array
+         Sum3_in2 (127.185, 19.140) 1055 ph3_sytolic_array
+         Sum3_in1 (127.183, 22.773) 1055 ph3_sytolic_array
+         Sum3_in0 (127.175, 26.448) 1055 ph3_sytolic_array
+         Sum2_out9 (95.608, 116.172) 1055 ph3_sytolic_array
+         Sum2_out8 (95.543, 119.820) 1055 ph3_sytolic_array
+         Sum2_out7 (95.605, 123.505) 1055 ph3_sytolic_array
+         Sum2_out6 (95.610, 114.515) 1055 ph3_sytolic_array
+         Sum2_out5 (95.532, 118.172) 1055 ph3_sytolic_array
+         Sum2_out4 (95.638, 121.835) 1055 ph3_sytolic_array
+         Sum2_out3 (95.630, 125.495) 1055 ph3_sytolic_array
+         Sum2_out2 (95.625, 129.155) 1055 ph3_sytolic_array
+         Sum2_out1 (95.635, 132.815) 1055 ph3_sytolic_array
+         Sum2_out0 (95.638, 136.477) 1055 ph3_sytolic_array
+         Sum2_in9 (95.142, 6.615) 1055 ph3_sytolic_array
+         Sum2_in8 (95.138, 10.273) 1055 ph3_sytolic_array
+         Sum2_in7 (95.145, 13.922) 1055 ph3_sytolic_array
+         Sum2_in6 (95.150, 4.487) 1055 ph3_sytolic_array
+         Sum2_in5 (95.140, 8.152) 1055 ph3_sytolic_array
+         Sum2_in4 (95.142, 11.812) 1055 ph3_sytolic_array
+         Sum2_in3 (95.142, 15.477) 1055 ph3_sytolic_array
+         Sum2_in2 (95.145, 19.137) 1055 ph3_sytolic_array
+         Sum2_in1 (95.140, 22.795) 1055 ph3_sytolic_array
+         Sum2_in0 (95.142, 26.457) 1055 ph3_sytolic_array
+         Sum1_out9 (63.583, 116.183) 1055 ph3_sytolic_array
+         Sum1_out8 (63.575, 119.840) 1055 ph3_sytolic_array
+         Sum1_out7 (63.575, 123.502) 1055 ph3_sytolic_array
+         Sum1_out6 (63.585, 114.520) 1055 ph3_sytolic_array
+         Sum1_out5 (63.587, 118.172) 1055 ph3_sytolic_array
+         Sum1_out4 (63.585, 121.840) 1055 ph3_sytolic_array
+         Sum1_out3 (63.587, 125.498) 1055 ph3_sytolic_array
+         Sum1_out2 (63.578, 129.157) 1055 ph3_sytolic_array
+         Sum1_out1 (63.583, 132.817) 1055 ph3_sytolic_array
+         Sum1_out0 (63.595, 136.475) 1055 ph3_sytolic_array
+         Sum1_in9 (63.100, 6.607) 1055 ph3_sytolic_array
+         Sum1_in8 (63.097, 10.258) 1055 ph3_sytolic_array
+         Sum1_in7 (63.097, 13.925) 1055 ph3_sytolic_array
+         Sum1_in6 (63.102, 4.503) 1055 ph3_sytolic_array
+         Sum1_in5 (63.097, 8.150) 1055 ph3_sytolic_array
+         Sum1_in4 (63.102, 11.810) 1055 ph3_sytolic_array
+         Sum1_in3 (63.102, 15.470) 1055 ph3_sytolic_array
+         Sum1_in2 (63.093, 19.133) 1055 ph3_sytolic_array
+         Sum1_in1 (63.102, 22.782) 1055 ph3_sytolic_array
+         Sum1_in0 (63.102, 26.455) 1055 ph3_sytolic_array
+         Sum0_out9 (31.530, 116.170) 1055 ph3_sytolic_array
+         Sum0_out8 (31.540, 119.840) 1055 ph3_sytolic_array
+         Sum0_out7 (31.535, 123.507) 1055 ph3_sytolic_array
+         Sum0_out6 (31.527, 114.520) 1055 ph3_sytolic_array
+         Sum0_out5 (31.547, 118.180) 1055 ph3_sytolic_array
+         Sum0_out4 (31.540, 121.835) 1055 ph3_sytolic_array
+         Sum0_out3 (31.527, 125.500) 1055 ph3_sytolic_array
+         Sum0_out2 (31.545, 129.157) 1055 ph3_sytolic_array
+         Sum0_out1 (31.540, 132.820) 1055 ph3_sytolic_array
+         Sum0_out0 (31.545, 136.477) 1055 ph3_sytolic_array
+         Sum0_in9 (31.052, 6.612) 1055 ph3_sytolic_array
+         Sum0_in8 (31.050, 10.258) 1055 ph3_sytolic_array
+         Sum0_in7 (31.055, 13.925) 1055 ph3_sytolic_array
+         Sum0_in6 (31.052, 4.487) 1055 ph3_sytolic_array
+         Sum0_in5 (31.043, 8.165) 1055 ph3_sytolic_array
+         Sum0_in4 (31.047, 11.812) 1055 ph3_sytolic_array
+         Sum0_in3 (31.050, 15.470) 1055 ph3_sytolic_array
+         Sum0_in2 (31.052, 19.130) 1055 ph3_sytolic_array
+         Sum0_in1 (31.052, 22.765) 1055 ph3_sytolic_array
+         Sum0_in0 (31.050, 26.460) 1055 ph3_sytolic_array
+         sel3_reg (124.892, 0.858) 1055 ph3_sytolic_array
+         Sel3 (25.508, 2.780) 1055 ph3_sytolic_array
+         sel2_reg (124.895, 37.445) 1055 ph3_sytolic_array
+         Sel2 (25.503, 39.380) 1055 ph3_sytolic_array
+         sel1_reg (124.890, 74.153) 1055 ph3_sytolic_array
+         Sel1 (25.505, 75.985) 1055 ph3_sytolic_array
+         sel0_reg (124.895, 110.728) 1055 ph3_sytolic_array
+         Sel0 (25.508, 112.582) 1055 ph3_sytolic_array
+         RST (0.738, 143.623) 1055 ph3_sytolic_array
+         gnd! (4.452, 1.875) 1055 ph3_sytolic_array
+         CLK (0.698, 145.635) 1055 ph3_sytolic_array
+         Cin3_3 (96.875, 10.273) 1055 ph3_sytolic_array
+         Cin3_2 (96.882, 46.865) 1055 ph3_sytolic_array
+         Cin3_1 (96.877, 83.457) 1055 ph3_sytolic_array
+         Cin3_0 (96.875, 120.055) 1055 ph3_sytolic_array
+         Cin2_3 (64.825, 10.262) 1055 ph3_sytolic_array
+         Cin2_2 (64.825, 46.858) 1055 ph3_sytolic_array
+         Cin2_1 (64.835, 83.457) 1055 ph3_sytolic_array
+         Cin2_0 (64.835, 120.062) 1055 ph3_sytolic_array
+         Cin1_3 (32.782, 10.270) 1055 ph3_sytolic_array
+         Cin1_2 (32.782, 46.852) 1055 ph3_sytolic_array
+         Cin1_1 (32.782, 83.475) 1055 ph3_sytolic_array
+         Cin1_0 (32.785, 120.058) 1055 ph3_sytolic_array
+         Cin0_3 (0.743, 10.255) 1055 ph3_sytolic_array
+         Cin0_2 (0.735, 46.862) 1055 ph3_sytolic_array
+         Cin0_1 (0.745, 83.465) 1055 ph3_sytolic_array
+         Cin0_0 (0.743, 120.062) 1055 ph3_sytolic_array
+         B3_reg3 (116.743, 33.810) 1055 ph3_sytolic_array
+         B3_reg2 (111.623, 33.788) 1055 ph3_sytolic_array
+         B3_reg1 (106.498, 33.807) 1055 ph3_sytolic_array
+         B3_reg0 (101.390, 33.807) 1055 ph3_sytolic_array
+         B3_3 (97.435, 132.868) 1055 ph3_sytolic_array
+         B3_2 (97.438, 134.433) 1055 ph3_sytolic_array
+         B3_1 (99.630, 138.090) 1055 ph3_sytolic_array
+         B3_0 (97.435, 138.088) 1055 ph3_sytolic_array
+         B2_reg3 (84.695, 33.788) 1055 ph3_sytolic_array
+         B2_reg2 (79.580, 33.795) 1055 ph3_sytolic_array
+         B2_reg1 (74.455, 33.795) 1055 ph3_sytolic_array
+         B2_reg0 (69.338, 33.805) 1055 ph3_sytolic_array
+         B2_3 (65.390, 132.865) 1055 ph3_sytolic_array
+         B2_2 (65.388, 134.433) 1055 ph3_sytolic_array
+         B2_1 (67.588, 138.088) 1055 ph3_sytolic_array
+         B2_0 (65.395, 138.097) 1055 ph3_sytolic_array
+         B1_reg3 (52.653, 33.795) 1055 ph3_sytolic_array
+         B1_reg2 (47.528, 33.805) 1055 ph3_sytolic_array
+         B1_reg1 (42.410, 33.797) 1055 ph3_sytolic_array
+         B1_reg0 (37.292, 33.800) 1055 ph3_sytolic_array
+         B1_3 (33.350, 132.868) 1055 ph3_sytolic_array
+         B1_2 (33.345, 134.433) 1055 ph3_sytolic_array
+         B1_1 (35.545, 138.083) 1055 ph3_sytolic_array
+         B1_0 (33.337, 138.093) 1055 ph3_sytolic_array
+         B0_reg3 (20.613, 33.800) 1055 ph3_sytolic_array
+         B0_reg2 (15.490, 33.803) 1055 ph3_sytolic_array
+         B0_reg1 (10.363, 33.800) 1055 ph3_sytolic_array
+         B0_reg0 (5.263, 33.803) 1055 ph3_sytolic_array
+         B0_3 (1.308, 132.870) 1055 ph3_sytolic_array
+         B0_2 (1.298, 134.428) 1055 ph3_sytolic_array
+         B0_1 (3.498, 138.085) 1055 ph3_sytolic_array
+         B0_0 (1.302, 138.088) 1055 ph3_sytolic_array
+         A3_reg3 (101.382, 30.137) 1055 ph3_sytolic_array
+         A3_reg2 (106.502, 30.155) 1055 ph3_sytolic_array
+         A3_reg1 (111.623, 30.150) 1055 ph3_sytolic_array
+         A3_reg0 (116.743, 30.157) 1055 ph3_sytolic_array
+         A3_3_9 (107.388, 1.103) 1055 ph3_sytolic_array
+         A3_3_8 (96.410, 1.097) 1055 ph3_sytolic_array
+         A3_3 (0.688, 28.308) 1055 ph3_sytolic_array
+         A3_2_9 (107.388, 37.705) 1055 ph3_sytolic_array
+         A3_2_8 (96.410, 37.700) 1055 ph3_sytolic_array
+         A3_2 (5.692, 28.285) 1055 ph3_sytolic_array
+         A3_1_9 (107.395, 74.300) 1055 ph3_sytolic_array
+         A3_1_8 (96.415, 74.297) 1055 ph3_sytolic_array
+         A3_1 (10.210, 28.277) 1055 ph3_sytolic_array
+         A3_0_9 (107.390, 110.897) 1055 ph3_sytolic_array
+         A3_0_8 (96.410, 110.895) 1055 ph3_sytolic_array
+         A3_0 (7.270, 24.650) 1055 ph3_sytolic_array
+         A2_reg3 (101.390, 66.748) 1055 ph3_sytolic_array
+         A2_reg2 (106.502, 66.745) 1055 ph3_sytolic_array
+         A2_reg1 (111.623, 66.765) 1055 ph3_sytolic_array
+         A2_reg0 (116.737, 66.745) 1055 ph3_sytolic_array
+         A2_3_9 (75.347, 1.097) 1055 ph3_sytolic_array
+         A2_3_8 (64.365, 1.103) 1055 ph3_sytolic_array
+         A2_3 (0.677, 64.903) 1055 ph3_sytolic_array
+         A2_2_9 (75.347, 37.708) 1055 ph3_sytolic_array
+         A2_2_8 (64.370, 37.697) 1055 ph3_sytolic_array
+         A2_2 (5.690, 64.880) 1055 ph3_sytolic_array
+         A2_1_9 (75.347, 74.302) 1055 ph3_sytolic_array
+         A2_1_8 (64.368, 74.293) 1055 ph3_sytolic_array
+         A2_1 (5.067, 61.245) 1055 ph3_sytolic_array
+         A2_0_9 (75.347, 110.903) 1055 ph3_sytolic_array
+         A2_0_8 (64.368, 110.903) 1055 ph3_sytolic_array
+         A2_0 (7.268, 61.245) 1055 ph3_sytolic_array
+         A1_reg3 (101.380, 103.330) 1055 ph3_sytolic_array
+         A1_reg2 (106.502, 103.350) 1055 ph3_sytolic_array
+         A1_reg1 (111.623, 103.353) 1055 ph3_sytolic_array
+         A1_reg0 (116.743, 103.347) 1055 ph3_sytolic_array
+         A1_3_9 (43.300, 1.100) 1055 ph3_sytolic_array
+         A1_3_8 (32.322, 1.103) 1055 ph3_sytolic_array
+         A1_3 (0.672, 101.502) 1055 ph3_sytolic_array
+         A1_2_9 (43.305, 37.695) 1055 ph3_sytolic_array
+         A1_2_8 (32.320, 37.700) 1055 ph3_sytolic_array
+         A1_2 (5.692, 101.487) 1055 ph3_sytolic_array
+         A1_1_9 (43.305, 74.295) 1055 ph3_sytolic_array
+         A1_1_8 (32.320, 74.300) 1055 ph3_sytolic_array
+         A1_1 (10.210, 101.480) 1055 ph3_sytolic_array
+         A1_0_9 (43.307, 110.890) 1055 ph3_sytolic_array
+         A1_0_8 (32.315, 110.897) 1055 ph3_sytolic_array
+         A1_0 (14.613, 101.490) 1055 ph3_sytolic_array
+         A0_reg3 (101.382, 139.938) 1055 ph3_sytolic_array
+         A0_reg2 (106.498, 139.952) 1055 ph3_sytolic_array
+         A0_reg1 (111.623, 139.950) 1055 ph3_sytolic_array
+         A0_reg0 (116.743, 139.990) 1055 ph3_sytolic_array
+         A0_3_9 (11.258, 1.093) 1055 ph3_sytolic_array
+         A0_3_8 (0.270, 1.097) 1055 ph3_sytolic_array
+         A0_3 (0.675, 138.102) 1055 ph3_sytolic_array
+         A0_2_9 (11.258, 37.700) 1055 ph3_sytolic_array
+         A0_2_8 (0.278, 37.697) 1055 ph3_sytolic_array
+         A0_2 (5.692, 138.093) 1055 ph3_sytolic_array
+         A0_1_9 (11.258, 74.297) 1055 ph3_sytolic_array
+         A0_1_8 (0.278, 74.302) 1055 ph3_sytolic_array
+         A0_1 (10.215, 138.088) 1055 ph3_sytolic_array
+         A0_1 (10.213, 138.093) 1055 ph3_sytolic_array
+         A0_0_9 (11.260, 110.900) 1055 ph3_sytolic_array
+         A0_0_8 (0.275, 110.903) 1055 ph3_sytolic_array
+         A0_0 (7.270, 132.852) 1055 ph3_sytolic_array
+         vdd! (10.995, 146.370) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out9 (31.872, 116.153) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out8 (31.883, 119.812) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out7 (31.872, 123.472) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out6 (31.883, 114.487) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out5 (31.878, 118.145) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out4 (31.885, 121.805) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out3 (31.887, 125.465) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out2 (31.880, 129.125) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out1 (31.875, 132.787) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_out0 (31.885, 136.447) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in9 (31.378, 6.577) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in8 (31.375, 10.240) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in7 (31.375, 13.895) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in6 (31.375, 4.445) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in5 (31.375, 8.123) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in4 (31.375, 11.783) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in3 (31.375, 15.438) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in2 (31.375, 19.108) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in1 (31.380, 22.753) 1055 ph2p3_Matrix_vector_Multiplication
+         Sum_in0 (31.375, 26.385) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel3_reg (29.082, 0.948) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel3 (25.830, 2.760) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel2_reg (29.082, 37.575) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel2 (25.830, 39.358) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel1_reg (29.078, 74.147) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel1 (25.832, 75.960) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel0_reg (29.082, 110.725) 1055 ph2p3_Matrix_vector_Multiplication
+         Sel0 (25.830, 112.555) 1055 ph2p3_Matrix_vector_Multiplication
+         RST (1.067, 143.588) 1055 ph2p3_Matrix_vector_Multiplication
+         gnd! (10.995, 144.600) 1055 ph2p3_Matrix_vector_Multiplication
+         CLK (1.032, 145.602) 1055 ph2p3_Matrix_vector_Multiplication
+         Cin3 (11.133, 15.540) 1055 ph2p3_Matrix_vector_Multiplication
+         Cin2 (11.133, 52.138) 1055 ph2p3_Matrix_vector_Multiplication
+         Cin1 (11.135, 88.735) 1055 ph2p3_Matrix_vector_Multiplication
+         Cin0 (11.127, 125.338) 1055 ph2p3_Matrix_vector_Multiplication
+         B_reg3 (20.930, 33.758) 1055 ph2p3_Matrix_vector_Multiplication
+         B_reg2 (15.812, 33.785) 1055 ph2p3_Matrix_vector_Multiplication
+         B_reg1 (10.690, 33.763) 1055 ph2p3_Matrix_vector_Multiplication
+         B_reg0 (5.572, 33.792) 1055 ph2p3_Matrix_vector_Multiplication
+         B0_3 (1.620, 132.840) 1055 ph2p3_Matrix_vector_Multiplication
+         B0_2 (1.620, 134.400) 1055 ph2p3_Matrix_vector_Multiplication
+         B0_1 (3.820, 138.060) 1055 ph2p3_Matrix_vector_Multiplication
+         B0_0 (1.620, 138.062) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_reg3 (5.572, 30.120) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_reg2 (10.693, 30.130) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_reg1 (15.812, 30.135) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_reg0 (20.933, 30.135) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_9 (11.582, 1.070) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_8 (0.600, 1.070) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_3 (0.995, 28.275) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_2 (6.020, 28.260) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_1 (10.540, 28.260) 1055 ph2p3_Matrix_vector_Multiplication
+         A3_0 (7.593, 24.615) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_reg3 (5.572, 66.778) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_reg2 (10.693, 66.890) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_reg1 (15.810, 66.750) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_reg0 (20.933, 66.820) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_9 (11.580, 37.670) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_8 (0.600, 37.670) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_3 (0.995, 64.875) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_2 (6.020, 64.860) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_1 (5.393, 61.215) 1055 ph2p3_Matrix_vector_Multiplication
+         A2_0 (7.593, 61.215) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_reg3 (3.475, 103.330) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_reg2 (8.592, 103.332) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_reg1 (13.720, 103.330) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_reg0 (21.000, 103.300) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_9 (11.580, 74.270) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_8 (0.600, 74.270) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_3 (0.995, 101.475) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_2 (6.020, 101.460) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_1 (10.540, 101.460) 1055 ph2p3_Matrix_vector_Multiplication
+         A1_0 (14.940, 101.460) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_reg3 (3.467, 139.933) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_reg2 (8.600, 139.930) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_reg1 (13.710, 139.930) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_reg0 (20.930, 140.020) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_9 (11.580, 110.870) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_8 (0.600, 110.870) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_3 (0.990, 138.077) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_2 (6.020, 138.060) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_1 (10.540, 138.060) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_0 (14.940, 138.060) 1055 ph2p3_Matrix_vector_Multiplication
+         A0_0 (7.590, 132.822) 1055 ph2p3_Matrix_vector_Multiplication
+         vdd! (1.200, 36.605) 1055 ph2p2_processing_element
+         Sum_out9 (31.585, 6.380) 1055 ph2p2_processing_element
+         Sum_out8 (31.585, 10.012) 1055 ph2p2_processing_element
+         Sum_out7 (31.585, 13.700) 1055 ph2p2_processing_element
+         Sum_out6 (31.585, 4.718) 1055 ph2p2_processing_element
+         Sum_out5 (31.585, 8.385) 1055 ph2p2_processing_element
+         Sum_out4 (31.585, 12.050) 1055 ph2p2_processing_element
+         Sum_out3 (31.585, 15.705) 1055 ph2p2_processing_element
+         Sum_out2 (31.585, 19.387) 1055 ph2p2_processing_element
+         Sum_out1 (31.585, 23.038) 1055 ph2p2_processing_element
+         Sum_out0 (31.585, 26.698) 1055 ph2p2_processing_element
+         Sum_in9 (31.190, 6.612) 1055 ph2p2_processing_element
+         Sum_in8 (31.192, 10.280) 1055 ph2p2_processing_element
+         Sum_in7 (31.192, 13.930) 1055 ph2p2_processing_element
+         Sum_in6 (31.190, 4.478) 1055 ph2p2_processing_element
+         Sum_in5 (31.190, 8.130) 1055 ph2p2_processing_element
+         Sum_in4 (31.192, 11.810) 1055 ph2p2_processing_element
+         Sum_in3 (31.190, 15.460) 1055 ph2p2_processing_element
+         Sum_in2 (31.190, 19.117) 1055 ph2p2_processing_element
+         Sum_in1 (31.190, 22.785) 1055 ph2p2_processing_element
+         Sum_in0 (31.190, 26.435) 1055 ph2p2_processing_element
+         Sel_reg (28.895, 1.018) 1055 ph2p2_processing_element
+         Sel (25.645, 2.795) 1055 ph2p2_processing_element
+         RST (0.848, 33.820) 1055 ph2p2_processing_element
+         gnd! (0.980, 34.835) 1055 ph2p2_processing_element
+         CLK (0.858, 35.840) 1055 ph2p2_processing_element
+         Cin (10.955, 15.568) 1055 ph2p2_processing_element
+         B_reg3 (20.745, 33.843) 1055 ph2p2_processing_element
+         B_reg2 (15.625, 33.852) 1055 ph2p2_processing_element
+         B_reg1 (10.505, 33.892) 1055 ph2p2_processing_element
+         B_reg0 (5.385, 33.945) 1055 ph2p2_processing_element
+         B2 (1.433, 24.633) 1055 ph2p2_processing_element
+         B1 (3.638, 28.288) 1055 ph2p2_processing_element
+         B0 (1.427, 28.293) 1055 ph2p2_processing_element
+         A_reg3 (5.385, 30.273) 1055 ph2p2_processing_element
+         A_reg2 (10.505, 30.308) 1055 ph2p2_processing_element
+         A_reg1 (15.625, 30.262) 1055 ph2p2_processing_element
+         A_reg0 (20.745, 30.282) 1055 ph2p2_processing_element
+         A9 (11.387, 1.100) 1055 ph2p2_processing_element
+         A8 (0.412, 1.100) 1055 ph2p2_processing_element
+         A3 (0.795, 28.305) 1055 ph2p2_processing_element
+         A2 (5.840, 28.290) 1055 ph2p2_processing_element
+         A1 (10.355, 28.290) 1055 ph2p2_processing_element
+         A0 (14.758, 28.290) 1055 ph2p2_processing_element
+         B3 (1.177, 22.293) 1058 ph2p2_processing_element
+         vdd! (1.500, 1.782) 1055 MUX_2to1___2X_ph2p2
+         S (0.380, 0.835) 1055 MUX_2to1___2X_ph2p2
+         out (2.638, 0.840) 1055 MUX_2to1___2X_ph2p2
+         gnd! (1.512, 0.068) 1055 MUX_2to1___2X_ph2p2
+         B (2.110, 1.067) 1055 MUX_2to1___2X_ph2p2
+         A (0.740, 1.525) 1055 MUX_2to1___2X_ph2p2
+         Z9 (23.543, 4.683) 1055 ph2p1_MAC
+         Z8 (23.547, 8.342) 1055 ph2p1_MAC
+         Z7 (23.545, 12.053) 1055 ph2p1_MAC
+         Z6 (28.665, 4.607) 1055 ph2p1_MAC
+         Z5 (28.668, 8.350) 1055 ph2p1_MAC
+         Z4 (28.665, 11.863) 1055 ph2p1_MAC
+         Z3 (28.665, 15.557) 1055 ph2p1_MAC
+         Z2 (28.665, 19.247) 1055 ph2p1_MAC
+         Z1 (28.663, 22.895) 1055 ph2p1_MAC
+         Z0 (28.663, 26.543) 1055 ph2p1_MAC
+         vdd! (23.850, 14.610) 1055 ph2p1_MAC
+         vdd! (23.850, 11.010) 1055 ph2p1_MAC
+         vdd! (23.850, 3.750) 1055 ph2p1_MAC
+         vdd! (23.848, 7.350) 1055 ph2p1_MAC
+         vdd! (9.260, 29.250) 1055 ph2p1_MAC
+         RST (24.163, 26.470) 1055 ph2p1_MAC
+         gnd! (23.852, 12.840) 1055 ph2p1_MAC
+         gnd! (23.850, 5.520) 1055 ph2p1_MAC
+         gnd! (23.848, 9.180) 1055 ph2p1_MAC
+         gnd! (9.262, 27.480) 1055 ph2p1_MAC
+         CLK (24.157, 28.490) 1055 ph2p1_MAC
+         Cin (10.720, 15.537) 1055 ph2p1_MAC
+         B3 (1.205, 23.040) 1055 ph2p1_MAC
+         B2 (1.205, 24.598) 1055 ph2p1_MAC
+         B1 (3.362, 28.260) 1055 ph2p1_MAC
+         B0 (1.202, 28.260) 1055 ph2p1_MAC
+         A9 (11.130, 1.067) 1055 ph2p1_MAC
+         A8 (0.140, 1.070) 1055 ph2p1_MAC
+         A3 (0.540, 28.273) 1055 ph2p1_MAC
+         A2 (5.560, 28.260) 1055 ph2p1_MAC
+         A1 (10.125, 28.260) 1055 ph2p1_MAC
+         A0 (14.525, 28.260) 1055 ph2p1_MAC
+         vdd! (36.377, 26.762) 1055 10badder
+         S9 (42.835, 25.955) 1055 10badder
+         S8 (31.855, 25.953) 1055 10badder
+         S7 (38.932, 24.055) 1055 10badder
+         S6 (38.935, 22.290) 1055 10badder
+         S5 (38.935, 20.400) 1055 10badder
+         S4 (38.935, 18.622) 1055 10badder
+         S3 (38.932, 16.738) 1055 10badder
+         S2 (38.935, 14.970) 1055 10badder
+         S1 (38.935, 13.075) 1055 10badder
+         S0 (38.935, 11.318) 1055 10badder
+         in_B_9 (37.032, 25.975) 1055 10badder
+         in_B_8 (25.558, 25.790) 1055 10badder
+         in_B_7 (33.133, 24.023) 1055 10badder
+         in_B_6 (33.133, 22.320) 1055 10badder
+         in_B_5 (33.138, 20.360) 1055 10badder
+         in_B_4 (33.135, 18.655) 1055 10badder
+         in_B_3 (33.133, 16.705) 1055 10badder
+         in_B_2 (33.127, 15.002) 1055 10badder
+         in_B_1 (33.133, 13.045) 1055 10badder
+         in_B_0 (33.133, 11.338) 1055 10badder
+         in_A_9 (36.538, 25.788) 1055 10badder
+         in_A_8 (26.055, 25.977) 1055 10badder
+         in_A_7 (32.638, 24.207) 1055 10badder
+         in_A_6 (32.635, 22.133) 1055 10badder
+         in_A_5 (32.638, 20.550) 1055 10badder
+         in_A_4 (32.635, 18.470) 1055 10badder
+         in_A_3 (32.638, 16.890) 1055 10badder
+         in_A_2 (32.638, 14.815) 1055 10badder
+         in_A_1 (32.640, 13.230) 1055 10badder
+         in_A_0 (32.640, 11.150) 1055 10badder
+         gnd! (28.628, 10.420) 1055 10badder
+         Cout (47.038, 26.062) 1055 10badder
+         Cin (36.095, 11.322) 1055 10badder
+         vdd! (5.580, 9.268) 1055 carry_skip_adder_8bits_project
+         vdd! (5.575, 12.922) 1055 carry_skip_adder_8bits_project
+         vdd! (5.570, 5.593) 1055 carry_skip_adder_8bits_project
+         vdd! (5.495, 1.917) 1055 carry_skip_adder_8bits_project
+         vdd! (-3.768, 5.610) 1055 carry_skip_adder_8bits_project
+         vdd! (-3.780, 9.258) 1055 carry_skip_adder_8bits_project
+         vdd! (-3.783, 1.940) 1055 carry_skip_adder_8bits_project
+         vdd! (-3.790, 12.928) 1055 carry_skip_adder_8bits_project
+         S7 (6.518, 13.810) 1055 carry_skip_adder_8bits_project
+         S6 (6.520, 12.043) 1055 carry_skip_adder_8bits_project
+         S5 (6.520, 10.155) 1055 carry_skip_adder_8bits_project
+         S4 (6.522, 8.375) 1055 carry_skip_adder_8bits_project
+         S3 (6.518, 6.492) 1055 carry_skip_adder_8bits_project
+         S2 (6.520, 4.720) 1055 carry_skip_adder_8bits_project
+         S1 (6.520, 2.835) 1055 carry_skip_adder_8bits_project
+         S0 (6.520, 1.058) 1055 carry_skip_adder_8bits_project
+         gnd! (5.570, 0.177) 1055 carry_skip_adder_8bits_project
+         gnd! (5.567, 14.688) 1055 carry_skip_adder_8bits_project
+         gnd! (5.562, 7.418) 1055 carry_skip_adder_8bits_project
+         gnd! (5.555, 3.775) 1055 carry_skip_adder_8bits_project
+         gnd! (5.545, 11.092) 1055 carry_skip_adder_8bits_project
+         gnd! (-3.770, 0.168) 1055 carry_skip_adder_8bits_project
+         gnd! (-3.780, 11.092) 1055 carry_skip_adder_8bits_project
+         gnd! (-3.788, 7.442) 1055 carry_skip_adder_8bits_project
+         gnd! (-3.800, 3.775) 1055 carry_skip_adder_8bits_project
+         gnd! (-3.970, 14.693) 1055 carry_skip_adder_8bits_project
+         Cout (-6.843, 13.920) 1055 carry_skip_adder_8bits_project
+         Cin (3.730, 1.080) 1055 carry_skip_adder_8bits_project
+         B7 (0.765, 13.777) 1055 carry_skip_adder_8bits_project
+         B6 (0.767, 12.072) 1055 carry_skip_adder_8bits_project
+         B5 (0.770, 10.110) 1055 carry_skip_adder_8bits_project
+         B4 (0.770, 8.418) 1055 carry_skip_adder_8bits_project
+         B3 (0.772, 6.452) 1055 carry_skip_adder_8bits_project
+         B2 (0.770, 4.758) 1055 carry_skip_adder_8bits_project
+         B1 (0.770, 2.797) 1055 carry_skip_adder_8bits_project
+         B0 (0.775, 1.093) 1055 carry_skip_adder_8bits_project
+         A7 (0.275, 13.963) 1055 carry_skip_adder_8bits_project
+         A6 (0.275, 11.885) 1055 carry_skip_adder_8bits_project
+         A5 (0.278, 10.300) 1055 carry_skip_adder_8bits_project
+         A4 (0.278, 8.223) 1055 carry_skip_adder_8bits_project
+         A3 (0.275, 6.650) 1055 carry_skip_adder_8bits_project
+         A2 (0.275, 4.567) 1055 carry_skip_adder_8bits_project
+         A1 (0.280, 2.985) 1055 carry_skip_adder_8bits_project
+         A0 (0.278, 0.907) 1055 carry_skip_adder_8bits_project
+         vdd! (0.458, 1.782) 1055 INV_1X_small
+         out (0.780, 0.890) 1055 INV_1X_small
+         in (0.333, 0.890) 1055 INV_1X_small
+         gnd! (0.460, 0.070) 1055 INV_1X_small
+         vdd! (5.550, 1.795) 1055 FA_4bit
+         vdd! (5.527, 5.425) 1055 FA_4bit
+         S3 (6.482, 6.327) 1055 FA_4bit
+         S2 (6.485, 4.560) 1055 FA_4bit
+         S1 (6.485, 2.667) 1055 FA_4bit
+         S0 (6.485, 0.892) 1055 FA_4bit
+         gnd! (5.527, 7.215) 1055 FA_4bit
+         gnd! (5.525, 0.025) 1055 FA_4bit
+         gnd! (5.513, 3.623) 1055 FA_4bit
+         Cout3 (10.685, 6.207) 1055 FA_4bit
+         Cin_rrr (3.647, 0.915) 1055 FA_4bit
+         B3 (0.688, 6.290) 1055 FA_4bit
+         B2 (0.728, 4.588) 1055 FA_4bit
+         B1 (0.690, 2.630) 1055 FA_4bit
+         B0 (0.725, 0.927) 1055 FA_4bit
+         A3 (0.188, 6.478) 1055 FA_4bit
+         A2 (0.242, 4.400) 1055 FA_4bit
+         A1 (0.190, 2.817) 1055 FA_4bit
+         A0 (0.237, 0.740) 1055 FA_4bit
+         A0 (0.188, 0.740) 1055 FA_4bit
+         vdd! (1.410, -0.828) 1055 MUX_2to1___2X
+         S (0.290, -1.775) 1055 MUX_2to1___2X
+         out (2.547, -1.770) 1055 MUX_2to1___2X
+         gnd! (1.423, -2.542) 1055 MUX_2to1___2X
+         B (2.020, -1.542) 1055 MUX_2to1___2X
+         A (0.650, -1.085) 1055 MUX_2to1___2X
+         S_source_0 (-0.080, 0.240) 1055 pmos1v_CDNS_45
+         G_gate_1 (0.022, 0.555) 1066 pmos1v_CDNS_45
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_45
+         D_drain_1 (0.125, 0.240) 1055 pmos1v_CDNS_44
+         G_gate_1 (0.022, 0.555) 1066 pmos1v_CDNS_44
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_44
+         z7 (10.745, 0.960) 1055 multiplier
+         z6 (6.545, 0.843) 1055 multiplier
+         z5 (17.525, 0.850) 1055 multiplier
+         z4 (17.525, 2.610) 1055 multiplier
+         z3 (12.655, 6.400) 1055 multiplier
+         z2 (18.753, 6.400) 1055 multiplier
+         z1 (20.927, 10.060) 1055 multiplier
+         z0 (15.352, 11.750) 1055 multiplier
+         vdd! (11.092, 1.732) 1055 multiplier
+         vdd! (10.607, 5.385) 1055 multiplier
+         vdd! (9.995, 9.047) 1055 multiplier
+         vdd! (8.960, 12.660) 1055 multiplier
+         gnd! (11.062, -0.045) 1055 multiplier
+         gnd! (11.053, 3.553) 1055 multiplier
+         gnd! (9.980, 7.240) 1055 multiplier
+         gnd! (8.957, 10.880) 1055 multiplier
+         b3 (0.833, 6.440) 1055 multiplier
+         b2 (0.835, 8.000) 1055 multiplier
+         b1 (3.035, 11.660) 1055 multiplier
+         b0 (0.890, 11.660) 1055 multiplier
+         a3 (0.203, 11.672) 1055 multiplier
+         a2 (5.230, 11.660) 1055 multiplier
+         a1 (9.752, 11.660) 1055 multiplier
+         a0 (14.158, 11.660) 1055 multiplier
+         vdd! (5.580, 1.792) 1055 full_adder1_small
+         S (6.530, 0.955) 1055 full_adder1_small
+         inB (0.728, 0.993) 1055 full_adder1_small
+         inA (0.233, 0.807) 1055 full_adder1_small
+         gnd! (5.607, 0.058) 1055 full_adder1_small
+         Cout (10.732, 1.075) 1055 full_adder1_small
+         Cin_ (3.690, 0.980) 1055 full_adder1_small
+         vdd! (2.973, 1.760) 1055 XOR1
+         vdd! (1.540, 1.762) 1055 XOR1
+         vdd! (0.762, 1.760) 1055 XOR1
+         vdd! (0.295, 1.762) 1055 XOR1
+         gnd! (2.610, 0.037) 1055 XOR1
+         gnd! (0.297, 0.058) 1055 XOR1
+         vdd! (0.495, 1.788) 1055 NAND_2X_small1
+         out (0.460, 0.868) 1055 NAND_2X_small1
+         gnd! (0.497, 0.085) 1055 NAND_2X_small1
+         S_source_0 (-0.080, 0.240) 1055 nmos1v_CDNS_38
+         G_gate_1 (0.022, 0.555) 1066 nmos1v_CDNS_38
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_38
+         D_drain_1 (0.125, 0.240) 1055 nmos1v_CDNS_37
+         G_gate_1 (0.022, 0.555) 1066 nmos1v_CDNS_37
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_37
+         D_drain_1 (0.125, 0.240) 1055 pmos1v_CDNS_36
+         G_gate_1 (0.022, 0.555) 1066 pmos1v_CDNS_36
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_36
+         S_source_0 (-0.080, 0.240) 1055 pmos1v_CDNS_35
+         D_drain_1 (0.125, 0.240) 1055 pmos1v_CDNS_35
+         G_gate_1 (0.022, 0.555) 1066 pmos1v_CDNS_35
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_35
+         vdd! (0.375, 1.760) 1055 NAND_1X_small
+         gnd! (0.463, 0.070) 1055 NAND_1X_small
+         S_source_0 (-0.080, 0.120) 1055 pmos1v_CDNS_34
+         D_drain_1 (0.125, 0.120) 1055 pmos1v_CDNS_34
+         G_gate_1 (0.022, 0.315) 1066 pmos1v_CDNS_34
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_34
+         S_source_0 (-0.080, 0.120) 1055 nmos1v_CDNS_32
+         G_gate_1 (0.022, 0.315) 1066 nmos1v_CDNS_32
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_32
+         D_drain_1 (0.125, 0.120) 1055 nmos1v_CDNS_31
+         G_gate_1 (0.022, 0.315) 1066 nmos1v_CDNS_31
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_31
+         D_drain_1 (0.125, 0.120) 1055 pmos1v_CDNS_30
+         G_gate_1 (0.022, 0.315) 1066 pmos1v_CDNS_30
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_30
+         vdd! (3.130, 1.775) 1055 half_adder
+         S (3.822, 0.830) 1055 half_adder
+         inB (0.970, 0.743) 1055 half_adder
+         inA (0.250, 0.838) 1055 half_adder
+         gnd! (3.103, 0.072) 1055 half_adder
+         C (5.902, 0.882) 1055 half_adder
+         vdd! (2.025, 1.785) 1055 XOR_small
+         out (3.822, 0.830) 1055 XOR_small
+         in_B (0.980, 0.740) 1055 XOR_small
+         in_A (0.185, 0.840) 1055 XOR_small
+         gnd! (2.022, 0.090) 1055 XOR_small
+         S_source_0 (-0.080, 0.120) 1055 nmos1v_CDNS_29
+         D_drain_1 (0.125, 0.120) 1055 nmos1v_CDNS_29
+         G_gate_1 (0.022, 0.315) 1066 nmos1v_CDNS_29
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_29
+         S_source_0 (-0.080, 0.240) 1055 pmos1v_CDNS_28
+         D_drain_1 (0.125, 0.240) 1055 pmos1v_CDNS_28
+         G_gate_1 (0.022, 0.555) 1066 pmos1v_CDNS_28
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_28
+         vdd! (1.165, 1.788) 1055 AND
+         out (2.007, 0.880) 1055 AND
+         in_B (0.812, 0.790) 1055 AND
+         in_B (0.810, 0.790) 1055 AND
+         in_A (0.182, 0.805) 1055 AND
+         gnd! (1.165, 0.065) 1055 AND
+         vdd (0.500, 1.772) 1055 INV_1X_new
+         gnd (0.540, 0.080) 1055 INV_1X_new
+         vdd! (2.565, -1.760) 1055 ph1p3_MSDFF
+         RST (0.268, -0.998) 1055 ph1p3_MSDFF
+         Q (4.815, -0.998) 1055 ph1p3_MSDFF
+         gnd! (2.555, 0.010) 1055 ph1p3_MSDFF
+         D (1.565, 0.905) 1055 ph1p3_MSDFF
+         CLK (0.240, 1.020) 1055 ph1p3_MSDFF
+         vdd! (0.650, 1.782) 1055 ph1p3_clk_part
+         Out (1.100, 0.907) 1055 ph1p3_clk_part
+         gnd! (0.652, 0.072) 1055 ph1p3_clk_part
+         D (0.865, 0.917) 1055 ph1p3_clk_part
+         CLK (0.223, 0.915) 1055 ph1p3_clk_part
+         S_source_0 (-0.080, 0.060) 1055 pmos1v_CDNS_47
+         D_drain_1 (0.125, 0.060) 1055 pmos1v_CDNS_47
+         G_gate_1 (0.022, 0.195) 1066 pmos1v_CDNS_47
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_47
+         vdd! (0.412, 1.780) 1055 INV_1X_small_layout
+         out (0.552, 1.015) 1055 INV_1X_small_layout
+         in (0.263, 1.020) 1055 INV_1X_small_layout
+         gnd! (0.407, 0.070) 1055 INV_1X_small_layout
+         vdd! (0.328, 1.800) 1055 NAND2_1X_small
+         out (1.240, 0.843) 1055 NAND2_1X_small
+         gnd! (0.343, 0.113) 1055 NAND2_1X_small
+         S_source_0 (-0.080, 0.120) 1055 pmos1v_CDNS_20
+         D_drain_1 (0.125, 0.120) 1055 pmos1v_CDNS_20
+         G_gate_1 (0.022, 0.315) 1066 pmos1v_CDNS_20
+         G_gate_1 (0.022, -0.075) 1066 pmos1v_CDNS_20
+         S_source_0 (-0.080, 0.060) 1055 nmos1v_CDNS_19
+         D_drain_1 (0.125, 0.060) 1055 nmos1v_CDNS_19
+         G_gate_1 (0.022, 0.195) 1066 nmos1v_CDNS_19
+         G_gate_1 (0.022, -0.075) 1066 nmos1v_CDNS_19
+
+INFO:    Texts For SELECT -LABEL ...
+         ========================================================================
+
+INFO:    Texts For EXPAND_TEXT_ORIGIN ...
+         ========================================================================
+
+INFO:    Texts For DFM_TEXT ...
+         ========================================================================
+
+INFO:    Layer Summary(Texts For Connectivity):
+         ----------------------------------------------------------------------------
+             LAYER                              ID       TEXTS
+         ----------------------------------------------------------------------------
+         metal1_conn_text                     1055       581
+         metal4_conn_text                     1058         1
+         poly_conn_text                       1066        30
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For SELECT -LABEL):
+         ----------------------------------------------------------------------------
+             LAYER                              ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For EXPAND_TEXT_ORIGIN):
+         ----------------------------------------------------------------------------
+             LAYER                              ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Layer Summary(Texts For DFM_TEXT):
+         ----------------------------------------------------------------------------
+             LAYER                              ID       TEXTS
+         ----------------------------------------------------------------------------
+         ----------------------------------------------------------------------------
+
+INFO:    Expanded Cell Summary
+         ph2p1_MAC is expanded.
+         M2_M1_CDNS_40 is expanded.
+         M4_M3_CDNS_41 is expanded.
+         M3_M2_CDNS_42 is expanded.
+         M3_M2_CDNS_1 is expanded.
+         M2_M1_CDNS_2 is expanded.
+         M4_M3_CDNS_3 is expanded.
+         M3_M2_CDNS_4 is expanded.
+         M5_M4_CDNS_5 is expanded.
+         M4_M3_CDNS_6 is expanded.
+         M3_M2_CDNS_7 is expanded.
+         M2_M1_CDNS_8 is expanded.
+         M2_M1_CDNS_9 is expanded.
+         M5_M4_CDNS_10 is expanded.
+         M3_M2_CDNS_11 is expanded.
+         M4_M3_CDNS_12 is expanded.
+         M4_M3_CDNS_13 is expanded.
+         M1_PO_CDNS_14 is expanded.
+         M1_PO_CDNS_16 is expanded.
+         nmos1v_CDNS_19 is expanded.
+         pmos1v_CDNS_20 is expanded.
+         cellTmpl_CDNS_21 is expanded.
+         cellTmpl_CDNS_46 is expanded.
+         pmos1v_CDNS_47 is expanded.
+         cellTmpl_CDNS_48 is expanded.
+         M1_PO_CDNS_15 is expanded.
+         M2_M1_CDNS_17 is expanded.
+         cellTmpl_CDNS_18 is expanded.
+         M1_PO_CDNS_22 is expanded.
+         M1_PO_CDNS_23 is expanded.
+         M3_M2_CDNS_24 is expanded.
+         M2_M1_CDNS_25 is expanded.
+         M2_M1_CDNS_26 is expanded.
+         cellTmpl_CDNS_27 is expanded.
+         pmos1v_CDNS_28 is expanded.
+         nmos1v_CDNS_29 is expanded.
+         pmos1v_CDNS_30 is expanded.
+         nmos1v_CDNS_31 is expanded.
+         nmos1v_CDNS_32 is expanded.
+         cellTmpl_CDNS_33 is expanded.
+         pmos1v_CDNS_34 is expanded.
+         pmos1v_CDNS_35 is expanded.
+         pmos1v_CDNS_36 is expanded.
+         nmos1v_CDNS_37 is expanded.
+         nmos1v_CDNS_38 is expanded.
+         cellTmpl_CDNS_39 is expanded.
+         cellTmpl_CDNS_43 is expanded.
+         pmos1v_CDNS_44 is expanded.
+         pmos1v_CDNS_45 is expanded.
+         cellTmpl_CDNS_49 is expanded.
+         INV_1X_new is expanded.
+         XOR_small is expanded.
+         NAND_2X_small1 is expanded.
+         carry_skip_adder_8bits_project is expanded.
+INFO:    Rule offgrid_check completed with no violations, 1/562
+INFO:    Rule ortho_45_check completed with no violations, 2/562
+INFO:    Rule acute_check completed with no violations, 3/562
+INFO:    Rule NZVT.X.4 completed with no violations, 4/562
+INFO:    Rule BONDPAD.L.1 completed with no violations, 5/562
+INFO:    Rule NBL.X.1 completed with no violations, 6/562
+INFO:    Rule NZVT.O.1 completed with no violations, 7/562
+INFO:    Rule VIAk.X.3_VIAk.X.4 completed with no violations, 8/562
+INFO:    Rule VIAk.X.3_VIAk.X.4_2 completed with no violations, 9/562
+INFO:    Rule VIAk.X.3_VIAk.X.4_3 completed with no violations, 10/562
+INFO:    Rule VIAk.X.3_VIAk.X.4_4 completed with no violations, 11/562
+INFO:    Rule POLY.SE.3 completed with no violations, 12/562
+INFO:    Rule VIA1.E.3 completed with no violations, 13/562
+INFO:    Rule VIA2.E.3 completed with no violations, 14/562
+INFO:    Rule VIA3.E.3 completed with no violations, 15/562
+INFO:    Rule VIA4.E.3 completed with no violations, 16/562
+INFO:    Rule VIA5.E.3 completed with no violations, 17/562
+INFO:    Rule VIA6.E.3 completed with no violations, 18/562
+INFO:    Rule VIA7.E.3 completed with no violations, 19/562
+INFO:    Rule VIA8.E.3 completed with no violations, 20/562
+INFO:    Rule BONDPAD.SP.5 completed with no violations, 21/562
+INFO:    Rule BONDPAD.W.4 completed with no violations, 22/562
+INFO:    Rule BONDPAD.SP.5_2 completed with no violations, 23/562
+INFO:    Rule BONDPAD.W.4_2 completed with no violations, 24/562
+INFO:    Rule BONDPAD.SP.5_3 completed with no violations, 25/562
+INFO:    Rule BONDPAD.W.4_3 completed with no violations, 26/562
+INFO:    Rule BONDPAD.SP.5_4 completed with no violations, 27/562
+INFO:    Rule BONDPAD.W.4_4 completed with no violations, 28/562
+INFO:    Rule BONDPAD.SP.5_5 completed with no violations, 29/562
+INFO:    Rule BONDPAD.W.4_5 completed with no violations, 30/562
+INFO:    Rule BONDPAD.SP.5_6 completed with no violations, 31/562
+INFO:    Rule BONDPAD.W.4_6 completed with no violations, 32/562
+INFO:    Rule BONDPAD.SP.5_7 completed with no violations, 33/562
+INFO:    Rule BONDPAD.W.4_7 completed with no violations, 34/562
+INFO:    Rule BONDPAD.SP.5_8 completed with no violations, 35/562
+INFO:    Rule BONDPAD.W.4_8 completed with no violations, 36/562
+INFO:    Rule BONDPAD.SP.5_9 completed with no violations, 37/562
+INFO:    Rule BONDPAD.W.4_9 completed with no violations, 38/562
+INFO:    Rule BONDPAD.SP.5_10 completed with no violations, 39/562
+INFO:    Rule BONDPAD.W.4_10 completed with no violations, 40/562
+INFO:    Rule OXIDE.L.1_OXIDE.L.2 completed with no violations, 41/562
+INFO:    Rule BONDPAD.W.5 completed with no violations, 42/562
+INFO:    Rule BONDPAD.W.5_2 completed with no violations, 43/562
+INFO:    Rule BONDPAD.W.5_3 completed with no violations, 44/562
+INFO:    Rule BONDPAD.W.5_4 completed with no violations, 45/562
+INFO:    Rule BONDPAD.W.5_5 completed with no violations, 46/562
+INFO:    Rule BONDPAD.W.5_6 completed with no violations, 47/562
+INFO:    Rule BONDPAD.W.5_7 completed with no violations, 48/562
+INFO:    Rule BONDPAD.W.5_8 completed with no violations, 49/562
+INFO:    Rule BONDPAD.W.5_9 completed with no violations, 50/562
+INFO:    Rule BONDPAD.W.5_10 completed with no violations, 51/562
+INFO:    Rule VIA1.X.1 completed with no violations, 52/562
+INFO:    Rule VIA2.X.1 completed with no violations, 53/562
+INFO:    Rule VIA3.X.1 completed with no violations, 54/562
+INFO:    Rule VIA4.X.1 completed with no violations, 55/562
+INFO:    Rule VIA5.X.1 completed with no violations, 56/562
+INFO:    Rule VIA6.X.1 completed with no violations, 57/562
+INFO:    Rule VIA7.X.1 completed with no violations, 58/562
+INFO:    Rule VIA8.X.1 completed with no violations, 59/562
+INFO:    Rule BONDPAD.B.1A completed with no violations, 60/562
+INFO:    Rule BONDPAD.B.1A_2 completed with no violations, 61/562
+INFO:    Rule BONDPAD.B.1A_3 completed with no violations, 62/562
+INFO:    Rule BONDPAD.B.1A_4 completed with no violations, 63/562
+INFO:    Rule BONDPAD.B.1A_5 completed with no violations, 64/562
+INFO:    Rule BONDPAD.B.1A_6 completed with no violations, 65/562
+INFO:    Rule BONDPAD.B.1A_7 completed with no violations, 66/562
+INFO:    Rule BONDPAD.B.1A_8 completed with no violations, 67/562
+INFO:    Rule BONDPAD.B.1A_9 completed with no violations, 68/562
+INFO:    Rule BONDPAD.B.1A_10 completed with no violations, 69/562
+INFO:    Rule BONDPAD.B.1A_11 completed with no violations, 70/562
+INFO:    Rule soft_check_3 completed with no violations, 71/562
+INFO:    Rule soft_check_6 completed with no violations, 72/562
+INFO:    Rule soft_check_9 completed with no violations, 73/562
+INFO:    Rule soft_check_12 completed with no violations, 74/562
+INFO:    Rule soft_check_15 completed with no violations, 75/562
+INFO:    Rule soft_check_18 completed with no violations, 76/562
+INFO:    Rule NBL.W.1 completed with no violations, 77/562
+INFO:    Rule NBL.E.1 completed with no violations, 78/562
+INFO:    Rule NBL.SP.1 completed with no violations, 79/562
+INFO:    Rule NBL.SE.1 completed with no violations, 80/562
+INFO:    Rule NBL.SE.2 completed with no violations, 81/562
+INFO:    Rule NBL.SE.3 completed with no violations, 82/562
+INFO:    Rule NBL.SE.4 completed with no violations, 83/562
+INFO:    Rule NW.SP.2 completed with no violations, 84/562
+INFO:    Rule NW.SP.2_2 completed with no violations, 85/562
+INFO:    Rule NW.W.1 completed with no violations, 86/562
+INFO:    Rule NW.SE.2 completed with no violations, 87/562
+INFO:    Rule NW.SE.1 completed with no violations, 88/562
+INFO:    Rule NW.SE.3 completed with no violations, 89/562
+INFO:    Rule NW.SE.4 completed with no violations, 90/562
+INFO:    Rule NW.E.1 completed with no violations, 91/562
+INFO:    Rule NW.E.2 completed with no violations, 92/562
+INFO:    Rule NW.E.3 completed with no violations, 93/562
+INFO:    Rule NW.E.4 completed with no violations, 94/562
+INFO:    Rule NW.A.1 completed with no violations, 95/562
+INFO:    Rule NW.EA.1 completed with no violations, 96/562
+INFO:    Rule NWR.SE.1 completed with no violations, 97/562
+INFO:    Rule NWR.E.1 completed with no violations, 98/562
+INFO:    Rule NWR.E.2 completed with no violations, 99/562
+INFO:    Rule NWR.X.1 completed with no violations, 100/562
+INFO:    Rule NWR.O.1 completed with no violations, 101/562
+INFO:    Rule OXIDE.W.1 completed with no violations, 102/562
+INFO:    Rule OXIDE.W.2.1.1 completed with no violations, 103/562
+INFO:    Rule OXIDE.W.2.1.2 completed with no violations, 104/562
+INFO:    Rule OXIDE.W.2.2.1 completed with no violations, 105/562
+INFO:    Rule OXIDE.W.2.2.2 completed with no violations, 106/562
+INFO:    Rule OXIDE.W.3 completed with no violations, 107/562
+INFO:    Rule OXIDE.SP.1 completed with no violations, 108/562
+INFO:    Rule OXIDE.SP.2 completed with no violations, 109/562
+INFO:    Rule OXIDE.SP.3 completed with no violations, 110/562
+INFO:    Rule OXIDE.SE.1 completed with no violations, 111/562
+INFO:    Rule OXIDE.SP.4 completed with no violations, 112/562
+INFO:    Rule OXIDE.A.1 completed with no violations, 113/562
+INFO:    Rule OXIDE.EA.1 completed with no violations, 114/562
+INFO:    Rule OXIDE.X.1 completed with no violations, 115/562
+INFO:    Rule OXIDER.SE.2 completed with no violations, 116/562
+INFO:    Rule OXIDER.SE.2_2 completed with no violations, 117/562
+INFO:    Rule OXIDER.E.1 completed with no violations, 118/562
+INFO:    Rule OXIDER.X.1 completed with no violations, 119/562
+INFO:    Rule OXIDETHK.W.1 completed with no violations, 120/562
+INFO:    Rule OXIDETHK.SP.1 completed with no violations, 121/562
+INFO:    Rule OXIDETHK.SP.2 completed with no violations, 122/562
+INFO:    Rule OXIDETHK.SE.1 completed with no violations, 123/562
+INFO:    Rule OXIDETHK.SE.2 completed with no violations, 124/562
+INFO:    Rule OXIDETHK.SE.3 completed with no violations, 125/562
+INFO:    Rule OXIDETHK.E.1 completed with no violations, 126/562
+INFO:    Rule OXIDETHK.SE.5 completed with no violations, 127/562
+INFO:    Rule OXIDETHK.E.2 completed with no violations, 128/562
+INFO:    Rule NHVT.W.1 completed with no violations, 129/562
+INFO:    Rule NHVT.SP.1 completed with no violations, 130/562
+INFO:    Rule NHVT.X.2 completed with no violations, 131/562
+INFO:    Rule NHVT.X.3 completed with no violations, 132/562
+INFO:    Rule NHVT.X.4 completed with no violations, 133/562
+INFO:    Rule PHVT.W.1 completed with no violations, 134/562
+INFO:    Rule PHVT.SP.1 completed with no violations, 135/562
+INFO:    Rule PHVT.X.2 completed with no violations, 136/562
+INFO:    Rule PHVT.X.3 completed with no violations, 137/562
+INFO:    Rule PHVT.X.4 completed with no violations, 138/562
+INFO:    Rule NLVT.W.1 completed with no violations, 139/562
+INFO:    Rule NLVT.SP.1 completed with no violations, 140/562
+INFO:    Rule NLVT.X.2 completed with no violations, 141/562
+INFO:    Rule NLVT.X.3 completed with no violations, 142/562
+INFO:    Rule NLVT.X.4 completed with no violations, 143/562
+INFO:    Rule PLVT.W.1 completed with no violations, 144/562
+INFO:    Rule PLVT.SP.1 completed with no violations, 145/562
+INFO:    Rule PLVT.X.2 completed with no violations, 146/562
+INFO:    Rule PLVT.X.3 completed with no violations, 147/562
+INFO:    Rule PLVT.X.4 completed with no violations, 148/562
+INFO:    Rule NZVT.W.1 completed with no violations, 149/562
+INFO:    Rule NZVT.SP.1 completed with no violations, 150/562
+INFO:    Rule NZVT.SE.1 completed with no violations, 151/562
+INFO:    Rule NZVT.SE.2 completed with no violations, 152/562
+INFO:    Rule NZVT.E.1 completed with no violations, 153/562
+INFO:    Rule NZVT.L.1 completed with no violations, 154/562
+INFO:    Rule NZVT.W.2 completed with no violations, 155/562
+INFO:    Rule NZVT.X.3 completed with no violations, 156/562
+INFO:    Rule POLY.W.1 completed with no violations, 157/562
+INFO:    Rule POLY.W.2 completed with no violations, 158/562
+INFO:    Rule POLY.W.3 completed with no violations, 159/562
+INFO:    Rule POLY.W.4 completed with no violations, 160/562
+INFO:    Rule POLY.W.5 completed with no violations, 161/562
+INFO:    Rule POLY.SP.1 completed with no violations, 162/562
+INFO:    Rule POLY.SP.2 completed with no violations, 163/562
+INFO:    Rule POLY.SP.3 completed with no violations, 164/562
+INFO:    Rule POLY.SP.4 completed with no violations, 165/562
+INFO:    Rule POLY.E.1 completed with no violations, 166/562
+INFO:    Rule POLY.E.2 completed with no violations, 167/562
+INFO:    Rule POLY.SE.1_POLY.SE.2 completed with no violations, 168/562
+INFO:    Rule POLY.E.3 completed with no violations, 169/562
+INFO:    Rule POLY.W.6 completed with no violations, 170/562
+INFO:    Rule POLY.SP.5 completed with no violations, 171/562
+INFO:    Rule POLY.X.1 completed with no violations, 172/562
+INFO:    Rule POLY.X.2 completed with no violations, 173/562
+INFO:    Rule POLY.A.1 completed with no violations, 174/562
+INFO:    Rule POLY.EA.1 completed with no violations, 175/562
+INFO:    Rule POLYR.E.1 completed with no violations, 176/562
+INFO:    Rule POLYR.E.2 completed with no violations, 177/562
+INFO:    Rule POLYR.E.3 completed with no violations, 178/562
+INFO:    Rule POLYR.SE.2 completed with no violations, 179/562
+INFO:    Rule POLYR.SE.2_2 completed with no violations, 180/562
+INFO:    Rule POLYR.SE.2_3 completed with no violations, 181/562
+INFO:    Rule POLYR.X.1 completed with no violations, 182/562
+INFO:    Rule NIMP.W.1 completed with no violations, 183/562
+INFO:    Rule NIMP.SP.1 completed with no violations, 184/562
+INFO:    Rule NIMP.E.1 completed with no violations, 185/562
+INFO:    Rule NIMP.O.1 completed with no violations, 186/562
+INFO:    Rule NIMP.SE.1 completed with no violations, 187/562
+INFO:    Rule NIMP.E.2 completed with no violations, 188/562
+INFO:    Rule NIMP.E.3 completed with no violations, 189/562
+INFO:    Rule NIMP.E.4 completed with no violations, 190/562
+INFO:    Rule NIMP.SE.2 completed with no violations, 191/562
+INFO:    Rule NIMP.A.1 completed with no violations, 192/562
+INFO:    Rule NIMP.EA.1 completed with no violations, 193/562
+INFO:    Rule NIMP.SE.3 completed with no violations, 194/562
+INFO:    Rule NIMP.X.1 completed with no violations, 195/562
+INFO:    Rule PIMP.W.1 completed with no violations, 196/562
+INFO:    Rule PIMP.SP.1 completed with no violations, 197/562
+INFO:    Rule PIMP.E.1 completed with no violations, 198/562
+INFO:    Rule PIMP.O.1 completed with no violations, 199/562
+INFO:    Rule PIMP.SE.1 completed with no violations, 200/562
+INFO:    Rule PIMP.E.2 completed with no violations, 201/562
+INFO:    Rule PIMP.E.3 completed with no violations, 202/562
+INFO:    Rule PIMP.E.4 completed with no violations, 203/562
+INFO:    Rule PIMP.SE.2 completed with no violations, 204/562
+INFO:    Rule PIMP.A.1 completed with no violations, 205/562
+INFO:    Rule PIMP.EA.1 completed with no violations, 206/562
+INFO:    Rule PIMP.SE.3 completed with no violations, 207/562
+INFO:    Rule CONT.W.1 completed with no violations, 208/562
+INFO:    Rule CONT.SP.1 completed with no violations, 209/562
+INFO:    Rule CONT.SP.2 completed with no violations, 210/562
+INFO:    Rule CONT.SE.1 completed with no violations, 211/562
+INFO:    Rule CONT.SE.2 completed with no violations, 212/562
+INFO:    Rule CONT.SE.3 completed with no violations, 213/562
+INFO:    Rule CONT.SE.4 completed with no violations, 214/562
+INFO:    Rule CONT.E.1 completed with no violations, 215/562
+INFO:    Rule CONT.E.2 completed with no violations, 216/562
+INFO:    Rule CONT.E.3 completed with no violations, 217/562
+INFO:    Rule CONT.E.4 completed with no violations, 218/562
+INFO:    Rule CONT.E.4_2 completed with no violations, 219/562
+INFO:    Rule CONT.X.1 completed with no violations, 220/562
+INFO:    Rule CONT.X.2 completed with no violations, 221/562
+INFO:    Rule CONT.X.2_2 completed with no violations, 222/562
+INFO:    Rule CONT.X.3 completed with no violations, 223/562
+INFO:    Rule SIPROT.W.1 completed with no violations, 224/562
+INFO:    Rule SIPROT.SP.1 completed with no violations, 225/562
+INFO:    Rule SIPROT.SE.1 completed with no violations, 226/562
+INFO:    Rule SIPROT.SE.2 completed with no violations, 227/562
+INFO:    Rule SIPROT.SE.3 completed with no violations, 228/562
+INFO:    Rule SIPROT.E.2 completed with no violations, 229/562
+INFO:    Rule SIPROT.E.1 completed with no violations, 230/562
+INFO:    Rule SIPROT.E.3 completed with no violations, 231/562
+INFO:    Rule SIPROT.A.1 completed with no violations, 232/562
+INFO:    Rule SIPROT.SE.4 completed with no violations, 233/562
+INFO:    Rule SIPROT.EA.1 completed with no violations, 234/562
+INFO:    Rule METAL2.E.1_METAL2.E.2 completed with no violations, 235/562
+INFO:    Rule METAL3.E.1_METAL3.E.2 completed with no violations, 236/562
+INFO:    Rule METAL4.E.1_METAL4.E.2 completed with no violations, 237/562
+INFO:    Rule METAL5.E.1_METAL5.E.2 completed with no violations, 238/562
+INFO:    Rule METAL6.E.1_METAL6.E.2 completed with no violations, 239/562
+INFO:    Rule METAL7.E.1_METAL7.E.2 completed with no violations, 240/562
+INFO:    Rule METAL8.E.1_METAL8.E.2 completed with no violations, 241/562
+INFO:    Rule METAL9.E.1_METAL9.E.2 completed with no violations, 242/562
+INFO:    Rule METAL10.E.1_METAL10.E.2 completed with no violations, 243/562
+INFO:    Rule METAL11.E.1_METAL11.E.2 completed with no violations, 244/562
+INFO:    Rule METAL1.E.1_METAL1.E.2 completed with no violations, 245/562
+INFO:    Rule METAL1.W.1 completed with no violations, 246/562
+INFO:    Rule METAL2.W.1 completed with no violations, 247/562
+INFO:    Rule METAL3.W.1 completed with no violations, 248/562
+INFO:    Rule METAL4.W.1 completed with no violations, 249/562
+INFO:    Rule METAL5.W.1 completed with no violations, 250/562
+INFO:    Rule METAL6.W.1 completed with no violations, 251/562
+INFO:    Rule METAL7.W.1 completed with no violations, 252/562
+INFO:    Rule METAL8.W.1 completed with no violations, 253/562
+INFO:    Rule METAL9.W.1 completed with no violations, 254/562
+INFO:    Rule METAL10.W.1 completed with no violations, 255/562
+INFO:    Rule METAL11.W.1 completed with no violations, 256/562
+INFO:    Rule METAL1.W.2 completed with no violations, 257/562
+INFO:    Rule METAL2.W.2 completed with no violations, 258/562
+INFO:    Rule METAL3.W.2 completed with no violations, 259/562
+INFO:    Rule METAL4.W.2 completed with no violations, 260/562
+INFO:    Rule METAL5.W.2 completed with no violations, 261/562
+INFO:    Rule METAL6.W.2 completed with no violations, 262/562
+INFO:    Rule METAL7.W.2 completed with no violations, 263/562
+INFO:    Rule METAL8.W.2 completed with no violations, 264/562
+INFO:    Rule METAL9.W.2 completed with no violations, 265/562
+INFO:    Rule METAL10.W.2 completed with no violations, 266/562
+INFO:    Rule METAL11.W.2 completed with no violations, 267/562
+INFO:    Rule METAL1.SP.1.1 completed with no violations, 268/562
+INFO:    Rule METAL2.SP.1.1 completed with no violations, 269/562
+INFO:    Rule METAL3.SP.1.1 completed with no violations, 270/562
+INFO:    Rule METAL4.SP.1.1 completed with no violations, 271/562
+INFO:    Rule METAL5.SP.1.1 completed with no violations, 272/562
+INFO:    Rule METAL6.SP.1.1 completed with no violations, 273/562
+INFO:    Rule METAL7.SP.1.1 completed with no violations, 274/562
+INFO:    Rule METAL8.SP.1.1 completed with no violations, 275/562
+INFO:    Rule METAL9.SP.1.1 completed with no violations, 276/562
+INFO:    Rule METAL10.SP.1.1 completed with no violations, 277/562
+INFO:    Rule METAL11.SP.1.1 completed with no violations, 278/562
+WARNING: -para only is set since -project with constraint only supported with -para only.
+INFO:    Rule METAL1.SP.1.2 completed with no violations, 279/562
+WARNING: -para only is set since -project with constraint only supported with -para only.
+INFO:    Rule METAL2.SP.1.2 completed with no violations, 280/562
+WARNING: -para only is set since -project with constraint only supported with -para only.
+INFO:    Rule METAL3.SP.1.2 completed with no violations, 281/562
+WARNING: -para only is set since -project with constraint only supported with -para only.
+INFO:    Rule METAL4.SP.1.2 completed with no violations, 282/562
+WARNING: -para only is set since -project with constraint only supported with -para only.
+INFO:    Rule METAL5.SP.1.2 completed with no violations, 283/562
+INFO:    Rule METAL6.SP.1.2 completed with no violations, 284/562
+INFO:    Rule METAL7.SP.1.2 completed with no violations, 285/562
+INFO:    Rule METAL8.SP.1.2 completed with no violations, 286/562
+INFO:    Rule METAL9.SP.1.2 completed with no violations, 287/562
+INFO:    Rule METAL1.SP.1.3 completed with no violations, 288/562
+INFO:    Rule METAL2.SP.1.3 completed with no violations, 289/562
+INFO:    Rule METAL3.SP.1.3 completed with no violations, 290/562
+INFO:    Rule METAL4.SP.1.3 completed with no violations, 291/562
+INFO:    Rule METAL5.SP.1.3 completed with no violations, 292/562
+INFO:    Rule METAL6.SP.1.3 completed with no violations, 293/562
+INFO:    Rule METAL7.SP.1.3 completed with no violations, 294/562
+INFO:    Rule METAL8.SP.1.3 completed with no violations, 295/562
+INFO:    Rule METAL9.SP.1.3 completed with no violations, 296/562
+INFO:    Rule METAL10.SP.1.2 completed with no violations, 297/562
+INFO:    Rule METAL11.SP.1.2 completed with no violations, 298/562
+INFO:    Rule METAL1.SP.1.4 completed with no violations, 299/562
+INFO:    Rule METAL2.SP.1.4 completed with no violations, 300/562
+INFO:    Rule METAL3.SP.1.4 completed with no violations, 301/562
+INFO:    Rule METAL4.SP.1.4 completed with no violations, 302/562
+INFO:    Rule METAL5.SP.1.4 completed with no violations, 303/562
+INFO:    Rule METAL6.SP.1.4 completed with no violations, 304/562
+INFO:    Rule METAL7.SP.1.4 completed with no violations, 305/562
+INFO:    Rule METAL8.SP.1.4 completed with no violations, 306/562
+INFO:    Rule METAL9.SP.1.4 completed with no violations, 307/562
+INFO:    Rule METAL10.SP.1.3 completed with no violations, 308/562
+INFO:    Rule METAL11.SP.1.3 completed with no violations, 309/562
+INFO:    Rule METAL1.SP.1.5 completed with no violations, 310/562
+INFO:    Rule METAL2.SP.1.5 completed with no violations, 311/562
+INFO:    Rule METAL3.SP.1.5 completed with no violations, 312/562
+INFO:    Rule METAL4.SP.1.5 completed with no violations, 313/562
+INFO:    Rule METAL5.SP.1.5 completed with no violations, 314/562
+INFO:    Rule METAL6.SP.1.5 completed with no violations, 315/562
+INFO:    Rule METAL7.SP.1.5 completed with no violations, 316/562
+INFO:    Rule METAL8.SP.1.5 completed with no violations, 317/562
+INFO:    Rule METAL9.SP.1.5 completed with no violations, 318/562
+INFO:    Rule METAL10.SP.1.4 completed with no violations, 319/562
+INFO:    Rule METAL11.SP.1.4 completed with no violations, 320/562
+INFO:    Rule METAL1.SP.1.6 completed with no violations, 321/562
+INFO:    Rule METAL2.SP.1.6 completed with no violations, 322/562
+INFO:    Rule METAL3.SP.1.6 completed with no violations, 323/562
+INFO:    Rule METAL4.SP.1.6 completed with no violations, 324/562
+INFO:    Rule METAL5.SP.1.6 completed with no violations, 325/562
+INFO:    Rule METAL6.SP.1.6 completed with no violations, 326/562
+INFO:    Rule METAL7.SP.1.6 completed with no violations, 327/562
+INFO:    Rule METAL8.SP.1.6 completed with no violations, 328/562
+INFO:    Rule METAL9.SP.1.6 completed with no violations, 329/562
+INFO:    Rule METAL10.SP.1.5 completed with no violations, 330/562
+INFO:    Rule METAL11.SP.1.5 completed with no violations, 331/562
+INFO:    Rule METAL1.L.1 completed with no violations, 332/562
+INFO:    Rule METAL2.L.1 completed with no violations, 333/562
+INFO:    Rule METAL3.L.1 completed with no violations, 334/562
+INFO:    Rule METAL4.L.1 completed with no violations, 335/562
+INFO:    Rule METAL5.L.1 completed with no violations, 336/562
+INFO:    Rule METAL6.L.1 completed with no violations, 337/562
+INFO:    Rule METAL7.L.1 completed with no violations, 338/562
+INFO:    Rule METAL8.L.1 completed with no violations, 339/562
+INFO:    Rule METAL9.L.1 completed with no violations, 340/562
+INFO:    Rule METAL1.SP.2 completed with no violations, 341/562
+INFO:    Rule METAL1.W.3 completed with no violations, 342/562
+INFO:    Rule METAL2.SP.2 completed with no violations, 343/562
+INFO:    Rule METAL2.W.3 completed with no violations, 344/562
+INFO:    Rule METAL3.SP.2 completed with no violations, 345/562
+INFO:    Rule METAL3.W.3 completed with no violations, 346/562
+INFO:    Rule METAL4.SP.2 completed with no violations, 347/562
+INFO:    Rule METAL4.W.3 completed with no violations, 348/562
+INFO:    Rule METAL5.SP.2 completed with no violations, 349/562
+INFO:    Rule METAL5.W.3 completed with no violations, 350/562
+INFO:    Rule METAL6.SP.2 completed with no violations, 351/562
+INFO:    Rule METAL6.W.3 completed with no violations, 352/562
+INFO:    Rule METAL7.SP.2 completed with no violations, 353/562
+INFO:    Rule METAL7.W.3 completed with no violations, 354/562
+INFO:    Rule METAL8.SP.2 completed with no violations, 355/562
+INFO:    Rule METAL8.W.3 completed with no violations, 356/562
+INFO:    Rule METAL9.SP.2 completed with no violations, 357/562
+INFO:    Rule METAL9.W.3 completed with no violations, 358/562
+INFO:    Rule METAL1.SP.3 completed with no violations, 359/562
+INFO:    Rule METAL2.SP.3 completed with no violations, 360/562
+INFO:    Rule METAL3.SP.3 completed with no violations, 361/562
+INFO:    Rule METAL4.SP.3 completed with no violations, 362/562
+INFO:    Rule METAL5.SP.3 completed with no violations, 363/562
+INFO:    Rule METAL6.SP.3 completed with no violations, 364/562
+INFO:    Rule METAL7.SP.3 completed with no violations, 365/562
+INFO:    Rule METAL8.SP.3 completed with no violations, 366/562
+INFO:    Rule METAL9.SP.3 completed with no violations, 367/562
+INFO:    Rule METAL1.A.1 completed with no violations, 368/562
+INFO:    Rule METAL2.A.1 completed with no violations, 369/562
+INFO:    Rule METAL3.A.1 completed with no violations, 370/562
+INFO:    Rule METAL4.A.1 completed with no violations, 371/562
+INFO:    Rule METAL5.A.1 completed with no violations, 372/562
+INFO:    Rule METAL6.A.1 completed with no violations, 373/562
+INFO:    Rule METAL7.A.1 completed with no violations, 374/562
+INFO:    Rule METAL8.A.1 completed with no violations, 375/562
+INFO:    Rule METAL9.A.1 completed with no violations, 376/562
+INFO:    Rule METAL10.A.1 completed with no violations, 377/562
+INFO:    Rule METAL11.A.1 completed with no violations, 378/562
+INFO:    Rule METAL1.EA.1 completed with no violations, 379/562
+INFO:    Rule METAL2.EA.1 completed with no violations, 380/562
+INFO:    Rule METAL3.EA.1 completed with no violations, 381/562
+INFO:    Rule METAL4.EA.1 completed with no violations, 382/562
+INFO:    Rule METAL5.EA.1 completed with no violations, 383/562
+INFO:    Rule METAL6.EA.1 completed with no violations, 384/562
+INFO:    Rule METAL7.EA.1 completed with no violations, 385/562
+INFO:    Rule METAL8.EA.1 completed with no violations, 386/562
+INFO:    Rule METAL9.EA.1 completed with no violations, 387/562
+INFO:    Rule METAL10.EA.1 completed with no violations, 388/562
+INFO:    Rule METAL11.EA.1 completed with no violations, 389/562
+INFO:    Rule CMET.S.1 completed with no violations, 390/562
+INFO:    Rule CMET.W.1 completed with no violations, 391/562
+INFO:    Rule CMET.E.1 completed with no violations, 392/562
+INFO:    Rule CMET.E.2 completed with no violations, 393/562
+INFO:    Rule CMET.E.4 completed with no violations, 394/562
+INFO:    Rule CMET.E.3 completed with no violations, 395/562
+INFO:    Rule VIA1.W.1 completed with no violations, 396/562
+INFO:    Rule VIA1.SP.1 completed with no violations, 397/562
+INFO:    Rule VIA2.W.1 completed with no violations, 398/562
+INFO:    Rule VIA2.SP.1 completed with no violations, 399/562
+INFO:    Rule VIA3.W.1 completed with no violations, 400/562
+INFO:    Rule VIA3.SP.1 completed with no violations, 401/562
+INFO:    Rule VIA4.W.1 completed with no violations, 402/562
+INFO:    Rule VIA4.SP.1 completed with no violations, 403/562
+INFO:    Rule VIA5.W.1 completed with no violations, 404/562
+INFO:    Rule VIA5.SP.1 completed with no violations, 405/562
+INFO:    Rule VIA6.W.1 completed with no violations, 406/562
+INFO:    Rule VIA6.SP.1 completed with no violations, 407/562
+INFO:    Rule VIA7.W.1 completed with no violations, 408/562
+INFO:    Rule VIA7.SP.1 completed with no violations, 409/562
+INFO:    Rule VIA8.W.1 completed with no violations, 410/562
+INFO:    Rule VIA8.SP.1 completed with no violations, 411/562
+INFO:    Rule VIA9.W.1 completed with no violations, 412/562
+INFO:    Rule VIA9.SP.1 completed with no violations, 413/562
+INFO:    Rule VIA10.W.1 completed with no violations, 414/562
+INFO:    Rule VIA10.SP.1 completed with no violations, 415/562
+INFO:    Rule VIA1.E.1 completed with no violations, 416/562
+INFO:    Rule VIA1.E.2 completed with no violations, 417/562
+INFO:    Rule VIA2.E.1 completed with no violations, 418/562
+INFO:    Rule VIA2.E.2 completed with no violations, 419/562
+INFO:    Rule VIA3.E.1 completed with no violations, 420/562
+INFO:    Rule VIA3.E.2 completed with no violations, 421/562
+INFO:    Rule VIA4.E.1 completed with no violations, 422/562
+INFO:    Rule VIA4.E.2 completed with no violations, 423/562
+INFO:    Rule VIA5.E.1 completed with no violations, 424/562
+INFO:    Rule VIA5.E.2 completed with no violations, 425/562
+INFO:    Rule VIA6.E.1 completed with no violations, 426/562
+INFO:    Rule VIA6.E.2 completed with no violations, 427/562
+INFO:    Rule VIA7.E.1 completed with no violations, 428/562
+INFO:    Rule VIA7.E.2 completed with no violations, 429/562
+INFO:    Rule VIA8.E.1 completed with no violations, 430/562
+INFO:    Rule VIA8.E.2 completed with no violations, 431/562
+INFO:    Rule VIA9.E.1 completed with no violations, 432/562
+INFO:    Rule VIA9.E.2 completed with no violations, 433/562
+INFO:    Rule VIA10.E.1 completed with no violations, 434/562
+INFO:    Rule VIA10.E.2 completed with no violations, 435/562
+INFO:    Rule VIA1.X.2 completed with no violations, 436/562
+INFO:    Rule VIA2.X.2 completed with no violations, 437/562
+INFO:    Rule VIA3.X.2 completed with no violations, 438/562
+INFO:    Rule VIA4.X.2 completed with no violations, 439/562
+INFO:    Rule VIA5.X.2 completed with no violations, 440/562
+INFO:    Rule VIA6.X.2 completed with no violations, 441/562
+INFO:    Rule VIA7.X.2 completed with no violations, 442/562
+INFO:    Rule VIA8.X.2 completed with no violations, 443/562
+INFO:    Rule LATCHUP.1 completed with no violations, 444/562
+INFO:    Rule LATCHUP.2 completed with no violations, 445/562
+INFO:    Rule ESD.1 completed with no violations, 446/562
+INFO:    Rule ESD.5 completed with no violations, 447/562
+INFO:    Rule ESD.6 completed with no violations, 448/562
+INFO:    Rule ESD.7 completed with no violations, 449/562
+INFO:    Rule ESD.7_2 completed with no violations, 450/562
+INFO:    Rule ESD.11 completed with no violations, 451/562
+INFO:    Rule ESD.12 completed with no violations, 452/562
+INFO:    Rule ESD.13 completed with no violations, 453/562
+INFO:    Rule ESD.14 completed with no violations, 454/562
+INFO:    Rule ESD.15 completed with no violations, 455/562
+INFO:    Rule BONDPAD.E.1 completed with no violations, 456/562
+INFO:    Rule BONDPAD.SP.2 completed with no violations, 457/562
+INFO:    Rule BONDPAD.E.1_2 completed with no violations, 458/562
+INFO:    Rule BONDPAD.SP.2_2 completed with no violations, 459/562
+INFO:    Rule BONDPAD.E.1_3 completed with no violations, 460/562
+INFO:    Rule BONDPAD.SP.2_3 completed with no violations, 461/562
+INFO:    Rule BONDPAD.E.1_4 completed with no violations, 462/562
+INFO:    Rule BONDPAD.SP.2_4 completed with no violations, 463/562
+INFO:    Rule BONDPAD.E.1_5 completed with no violations, 464/562
+INFO:    Rule BONDPAD.SP.2_5 completed with no violations, 465/562
+INFO:    Rule BONDPAD.E.1_6 completed with no violations, 466/562
+INFO:    Rule BONDPAD.SP.2_6 completed with no violations, 467/562
+INFO:    Rule BONDPAD.E.1_7 completed with no violations, 468/562
+INFO:    Rule BONDPAD.SP.2_7 completed with no violations, 469/562
+INFO:    Rule BONDPAD.E.1_8 completed with no violations, 470/562
+INFO:    Rule BONDPAD.SP.2_8 completed with no violations, 471/562
+INFO:    Rule BONDPAD.E.1_9 completed with no violations, 472/562
+INFO:    Rule BONDPAD.SP.2_9 completed with no violations, 473/562
+INFO:    Rule BONDPAD.E.1_10 completed with no violations, 474/562
+INFO:    Rule BONDPAD.SP.2_10 completed with no violations, 475/562
+INFO:    Rule BONDPAD.E.1_11 completed with no violations, 476/562
+INFO:    Rule BONDPAD.SP.2_11 completed with no violations, 477/562
+INFO:    Rule BONDPAD.W.1 completed with no violations, 478/562
+INFO:    Rule BONDPAD.SP.1 completed with no violations, 479/562
+INFO:    Rule BONDPAD.B.1B completed with no violations, 480/562
+INFO:    Rule BONDPAD.B.1B_2 completed with no violations, 481/562
+INFO:    Rule BONDPAD.B.1B_3 completed with no violations, 482/562
+INFO:    Rule BONDPAD.B.1B_4 completed with no violations, 483/562
+INFO:    Rule BONDPAD.B.1B_5 completed with no violations, 484/562
+INFO:    Rule BONDPAD.B.1B_6 completed with no violations, 485/562
+INFO:    Rule BONDPAD.B.1B_7 completed with no violations, 486/562
+INFO:    Rule BONDPAD.B.1B_8 completed with no violations, 487/562
+INFO:    Rule BONDPAD.B.1B_9 completed with no violations, 488/562
+INFO:    Rule BONDPAD.B.1B_10 completed with no violations, 489/562
+INFO:    Rule BONDPAD.B.1B_11 completed with no violations, 490/562
+INFO:    Rule BONDPAD.SP.3 completed with no violations, 491/562
+INFO:    Rule BONDPAD.SP.3_2 completed with no violations, 492/562
+INFO:    Rule BONDPAD.SP.3_3 completed with no violations, 493/562
+INFO:    Rule BONDPAD.SP.3_4 completed with no violations, 494/562
+INFO:    Rule BONDPAD.SP.3_5 completed with no violations, 495/562
+INFO:    Rule BONDPAD.SP.3_6 completed with no violations, 496/562
+INFO:    Rule BONDPAD.SP.4 completed with no violations, 497/562
+INFO:    Rule BONDPAD.SP.4_2 completed with no violations, 498/562
+INFO:    Rule BONDPAD.SP.4_3 completed with no violations, 499/562
+INFO:    Rule BONDPAD.SP.4_4 completed with no violations, 500/562
+INFO:    Rule BONDPAD.E.2 completed with no violations, 501/562
+INFO:    Rule BONDPAD.E.2_2 completed with no violations, 502/562
+INFO:    Rule BONDPAD.E.2_3 completed with no violations, 503/562
+INFO:    Rule BONDPAD.E.2_4 completed with no violations, 504/562
+INFO:    Rule BONDPAD.E.2_5 completed with no violations, 505/562
+INFO:    Rule BONDPAD.E.2_6 completed with no violations, 506/562
+INFO:    Rule BONDPAD.E.3 completed with no violations, 507/562
+INFO:    Rule BONDPAD.E.3_2 completed with no violations, 508/562
+INFO:    Rule BONDPAD.E.3_3 completed with no violations, 509/562
+INFO:    Rule BONDPAD.E.3_4 completed with no violations, 510/562
+INFO:    Rule BONDPAD.E.2_7 completed with no violations, 511/562
+INFO:    Rule BONDPAD.E.2_8 completed with no violations, 512/562
+INFO:    Rule BONDPAD.E.2_9 completed with no violations, 513/562
+INFO:    Rule BONDPAD.E.2_10 completed with no violations, 514/562
+INFO:    Rule BONDPAD.E.2_11 completed with no violations, 515/562
+INFO:    Rule BONDPAD.E.2_12 completed with no violations, 516/562
+INFO:    Rule BONDPAD.E.3_5 completed with no violations, 517/562
+INFO:    Rule BONDPAD.E.3_6 completed with no violations, 518/562
+INFO:    Rule BONDPAD.E.3_7 completed with no violations, 519/562
+INFO:    Rule BONDPAD.E.3_8 completed with no violations, 520/562
+INFO:    Rule BONDPAD.SP.6 completed with no violations, 521/562
+INFO:    Rule BONDPAD.SP.6_2 completed with no violations, 522/562
+INFO:    Rule BONDPAD.SP.6_3 completed with no violations, 523/562
+INFO:    Rule BONDPAD.SP.6_4 completed with no violations, 524/562
+INFO:    Rule BONDPAD.SP.6_5 completed with no violations, 525/562
+INFO:    Rule BONDPAD.SP.6_6 completed with no violations, 526/562
+INFO:    Rule BONDPAD.SP.6_7 completed with no violations, 527/562
+INFO:    Rule BONDPAD.SP.6_8 completed with no violations, 528/562
+INFO:    Rule BONDPAD.SP.6_9 completed with no violations, 529/562
+INFO:    Rule BONDPAD.SP.6_10 completed with no violations, 530/562
+INFO:    Rule BONDPAD.SP.7 completed with no violations, 531/562
+INFO:    Rule BONDPAD.SP.7_2 completed with no violations, 532/562
+INFO:    Rule BONDPAD.SP.7_3 completed with no violations, 533/562
+INFO:    Rule BONDPAD.SP.7_4 completed with no violations, 534/562
+INFO:    Rule BONDPAD.SP.7_5 completed with no violations, 535/562
+INFO:    Rule BONDPAD.SP.7_6 completed with no violations, 536/562
+INFO:    Rule BONDPAD.SP.7_7 completed with no violations, 537/562
+INFO:    Rule BONDPAD.SP.7_8 completed with no violations, 538/562
+INFO:    Rule BONDPAD.SP.7_9 completed with no violations, 539/562
+INFO:    Rule BONDPAD.SP.7_10 completed with no violations, 540/562
+INFO:    Rule OXIDER.W.1.1 completed with no violations, 541/562
+INFO:    Rule POLYR.W.1.1 completed with no violations, 542/562
+INFO:    Rule soft_check_1 completed with no violations, 543/562
+INFO:    Rule soft_check_2 completed with no violations, 544/562
+INFO:    Rule soft_check_4 completed with no violations, 545/562
+INFO:    Rule soft_check_5 completed with no violations, 546/562
+INFO:    Rule soft_check_7 completed with no violations, 547/562
+INFO:    Rule soft_check_8 completed with no violations, 548/562
+INFO:    Rule soft_check_10 completed with no violations, 549/562
+INFO:    Rule soft_check_11 completed with no violations, 550/562
+INFO:    Rule soft_check_13 completed with no violations, 551/562
+INFO:    Rule soft_check_14 completed with no violations, 552/562
+         Remaining rules: soft_check_16  soft_check_17  NW.SP.1  NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule soft_check_16 completed with no violations, 553/562
+         Remaining rules: soft_check_17  NW.SP.1  NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule soft_check_17 completed with no violations, 554/562
+         Remaining rules: NW.SP.1  NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule NW.SP.1 completed with no violations, 555/562
+         Remaining rules: NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule NW.SP.2_3 completed with no violations, 556/562
+         Remaining rules: LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule LATCHUP.3 completed with no violations, 557/562
+         Remaining rules: LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule LATCHUP.4 completed with no violations, 558/562
+         Remaining rules: ESD.4  ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule ESD.4 completed with no violations, 559/562
+         Remaining rules: ESD.4_2  ESD.8  ESD.8_2 
+INFO:    Rule ESD.4_2 completed with no violations, 560/562
+         Remaining rules: ESD.8  ESD.8_2 
+INFO:    Rule ESD.8 completed with no violations, 561/562
+         Remaining rules: ESD.8_2 
+INFO:    Rule ESD.8_2 completed with no violations, 562/562
+INFO:    Status: Runset 100% complete as of 2024-12-08 17:44:36   Elapsed: 00:00:23
+         Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
+              0:    1 /   1             27              14            5
+INFO:	 Status: Finishing as of 2024-12-08 17:44:36   Elapsed: 00:00:23   CPU time[s]: 23
+INFO:    Resource usage by worker at exit:
+                  CPU      Elapsed  CPUs       CPU       Peak        Peak engine
+         Worker:  time[s]  time[s]  Allocated  usage[%]  Memory[MB]  Memory[MB]
+              0:        5       23          1     25.54          27           14
+         Worker resource usage  summary: Total CPU[s]: 5  Run duration[s]: 23  Max peak memory[MB]: 27
+         Worker CPU utilization summary: 5 of 23 available CPU seconds (21.74%) with 1 average available CPU(s)
+INFO:    Generating summary in /home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.sum
+INFO:    All selected rules completed
+         Total CPU Time                    : 6(s)
+         Total Real Time                   : 23(s)
+         Total Original Geometry           : 5788(942466)
+         Total DRC RuleChecks              : 562
+         Total DRC Results                 : 0 (0)
+         ASCII report database is /home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.drc_errors.ascii
+INFO:    Checking in all SoftShare licenses.
+
+Pegasus finished normally. 2024-12-08 17:44:36
+
+

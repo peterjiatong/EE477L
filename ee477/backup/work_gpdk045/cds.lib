@@ -1,0 +1,8 @@
+include ~ee577/CDS_GPDK45/gpdk045_v_5_0/cds.lib
+include ~ee577/CDS_GPDK45/gsclib045_svt_mini_v4.4/cds.lib
+#Removed by ddDeleteObj: DEFINE demo /home/viterbi/01/tongjia/work_gpdk045/demo
+#Removed by ddDeleteObj: DEFINE EE477L /home/viterbi/01/tongjia/work_gpdk045/EE477L
+DEFINE demo /home/viterbi/01/tongjia/work_gpdk045/demo
+DEFINE project /home/viterbi/01/tongjia/work_gpdk045/project
+DEFINE project_demo /home/viterbi/01/tongjia/work_gpdk045/project_demo
+DEFINE project_p1 /home/viterbi/01/tongjia/work_gpdk045/project_p1

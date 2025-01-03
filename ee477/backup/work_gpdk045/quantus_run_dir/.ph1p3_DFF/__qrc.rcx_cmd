@@ -1,0 +1,55 @@
+avParameters(
+	?cellName "ph1p3_DFF"
+	?viewName "layout"
+	?inputLayout ( "DFII" "project_demo" )
+	?cdslib "/home/viterbi/01/tongjia/work_gpdk045/cds.lib"
+	?workingDirectory "/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir"
+	?techLib "/home/viterbi/01/tongjia/work_gpdk045/tech.def"
+	?technology "qrc_tech_typical"
+
+)
+rcxParameters(
+	?capCouplingFactor 1.0
+	?capGround "gnd!"
+	?multiCPU 1
+	?arrayViasSpacing "auto"
+	?maxFractureLength "infinite"
+	?fractureLengthUnits "MICRONS"
+	?maxMergedViaSize "auto"
+	?netNameSpace "layout"
+	?minC 1e-17
+	?minCByPercentage 0.1
+	?mergeParallelR nil
+	?minR 0.001
+	?pvsRunDir "/home/viterbi/01/tongjia/work_gpdk045/LVS/svdb"
+	?pvsPrimary "ph1p3_DFF"
+	?lvsSource "pvs"
+	?dumpOptions t
+	?capacitor "pcapacitor"
+	?capPropName "c"
+	?cdloutRunDir ( "/home/viterbi/01/tongjia/work_gpdk045/LVS" )
+	?deviceFingerDelimiter "@"
+	?checkCellView t
+	?capModels "no"
+	?parasiticCapModels "no"
+	?parasiticResModels "comment"
+	?parasiticResWidth t
+	?resModels "no"
+	?resistor "presistor"
+	?resPropName "r"
+	?transferNetExpression t
+	?outputFormat "dfii"
+	?lvsExtractedCellView nil
+	?extractedView "av_extracted"
+	?runName "ph1p3_DFF"
+	?tempdir "/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/ph1p3_DFF/rcx_temp"
+	?rcxSetupDir "/home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical"
+	?temperature ( 25.0 )
+	?type "full"
+	?extract "both"
+	?capExtractMode "coupled"
+
+)
+(avRCX)
+
+

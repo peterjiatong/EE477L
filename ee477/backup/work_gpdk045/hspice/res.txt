@@ -1,0 +1,5375 @@
+Using: /usr/local/synopsys/HSPICE/default/hspice/linux64/hspice  -i 'pi.sp'
+ ****** HSPICE -- L-2016.06 linux64 (May 22 2016) ******                        
+  Copyright (c) 1986 - 2024 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: pi.sp                                                             
+  Command line options: /usr/local/synopsys/HSPICE/default/hspice/linux64/hspice -i pi.sp
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   tongjia              HOSTNAME: viterbi-scf2 
+ lic: HOSTID: "e4434b6e9271"       PID:      114385 
+ lic: Using FLEXlm license file: 
+ lic: 1720@lic-synopsys.usc.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 30-jun-2025/2023.12 
+ lic: 1(in_use)/50(total) FLOATING license(s) on SERVER 1720@lic-synopsys.usc.edu 
+ lic:   
+  **warning** (pi.sp:13) Global net name, "gnd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+  **info** (pi.sp:10) DC voltage reset to initial transient source value in source 0:vin. new dc=0.0000D+00
+ 
+
+ Warning: Pd = 0 is less than Weff = 1.2e-07 in BSIM3 model 0:cmosn element m2 with W = 1.2e-07, L = 1.3e-07
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=pi.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     1 ***
+
+ ******
+ spice pi wire delay
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     2 ***
+
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     3 ***
+
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     4 ***
+
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     5 ***
+
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     6 ***
+
+ r=   2.0832p  targ=   1.1450n   trig=   1.1429n
+ f=   1.8387p  targ= 133.7129p   trig= 131.8742p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     7 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     8 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =     9 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    10 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    11 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    12 ***
+
+ r=   1.9451p  targ=   1.1490n   trig=   1.1470n
+ f=   2.0032p  targ= 137.3766p   trig= 135.3734p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    13 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    14 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    15 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    16 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    17 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    18 ***
+
+ r=   2.4469p  targ=   1.1548n   trig=   1.1524n
+ f=   2.5907p  targ= 142.3638p   trig= 139.7731p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    19 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    20 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    21 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    22 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    23 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    24 ***
+
+ r=   2.6006p  targ=   1.1610n   trig=   1.1584n
+ f=   2.8313p  targ= 148.3702p   trig= 145.5389p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    25 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    26 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    27 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    28 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    29 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    30 ***
+
+ r=   3.5523p  targ=   1.1691n   trig=   1.1655n
+ f=   3.1942p  targ= 155.6233p   trig= 152.4291p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    31 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    32 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    33 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    34 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    35 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    36 ***
+
+ r=   4.6745p  targ=   1.1803n   trig=   1.1757n
+ f=   3.6641p  targ= 164.6348p   trig= 160.9707p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    37 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    38 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    39 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    40 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    41 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    42 ***
+
+ r=   5.2446p  targ=   1.1933n   trig=   1.1880n
+ f=   4.2487p  targ= 176.0770p   trig= 171.8283p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    43 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    44 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    45 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    46 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    47 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    48 ***
+
+ r=   5.9087p  targ=   1.2092n   trig=   1.2033n
+ f=   5.5035p  targ= 188.3089p   trig= 182.8054p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    49 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    50 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    51 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    52 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    53 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    54 ***
+
+ r=   6.5992p  targ=   1.2281n   trig=   1.2215n
+ f=   6.2431p  targ= 205.0216p   trig= 198.7785p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    55 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    56 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    57 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    58 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    59 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    60 ***
+
+ r=   7.2581p  targ=   1.2500n   trig=   1.2427n
+ f=   7.2506p  targ= 225.1194p   trig= 217.8688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    61 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    62 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    63 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    64 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    65 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    66 ***
+
+ r=   8.5360p  targ=   1.2778n   trig=   1.2693n
+ f=   8.5663p  targ= 249.6646p   trig= 241.0984p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    67 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    68 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    69 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    70 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    71 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    72 ***
+
+ r=   3.6114p  targ=   1.1460n   trig=   1.1424n
+ f=   3.5885p  targ= 134.4550p   trig= 130.8665p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    73 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    74 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    75 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    76 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    77 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    78 ***
+
+ r=   4.5295p  targ=   1.1508n   trig=   1.1463n
+ f=   4.4281p  targ= 138.6911p   trig= 134.2630p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    79 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    80 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    81 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    82 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    83 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    84 ***
+
+ r=   4.8606p  targ=   1.1563n   trig=   1.1515n
+ f=   5.2455p  targ= 144.0449p   trig= 138.7994p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    85 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    86 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    87 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    88 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    89 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    90 ***
+
+ r=   5.2457p  targ=   1.1627n   trig=   1.1575n
+ f=   5.7747p  targ= 150.3257p   trig= 144.5509p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    91 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    92 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    93 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    94 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    95 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    96 ***
+
+ r=   6.0203p  targ=   1.1720n   trig=   1.1660n
+ f=   6.3715p  targ= 157.3757p   trig= 151.0042p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    97 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    98 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =    99 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   100 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   101 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   102 ***
+
+ r=   8.4245p  targ=   1.1826n   trig=   1.1742n
+ f=   7.2767p  targ= 166.0525p   trig= 158.7758p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   103 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   104 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   105 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   106 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   107 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   108 ***
+
+ r=   9.6198p  targ=   1.1954n   trig=   1.1858n
+ f=   9.4244p  targ= 177.6820p   trig= 168.2576p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   109 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   110 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   111 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   112 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   113 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   114 ***
+
+ r=  11.0404p  targ=   1.2112n   trig=   1.2001n
+ f=  10.7221p  targ= 191.7597p   trig= 181.0376p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   115 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   116 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   117 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   118 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   119 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   120 ***
+
+ r=  12.5488p  targ=   1.2299n   trig=   1.2173n
+ f=  12.4767p  targ= 209.0087p   trig= 196.5320p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   121 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   122 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   123 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   124 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   125 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   126 ***
+
+ r=  14.6993p  targ=   1.2545n   trig=   1.2398n
+ f=  14.4504p  targ= 228.9495p   trig= 214.4991p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   127 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   128 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   129 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   130 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   131 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   132 ***
+
+ r=  21.7331p  targ=   1.2836n   trig=   1.2619n
+ f=  19.0382p  targ= 255.2782p   trig= 236.2400p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   133 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   134 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   135 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   136 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   137 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   138 ***
+
+ r=   5.9590p  targ=   1.1476n   trig=   1.1417n
+ f=   5.7324p  targ= 135.6142p   trig= 129.8818p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   139 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   140 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   141 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   142 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   143 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   144 ***
+
+ r=   6.8605p  targ=   1.1523n   trig=   1.1454n
+ f=   6.8044p  targ= 140.0351p   trig= 133.2307p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   145 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   146 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   147 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   148 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   149 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   150 ***
+
+ r=   7.6819p  targ=   1.1591n   trig=   1.1514n
+ f=   7.8292p  targ= 145.2729p   trig= 137.4436p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   151 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   152 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   153 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   154 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   155 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   156 ***
+
+ r=   8.5003p  targ=   1.1661n   trig=   1.1576n
+ f=   8.5608p  targ= 151.4120p   trig= 142.8511p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   157 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   158 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   159 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   160 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   161 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   162 ***
+
+ r=   9.4727p  targ=   1.1733n   trig=   1.1638n
+ f=   9.5612p  targ= 158.8215p   trig= 149.2604p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   163 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   164 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   165 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   166 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   167 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   168 ***
+
+ r=  12.7054p  targ=   1.1850n   trig=   1.1723n
+ f=  11.5053p  targ= 168.4822p   trig= 156.9769p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   169 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   170 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   171 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   172 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   173 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   174 ***
+
+ r=  14.8752p  targ=   1.1982n   trig=   1.1834n
+ f=  14.0733p  targ= 180.3585p   trig= 166.2852p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   175 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   176 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   177 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   178 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   179 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   180 ***
+
+ r=  17.3755p  targ=   1.2147n   trig=   1.1973n
+ f=  16.3370p  targ= 194.9084p   trig= 178.5714p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   181 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   182 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   183 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   184 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   185 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   186 ***
+
+ r=  19.8694p  targ=   1.2345n   trig=   1.2146n
+ f=  18.6768p  targ= 211.9045p   trig= 193.2277p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   187 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   188 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   189 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   190 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   191 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   192 ***
+
+ r=  22.6391p  targ=   1.2582n   trig=   1.2356n
+ f=  22.8921p  targ= 233.8139p   trig= 210.9218p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   193 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   194 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   195 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   196 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   197 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   198 ***
+
+ r=  31.0176p  targ=   1.2904n   trig=   1.2594n
+ f=  28.3358p  targ= 260.8221p   trig= 232.4863p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   199 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   200 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   201 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   202 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   203 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   204 ***
+
+ r=   8.0127p  targ=   1.1490n   trig=   1.1409n
+ f=   7.7510p  targ= 136.6761p   trig= 128.9251p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   205 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   206 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   207 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   208 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   209 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   210 ***
+
+ r=   9.0668p  targ=   1.1537n   trig=   1.1446n
+ f=   8.8536p  targ= 141.0872p   trig= 132.2336p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   211 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   212 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   213 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   214 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   215 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   216 ***
+
+ r=  10.3759p  targ=   1.1599n   trig=   1.1495n
+ f=  10.1516p  targ= 146.4901p   trig= 136.3385p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   217 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   218 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   219 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   220 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   221 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   222 ***
+
+ r=  11.6714p  targ=   1.1669n   trig=   1.1553n
+ f=  11.6087p  targ= 152.8634p   trig= 141.2547p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   223 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   224 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   225 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   226 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   227 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   228 ***
+
+ r=  13.0025p  targ=   1.1756n   trig=   1.1626n
+ f=  12.9752p  targ= 160.5719p   trig= 147.5967p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   229 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   230 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   231 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   232 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   233 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   234 ***
+
+ r=  16.3417p  targ=   1.1876n   trig=   1.1713n
+ f=  15.4758p  targ= 170.6889p   trig= 155.2131p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   235 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   236 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   237 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   238 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   239 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   240 ***
+
+ r=  19.6115p  targ=   1.2014n   trig=   1.1818n
+ f=  18.7315p  targ= 183.0668p   trig= 164.3353p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   241 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   242 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   243 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   244 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   245 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   246 ***
+
+ r=  23.5958p  targ=   1.2185n   trig=   1.1949n
+ f=  22.0374p  targ= 197.7232p   trig= 175.6858p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   247 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   248 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   249 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   250 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   251 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   252 ***
+
+ r=  26.8307p  targ=   1.2387n   trig=   1.2119n
+ f=  25.3486p  targ= 215.4588p   trig= 190.1102p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   253 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   254 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   255 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   256 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   257 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   258 ***
+
+ r=  30.5772p  targ=   1.2630n   trig=   1.2324n
+ f=  30.8317p  targ= 238.3577p   trig= 207.5261p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   259 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   260 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   261 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   262 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   263 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   264 ***
+
+ r=  39.6706p  targ=   1.2965n   trig=   1.2568n
+ f=  37.5920p  targ= 266.3185p   trig= 228.7265p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   265 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   266 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   267 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   268 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   269 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   270 ***
+
+ r=  10.0817p  targ=   1.1502n   trig=   1.1401n
+ f=   9.7446p  targ= 137.6731p   trig= 127.9285p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   271 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   272 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   273 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   274 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   275 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   276 ***
+
+ r=  11.4100p  targ=   1.1553n   trig=   1.1439n
+ f=  11.0184p  targ= 142.2118p   trig= 131.1934p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   277 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   278 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   279 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   280 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   281 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   282 ***
+
+ r=  12.9893p  targ=   1.1616n   trig=   1.1486n
+ f=  12.5682p  targ= 147.8007p   trig= 135.2326p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   283 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   284 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   285 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   286 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   287 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   288 ***
+
+ r=  14.8809p  targ=   1.1689n   trig=   1.1540n
+ f=  14.3925p  targ= 154.4051p   trig= 140.0126p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   289 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   290 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   291 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   292 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   293 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   294 ***
+
+ r=  16.7800p  targ=   1.1779n   trig=   1.1611n
+ f=  16.6064p  targ= 162.4161p   trig= 145.8097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   295 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   296 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   297 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   298 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   299 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   300 ***
+
+ r=  20.4977p  targ=   1.1904n   trig=   1.1699n
+ f=  19.5706p  targ= 172.8561p   trig= 153.2855p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   301 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   302 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   303 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   304 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   305 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   306 ***
+
+ r=  24.3666p  targ=   1.2047n   trig=   1.1803n
+ f=  23.2160p  targ= 185.5722p   trig= 162.3562p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   307 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   308 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   309 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   310 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   311 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   312 ***
+
+ r=  28.9383p  targ=   1.2221n   trig=   1.1931n
+ f=  27.4463p  targ= 200.7877p   trig= 173.3414p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   313 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   314 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   315 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   316 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   317 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   318 ***
+
+ r=  34.4191p  targ=   1.2431n   trig=   1.2087n
+ f=  32.5225p  targ= 219.2231p   trig= 186.7006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   319 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   320 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   321 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   322 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   323 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   324 ***
+
+ r=  40.8161p  targ=   1.2705n   trig=   1.2297n
+ f=  39.0073p  targ= 242.8069p   trig= 203.7996p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   325 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   326 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   327 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   328 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   329 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   330 ***
+
+ r=  49.1646p  targ=   1.3027n   trig=   1.2535n
+ f=  47.2296p  targ= 271.7947p   trig= 224.5651p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   331 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   332 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   333 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   334 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   335 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   336 ***
+
+ r=  12.4237p  targ=   1.1516n   trig=   1.1392n
+ f=  11.7877p  targ= 138.6906p   trig= 126.9029p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   337 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   338 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   339 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   340 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   341 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   342 ***
+
+ r=  13.8867p  targ=   1.1568n   trig=   1.1429n
+ f=  13.2764p  targ= 143.3699p   trig= 130.0935p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   343 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   344 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   345 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   346 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   347 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   348 ***
+
+ r=  15.7093p  targ=   1.1633n   trig=   1.1476n
+ f=  15.0639p  targ= 149.1444p   trig= 134.0805p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   349 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   350 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   351 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   352 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   353 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   354 ***
+
+ r=  17.9061p  targ=   1.1709n   trig=   1.1530n
+ f=  17.2133p  targ= 155.9949p   trig= 138.7815p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   355 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   356 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   357 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   358 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   359 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   360 ***
+
+ r=  20.6068p  targ=   1.1802n   trig=   1.1596n
+ f=  19.8408p  targ= 164.3072p   trig= 144.4663p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   361 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   362 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   363 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   364 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   365 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   366 ***
+
+ r=  24.8617p  targ=   1.1931n   trig=   1.1682n
+ f=  23.6093p  targ= 175.0107p   trig= 151.4014p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   367 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   368 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   369 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   370 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   371 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   372 ***
+
+ r=  29.2452p  targ=   1.2078n   trig=   1.1785n
+ f=  27.8549p  targ= 188.1773p   trig= 160.3225p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   373 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   374 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   375 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   376 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   377 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   378 ***
+
+ r=  34.5442p  targ=   1.2257n   trig=   1.1912n
+ f=  32.8568p  targ= 203.9520p   trig= 171.0952p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   379 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   380 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   381 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   382 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   383 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   384 ***
+
+ r=  40.6295p  targ=   1.2468n   trig=   1.2062n
+ f=  38.9628p  targ= 223.0794p   trig= 184.1166p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   385 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   386 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   387 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   388 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   389 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   390 ***
+
+ r=  48.9985p  targ=   1.2746n   trig=   1.2256n
+ f=  47.1427p  targ= 247.1948p   trig= 200.0521p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   391 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   392 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   393 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   394 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   395 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   396 ***
+
+ r=  59.5592p  targ=   1.3090n   trig=   1.2494n
+ f=  57.3688p  targ= 277.2522p   trig= 219.8834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   397 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   398 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   399 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   400 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   401 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   402 ***
+
+ r=  14.7228p  targ=   1.1529n   trig=   1.1382n
+ f=  13.5775p  targ= 139.7295p   trig= 126.1520p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   403 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   404 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   405 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   406 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   407 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   408 ***
+
+ r=  16.4077p  targ=   1.1583n   trig=   1.1419n
+ f=  15.5155p  targ= 144.5585p   trig= 129.0430p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   409 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   410 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   411 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   412 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   413 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   414 ***
+
+ r=  18.4379p  targ=   1.1649n   trig=   1.1465n
+ f=  17.6127p  targ= 150.5224p   trig= 132.9097p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   415 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   416 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   417 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   418 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   419 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   420 ***
+
+ r=  20.9295p  targ=   1.1728n   trig=   1.1519n
+ f=  20.0777p  targ= 157.6143p   trig= 137.5366p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   421 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   422 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   423 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   424 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   425 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   426 ***
+
+ r=  24.1388p  targ=   1.1825n   trig=   1.1584n
+ f=  23.1028p  targ= 166.2270p   trig= 143.1241p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   427 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   428 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   429 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   430 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   431 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   432 ***
+
+ r=  29.4653p  targ=   1.1957n   trig=   1.1663n
+ f=  27.2387p  targ= 177.1634p   trig= 149.9247p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   433 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   434 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   435 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   436 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   437 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   438 ***
+
+ r=  34.3266p  targ=   1.2109n   trig=   1.1765n
+ f=  32.6028p  targ= 190.8357p   trig= 158.2329p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   439 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   440 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   441 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   442 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   443 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   444 ***
+
+ r=  40.4406p  targ=   1.2295n   trig=   1.1890n
+ f=  38.3542p  targ= 207.1697p   trig= 168.8155p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   445 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   446 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   447 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   448 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   449 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   450 ***
+
+ r=  47.5002p  targ=   1.2515n   trig=   1.2040n
+ f=  45.4141p  targ= 226.9866p   trig= 181.5725p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   451 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   452 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   453 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   454 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   455 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   456 ***
+
+ r=  57.3077p  targ=   1.2796n   trig=   1.2223n
+ f=  54.3620p  targ= 251.5253p   trig= 197.1633p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   457 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   458 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   459 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   460 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   461 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   462 ***
+
+ r=  70.6866p  targ=   1.3153n   trig=   1.2446n
+ f=  66.8859p  targ= 282.9086p   trig= 216.0226p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   463 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   464 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   465 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   466 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   467 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   468 ***
+
+ r=  16.7071p  targ=   1.1542n   trig=   1.1375n
+ f=  15.3417p  targ= 140.7890p   trig= 125.4472p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   469 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   470 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   471 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   472 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   473 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   474 ***
+
+ r=  18.9246p  targ=   1.1597n   trig=   1.1408n
+ f=  17.4752p  targ= 145.7695p   trig= 128.2943p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   475 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   476 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   477 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   478 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   479 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   480 ***
+
+ r=  21.2032p  targ=   1.1665n   trig=   1.1453n
+ f=  20.1642p  targ= 151.9223p   trig= 131.7581p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   481 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   482 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   483 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   484 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   485 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   486 ***
+
+ r=  24.0462p  targ=   1.1747n   trig=   1.1507n
+ f=  22.9767p  targ= 159.2548p   trig= 136.2781p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   487 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   488 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   489 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   490 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   491 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   492 ***
+
+ r=  27.9865p  targ=   1.1861n   trig=   1.1581n
+ f=  26.3803p  targ= 168.1663p   trig= 141.7860p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   493 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   494 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   495 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   496 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   497 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   498 ***
+
+ r=  33.9300p  targ=   1.1985n   trig=   1.1645n
+ f=  30.9246p  targ= 179.3954p   trig= 148.4708p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   499 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   500 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   501 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   502 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   503 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   504 ***
+
+ r=  39.5793p  targ=   1.2140n   trig=   1.1744n
+ f=  37.4519p  targ= 193.5293p   trig= 156.0774p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   505 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   506 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   507 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   508 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   509 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   510 ***
+
+ r=  46.5700p  targ=   1.2333n   trig=   1.1867n
+ f=  43.9198p  targ= 210.4204p   trig= 166.5006p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   511 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   512 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   513 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   514 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   515 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   516 ***
+
+ r=  54.5253p  targ=   1.2561n   trig=   1.2016n
+ f=  51.9035p  targ= 230.9246p   trig= 179.0211p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   517 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   518 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   519 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   520 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   521 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   522 ***
+
+ r=  65.0348p  targ=   1.2847n   trig=   1.2197n
+ f=  61.7557p  targ= 256.0512p   trig= 194.2955p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   523 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   524 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   525 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   526 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   527 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   528 ***
+
+ r=  80.1777p  targ=   1.3218n   trig=   1.2416n
+ f=  75.8467p  targ= 288.5959p   trig= 212.7493p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   529 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   530 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   531 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   532 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   533 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   534 ***
+
+ r=  18.6370p  targ=   1.1554n   trig=   1.1368n
+ f=  17.0850p  targ= 141.8712p   trig= 124.7862p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   535 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   536 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   537 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   538 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   539 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   540 ***
+
+ r=  21.1052p  targ=   1.1611n   trig=   1.1400n
+ f=  19.3935p  targ= 146.9989p   trig= 127.6053p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   541 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   542 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   543 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   544 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   545 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   546 ***
+
+ r=  24.0071p  targ=   1.1681n   trig=   1.1441n
+ f=  22.3095p  targ= 153.3413p   trig= 131.0319p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   547 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   548 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   549 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   550 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   551 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   552 ***
+
+ r=  27.2257p  targ=   1.1766n   trig=   1.1494n
+ f=  25.8245p  targ= 160.9126p   trig= 135.0881p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   553 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   554 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   555 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   556 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   557 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   558 ***
+
+ r=  32.0785p  targ=   1.1878n   trig=   1.1558n
+ f=  29.6774p  targ= 170.1206p   trig= 140.4431p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   559 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   560 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   561 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   562 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   563 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   564 ***
+
+ r=  37.9430p  targ=   1.2011n   trig=   1.1632n
+ f=  34.6175p  targ= 181.7047p   trig= 147.0872p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   565 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   566 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   567 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   568 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   569 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   570 ***
+
+ r=  44.9731p  targ=   1.2172n   trig=   1.1722n
+ f=  41.5603p  targ= 196.2509p   trig= 154.6907p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   571 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   572 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   573 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   574 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   575 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   576 ***
+
+ r=  52.9034p  targ=   1.2371n   trig=   1.1842n
+ f=  49.5659p  targ= 213.6959p   trig= 164.1300p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   577 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   578 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   579 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   580 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   581 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   582 ***
+
+ r=  61.6776p  targ=   1.2606n   trig=   1.1990n
+ f=  58.4389p  targ= 234.8835p   trig= 176.4446p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   583 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   584 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   585 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   586 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   587 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   588 ***
+
+ r=  73.5516p  targ=   1.2903n   trig=   1.2167n
+ f=  69.2480p  targ= 260.8040p   trig= 191.5559p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   589 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   590 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   591 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   592 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   593 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   594 ***
+
+ r=  89.8754p  targ=   1.3282n   trig=   1.2383n
+ f=  84.6029p  targ= 294.3087p   trig= 209.7058p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   595 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   596 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   597 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   598 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   599 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   600 ***
+
+ r=  20.5213p  targ=   1.1567n   trig=   1.1362n
+ f=  18.8035p  targ= 142.9723p   trig= 124.1688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   601 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   602 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   603 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   604 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   605 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   606 ***
+
+ r=  23.1710p  targ=   1.1625n   trig=   1.1393n
+ f=  21.2686p  targ= 148.2466p   trig= 126.9780p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   607 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   608 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   609 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   610 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   611 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   612 ***
+
+ r=  26.5935p  targ=   1.1697n   trig=   1.1431n
+ f=  24.3982p  targ= 154.7777p   trig= 130.3795p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   613 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   614 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   615 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   616 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   617 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   618 ***
+
+ r=  30.4328p  targ=   1.1785n   trig=   1.1481n
+ f=  28.2033p  targ= 162.5866p   trig= 134.3834p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   619 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   620 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   621 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   622 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   623 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   624 ***
+
+ r=  35.5814p  targ=   1.1901n   trig=   1.1546n
+ f=  32.8956p  targ= 172.0884p   trig= 139.1928p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   625 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   626 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   627 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   628 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   629 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   630 ***
+
+ r=  41.8821p  targ=   1.2038n   trig=   1.1619n
+ f=  38.2514p  targ= 184.0342p   trig= 145.7829p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   631 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   632 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   633 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   634 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   635 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   636 ***
+
+ r=  49.6355p  targ=   1.2203n   trig=   1.1707n
+ f=  45.3677p  targ= 198.9886p   trig= 153.6210p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   637 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   638 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   639 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   640 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   641 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   642 ***
+
+ r=  59.2624p  targ=   1.2409n   trig=   1.1816n
+ f=  54.3248p  targ= 216.9936p   trig= 162.6688p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   643 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   644 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   645 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   646 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   647 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   648 ***
+
+ r=  68.9376p  targ=   1.2652n   trig=   1.1962n
+ f=  64.8676p  targ= 238.7980p   trig= 173.9304p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   649 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   650 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   651 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   652 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   653 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   654 ***
+
+ r=  82.1152p  targ=   1.2957n   trig=   1.2136n
+ f=  76.6103p  targ= 265.5807p   trig= 188.9704p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   655 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   656 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   657 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   658 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   659 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = mydata , index =   660 ***
+
+ r=  99.0377p  targ=   1.3349n   trig=   1.2359n
+ f=  93.1821p  targ= 300.0586p   trig= 206.8765p
+
+          ***** job concluded
+1****** HSPICE -- L-2016.06 linux64 (May 22 2016) ******                        
+ ******  
+ spice pi wire delay
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz
+ cpu MHz	: 3299.987
+  
+ OS:
+ Linux version 3.10.0-1160.119.1.el7.tuxcare.els10.x86_64 (mockbuild@buildfarm02-new.corp.cloudlinux.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Fri Oct 11 21:40:41 UTC 2024
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :   112
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       6 # elements   =       9
+  # resistors   =       1 # capacitors =       2 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       4 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.10           1        2640
+  transient          3.43      660660      384858      154500 rev=      7656
+  readin             0.02
+  errchk             0.01
+  setup              0.01
+  output             0.03
+
+
+           peak memory used        184.29 megabytes
+           total cpu time            3.75 seconds
+           total elapsed time        6.83 seconds
+           job started at     18:51:13 12/04/2024
+           job ended   at     18:51:19 12/04/2024
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.05(s)

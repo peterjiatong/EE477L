@@ -1,0 +1,16 @@
+#4                               
+M: M
+= D D
+= G G
+= S S
+= B B
+#8                               
+NAND2_1X: NAND2_1X
+= in_a in_a
+= in_b in_b
+= out out
+= gnd! gnd!
+= vdd! vdd!
+= vdd! X2/B
+= vdd! X3/B
+= net9 6

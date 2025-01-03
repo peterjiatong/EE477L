@@ -1,0 +1,31 @@
+#4                               
+M: M
+= D D
+= G G
+= S S
+= B B
+#23                              
+1_bit_Full_Adder_ver1: 1_bit_Full_Adder_ver1
+= net3 5
+= net9 6
+= net10 9
+= A A
+= B B
+= Cin Cin
+= Cout Cout
+= S S
+= vdd! vdd!
+= gnd! gnd!
+= XI1/net14 13
+= XI1/net6 14
+= XI0/net14 12
+= XI0/net6 11
+= XI1/net9 20
+= XI1/net1 21
+= XI0/net9 18
+= XI0/net1 19
+= XI2/net9 17
+= XI4/net9 15
+= XI3/net9 16
+= XI1/net4 23
+= XI0/net4 22

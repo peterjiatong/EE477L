@@ -1,0 +1,198 @@
+
+
+  Cadence Quantus Extraction - 64-bit Parasitic Extractor - Version
+22.1.1-p041 Mon Apr 17 07:53:34 PDT 2023
+---------------------------------------------------------------------------------------------------------------
+                                  Copyright 2023 Cadence Design Systems,
+Inc.
+
+
+
+INFO (EXTQRCXLOG-128) : Quantus command line:
+ Started at: 2024-Dec-03 19:48:01 (2024-Dec-04 03:48:01 GMT)
+ Executable:
+/usr/local/cadence/QUANTUS221/tools.lnx86/extraction/bin/64bit/qrc
+ Options:     -log_file
+/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/qrc.ph2p3_Matrix_vector_Multiplication.log
+-cmd
+/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/qrc.ph2p3_Matrix_vector_Multiplication.ccl
+ Current working directory: /home/viterbi/01/tongjia/work_gpdk045
+
+
+INFO (EXTQRCXLOG-103) : The Command File Options for the current Quantus run are as follows:
+
+capacitance \
+	 -decoupling_factor 1.0 \
+	 -ground_net "gnd!" \
+	 -ground_substrate_floating_nets "true"
+extract \
+	 -selection "all" \
+	 -type "rc_coupled"
+extraction_setup \
+	 -array_vias_spacing "auto" \
+	 -max_fracture_length infinite \
+	 -max_fracture_length_unit "MICRONS" \
+	 -max_via_array_size \
+		"auto" \
+	 -net_name_space "LAYOUT"
+filter_coupling_cap \
+	 -coupling_cap_threshold_absolute 0.01 \
+	 -coupling_cap_threshold_relative 0.001
+filter_res \
+	 -merge_parallel_res false \
+	 -min_res 0.001
+input_db -type pegasus \
+	 -design_cell_name "ph2p3_Matrix_vector_Multiplication layout project_demo" \
+	 -directory_name "/home/viterbi/01/tongjia/work_gpdk045/LVS/svdb" \
+	 -format "DFII" \
+	 -library_definitions_file "/home/viterbi/01/tongjia/work_gpdk045/cds.lib" \
+	 -run_name "ph2p3_Matrix_vector_Multiplication"
+log_file \
+	 -dump_options true \
+	 -file_name "/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/qrc.ph2p3_Matrix_vector_Multiplication.log"
+output_db -type extracted_view \
+	 -cap_component "pcapacitor" \
+	 -cap_property_name "c" \
+	 -cdl_out_map_directory \
+		"/home/viterbi/01/tongjia/work_gpdk045/LVS" \
+	 -device_finger_delimiter "@" \
+	 -enable_cellview_check true \
+	 -include_cap_model "false" \
+	 -include_parasitic_cap_model "false" \
+	 -include_parasitic_res_model "comment" \
+	 -include_parasitic_res_width true \
+	 -include_res_model "false" \
+	 -res_component "presistor" \
+	 -res_property_name "r" \
+	 -transfer_net_expression true \
+	 -view_name "av_extracted"
+output_setup \
+	 -directory_name "/home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir" \
+	 -temporary_directory_name "ph2p3_Matrix_vector_Multiplication"
+process_technology \
+	 -technology_library_file "/home/viterbi/01/tongjia/work_gpdk045/tech.def" \
+	 -technology_name "qrc_tech_typical" \
+	 -temperature \
+		"25.0"
+
+
+
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:03 2024: BEGIN INPUT stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:03 2024: DONE INPUT stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+INPUT stage summary:
+-------------------------------------------------------------------------------------
+ Number of CPUs requested:		1
+ Techfile(s):
+    /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical/qrcTechFile; process name: 
+
+ License(s) used:	QTS300 (x1)
+
+ Techgen compilation option(s):
+    -techdir /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical -inc /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/ph2p3_Matrix_vector_Multiplication/ph2p3_Matrix_vector_Multiplication.ilf -lvs /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/ph2p3_Matrix_vector_Multiplication/ph2p3_Matrix_vector_Multiplication.xcn -lvsvia -p2lvs /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical/qrcTechFile -reseqn -p poly_conn,allGate,Oxide -canonical_res_caps -length_units meters -exclude_gate_res -cap_ground_layer psubstrate /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/ph2p3_Matrix_vector_Multiplication
+
+ Input files:
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.agf
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.devtab
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.gds.map
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.ixf
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.lph
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.lvsfile
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.nxf
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.ports
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication.sph
+    /home/viterbi/01/tongjia/work_gpdk045/LVS/svdb/ph2p3_Matrix_vector_Multiplication_pin_xy.spi
+
+ Design data:
+    global nets:                  0
+
+ Peak memory:	130 MB
+
+ Messages:
+    INFO (CAPGEN-41199): 
+    
+    
+    Techgen -trans results will be written to directory: /home/viterbi/01/tongjia/work_gpdk045/quantus_run_dir/ph2p3_Matrix_vector_Multiplication
+    
+    INFO (CAPGEN-41809):  Lvs connect via bp_0tap via10_0cap via10_0nocap ind_0via_0diva via10_0nodev Via9 Via8 Via7 Via6 Via5 Via4 Via3 Via2 Via1 cont_0poly cont_0pdiff cont_0ndiff ptap ntap nb_0tap are not mapped in layer_setup file.
+    
+    WARNING (RCXSPIC-27104): p2lvsfile in tech directory does not have resistance 
+     temperature coefficients (TC1, TC2). ?temperature is ignored 
+    
+    WARNING (RCXSPIC-27297): cap_ground net cannot be set to gnd! as in the CCL because the name collides with a net name in lnn file.
+    
+    WARNING (AGDSEXT-30124): The <design>.props file is not available. The CCL option "input_db calibre/pvs/pegasus -device_properties_file <filename>" can be used to specify the .props file. 
+    
+    INFO (AGDSEXT-30016): 
+    setting dbunit 5e-10 1 5e-10
+    
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:03 2024: BEGIN EXTRACTION stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:26 2024: DONE EXTRACTION stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+EXTRACTION stage summary:
+-------------------------------------------------------------------------------------
+ Design data:
+    LVS nets:                     3270
+    signal nets:                  3270
+    floating nets:                0
+    ground net name:              gnd!
+
+ Peak memory:	339 MB
+
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:26 2024: BEGIN OUTPUT stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+Tue Dec  3 19:48:42 2024: DONE OUTPUT stage
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+OUTPUT stage summary:
+-------------------------------------------------------------------------------------
+ Reduction statistics:
+    Dangling Rs removed:          628
+    Merged Parallel Rs:           0
+    Rs shorted by min_res option: 243
+    Merged Parallel Self Caps:    0
+    CCs filtered by minC option:  153555
+    Shorted Incomplete Nets:      0
+ Output statistics:
+    R: 48272
+    C: 378974
+    L: 0
+
+ Peak memory:	342 MB
+
+    Summary for project_demo/ph2p3_Matrix_vector_Multiplication/av_extracted
+    
+    instance count totals:
+    
+        lib              cell             view                    total
+        analogLib        pcapacitor       symbol                 378974
+        analogLib        presistor        symbol                  48272
+        gpdk045          nmos1v           ivpcell                  3324
+        gpdk045          pmos1v           ivpcell                  3324
+    
+    Extracted view creation has completed.
+-------------------------------------------------------------------------------------
+
+INFO (LBRCXM-920): Host name and peak memory report
+ Host Name:                    viterbi-scf2
+ Peak memory used:             379 MB (sampled at 15s intervals)
+
+INFO (LBRCXM-702): Run ended: Tue Dec  3 19:49:35 2024
+
+
+INFO (LBRCXM-805): Quantus run took:  1m1s user, 1m33s sys, 1m34s elapsed
+
+
+INFO (LBRCXM-708): *****  Quantus terminated normally  *****
+
+

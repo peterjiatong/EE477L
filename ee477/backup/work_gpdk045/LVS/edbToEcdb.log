@@ -1,0 +1,17 @@
+
+/usr/local/cadence/PEGASUS222/tools.lnx86/Pegasus/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : ph3_sytolic_array_328336.db
+ECDB dir        : ./
+Top Cell        : ph3_sytolic_array
+CDL netlist     : svdb/ph3_sytolic_array.net
+Layer map file  : svdb/ph3_sytolic_array.ecdbmap
+Text map file   : svdb/ph3_sytolic_array.ports
+Dependency map  : ph3_sytolic_array.lmap.perc
+Lvs file        : svdb/ph3_sytolic_array.lvsfile
+Float net file  : .ph3_sytolic_array.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : ph3_sytolic_array_328336

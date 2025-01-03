@@ -1,0 +1,6 @@
+[Logging Service: 34]
+[2024-10-15 21:30:03.424 -0700] [INFO] [cadence.virtuoso.ade.loggingservice] - HistoryRecorderManager init {"dbBasePath": "/home/viterbi/01/tongjia/work_gpdk045/demo/NAND2_2X_tb/maestro/results/maestro"}
+[2024-10-15 21:30:03.425 -0700] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Logging Service has successfully started. Waiting for incoming messages ... {"hostname": "viterbi-scf2", "processid": 254805, "logfile": "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs0/LoggingService34.log"}
+[2024-10-15 21:36:43.825 -0700] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Current memory used: 38.2656 MBytes, peak memory used: 38.2656 MBytes {"hostname": "viterbi-scf2", "processid": 254805, "logfile": "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs0/LoggingService34.log"}
+[2024-10-15 21:36:43.825 -0700] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Stopping Logging Service process. {"hostname": "viterbi-scf2", "processid": 254805, "logfile": "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs0/LoggingService34.log"}
+[2024-10-15 21:36:43.825 -0700] [PROCESS] [cadence.virtuoso.ade.loggingservice] - Logging Service stop!!!! {"hostname": "viterbi-scf2", "processid": 254805, "logfile": "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs0/LoggingService34.log"}

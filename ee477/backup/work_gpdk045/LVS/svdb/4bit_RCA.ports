@@ -1,0 +1,18 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary 4bit_RCA
+A0 13 A0 1955 2995 metal4_conn
+B0 14 B0 1175 620 metal3_conn
+A1 1 A1 17145 4375 metal4_conn
+B1 2 B1 17915 6760 metal3_conn
+C0 15 C0 965 3285 metal3_conn
+S0 16 S0 19125 1590 metal1_conn
+gnd! 4 gnd! -585 7205 metal1_conn
+A2 17 A2 2270 10320 metal4_conn
+vdd! 5 vdd! 9580 3685 metal1_conn
+B2 18 B2 1275 7925 metal3_conn
+S2 19 S2 19100 8915 metal1_conn
+S1 7 S1 -80 5775 metal1_conn
+A3 8 A3 16890 11705 metal4_conn
+B3 9 B3 16855 14080 metal3_conn
+C4 11 C4 195 13885 metal3_conn
+S3 12 S3 -10 13095 metal1_conn

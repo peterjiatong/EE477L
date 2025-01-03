@@ -1,0 +1,545 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary ph3_sytolic_array
+% M3_M2_CDNS_1 1
+% M2_M1_CDNS_2 1
+% M4_M3_CDNS_3 1
+% M3_M2_CDNS_4 1
+% M5_M4_CDNS_5 1
+% M4_M3_CDNS_6 1
+% M3_M2_CDNS_7 1
+% M2_M1_CDNS_8 1
+% M2_M1_CDNS_9 1
+% M5_M4_CDNS_10 1
+% M3_M2_CDNS_11 1
+% M4_M3_CDNS_12 1
+% M4_M3_CDNS_13 1
+% M1_PO_CDNS_14 1
+% M1_PO_CDNS_15 1
+% M1_PO_CDNS_16 1
+% M2_M1_CDNS_17 1
+% cellTmpl_CDNS_18 2
+% INV_1X_new 4
+1 vdd
+2 gnd
+% nmos1v_CDNS_19 4
+1 S_source_0
+3 D_drain_1
+% pmos1v_CDNS_20 5
+1 S_source_0
+3 D_drain_1
+5 B
+% cellTmpl_CDNS_21 2
+% NAND2_1X_small 6
+2 vdd!
+3 gnd!
+5 out
+% AND 6
+1 in_A
+2 vdd!
+3 gnd!
+4 in_B
+5 out
+% M1_PO_CDNS_22 1
+% M1_PO_CDNS_23 1
+% M3_M2_CDNS_24 1
+% M2_M1_CDNS_25 1
+% M2_M1_CDNS_26 1
+% cellTmpl_CDNS_27 2
+% pmos1v_CDNS_28 5
+1 S_source_0
+3 D_drain_1
+5 B
+% nmos1v_CDNS_29 4
+1 S_source_0
+3 D_drain_1
+% XOR_small 10
+1 in_A
+2 vdd!
+3 gnd!
+4 in_B
+5 out
+% half_adder 9
+1 inA
+2 gnd!
+3 vdd!
+4 inB
+5 S
+6 C
+% cellTmpl_CDNS_33 2
+% NAND_1X_small 6
+1 vdd!
+2 gnd!
+% NAND_2X_small1 6
+1 vdd!
+2 gnd!
+3 out
+% cellTmpl_CDNS_39 2
+% XOR1 10
+1 vdd!
+2 gnd!
+% full_adder1_small 16
+1 inA
+2 vdd!
+3 inB
+4 gnd!
+5 Cin_
+6 S
+7 Cout
+% multiplier 50
+1 a3
+2 gnd!
+3 b0
+4 b2
+5 b3
+6 vdd!
+7 a2
+8 a1
+9 b1
+10 z6
+11 a0
+12 z7
+13 z3
+14 z0
+15 z5
+16 z4
+17 z2
+18 z1
+% nmos1v_CDNS_31 4
+1 D_drain_1
+% nmos1v_CDNS_32 4
+1 S_source_0
+% cellTmpl_CDNS_43 6
+% pmos1v_CDNS_44 5
+1 D_drain_1
+5 B
+% pmos1v_CDNS_45 5
+1 S_source_0
+5 B
+% MUX_2to1___2X 12
+1 S
+2 A
+3 vdd!
+4 gnd!
+5 B
+6 out
+% FA_4bit 19
+1 B0
+2 B1
+3 B2
+4 B3
+5 vdd!
+6 A0
+7 gnd!
+8 A1
+9 A2
+10 A3
+11 Cin_rrr
+12 S0
+13 S1
+14 S2
+15 S3
+16 Cout3
+% INV_1X_small 4
+1 in
+2 vdd!
+3 gnd!
+4 out
+% 10badder 77
+1 in_A_8
+2 Cin
+3 vdd!
+4 gnd!
+5 in_B_8
+6 in_A_4
+7 in_A_0
+8 in_B_7
+9 in_B_6
+10 in_B_5
+11 in_B_3
+12 in_B_2
+13 in_B_1
+14 in_B_0
+15 in_A_1
+16 in_A_2
+17 in_A_3
+18 in_B_4
+19 in_A_5
+20 in_A_6
+21 in_A_7
+22 S8
+23 in_B_9
+24 in_A_9
+25 S0
+26 S3
+27 S2
+28 S1
+29 S7
+30 S6
+31 S5
+32 S4
+33 S9
+34 Cout
+% cellTmpl_CDNS_46 4
+% INV_1X_small_layout 4
+1 in
+2 vdd!
+3 gnd!
+4 out
+% ph1p3_clk_part 6
+1 CLK
+2 vdd!
+3 gnd!
+4 D
+5 Out
+% cellTmpl_CDNS_48 2
+% ph1p3_MSDFF 17
+1 vdd!
+2 CLK
+3 gnd!
+4 RST
+5 D
+6 Q
+% cellTmpl_CDNS_49 2
+% MUX_2to1___2X_ph2p2 12
+1 S
+2 A
+3 vdd!
+4 gnd!
+5 B
+6 out
+% ph2p2_processing_element 122
+1 A3
+2 B0
+3 B2
+4 B3
+5 gnd!
+6 RST
+7 CLK
+8 Cin
+9 A8
+10 vdd!
+11 B1
+12 A_reg3
+13 B_reg0
+14 A1
+15 A2
+16 A0
+17 B_reg1
+18 A_reg2
+19 A9
+20 B_reg2
+21 A_reg1
+22 A_reg0
+23 B_reg3
+24 Sel
+25 Sel_reg
+26 Sum_out5
+27 Sum_out0
+28 Sum_out3
+29 Sum_out9
+30 Sum_out1
+31 Sum_out8
+32 Sum_out4
+33 Sum_out2
+34 Sum_out6
+35 Sum_out7
+36 Sum_in6
+37 Sum_in9
+38 Sum_in5
+39 Sum_in8
+40 Sum_in4
+41 Sum_in7
+42 Sum_in3
+43 Sum_in2
+44 Sum_in1
+45 Sum_in0
+% ph2p3_Matrix_vector_Multiplication 126
+1 A3_3
+2 A2_3
+3 A1_3
+4 A0_3
+5 B_reg0
+6 A3_1
+7 gnd!
+8 A3_reg3
+9 Cin3
+10 CLK
+11 RST
+12 A3_8
+13 vdd!
+14 A2_1
+15 A2_reg3
+16 Cin2
+17 A2_8
+18 A1_1
+19 A1_reg3
+20 Cin1
+21 A1_8
+22 A0_1
+23 B0_1
+24 A0_reg3
+25 B0_0
+26 B0_2
+27 B0_3
+28 Cin0
+29 A0_8
+30 A3_2
+31 A2_2
+32 A1_2
+33 A0_2
+34 B_reg1
+35 A3_reg2
+36 A3_0
+37 A2_reg2
+38 A2_0
+39 A1_reg2
+40 A1_0
+41 A0_reg2
+42 A0_0
+43 B_reg2
+44 A0_reg1
+45 A1_reg1
+46 A2_reg1
+47 A3_reg1
+48 A3_9
+49 A2_9
+50 A1_9
+51 A0_9
+52 B_reg3
+53 A3_reg0
+54 A2_reg0
+55 A1_reg0
+56 A0_reg0
+57 Sel3
+58 Sel2
+59 Sel1
+60 Sel0
+61 Sel0_reg
+62 Sel1_reg
+63 Sel2_reg
+64 Sel3_reg
+65 Sum_in0
+66 Sum_in1
+67 Sum_in2
+68 Sum_in3
+69 Sum_in7
+70 Sum_in4
+71 Sum_in8
+72 Sum_in5
+73 Sum_in9
+74 Sum_in6
+75 Sum_out0
+76 Sum_out2
+77 Sum_out9
+78 Sum_out1
+79 Sum_out3
+80 Sum_out7
+81 Sum_out4
+82 Sum_out8
+83 Sum_out5
+84 Sum_out6
+% ph3_sytolic_array 204
+1 RST
+2 CLK
+63 A3_3
+64 A2_3
+65 A1_3
+66 A0_3
+67 B0_reg0
+68 A3_1
+69 gnd!
+70 Cin0_3
+71 A0_3_8
+72 vdd!
+73 A2_1
+74 Cin0_2
+75 A0_2_8
+76 A1_1
+77 Cin0_1
+78 A0_1_8
+79 A0_1
+80 B0_1
+81 B0_0
+82 B0_2
+83 B0_3
+84 Cin0_0
+85 A0_0_8
+86 A3_2
+87 A2_2
+88 A1_2
+89 A0_2
+90 B0_reg1
+91 A3_0
+92 A2_0
+93 A1_0
+94 A0_0
+95 B0_reg2
+96 A0_3_9
+97 A0_2_9
+98 A0_1_9
+99 A0_0_9
+100 B0_reg3
+101 Sel3
+102 Sel2
+103 Sel1
+104 Sel0
+105 Sum0_in0
+106 Sum0_in1
+107 Sum0_in2
+108 Sum0_in3
+109 Sum0_in7
+110 Sum0_in4
+111 Sum0_in8
+112 Sum0_in5
+113 Sum0_in9
+114 Sum0_in6
+115 Sum0_out0
+116 Sum0_out2
+117 Sum0_out9
+118 Sum0_out1
+119 Sum0_out3
+120 Sum0_out7
+121 Sum0_out4
+122 Sum0_out8
+123 Sum0_out5
+124 Sum0_out6
+125 B1_reg0
+126 Cin1_3
+127 A1_3_8
+128 Cin1_2
+129 A1_2_8
+130 Cin1_1
+131 A1_1_8
+132 B1_1
+133 B1_0
+134 B1_2
+135 B1_3
+136 Cin1_0
+137 A1_0_8
+138 B1_reg1
+139 B1_reg2
+140 A1_3_9
+141 A1_2_9
+142 A1_1_9
+143 A1_0_9
+144 B1_reg3
+145 Sum1_in0
+146 Sum1_in1
+147 Sum1_in2
+148 Sum1_in3
+149 Sum1_in7
+150 Sum1_in4
+151 Sum1_in8
+152 Sum1_in5
+153 Sum1_in9
+154 Sum1_in6
+155 Sum1_out0
+156 Sum1_out2
+157 Sum1_out9
+158 Sum1_out1
+159 Sum1_out3
+160 Sum1_out7
+161 Sum1_out4
+162 Sum1_out8
+163 Sum1_out5
+164 Sum1_out6
+165 B2_reg0
+166 Cin2_3
+167 A2_3_8
+168 Cin2_2
+169 A2_2_8
+170 Cin2_1
+171 A2_1_8
+172 B2_1
+173 B2_0
+174 B2_2
+175 B2_3
+176 Cin2_0
+177 A2_0_8
+178 B2_reg1
+179 B2_reg2
+180 A2_3_9
+181 A2_2_9
+182 A2_1_9
+183 A2_0_9
+184 B2_reg3
+185 Sum2_in0
+186 Sum2_in1
+187 Sum2_in2
+188 Sum2_in3
+189 Sum2_in7
+190 Sum2_in4
+191 Sum2_in8
+192 Sum2_in5
+193 Sum2_in9
+194 Sum2_in6
+195 Sum2_out0
+196 Sum2_out2
+197 Sum2_out9
+198 Sum2_out1
+199 Sum2_out3
+200 Sum2_out7
+201 Sum2_out4
+202 Sum2_out8
+203 Sum2_out5
+204 Sum2_out6
+205 B3_reg0
+206 A3_reg3
+207 Cin3_3
+208 A3_3_8
+209 A2_reg3
+210 Cin3_2
+211 A3_2_8
+212 A1_reg3
+213 Cin3_1
+214 A3_1_8
+215 B3_1
+216 A0_reg3
+217 B3_0
+218 B3_2
+219 B3_3
+220 Cin3_0
+221 A3_0_8
+222 B3_reg1
+223 A3_reg2
+224 A2_reg2
+225 A1_reg2
+226 A0_reg2
+227 B3_reg2
+228 A0_reg1
+229 A1_reg1
+230 A2_reg1
+231 A3_reg1
+232 A3_3_9
+233 A3_2_9
+234 A3_1_9
+235 A3_0_9
+236 B3_reg3
+237 A3_reg0
+238 A2_reg0
+239 A1_reg0
+240 A0_reg0
+241 sel0_reg
+242 sel1_reg
+243 sel2_reg
+244 sel3_reg
+245 Sum3_in0
+246 Sum3_in1
+247 Sum3_in2
+248 Sum3_in3
+249 Sum3_in7
+250 Sum3_in4
+251 Sum3_in8
+252 Sum3_in5
+253 Sum3_in9
+254 Sum3_in6
+255 Sum3_out0
+256 Sum3_out2
+257 Sum3_out9
+258 Sum3_out1
+259 Sum3_out3
+260 Sum3_out7
+261 Sum3_out4
+262 Sum3_out8
+263 Sum3_out5
+264 Sum3_out6

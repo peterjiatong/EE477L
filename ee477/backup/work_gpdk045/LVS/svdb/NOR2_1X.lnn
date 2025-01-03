@@ -1,0 +1,20 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary NOR2_1X
+% M1_PO_CDNS_1 1
+% nmos1v_CDNS_3 3
+1 D_drain_1
+% pmos1v_CDNS_4 5
+1 D_drain_1
+5 B
+% pmos1v_CDNS_5 5
+1 S_source_0
+5 B
+% nmos1v_CDNS_6 3
+1 D_drain_1
+2 S_source_0
+% NOR2_1X 5
+1 in_b
+2 in_a
+3 gnd!
+4 out
+5 vdd!

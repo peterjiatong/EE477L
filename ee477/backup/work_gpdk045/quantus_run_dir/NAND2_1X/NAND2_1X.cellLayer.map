@@ -1,0 +1,6 @@
+nmos1v_CDNS_5 ndiff_conn,poly_conn,_nmos1v,metal1_conn,psubstrate,cont_ndiff NULL
+nmos1v_CDNS_6 ndiff_conn,poly_conn,_nmos1v,metal1_conn,psubstrate,cont_ndiff NULL
+pmos1v_CDNS_2 nwell_conn,poly_conn,_pmos1v,metal1_conn,cont_pdiff,psubstrate,pdiff_conn NULL
+pmos1v_CDNS_3 nwell_conn,poly_conn,_pmos1v,metal1_conn,cont_pdiff,psubstrate,pdiff_conn NULL
+NAND2_1X ndiff_conn,ntap,nwell_conn,poly_conn,ptap,metal1_conn,cont_pdiff,psubstrate,cont_ndiff,pdiff_conn cont_poly,_pmos1v,_nmos1v
+M1_PO_CDNS_1 cont_poly,poly_conn,metal1_conn NULL

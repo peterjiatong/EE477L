@@ -1,0 +1,8 @@
+#0                               
+M: M
+#4                               
+NAND2_1X: NAND2_1X
+S MPM1 X3/M0
+D MPM0 X2/M0
+D MNM1 X5/M0
+D MNM0 X4/M0

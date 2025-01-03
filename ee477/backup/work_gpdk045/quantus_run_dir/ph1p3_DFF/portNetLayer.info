@@ -1,0 +1,5 @@
+vdd!	metal1_0conn	4625	-3520
+Q	metal1_0conn	8630	-1905
+gnd!	metal1_0conn	4615	25
+CLK	metal1_0conn	590	2045
+D	metal1_0conn	3130	1830

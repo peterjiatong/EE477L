@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cd "/home/viterbi/01/tongjia/work_gpdk045"
+
+export CDS_USE_XVFB=1
+export CDS_XVFB_MONITOR=0
+
+/usr/local/cadence/ICADVM201/tools.lnx86/dfII/bin/spectreMonitor -mpssession "virtuoso2680" -mpshost "viterbi-scf1" --davinciService DaVinciService_2680_1733733473 --axlsession fnxSession1 -lscs 000175E1894CBE06FF0966E38F1FFC06BC4D62ED9A709D06D62460E4905B952BCE2F6CBD9F1D9F67D0227DAAD241CD30C87766E3A12FFC06BC4D01B4B5CBC6D2DB1A00001E3E -beanhost "viterbi-scf1" -beanport 11300 -beanLogFile "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs1/amps_Job4.log"  -beanbinlog "" --domain 0 --interactive yes --netlistOpt no --useMultiPointEvaluation yes --evalSimParallel no --maxSims 0 --historyName "ExplorerRun.0" --historyUUID ""  --exprEvaluator vds --mcMapping mc1.mapping --checkLogStatusInterval 0  --exprEvalMaxTries 3  --maxNFSSyncWait 60  --virtuosoBinary "virtuoso" --guiDisplay localhost:16.0 --globalStatus 60  --evaluateMultiMC yes --evalOnSimFail SkipFailedAnalyses --numRetriesOnError 1 --fenixMode explorer --lingertimeout 300 --sdbLib project_demo --sdbCell ph3_sytolic_array_tb --sdbView maestro --heartBeatFileDir /dev/shm --id 4 --uuid "611ca944-9df3-491a-a4f6-da386c3b4210" --log "/home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs1/Job4.log" &
+
+JOB_PID=$!
+HOST_NAME=$(hostname)
+printf "Simulation Monitor process '$JOB_PID' is starting up on host '$HOST_NAME'"
+wait $JOB_PID
+status=$?
+if [ $status != 0 ]; then
+  /usr/local/cadence/ICADVM201/tools.lnx86/bin/checkSysConf ICADVM20.1 > /home/viterbi/01/tongjia/work_gpdk045/logs_tongjia/logs1/Job4.log.checkSysConf
+fi
+exit $status
+

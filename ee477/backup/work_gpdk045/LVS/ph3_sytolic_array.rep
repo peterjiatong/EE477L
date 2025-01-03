@@ -1,0 +1,28 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : ph3_sytolic_array.rep
+ERC Summary File         : /home/viterbi/01/tongjia/work_gpdk045/LVS/ph3_sytolic_array.sum
+LVS Comparison Report    : ph3_sytolic_array.rep.cls
+LVS Softchk Report       : ph3_sytolic_array.softchk
+Layout Name              : /home/viterbi/01/tongjia/work_gpdk045/LVS/ph3_sytolic_array.gds.gz ("ph3_sytolic_array")
+User Name                : tongjia
+Creation Time            : Sun Dec  8 18:33:11 2024
+Current directory        : /home/viterbi/01/tongjia/work_gpdk045/LVS
+Pegasus Version          : 22.21-s012 Fri Mar 10 17:36:33 PST 2023
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)

@@ -1,0 +1,35 @@
+; radix specifies the number of bit of the vector.
+radix 1 1 4 4 2 1 1 244 
+; io defines the vector as an input or output vector.
+io i i i i i i i i
+; vname assigns the name to the vector.
+vname CLK RST A[3:0] B[3:0] A[9:8] Cin Sel Sum_in[9:0] 
+; tunit sets the time unit.
+tunit ns
+; trise specifies the rise time of each input vector.
+trise 0.01
+; tfall specifies the fall time of each input vector.
+tfall 0.01
+; vih specifies the logic high voltage of each input vector.
+vih 1.0
+; vil specifies the logic low voltage of each input vector
+vil 0.0
+; set period time
+period 0.6
+
+; CLK RST A[3:0] B[3:0] A[9:8] Cin Sel Sum_in[9:0]
+0 0 0 0 0 0 0 001
+; Cycle 0
+1 1 0 0 0 0 0 001
+; Cycle 1
+0 0 1 A 0 0 0 001
+1 0 1 A 0 0 0 001
+; Cycle 2
+0 0 2 9 0 0 1 001
+1 0 2 9 0 0 1 001
+; Cycle 3
+0 0 3 8 0 0 0 001
+1 0 3 8 0 0 0 001
+; Cycle 4
+0 0 4 7 0 0 1 001
+1 0 4 7 0 0 1 001

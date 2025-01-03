@@ -1,0 +1,35 @@
+##############################################################################################################
+#####  
+#####                                       Pegasus LVS COMPARISON
+#####  
+#####  Version                       :   22.21-s012
+#####  NVN Run Start                 :   Sun Dec  8 18:33:59 2024
+#####  ERC Summary File              :   ph3_sytolic_array.sum
+#####  Extraction Report File        :   ph3_sytolic_array.rep
+#####  Comparison Report File        :   ph3_sytolic_array.rep.cls
+#####  Top Cell                      :   ph3_sytolic_array  <vs>  ph3_sytolic_array
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####                                :   [INFO]  Some Sections Have Been Truncated
+#####  
+#####  Layout Design                 :   project_demo ph3_sytolic_array layout
+#####  Schematic File                :   /home/viterbi/01/tongjia/work_gpdk045/LVS/ph3_sytolic_array.cdl (cdl)
+#####  Rules File                    :   /home/viterbi/01/tongjia/work_gpdk045/LVS/.technology.rul
+#####  Pin Swap File                 :   ph3_sytolic_array.rep.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 11s - (11s)
+#####  Extraction Exec Time          :   0h 0m 42s - (42s)
+#####  Extraction Peak Memory Usage  :   36.00MB
+#####  NVN CPU Time                  :   0h 0m 2s - (2s)                 
+#####  NVN Exec Time                 :   0h 0m 10s - (10s)               
+#####  NVN Peak Memory Usage         :   282.39MB
+#####  LVS Total CPU Time            :   0h 0m 13s - (13s)               
+#####  LVS Total Exec Time           :   0h 0m 52s - (52s)               
+#####  LVS Total Peak Memory Usage   :   282.39MB
+#####  
+##############################################################################################################
+
+

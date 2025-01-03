@@ -1,0 +1,8 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary MUX_2to1___2X_forph2p2
+B 3 B 4220 2135 metal1_conn
+vdd! 6 vdd! 3000 3565 metal1_conn
+out 7 out 5275 1680 metal1_conn
+S 1 S 760 1670 metal1_conn
+gnd! 8 gnd! 3025 135 metal1_conn
+A 2 A 1480 3050 metal1_conn

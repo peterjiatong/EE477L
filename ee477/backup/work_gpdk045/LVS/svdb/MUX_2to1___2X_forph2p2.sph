@@ -1,0 +1,17 @@
+# Placement Hierarchy File (sph)
+# 
+# 
+# 
+% MUX_2to1___2X_forph2p2 4
+MPM5 M 4
+MPM4 M 4
+MPM3 M 4
+MPM2 M 4
+MPM1 M 4
+MPM0 M 4
+MNM5 M 4
+MNM4 M 4
+MNM3 M 4
+MNM2 M 4
+MNM1 M 4
+MNM0 M 4

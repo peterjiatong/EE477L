@@ -1,0 +1,37 @@
+# XXXX: Net Cross Reference (nxf) (File format 1)
+# XXXX: Layout Primary 1_bit_Full_Adder_ver2
+# XXXX: End of header.
+% M 4 M 4 
+0 D 0 D
+0 G 0 G
+0 S 0 S
+0 B 0 B
+% 1_bit_Full_Adder_ver2 7 1_bit_Full_Adder_ver2 7 
+0 8 0 net3
+0 5 0 net2
+0 12 0 net10
+0 3 0 net4
+0 10 0 net7
+0 11 0 net5
+0 A 0 A
+0 B 0 B
+0 Cin 0 Cin
+0 Cout 0 Cout
+0 S 0 S
+0 vdd! 0 vdd!
+0 gnd! 0 gnd!
+0 17 0 XI1/net14
+0 16 0 XI1/net6
+0 15 0 XI0/net14
+0 14 0 XI0/net6
+0 20 0 XI1/net9
+0 21 0 XI1/net1
+0 18 0 XI0/net9
+0 19 0 XI0/net1
+0 26 0 XI7/net9
+0 24 0 XI5/net9
+0 25 0 XI4/net9
+0 23 0 XI3/net9
+0 22 0 XI2/net9
+0 28 0 XI1/net4
+0 27 0 XI0/net4

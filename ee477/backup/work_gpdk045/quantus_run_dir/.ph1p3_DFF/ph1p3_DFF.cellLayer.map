@@ -1,0 +1,11 @@
+nmos1v_CDNS_8 metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn,_nmos1v NULL
+INV_1X_small_layout metal1_conn,cont_ndiff,ndiff_conn,poly_conn,_nmos1v,cont_pdiff,pdiff_conn,nwell_conn psubstrate,cont_poly,ptap,ntap
+pmos1v_CDNS_9 metal1_conn,psubstrate,poly_conn,cont_pdiff,pdiff_conn,nwell_conn NULL
+pmos1v_CDNS_11 metal1_conn,psubstrate,poly_conn,cont_pdiff,pdiff_conn,nwell_conn NULL
+cellTmpl_CDNS_7 metal1_conn,cont_ndiff,psubstrate,ndiff_conn,cont_pdiff,ptap,pdiff_conn,nwell_conn,ntap NULL
+M3_M2_CDNS_1 metal2_conn,Via2,metal3_conn NULL
+ph1p3_clk_part metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn,cont_pdiff,ptap,pdiff_conn,nwell_conn,ntap cont_poly,_nmos1v
+M1_PO_CDNS_6 metal1_conn,cont_poly,poly_conn NULL
+ph1p3_DFF metal2_conn,metal1_conn,psubstrate,cont_poly,poly_conn,_pmos1v,Via1,metal3_conn cont_ndiff,ndiff_conn,_nmos1v,cont_pdiff,ptap,Via2,pdiff_conn,nwell_conn,ntap
+M2_M1_CDNS_4 metal2_conn,metal1_conn,Via1 NULL
+M2_M1_CDNS_5 metal2_conn,metal1_conn,Via1 NULL

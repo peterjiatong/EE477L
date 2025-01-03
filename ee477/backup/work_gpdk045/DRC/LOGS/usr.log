@@ -1,0 +1,10 @@
+Pegasus 22.21-s012 cYRW7I1koHT2/XVH1CzscA 2024-12-08 17:43:37 152406 viterbi-scf2
+Copyright 2023 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+INFO:    Command Line Options: --log_dir LOGS -top_cell ph3_sytolic_array -ui_data --control /home/viterbi/01/tongjia/work_gpdk045/DRC/pegasusdrcctl /home/viterbi/01/tongjia/work_gpdk045/DRC/.technology.rul
+INFO:    Launch host CPU: Model: Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz, OS: CentOS Linux release 7.9.2009 (Core), Logical cores: 112, Physical cores: 56, Cache: 19712 KB, CPU Speed: 3210.49 MHz
+         Launch host Memory: MemTotal: 1031303 MB,  MemFree: 464134 MB,  SwapTotal: 0 MB,  SwapFree: 0 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 2576 MB
+INFO:    Current path: /home/viterbi/01/tongjia/work_gpdk045/DRC
+INFO:    Run directory same as current path
+INFO:    Log directory: /home/viterbi/01/tongjia/work_gpdk045/DRC/LOGS

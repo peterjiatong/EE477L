@@ -1,0 +1,84 @@
+### Custom WaveView ADV log file, revision L-2016.06-1 (build Jul 27, ) ###
+### created at 18:19:24 on Wed Dec  4 2024 (Linux AMD64) ###
+### Host Name: viterbi-scf2   User ID: tongjia   PID: 229040   ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+wv_move_window CustomWaveView 0 0
+wv_resize_window CustomWaveView 800 400
+wv_move_window CustomWaveView 0 1
+wv_move_window CustomWaveView 519 8
+wv_resize_window CustomWaveView 1344 921
+wv_resize_window CustomWaveView 1344 898
+wv_move_window CustomWaveView 508 8
+wv_move_window CustomWaveView 418 3
+wv_move_window CustomWaveView 322 0
+wv_move_window CustomWaveView 276 0
+wv_move_window CustomWaveView 229 0
+wv_move_window CustomWaveView 198 0
+wv_move_window CustomWaveView 177 0
+wv_move_window CustomWaveView 149 0
+wv_move_window CustomWaveView 94 0
+wv_move_window CustomWaveView 89 0
+wv_move_window CustomWaveView 83 0
+wv_move_window CustomWaveView 67 0
+wv_move_window CustomWaveView 64 0
+wv_move_window CustomWaveView 62 0
+wv_move_window CustomWaveView 43 0
+wv_move_window CustomWaveView 18 0
+wv_move_window CustomWaveView 8 0
+wv_move_window CustomWaveView 5 0
+wv_move_window CustomWaveView 9 0
+wv_move_window CustomWaveView 51 0
+wv_move_window CustomWaveView 98 0
+wv_move_window CustomWaveView 155 0
+wv_move_window CustomWaveView 192 0
+wv_move_window CustomWaveView 202 0
+wv_move_window CustomWaveView 206 0
+wv_move_window CustomWaveView 121 0
+wv_move_window CustomWaveView 111 0
+wv_move_window CustomWaveView 108 0
+wv_move_window CustomWaveView 111 0
+wv_move_window CustomWaveView 115 0
+wv_move_window CustomWaveView 119 0
+wv_move_window CustomWaveView 124 0
+wv_move_window CustomWaveView 129 0
+wv_move_window CustomWaveView 134 0
+wv_select_menu_item {File} {Import Waveform File ...}
+wv_move_dialog FileDialog 600 161
+wv_select_dialog FileDialog
+wv_set_text FileDialog.FileName {}
+wv_select_list_item FileDialog.FileList pi.tr0
+wv_press_button FileDialog.Ok
+wv_select_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_select_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_drag_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_drag_enter WV1
+wv_drag_leave WV1
+wv_drag_enter WV1
+wv_drop_on WV1
+wv_select_panel WV1.PANEL1:1 6.3762e-10 0.676554
+wv_set_text MainWindow.XValue {0}
+wv_set_text MainWindow.XValue {0}
+wv_set_text MainWindow.XValue {0}
+wv_tree_context_menu MainWindow.hierview {D0:pi.tr0}
+wv_select_context_menu_item {Close This File}
+wv_move_dialog Confirmation 715 424
+wv_select_dialog Confirmation
+wv_press_button Confirmation.Ok
+wv_select_menu_item {File} {Import Waveform File ...}
+wv_move_dialog FileDialog 600 161
+wv_move_dialog FileDialog 600 183
+wv_select_dialog FileDialog
+wv_set_text FileDialog.FileName {pi.tr0}
+wv_select_list_item FileDialog.FileList pi.tr0
+wv_press_button FileDialog.Ok
+wv_select_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_select_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_drag_tree_item MainWindow.hierview {D0:pi.tr0}
+wv_drag_enter WV1
+wv_drop_on WV1
+wv_move_window CustomWaveView 68 0
+wv_move_window CustomWaveView 61 0

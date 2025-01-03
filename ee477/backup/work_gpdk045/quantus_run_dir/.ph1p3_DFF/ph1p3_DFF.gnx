@@ -1,0 +1,23 @@
+#4                               
+M: M
+= D D
+= G G
+= S S
+= B B
+#15                              
+ph1p3_DFF: ph1p3_DFF
+= net16 1
+= net11 8
+= net3 3
+= net15 7
+= net2 2
+= net13 5
+= CLK CLK
+= D D
+= Q Q
+= gnd! gnd!
+= vdd! vdd!
+= XI13/net2 15
+= XI18/net2 14
+= XI9/net2 13
+= XI15/net2 12

@@ -1,0 +1,30 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary 8bit_CSA
+A7 26 A7 198540 3010 metal4_conn
+S2 13 S2 68280 1685 metal1_conn
+B7 27 B7 196350 1435 metal3_conn
+A3 14 A3 77690 2990 metal4_conn
+B3 15 B3 76555 1435 metal3_conn
+S7 28 S7 213280 1685 metal1_conn
+A0 2 A0 1655 2990 metal4_conn
+Cout 29 Cout 239280 1485 metal1_conn
+B0 3 B0 1430 605 metal3_conn
+S3 16 S3 93485 1680 metal1_conn
+Cin 4 Cin 1500 4150 metal3_conn
+A4 17 A4 122045 2985 metal4_conn
+vdd! 5 vdd! 119820 3560 metal1_conn
+B4 18 B4 120740 1430 metal3_conn
+S4 19 S4 137770 1685 metal1_conn
+gnd! 6 gnd! 119820 140 metal1_conn
+A5 20 A5 147045 2995 metal4_conn
+S0 7 S0 17885 1675 metal1_conn
+B5 21 B5 145950 1435 metal3_conn
+A1 8 A1 26590 2990 metal4_conn
+B1 9 B1 26160 1445 metal3_conn
+S5 22 S5 162935 1685 metal1_conn
+A6 23 A6 172905 2990 metal4_conn
+S1 10 S1 43110 1685 metal1_conn
+B6 24 B6 171150 1435 metal3_conn
+A2 11 A2 52540 2995 metal4_conn
+B2 12 B2 51365 1440 metal3_conn
+S6 25 S6 188135 1685 metal1_conn

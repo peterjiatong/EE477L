@@ -1,0 +1,14 @@
+1_bit_Full_Adder_ver1 metal1_conn,_pmos1v,psubstrate,metal3_conn,metal4_conn nwell_conn,ndiff_conn,ptap,Via3,pdiff_conn,cont_ndiff,_nmos1v,Via1,metal2_conn,cont_pdiff,ntap,cont_poly,Via2,poly_conn
+M2_M1_CDNS_14 metal1_conn,metal2_conn,Via1 NULL
+pmos1v_CDNS_17 nwell_conn,metal1_conn,pdiff_conn,cont_pdiff,psubstrate,poly_conn NULL
+nmos1v_CDNS_16 ndiff_conn,metal1_conn,_nmos1v,cont_ndiff,psubstrate,poly_conn NULL
+cellTmpl_CDNS_9 nwell_conn,ndiff_conn,ptap,metal1_conn,pdiff_conn,_nmos1v,cont_ndiff,ntap,cont_pdiff,psubstrate NULL
+XOR2_1X nwell_conn,ndiff_conn,ptap,metal1_conn,pdiff_conn,_pmos1v,cont_ndiff,metal2_conn,ntap,cont_pdiff,psubstrate,poly_conn _nmos1v,Via1,cont_poly
+M4_M3_CDNS_3 Via3,metal3_conn,metal4_conn NULL
+M3_M2_CDNS_1 metal2_conn,metal3_conn,Via2 NULL
+M3_M2_CDNS_5 metal2_conn,metal3_conn,Via2 NULL
+NAND2_1X nwell_conn,ndiff_conn,metal1_conn,pdiff_conn,_pmos1v,cont_ndiff,cont_pdiff,poly_conn ptap,_nmos1v,ntap,cont_poly,psubstrate
+NAND2_2X nwell_conn,ndiff_conn,metal1_conn,pdiff_conn,_pmos1v,cont_ndiff,cont_pdiff,poly_conn ptap,_nmos1v,ntap,cont_poly,psubstrate
+M1_PO_CDNS_6 metal1_conn,cont_poly,poly_conn NULL
+M2_M1_CDNS_2 metal1_conn,metal2_conn,Via1 NULL
+M2_M1_CDNS_4 metal1_conn,metal2_conn,Via1 NULL

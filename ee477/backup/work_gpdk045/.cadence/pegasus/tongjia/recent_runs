@@ -1,0 +1,10 @@
+1733711648 0 1733711648 "/home/viterbi/01/tongjia/work_gpdk045/LVS" "pvsrv" "" "" "" "" "" "" "" "" "" "" "" true
+1733708685 0 1733708685 "/home/viterbi/01/tongjia/work_gpdk045/DRC" "pegasusrv" "" "" "" "" "" "" "" "" "" "" "" true
+1733708677 0 1733708677 "/home/viterbi/01/tongjia/work_gpdk045/DRC/ph3_sytolic_array.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732556773 0 1732556773 "/home/viterbi/01/tongjia/work_gpdk045/DRC/ph2p3_Matrix_vector_Multiplication.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732510610 0 1732510610 "/home/viterbi/01/tongjia/work_gpdk045/DRC/ph2p2_processing_element.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732490855 0 1732490855 "/home/viterbi/01/tongjia/work_gpdk045/DRC/MUX_2to1___2X_ph2p2.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732490307 0 1732490307 "/home/viterbi/01/tongjia/work_gpdk045/DRC/MUX_2to1___2X_forph2p2.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732426331 0 1732426331 "/home/viterbi/01/tongjia/work_gpdk045/DRC/ph1p3_MSDFF.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1732410484 0 1732410484 "/home/viterbi/01/tongjia/work_gpdk045/DRC/ph2p1_MAC.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true
+1731895044 0 1731895044 "/home/viterbi/01/tongjia/work_gpdk045/DRC/10badder.drc_errors.ascii" "pvsdrcrv" "" "" "" "" "" "" "" "" "" "" "" true

@@ -1,0 +1,40 @@
+# Placement Hierarchy File (lph)
+# 
+# 
+# 
+% nmos1v_CDNS_16 4
+M0 M 4
+% cellTmpl_CDNS_9 6
+M0 M 4
+M1 M 4
+% XOR2_1X 10
+X14 nmos1v_CDNS_16 4
+X15 nmos1v_CDNS_16 4
+X16 nmos1v_CDNS_16 4
+X17 nmos1v_CDNS_16 4
+X18 nmos1v_CDNS_16 4
+X19 nmos1v_CDNS_16 4
+M0 M 4
+M1 M 4
+% NAND2_2X 6
+X2 cellTmpl_CDNS_9 6
+M0 M 4
+M1 M 4
+% NAND2_1X 6
+X2 cellTmpl_CDNS_9 6
+M0 M 4
+M1 M 4
+% 1_bit_Full_Adder_ver1 7
+X28 NAND2_1X 6
+X29 NAND2_1X 6
+X30 NAND2_2X 6
+X31 XOR2_1X 10
+X32 XOR2_1X 10
+M0 M 4
+M1 M 4
+M2 M 4
+M3 M 4
+M4 M 4
+M5 M 4
+M6 M 4
+M7 M 4

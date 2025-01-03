@@ -1,0 +1,6 @@
+gnd!	metal1_0conn	5110	20
+RST	metal1_0conn	535	-1995
+CLK	metal1_0conn	480	2040
+Q	metal1_0conn	9630	-1995
+D	metal1_0conn	3130	1810
+vdd!	metal1_0conn	5130	-3520

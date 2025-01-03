@@ -1,0 +1,2953 @@
+*
+*
+*
+*                       LINUX           Wed Oct 16 07:29:15 2024
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  Name           : advgen - Quantus - (64-bit)
+*  Version        : 22.1.1-p041
+*  Build Date     : Mon Apr 17 07:36:05 PDT 2023
+*
+*  HSPICE LIBRARY
+*
+*  QRC_TECH_DIR /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical 
+*
+*!LENGTH_UNITS METERS
+*
+*
+*
+
+*
+.SUBCKT 1_bit_Full_Adder_ver2 A B Cin Cout S gnd! vdd!
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MXI6/MNM0	net2#7	net5#4	gnd!#10	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=16.6908 scb=0.0179614 scc=0.00130074
+MXI7/MNM0	gnd!#8	net10#4	XI7/net9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=7.2e-15	PD=5.2e-07	PS=3.6e-07
++ fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI7/MNM1	XI7/net9	net2#3	Cout#3	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=7.2e-15	AS=1.68e-14	PD=3.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI4/MNM1	XI4/net9	B#16	gnd!#9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=7.2e-15	AS=1.68e-14	PD=3.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI4/MNM0	net10#8	Cin#15	XI4/net9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=7.2e-15	PD=5.2e-07	PS=3.6e-07
++ fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI5/MNM0	gnd!#11	net7#4	XI5/net9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=7.2e-15	PD=5.2e-07	PS=3.6e-07
++ fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI5/MNM1	XI5/net9	net4#3	net5#8	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=7.2e-15	AS=1.68e-14	PD=3.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI3/MNM1	XI3/net9	A#14	gnd!#25	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=7.2e-15	AS=1.68e-14	PD=3.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI3/MNM0	net7#8	Cin#11	XI3/net9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=7.2e-15	PD=5.2e-07	PS=3.6e-07
++ fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI2/MNM1	XI2/net9	A#10	gnd!#26	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=7.2e-15	AS=1.68e-14	PD=3.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI2/MNM0	net4#8	B#11	XI2/net9	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=7.2e-15	PD=5.2e-07	PS=3.6e-07
++ fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05
+MXI1/MNM1	S#5	net3#2	XI1/net9#3	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI1/MNM2	XI1/net1	XI1/net14#4	gnd!#27	gnd!
++ g45n1svt	L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI1/MNM0	S#4	XI1/net6#4	XI1/net1#2	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI1/MNM3	XI1/net9	Cin#6	gnd!#28	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI1/XI13/MNM0	XI1/net14#7	Cin#8	gnd!#29	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI1/XI12/MNM0	XI1/net6#7	net3#3	gnd!#30	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/MNM1	net3#12	A#2	XI0/net9#3	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/MNM2	XI0/net1	XI0/net14#4	gnd!#31	gnd!
++ g45n1svt	L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/MNM0	net3#11	XI0/net6#4	XI0/net1#2	gnd!
++ g45n1svt	L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/MNM3	XI0/net9	B#6	gnd!#32	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/XI13/MNM0	XI0/net14#7	B#8	gnd!#33	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI0/XI12/MNM0	XI0/net6#7	A#3	gnd!#24	gnd!	g45n1svt
++ L=4.5e-08	W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.20059 scb=0.00764836 scc=0.000159521
+MXI6/MPM0	net2#8	net5	vdd!#18	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=18.2452 scb=0.0177397 scc=0.00150411
+MXI1/MPM2	XI1/net4	Cin#1	vdd!#32	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI1/MPM1	S#7	XI1/net6	XI1/net4#3	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI1/MPM3	S#6	XI1/net14	XI1/net4#5	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI1/MPM0	XI1/net4#7	net3	vdd!#28	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI0/MPM2	XI0/net4	B#1	vdd!#41	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI0/MPM1	net3#14	XI0/net6	XI0/net4#3	vdd!
++ g45p1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI0/MPM3	net3#13	XI0/net14	XI0/net4#5	vdd!
++ g45p1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI0/MPM0	XI0/net4#7	A#1	vdd!#39	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.2959 scb=0.00764059 scc=8.89329e-05
+MXI0/XI12/MPM0	XI0/net6#8	A#6	vdd!#45	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=17.6861 scb=0.0184591 scc=0.000433664
+MXI0/XI13/MPM0	XI0/net14#8	B#7	vdd!#44	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.886 scb=0.00790338 scc=9.25552e-05
+MXI1/XI12/MPM0	XI1/net6#8	net3#6	vdd!#37	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.327 scb=0.00769864 scc=9.24832e-05
+MXI1/XI13/MPM0	XI1/net14#8	Cin#7	vdd!#34	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=10.327 scb=0.00769864 scc=9.24832e-05
+MXI2/MPM0	net4#7	A#7	vdd!#26	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI2/MPM1	net4#7	B#12	vdd!#24	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI3/MPM0	net7#7	A#11	vdd!#22	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI3/MPM1	net7#7	Cin#12	vdd!#21	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI5/MPM1	net5#7	net7	vdd!#20	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI5/MPM0	net5#7	net4#4	vdd!#19	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI4/MPM0	net10#7	B#13	vdd!#17	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI4/MPM1	net10#7	Cin#16	vdd!#16	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=21.6767 scb=0.0202328 scc=0.0021948
+MXI7/MPM1	Cout#2	net10	vdd!#15	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=22.3336 scb=0.0204967 scc=0.00219492
+MXI7/MPM0	Cout#2	net2#4	vdd!#14	vdd!	g45p1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=23.6714 scb=0.021925 scc=0.00220002
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rh1	A#31	A#34	1.280007	$metal4_conn	$W=1e-07
++ $X=7.5 $Y=0.825
+Rh2	A#34	A	2.787159	$metal4_conn	$W=1e-07
++ $X=3.433 $Y=1.125
+Rh3	A	A#27	0.798784	$metal4_conn	$W=9.15e-08
++ $X=0.31 $Y=1.0275
+Rh4	A#34	A#29	0.801256	$metal4_conn	$W=1e-07
++ $X=6.3 $Y=0.955
+Rh5	net2#17	net2#15	2.050756	$metal4_conn
++ $W=9.65e-08	$X=11.3525 $Y=1.105
+Ri1	A#27	A#21	0.500000	$metal3_conn	$W=8e-08
++ $X=0.135 $Y=0.93
+Ri2	A#29	A#23	0.500000	$metal3_conn	$W=8e-08
++ $X=6.645 $Y=0.805
+Ri3	A#31	A#25	0.500000	$metal3_conn	$W=8e-08
++ $X=7.645 $Y=0.805
+Ri4	net4#13	net4#11	2.329261	$metal3_conn
++ $W=8e-08	$X=8.3925 $Y=0.385
+Ri5	net2#15	net2#11	0.500000	$metal3_conn
++ $W=8e-08	$X=10.355 $Y=1.1
+Ri6	B#27	B#30	2.961408	$metal3_conn	$W=9e-08
++ $X=10.495 $Y=0.5725
+Ri7	B#30	B	2.482222	$metal3_conn	$W=1e-07
++ $X=3.728 $Y=0.26
+Ri8	B	B#23	1.157763	$metal3_conn	$W=9e-08
++ $X=0.425 $Y=0.49
+Ri9	B#30	B#25	1.490729	$metal3_conn	$W=1e-07
++ $X=6.295 $Y=0.6925
+Ri10	Cin	Cin#29	1.848736	$metal3_conn	$W=1e-07
++ $X=2.028 $Y=1.62
+Ri11	Cin#29	Cin#23	0.978723	$metal3_conn	$W=9e-08
++ $X=3.945 $Y=1.165
+Ri12	Cin#29	Cin#31	2.148445	$metal3_conn	$W=1e-07
++ $X=6.1475 $Y=1.615
+Ri13	Cin#31	Cin#25	0.823251	$metal3_conn	$W=1e-07
++ $X=8.35 $Y=1.26
+Ri14	Cin#31	Cin#27	2.284623	$metal3_conn	$W=1e-07
++ $X=9.845 $Y=1.615
+Ri15	net2#17	net2#13	0.500000	$metal3_conn
++ $W=8e-08	$X=12.35 $Y=0.91
+Rj1	A#21	A#16	0.500000	$metal2_conn	$W=8e-08
++ $X=0.135 $Y=0.93
+Rj2	B#23	B#18	0.500000	$metal2_conn	$W=8e-08
++ $X=0.595 $Y=0.715
+Rj3	XI0/net6#9	XI0/net6#5	1.632724	$metal2_conn
++ $W=9e-08	$X=1.125 $Y=0.96
+Rj4	XI0/net14#10	XI0/net14#5	1.662252	$metal2_conn
++ $W=9e-08	$X=1.62 $Y=0.79
+Rj5	XI0/net9#4	XI0/net9#2	1.529104	$metal2_conn
++ $W=1e-07	$X=2.2275 $Y=0.345
+Rj6	XI0/net4#8	XI0/net4#6	0.716107	$metal2_conn
++ $W=1e-07	$X=2.5925 $Y=1.525
+Rj7	XI0/net4#6	XI0/net4#4	0.216107	$metal2_conn
++ $W=1e-07	$X=2.1275 $Y=1.525
+Rj8	XI0/net4#4	XI0/net4#2	0.617051	$metal2_conn
++ $W=1e-07	$X=1.765 $Y=1.525
+Rj9	Cin#23	Cin#18	0.500000	$metal2_conn	$W=8e-08
++ $X=3.795 $Y=0.715
+Rj10	XI1/net6#9	XI1/net6#5	1.632724	$metal2_conn
++ $W=9e-08	$X=4.325 $Y=0.96
+Rj11	XI1/net14#10	XI1/net14#5	1.662252	$metal2_conn
++ $W=9e-08	$X=4.82 $Y=0.79
+Rj12	XI1/net9#4	XI1/net9#2	1.529104	$metal2_conn
++ $W=1e-07	$X=5.4275 $Y=0.345
+Rj13	XI1/net4#8	XI1/net4#6	0.716107	$metal2_conn
++ $W=1e-07	$X=5.7925 $Y=1.525
+Rj14	XI1/net4#6	XI1/net4#4	0.216107	$metal2_conn
++ $W=1e-07	$X=5.3275 $Y=1.525
+Rj15	XI1/net4#4	XI1/net4#2	0.617051	$metal2_conn
++ $W=1e-07	$X=4.965 $Y=1.525
+Rj16	A#23	A#18	0.500000	$metal2_conn	$W=8e-08
++ $X=6.645 $Y=0.805
+Rj17	B#25	B#19	0.500000	$metal2_conn	$W=8e-08
++ $X=7.34 $Y=0.91
+Rj18	net4#11	net4#5	0.500000	$metal2_conn	$W=8e-08
++ $X=7.44 $Y=0.535
+Rj19	A#25	A#20	0.500000	$metal2_conn	$W=8e-08
++ $X=7.645 $Y=0.805
+Rj20	Cin#25	Cin#19	0.500000	$metal2_conn	$W=8e-08
++ $X=8.35 $Y=0.905
+Rj21	net4#13	net4#9	0.500000	$metal2_conn	$W=8e-08
++ $X=9.35 $Y=0.91
+Rj22	net2#11	net2#5	0.500000	$metal2_conn	$W=8e-08
++ $X=10.355 $Y=1.1
+Rj23	B#27	B#22	0.500000	$metal2_conn	$W=8e-08
++ $X=10.645 $Y=0.805
+Rj24	Cin#27	Cin#21	0.500000	$metal2_conn	$W=8e-08
++ $X=11.34 $Y=0.91
+Rj25	net2#13	net2#9	0.500000	$metal2_conn	$W=8e-08
++ $X=12.35 $Y=0.91
+Rk1	A#5	A#16	45.071663	$metal1_conn	$W=1.15e-07
++ $X=0.2075 $Y=1.005
+Rk2	XI0/net6#5	XI0/net6#6	0.024193	$metal1_conn
++ $W=1e-07	$X=0.48 $Y=0.96
+Rk3	XI0/net6#6	XI0/net6#7	75.344322	$metal1_conn
++ $W=8.75e-08	$X=0.45 $Y=0.72
+Rk4	XI0/net6#6	XI0/net6#8	31.294611	$metal1_conn
++ $W=8.5e-08	$X=0.45 $Y=1.1375
+Rk5	B#5	B#18	45.072075	$metal1_conn	$W=1.15e-07
++ $X=0.665 $Y=0.79
+Rk6	XI0/net14#5	XI0/net14#6	0.021216	$metal1_conn
++ $W=1e-07	$X=0.945 $Y=0.79
+Rk7	XI0/net14#6	XI0/net14#7	75.215706	$metal1_conn
++ $W=9e-08	$X=0.915 $Y=0.635
+Rk8	XI0/net14#6	XI0/net14#8	31.400511	$metal1_conn
++ $W=9e-08	$X=0.915 $Y=1.0525
+Rk9	XI0/net4	XI0/net4#2	31.113539	$metal1_conn
++ $W=9e-08	$X=1.635 $Y=1.465
+Rk10	XI0/net9	XI0/net9#2	75.093613	$metal1_conn
++ $W=9e-08	$X=1.635 $Y=0.4225
+Rk11	XI0/net4#3	XI0/net4#4	31.606249	$metal1_conn
++ $W=9e-08	$X=1.895 $Y=1.4595
+Rk12	XI0/net6#9	XI0/net6#3	45.115864	$metal1_conn
++ $W=1e-07	$X=1.7645 $Y=0.96
+Rk13	XI0/net1	XI0/net1#2	150.606964	$metal1_conn
++ $W=8e-08	$X=2.1275 $Y=0.3
+Rk14	XI0/net4#5	XI0/net4#6	31.606249	$metal1_conn
++ $W=9e-08	$X=2.36 $Y=1.4595
+Rk15	XI0/net14#3	XI0/net14#10	45.074959	$metal1_conn
++ $W=1.15e-07	$X=2.3275 $Y=0.79
+Rk16	XI0/net9#3	XI0/net9#4	75.089417	$metal1_conn
++ $W=9e-08	$X=2.825 $Y=0.4225
+Rk17	XI0/net4#7	XI0/net4#8	31.106249	$metal1_conn
++ $W=9e-08	$X=2.825 $Y=1.4595
+Rk18	net3#5	net3#8	45.385845	$metal1_conn	$W=1e-07
++ $X=3.1575 $Y=0.795
+Rk19	net3#8	net3#9	0.492234	$metal1_conn	$W=8.65e-08
++ $X=2.565 $Y=0.9175
+Rk20	net3#9	net3#10	0.286972	$metal1_conn	$W=9e-08
++ $X=2.3325 $Y=1.04
+Rk21	net3#10	net3#11	75.400017	$metal1_conn
++ $W=8.25e-08	$X=2.1 $Y=0.765
+Rk22	net3#8	net3#12	75.195122	$metal1_conn	$W=9e-08
++ $X=3.03 $Y=0.6425
+Rk23	net3#9	net3#13	31.235874	$metal1_conn	$W=9e-08
++ $X=2.565 $Y=1.175
+Rk24	net3#10	net3#14	31.235874	$metal1_conn
++ $W=9e-08	$X=2.1 $Y=1.175
+Rk25	XI1/net6#5	XI1/net6#6	0.024193	$metal1_conn
++ $W=1e-07	$X=3.68 $Y=0.96
+Rk26	XI1/net6#6	XI1/net6#7	75.344322	$metal1_conn
++ $W=8.75e-08	$X=3.65 $Y=0.72
+Rk27	XI1/net6#6	XI1/net6#8	31.294611	$metal1_conn
++ $W=8.5e-08	$X=3.65 $Y=1.1375
+Rk28	Cin#5	Cin#18	45.072075	$metal1_conn	$W=1.15e-07
++ $X=3.865 $Y=0.79
+Rk29	XI1/net14#5	XI1/net14#6	0.021216	$metal1_conn
++ $W=1e-07	$X=4.145 $Y=0.79
+Rk30	XI1/net14#6	XI1/net14#7	75.215706	$metal1_conn
++ $W=9e-08	$X=4.115 $Y=0.635
+Rk31	XI1/net14#6	XI1/net14#8	31.400511	$metal1_conn
++ $W=9e-08	$X=4.115 $Y=1.0525
+Rk32	XI1/net4	XI1/net4#2	31.113539	$metal1_conn
++ $W=9e-08	$X=4.835 $Y=1.465
+Rk33	XI1/net9	XI1/net9#2	75.093613	$metal1_conn
++ $W=9e-08	$X=4.835 $Y=0.4225
+Rk34	XI1/net4#3	XI1/net4#4	31.606249	$metal1_conn
++ $W=9e-08	$X=5.095 $Y=1.4595
+Rk35	XI1/net6#9	XI1/net6#3	45.115864	$metal1_conn
++ $W=1e-07	$X=4.9645 $Y=0.96
+Rk36	XI1/net1	XI1/net1#2	150.606964	$metal1_conn
++ $W=8e-08	$X=5.3275 $Y=0.3
+Rk37	XI1/net4#5	XI1/net4#6	31.606249	$metal1_conn
++ $W=9e-08	$X=5.56 $Y=1.4595
+Rk38	XI1/net14#3	XI1/net14#10	45.074959	$metal1_conn
++ $W=1.15e-07	$X=5.5275 $Y=0.79
+Rk39	XI1/net9#3	XI1/net9#4	75.089417	$metal1_conn
++ $W=9e-08	$X=6.025 $Y=0.4225
+Rk40	XI1/net4#7	XI1/net4#8	31.106249	$metal1_conn
++ $W=9e-08	$X=6.025 $Y=1.4595
+Rk41	S	S#1	0.099185	$metal1_conn	$W=1e-07
++ $X=6.312 $Y=0.795
+Rk42	S#1	S#2	0.492234	$metal1_conn	$W=8.65e-08
++ $X=5.765 $Y=0.9175
+Rk43	S#2	S#3	0.286972	$metal1_conn	$W=9e-08
++ $X=5.5325 $Y=1.04
+Rk44	S#3	S#4	75.400017	$metal1_conn	$W=8.25e-08
++ $X=5.3 $Y=0.765
+Rk45	S#1	S#5	75.195122	$metal1_conn	$W=9e-08
++ $X=6.23 $Y=0.6425
+Rk46	S#2	S#6	31.235874	$metal1_conn	$W=9e-08
++ $X=5.765 $Y=1.175
+Rk47	S#3	S#7	31.235874	$metal1_conn	$W=9e-08
++ $X=5.3 $Y=1.175
+Rk48	A#9	A#18	45.060955	$metal1_conn	$W=1.15e-07
++ $X=6.7075 $Y=0.88
+Rk49	B#19	B#9	45.125336	$metal1_conn	$W=1e-07
++ $X=7.3005 $Y=0.91
+Rk50	net4#5	net4#6	0.392295	$metal1_conn	$W=8.5e-08
++ $X=7.2025 $Y=0.76
+Rk51	net4#6	net4#7	31.377035	$metal1_conn	$W=7.75e-08
++ $X=6.955 $Y=0.9275
+Rk52	net4#6	net4#8	75.210793	$metal1_conn	$W=1e-07
++ $X=7.06 $Y=0.5875
+Rk53	A#13	A#20	45.060955	$metal1_conn	$W=1.15e-07
++ $X=7.7075 $Y=0.88
+Rk54	Cin#19	Cin#9	45.132057	$metal1_conn	$W=9.75e-08
++ $X=8.305 $Y=0.905
+Rk55	net7#3	net7#6	45.569843	$metal1_conn	$W=8.5e-08
++ $X=8.3475 $Y=0.76
+Rk56	net7#6	net7#7	31.377035	$metal1_conn	$W=7.75e-08
++ $X=7.955 $Y=0.9275
+Rk57	net7#6	net7#8	75.210793	$metal1_conn	$W=1e-07
++ $X=8.06 $Y=0.5875
+Rk58	net4#9	net4	45.131294	$metal1_conn	$W=1e-07
++ $X=9.305 $Y=0.91
+Rk59	net5#3	net5#6	45.696781	$metal1_conn	$W=8.5e-08
++ $X=9.4225 $Y=0.76
+Rk60	net5#6	net5#7	31.377035	$metal1_conn	$W=7.75e-08
++ $X=8.955 $Y=0.9275
+Rk61	net5#6	net5#8	75.210793	$metal1_conn	$W=1e-07
++ $X=9.06 $Y=0.5875
+Rk62	net2#5	net2#6	0.196312	$metal1_conn	$W=1e-07
++ $X=10.355 $Y=0.9875
+Rk63	net2#6	net2#7	75.184486	$metal1_conn	$W=9e-08
++ $X=10.185 $Y=0.7275
+Rk64	net2#6	net2#8	31.256752	$metal1_conn	$W=8e-08
++ $X=10.185 $Y=1.0025
+Rk65	B#15	B#22	45.064045	$metal1_conn	$W=1.15e-07
++ $X=10.7075 $Y=0.88
+Rk66	Cin#21	Cin#13	45.125336	$metal1_conn	$W=1e-07
++ $X=11.3005 $Y=0.91
+Rk67	net10#3	net10#6	45.551414	$metal1_conn
++ $W=8.5e-08	$X=11.3475 $Y=0.76
+Rk68	net10#6	net10#7	31.377035	$metal1_conn
++ $W=7.75e-08	$X=10.955 $Y=0.9275
+Rk69	net10#6	net10#8	75.210793	$metal1_conn
++ $W=1e-07	$X=11.06 $Y=0.5875
+Rk70	net2#9	net2	45.131294	$metal1_conn	$W=1e-07
++ $X=12.305 $Y=0.91
+Rk72	vdd!#2	vdd!#4	0.089443	$metal1_conn	$W=1.25e-07
++ $X=12.085 $Y=1.78
+Rk73	vdd!#4	vdd!#5	0.114343	$metal1_conn	$W=1.25e-07
++ $X=11.85 $Y=1.78
+Rk74	vdd!#5	vdd!#6	0.293425	$metal1_conn	$W=1.25e-07
++ $X=11.455 $Y=1.78
+Rk75	vdd!#6	vdd!#7	0.203786	$metal1_conn	$W=1.25e-07
++ $X=10.955 $Y=1.78
+Rk76	vdd!#7	vdd!#8	0.283660	$metal1_conn	$W=1.25e-07
++ $X=10.48 $Y=1.78
+Rk77	vdd!#8	vdd!#9	0.099403	$metal1_conn	$W=1.25e-07
++ $X=10.065 $Y=1.78
+Rk78	vdd!#9	vdd!#10	0.407962	$metal1_conn	$W=1.25e-07
++ $X=9.57 $Y=1.78
+Rk79	vdd!#10	vdd!#11	0.203786	$metal1_conn
++ $W=1.25e-07	$X=8.955 $Y=1.78
+Rk80	vdd!#11	vdd!#12	0.293425	$metal1_conn
++ $W=1.25e-07	$X=8.455 $Y=1.78
+Rk81	vdd!#12	vdd!#13	0.189041	$metal1_conn
++ $W=1.25e-07	$X=7.979 $Y=1.78
+Rk82	vdd!#2	vdd!#14	31.399387	$metal1_conn	$W=9e-08
++ $X=12.16 $Y=1.4825
+Rk83	vdd!#5	vdd!#15	31.399387	$metal1_conn	$W=9e-08
++ $X=11.75 $Y=1.4825
+Rk84	vdd!#6	vdd!#16	31.399387	$metal1_conn	$W=9e-08
++ $X=11.16 $Y=1.4825
+Rk85	vdd!#7	vdd!#17	31.399387	$metal1_conn	$W=9e-08
++ $X=10.75 $Y=1.4825
+Rk86	vdd!#9	vdd!#18	31.382984	$metal1_conn	$W=9e-08
++ $X=9.98 $Y=1.495
+Rk87	vdd!#10	vdd!#19	31.399387	$metal1_conn
++ $W=9e-08	$X=9.16 $Y=1.4825
+Rk88	vdd!#11	vdd!#20	31.399387	$metal1_conn
++ $W=9e-08	$X=8.75 $Y=1.4825
+Rk89	vdd!#12	vdd!#21	31.399387	$metal1_conn
++ $W=9e-08	$X=8.16 $Y=1.4825
+Rk90	vdd!#13	vdd!#22	31.412254	$metal1_conn
++ $W=9e-08	$X=7.75 $Y=1.4825
+Rk91	vdd!#13	vdd!#23	0.309169	$metal1_conn
++ $W=1.25e-07	$X=7.455 $Y=1.78
+Rk92	vdd!#23	vdd!#24	31.399387	$metal1_conn
++ $W=9e-08	$X=7.16 $Y=1.4825
+Rk93	vdd!#23	vdd!#25	0.203786	$metal1_conn
++ $W=1.25e-07	$X=6.955 $Y=1.78
+Rk94	vdd!#25	vdd!#26	31.399387	$metal1_conn
++ $W=9e-08	$X=6.75 $Y=1.4825
+Rk95	vdd!#25	vdd!	0.210206	$metal1_conn	$W=1.25e-07
++ $X=6.524 $Y=1.78
+Rk96	vdd!	vdd!#27	0.048359	$metal1_conn	$W=1.25e-07
++ $X=6.293 $Y=1.78
+Rk97	vdd!#27	vdd!#28	31.265614	$metal1_conn
++ $W=9e-08	$X=6.23 $Y=1.59
+Rk98	vdd!#27	vdd!#30	0.283660	$metal1_conn
++ $W=1.25e-07	$X=5.96 $Y=1.78
+Rk99	vdd!#30	vdd!#31	0.512735	$metal1_conn
++ $W=1.25e-07	$X=5.13 $Y=1.78
+Rk100	vdd!#31	vdd!#32	31.266342	$metal1_conn
++ $W=9e-08	$X=4.63 $Y=1.59
+Rk101	vdd!#31	vdd!#33	0.358163	$metal1_conn
++ $W=1.25e-07	$X=4.27 $Y=1.78
+Rk102	vdd!#33	vdd!#34	31.261604	$metal1_conn
++ $W=9e-08	$X=3.91 $Y=1.5875
+Rk103	vdd!#33	vdd!#35	0.124303	$metal1_conn
++ $W=1.25e-07	$X=3.8 $Y=1.78
+Rk104	vdd!#35	vdd!#36	0.106873	$metal1_conn
++ $W=1.25e-07	$X=3.5375 $Y=1.78
+Rk105	vdd!#36	vdd!#37	31.261604	$metal1_conn
++ $W=9e-08	$X=3.445 $Y=1.5875
+Rk106	vdd!#36	vdd!#38	0.206276	$metal1_conn
++ $W=1.25e-07	$X=3.2375 $Y=1.78
+Rk107	vdd!#38	vdd!#39	31.265614	$metal1_conn
++ $W=9e-08	$X=3.03 $Y=1.59
+Rk108	vdd!#38	vdd!#40	0.796395	$metal1_conn
++ $W=1.25e-07	$X=2.23 $Y=1.78
+Rk109	vdd!#40	vdd!#41	31.266342	$metal1_conn
++ $W=9e-08	$X=1.43 $Y=1.59
+Rk110	vdd!#40	vdd!#42	0.084464	$metal1_conn
++ $W=1.25e-07	$X=1.36 $Y=1.78
+Rk111	vdd!#42	vdd!#43	0.273700	$metal1_conn
++ $W=1.25e-07	$X=0.97 $Y=1.78
+Rk112	vdd!#43	vdd!#44	31.261604	$metal1_conn
++ $W=9e-08	$X=0.71 $Y=1.5875
+Rk113	vdd!#43	vdd!#45	31.496145	$metal1_conn
++ $W=9e-08	$X=0.245 $Y=1.5875
+Rk114	vdd!#3	vdd!#4	12.500000	$metal1_conn	$W=9e-08
++ $X=11.98 $Y=1.78
+Rk115	vdd!#3	vdd!#8	6.250000	$metal1_conn	$W=9e-08
++ $X=10.18 $Y=1.78
+Rk116	vdd!#3	vdd!#13	6.250000	$metal1_conn	$W=9e-08
++ $X=7.78 $Y=1.78
+Rk117	vdd!#29	vdd!#30	9.375000	$metal1_conn
++ $W=9e-08	$X=5.66 $Y=1.78
+Rk118	vdd!#29	vdd!#35	6.250000	$metal1_conn
++ $W=9e-08	$X=3.66 $Y=1.78
+Rk119	vdd!#29	vdd!#42	6.250000	$metal1_conn
++ $W=9e-08	$X=1.26 $Y=1.78
+Rk120	gnd!#1	gnd!#2	10.447677	$metal1_conn	$W=1.25e-07
++ $X=11.85 $Y=0.07
+Rk121	gnd!#2	gnd!#3	0.497601	$metal1_conn	$W=1.25e-07
++ $X=11.25 $Y=0.07
+Rk122	gnd!#3	gnd!#4	0.283660	$metal1_conn	$W=1.25e-07
++ $X=10.48 $Y=0.07
+Rk123	gnd!#4	gnd!#5	0.099403	$metal1_conn	$W=1.25e-07
++ $X=10.065 $Y=0.07
+Rk124	gnd!#5	gnd!#6	0.612138	$metal1_conn	$W=1.25e-07
++ $X=9.365 $Y=0.07
+Rk125	gnd!#6	gnd!#7	0.482856	$metal1_conn	$W=1.25e-07
++ $X=8.274 $Y=0.07
+Rk126	gnd!#2	gnd!#8	75.206924	$metal1_conn	$W=1e-07
++ $X=11.75 $Y=0.2575
+Rk127	gnd!#3	gnd!#9	75.206924	$metal1_conn	$W=1e-07
++ $X=10.75 $Y=0.2575
+Rk128	gnd!#5	gnd!#10	75.342522	$metal1_conn	$W=9e-08
++ $X=9.98 $Y=0.3575
+Rk129	gnd!#6	gnd!#11	75.206924	$metal1_conn	$W=1e-07
++ $X=8.75 $Y=0.2575
+Rk130	gnd!#7	gnd!#12	0.513345	$metal1_conn	$W=1.25e-07
++ $X=7.25 $Y=0.07
+Rk131	gnd!#12	gnd!	0.217676	$metal1_conn	$W=1.25e-07
++ $X=6.5165 $Y=0.07
+Rk132	gnd!	gnd!#13	0.272455	$metal1_conn	$W=1.25e-07
++ $X=6.053 $Y=0.07
+Rk133	gnd!#13	gnd!#15	0.052094	$metal1_conn
++ $W=1.25e-07	$X=5.7275 $Y=0.07
+Rk134	gnd!#15	gnd!#16	0.512735	$metal1_conn
++ $W=1.25e-07	$X=5.13 $Y=0.07
+Rk135	gnd!#16	gnd!#17	0.358163	$metal1_conn
++ $W=1.25e-07	$X=4.27 $Y=0.07
+Rk136	gnd!#17	gnd!#18	0.124303	$metal1_conn
++ $W=1.25e-07	$X=3.8 $Y=0.07
+Rk137	gnd!#18	gnd!#19	0.106873	$metal1_conn
++ $W=1.25e-07	$X=3.5375 $Y=0.07
+Rk138	gnd!#19	gnd!#20	0.437842	$metal1_conn
++ $W=1.25e-07	$X=3.005 $Y=0.07
+Rk139	gnd!#20	gnd!#21	0.564829	$metal1_conn
++ $W=1.25e-07	$X=1.9975 $Y=0.07
+Rk140	gnd!#21	gnd!#22	0.084464	$metal1_conn
++ $W=1.25e-07	$X=1.36 $Y=0.07
+Rk141	gnd!#22	gnd!#23	0.273700	$metal1_conn
++ $W=1.25e-07	$X=0.97 $Y=0.07
+Rk142	gnd!#23	gnd!#24	75.495049	$metal1_conn
++ $W=9e-08	$X=0.245 $Y=0.295
+Rk143	gnd!#7	gnd!#25	75.219795	$metal1_conn	$W=1e-07
++ $X=7.75 $Y=0.2575
+Rk144	gnd!#12	gnd!#26	75.206924	$metal1_conn
++ $W=1e-07	$X=6.75 $Y=0.2575
+Rk145	gnd!#13	gnd!#27	75.279465	$metal1_conn
++ $W=8e-08	$X=5.765 $Y=0.295
+Rk146	gnd!#16	gnd!#28	75.270714	$metal1_conn
++ $W=9e-08	$X=4.63 $Y=0.295
+Rk147	gnd!#17	gnd!#29	75.260513	$metal1_conn
++ $W=9e-08	$X=3.91 $Y=0.295
+Rk148	gnd!#19	gnd!#30	75.260513	$metal1_conn
++ $W=9e-08	$X=3.445 $Y=0.295
+Rk149	gnd!#20	gnd!#31	75.279465	$metal1_conn
++ $W=8e-08	$X=2.565 $Y=0.295
+Rk150	gnd!#21	gnd!#32	75.270714	$metal1_conn
++ $W=9e-08	$X=1.43 $Y=0.295
+Rk151	gnd!#23	gnd!#33	75.260513	$metal1_conn
++ $W=9e-08	$X=0.71 $Y=0.295
+Rk152	gnd!#1	gnd!#4	5.166667	$metal1_conn	$W=9e-08
++ $X=10.18 $Y=0.07
+Rk153	gnd!#1	gnd!#7	5.166667	$metal1_conn	$W=9e-08
++ $X=7.78 $Y=0.07
+Rk154	gnd!#14	gnd!#15	7.750000	$metal1_conn
++ $W=9e-08	$X=5.66 $Y=0.07
+Rk155	gnd!#14	gnd!#18	5.166667	$metal1_conn
++ $W=9e-08	$X=3.66 $Y=0.07
+Rk156	gnd!#14	gnd!#22	5.166667	$metal1_conn
++ $W=9e-08	$X=1.26 $Y=0.07
+Rk157	Cout	Cout#1	0.510240	$metal1_conn	$W=8.5e-08
++ $X=12.427 $Y=0.76
+Rk158	Cout#1	Cout#2	31.377035	$metal1_conn	$W=7.75e-08
++ $X=11.955 $Y=0.9275
+Rk159	Cout#1	Cout#3	75.210793	$metal1_conn	$W=1e-07
++ $X=12.06 $Y=0.5875
+Rl1	B#1	B#2	74.233528	$poly_conn	$W=3.9e-08
++ $X=1.5325 $Y=1.163
+Rl2	B#2	B#3	262.824524	$poly_conn	$W=3.9e-08
++ $X=1.1725 $Y=1.0525
+Rl3	B#3	B#4	95.101501	$poly_conn	$W=3.9e-08
++ $X=0.8125 $Y=0.935
+Rl4	B#4	B#5	2.766559	$poly_conn	$W=9.4e-08
++ $X=0.79 $Y=0.79
+Rl5	B#2	B#6	191.541229	$poly_conn	$W=3.9e-08
++ $X=1.5325 $Y=0.79
+Rl6	B#3	B#7	72.310455	$poly_conn	$W=3.9e-08
++ $X=0.8125 $Y=1.16
+Rl7	B#4	B#8	88.175659	$poly_conn	$W=3.9e-08
++ $X=0.8125 $Y=0.645
+Rl8	XI0/net6	XI0/net6#2	107.406433	$poly_conn
++ $W=3.9e-08	$X=1.9975 $Y=1.1305
+Rl9	XI0/net6#2	XI0/net6#3	1.266559	$poly_conn
++ $W=9.4e-08	$X=1.975 $Y=0.96
+Rl10	XI0/net6#2	XI0/net6#4	153.560272	$poly_conn
++ $W=3.9e-08	$X=1.9975 $Y=0.73
+Rl11	XI0/net14	XI0/net14#2	172.791046	$poly_conn
++ $W=3.9e-08	$X=2.4625 $Y=1.0455
+Rl12	XI0/net14#2	XI0/net14#3	2.016559	$poly_conn
++ $W=9.4e-08	$X=2.44 $Y=0.79
+Rl13	XI0/net14#2	XI0/net14#4	88.175659	$poly_conn
++ $W=3.9e-08	$X=2.4625 $Y=0.645
+Rl14	A#1	A#2	269.230743	$poly_conn	$W=3.9e-08
++ $X=2.9275 $Y=0.9005
+Rl15	A#2	A#3	1126.488770	$poly_conn	$W=3.9e-08
++ $X=1.638 $Y=0.2325
+Rl16	A#3	A#4	170.867966	$poly_conn	$W=3.9e-08
++ $X=0.3475 $Y=0.752
+Rl17	A#4	A#5	1.266559	$poly_conn	$W=9.4e-08
++ $X=0.325 $Y=1.005
+Rl18	A#4	A#6	88.175659	$poly_conn	$W=3.9e-08
++ $X=0.3475 $Y=1.15
+Rl19	Cin#1	Cin#2	74.233528	$poly_conn	$W=3.9e-08
++ $X=4.7325 $Y=1.163
+Rl20	Cin#2	Cin#3	262.824524	$poly_conn	$W=3.9e-08
++ $X=4.3725 $Y=1.0525
+Rl21	Cin#3	Cin#4	95.101501	$poly_conn	$W=3.9e-08
++ $X=4.0125 $Y=0.935
+Rl22	Cin#4	Cin#5	2.766559	$poly_conn	$W=9.4e-08
++ $X=3.99 $Y=0.79
+Rl23	Cin#2	Cin#6	191.541229	$poly_conn	$W=3.9e-08
++ $X=4.7325 $Y=0.79
+Rl24	Cin#3	Cin#7	72.310455	$poly_conn	$W=3.9e-08
++ $X=4.0125 $Y=1.16
+Rl25	Cin#4	Cin#8	88.175659	$poly_conn	$W=3.9e-08
++ $X=4.0125 $Y=0.645
+Rl26	XI1/net6	XI1/net6#2	107.406433	$poly_conn
++ $W=3.9e-08	$X=5.1975 $Y=1.1305
+Rl27	XI1/net6#2	XI1/net6#3	1.266559	$poly_conn
++ $W=9.4e-08	$X=5.175 $Y=0.96
+Rl28	XI1/net6#2	XI1/net6#4	153.560272	$poly_conn
++ $W=3.9e-08	$X=5.1975 $Y=0.73
+Rl29	XI1/net14	XI1/net14#2	172.791046	$poly_conn
++ $W=3.9e-08	$X=5.6625 $Y=1.0455
+Rl30	XI1/net14#2	XI1/net14#3	2.016559	$poly_conn
++ $W=9.4e-08	$X=5.64 $Y=0.79
+Rl31	XI1/net14#2	XI1/net14#4	88.175659	$poly_conn
++ $W=3.9e-08	$X=5.6625 $Y=0.645
+Rl32	net3	net3#2	269.230743	$poly_conn	$W=3.9e-08
++ $X=6.1275 $Y=0.9005
+Rl33	net3#2	net3#3	1126.488770	$poly_conn	$W=3.9e-08
++ $X=4.838 $Y=0.2325
+Rl34	net3#3	net3#4	170.867966	$poly_conn	$W=3.9e-08
++ $X=3.5475 $Y=0.752
+Rl35	net3#4	net3#5	1.266559	$poly_conn	$W=9.4e-08
++ $X=3.525 $Y=1.005
+Rl36	net3#4	net3#6	88.175659	$poly_conn	$W=3.9e-08
++ $X=3.5475 $Y=1.15
+Rl37	A#7	A#8	55.483356	$poly_conn	$W=3.9e-08
++ $X=6.8525 $Y=0.983
+Rl38	A#8	A#9	3.516560	$poly_conn	$W=9.4e-08
++ $X=6.83 $Y=0.88
+Rl39	A#8	A#10	151.637192	$poly_conn	$W=3.9e-08
++ $X=6.8525 $Y=0.6525
+Rl40	B#9	B#10	2.021347	$poly_conn	$W=9.4e-08
++ $X=7.08 $Y=0.91
+Rl41	B#10	B#11	183.895157	$poly_conn	$W=3.9e-08
++ $X=7.0575 $Y=0.7725
+Rl42	B#10	B#12	43.944893	$poly_conn	$W=3.9e-08
++ $X=7.0575 $Y=0.9975
+Rl43	A#11	A#12	55.483356	$poly_conn	$W=3.9e-08
++ $X=7.8525 $Y=0.983
+Rl44	A#12	A#13	3.516560	$poly_conn	$W=9.4e-08
++ $X=7.83 $Y=0.88
+Rl45	A#12	A#14	151.637192	$poly_conn	$W=3.9e-08
++ $X=7.8525 $Y=0.6525
+Rl46	Cin#9	Cin#10	2.021347	$poly_conn	$W=9.4e-08
++ $X=8.08 $Y=0.91
+Rl47	Cin#10	Cin#11	183.895157	$poly_conn	$W=3.9e-08
++ $X=8.0575 $Y=0.7725
+Rl48	Cin#10	Cin#12	43.944893	$poly_conn	$W=3.9e-08
++ $X=8.0575 $Y=0.9975
+Rl49	net7	net7#2	55.483356	$poly_conn	$W=3.9e-08
++ $X=8.8525 $Y=0.983
+Rl50	net7#2	net7#3	3.516560	$poly_conn	$W=9.4e-08
++ $X=8.83 $Y=0.88
+Rl51	net7#2	net7#4	151.637192	$poly_conn	$W=3.9e-08
++ $X=8.8525 $Y=0.6525
+Rl52	net4	net4#2	2.021347	$poly_conn	$W=9.4e-08
++ $X=9.08 $Y=0.91
+Rl53	net4#2	net4#3	183.895157	$poly_conn	$W=3.9e-08
++ $X=9.0575 $Y=0.7725
+Rl54	net4#2	net4#4	43.944893	$poly_conn	$W=3.9e-08
++ $X=9.0575 $Y=0.9975
+Rl55	net5	net5#2	68.944893	$poly_conn	$W=3.9e-08
++ $X=10.0825 $Y=0.9905
+Rl56	net5#2	net5#3	5.112304	$poly_conn	$W=9.4e-08
++ $X=10.055 $Y=0.87
+Rl57	net5#2	net5#4	70.867966	$poly_conn	$W=3.9e-08
++ $X=10.0825 $Y=0.7475
+Rl58	B#13	B#14	55.483356	$poly_conn	$W=3.9e-08
++ $X=10.8525 $Y=0.983
+Rl59	B#14	B#15	3.516560	$poly_conn	$W=9.4e-08
++ $X=10.83 $Y=0.88
+Rl60	B#14	B#16	151.637192	$poly_conn	$W=3.9e-08
++ $X=10.8525 $Y=0.6525
+Rl61	Cin#13	Cin#14	2.021347	$poly_conn	$W=9.4e-08
++ $X=11.08 $Y=0.91
+Rl62	Cin#14	Cin#15	183.895157	$poly_conn	$W=3.9e-08
++ $X=11.0575 $Y=0.7725
+Rl63	Cin#14	Cin#16	43.944893	$poly_conn	$W=3.9e-08
++ $X=11.0575 $Y=0.9975
+Rl64	net10	net10#2	55.483356	$poly_conn	$W=3.9e-08
++ $X=11.8525 $Y=0.983
+Rl65	net10#2	net10#3	3.516560	$poly_conn
++ $W=9.4e-08	$X=11.83 $Y=0.88
+Rl66	net10#2	net10#4	151.637192	$poly_conn
++ $W=3.9e-08	$X=11.8525 $Y=0.6525
+Rl67	net2	net2#2	2.021347	$poly_conn	$W=9.4e-08
++ $X=12.08 $Y=0.91
+Rl68	net2#2	net2#3	183.895157	$poly_conn	$W=3.9e-08
++ $X=12.0575 $Y=0.7725
+Rl69	net2#2	net2#4	43.944893	$poly_conn	$W=3.9e-08
++ $X=12.0575 $Y=0.9975
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	B	3.39691e-17	$X=2.031 $Y=0.6965
+C2	Cin#27	net2#11	4.25505e-18	$X=10.4535 $Y=1.098
+C3	gnd!#12	A#18	3.29802e-18	$X=6.714 $Y=0.6655
+C4	A	Cin	3.41713e-17	$X=1.382 $Y=1.4265
+C5	net2#11	net10#7	1.73487e-18	$X=10.503 $Y=1.105
+C6	XI0/net14#10	XI0/net9	1.00891e-18	$X=1.778 $Y=0.5915
+C7	A	vdd!	2.46381e-17	$X=2.0045 $Y=1.1345
+C8	B#30	gnd!#14	3.50007e-18	$X=5.378 $Y=0.4875
+C9	B#6	XI0/net6#4	5.02857e-18	$X=1.7805 $Y=0.543
+C10	net4#6	B#11	3.26515e-18	$X=6.994 $Y=0.5485
+C11	gnd!#2	net10#4	1.6942e-18	$X=11.7845 $Y=0.3825
+C12	Cin	vdd!	4.4919e-17	$X=1.1295 $Y=1.618
+C13	B#23	XI0/net6#6	2.90048e-18	$X=0.4655 $Y=0.8405
+C14	net2#15	Cin#15	6.57019e-19	$X=10.905 $Y=0.5685
+C15	S#2	XI1/net4#6	4.26594e-18	$X=5.6705 $Y=1.2225
+C16	S	vdd!	2.08697e-18	$X=6.383 $Y=0.795
+C17	A#21	gnd!#24	2.24692e-18	$X=0.159 $Y=0.811
+C18	B#5	B#4	2.51425e-18	$X=0.785 $Y=0.7895
+C19	XI1/net4#6	vdd!#29	1.97449e-17	$X=5.4605 $Y=1.536
+C20	net5#3	net2#6	2.19095e-17	$X=10.125 $Y=0.856
+C21	gnd!#14	net3#2	7.37785e-18	$X=5.308 $Y=0.219
+C22	gnd!#19	net3#3	4.00066e-18	$X=3.6815 $Y=0.1465
+C23	net4#11	gnd!#1	6.97634e-18	$X=7.692 $Y=0.493
+C24	A#31	B#25	2.22982e-17	$X=7.424 $Y=0.924
+C25	XI1/net9#4	XI1/net14#10	5.13193e-18	$X=5.614 $Y=0.561
+C26	XI0/net14#7	XI0/net9	1.38562e-18	$X=1.2685 $Y=0.509
+C27	XI0/net9#2	A#3	1.24978e-18	$X=1.4385 $Y=0.298
+C28	net3#11	A#2	1.805e-18	$X=2.1465 $Y=0.451
+C29	S#3	vdd!#29	2.47077e-18	$X=5.2365 $Y=0.996
+C30	net4#13	gnd!#11	1.93873e-18	$X=8.865 $Y=0.462
+C31	vdd!#18	net4#4	9.67417e-19	$X=9.262 $Y=1.1945
+C32	XI0/net9#3	XI0/net14#4	1.71289e-18	$X=2.581 $Y=0.494
+C33	B#27	net2#11	1.54339e-18	$X=10.3705 $Y=1.0645
+C34	net2#11	vdd!#17	2.18758e-18	$X=10.4535 $Y=1.1255
+C35	XI1/net4#6	XI1/net6	1.05545e-18	$X=5.3005 $Y=1.407
+C36	A	B#23	7.0157e-18	$X=0.888 $Y=0.744
+C37	XI0/net14#2	A#1	2.07153e-18	$X=2.632 $Y=0.991
+C38	XI1/net6#6	Cin#4	1.61756e-18	$X=3.9105 $Y=0.8285
+C39	gnd!#8	Cin#15	1.194e-18	$X=11.2845 $Y=0.4365
+C40	A#29	A#34	2.40406e-17	$X=6.522 $Y=0.8165
+C41	B#15	net10#6	1.37631e-17	$X=10.8755 $Y=0.811
+C42	XI1/net14#7	gnd!#28	3.47347e-18	$X=4.359 $Y=0.484
+C43	vdd!#41	XI0/net4#2	1.38022e-17	$X=1.5655 $Y=1.485
+C44	A	XI0/net4#8	2.93981e-18	$X=2.6465 $Y=1.473
+C45	A	XI0/net9#4	3.52092e-18	$X=2.519 $Y=0.51
+C46	A	XI0/net4#6	3.79768e-18	$X=2.28 $Y=1.4545
+C47	B	net3#3	2.02629e-18	$X=3.702 $Y=0.2385
+C48	A	XI0/net14#10	4.88808e-18	$X=2.078 $Y=0.8625
+C49	A	XI0/net4#4	2.50694e-18	$X=1.8955 $Y=1.464
+C50	vdd!#19	net4#4	4.36726e-18	$X=9.078 $Y=1.1895
+C51	B	A#2	6.3964e-18	$X=2.2425 $Y=0.239
+C52	A	XI0/net6#9	6.69555e-18	$X=1.65 $Y=0.9925
+C53	A	XI0/net9#2	2.21222e-18	$X=1.803 $Y=0.509
+C54	A	XI0/net4#2	1.38111e-18	$X=1.662 $Y=1.4905
+C55	A	XI0/net14#5	5.09416e-18	$X=1.3075 $Y=0.898
+C56	A	XI0/net6#5	9.78587e-18	$X=0.989 $Y=0.989
+C57	vdd!#9	vdd!#3	6.77273e-18	$X=9.768 $Y=1.7775
+C58	B	A#3	6.06385e-18	$X=1.287 $Y=0.2385
+C59	XI1/net6#8	vdd!#29	6.3545e-18	$X=3.633 $Y=1.3585
+C60	S#3	XI1/net4#6	4.13766e-18	$X=5.4075 $Y=1.2
+C61	net10#8	Cin#15	2.89284e-18	$X=10.996 $Y=0.4585
+C62	net5#7	net4#4	2.84592e-18	$X=9.0345 $Y=1.1715
+C63	gnd!#31	XI0/net14#4	2.45732e-18	$X=2.4915 $Y=0.477
+C64	B	net3#5	9.14113e-19	$X=3.25 $Y=0.8835
+C65	XI1/net9#3	S#1	9.42386e-18	$X=6.0405 $Y=0.6465
+C66	A#29	B#25	1.5462e-17	$X=6.8035 $Y=0.847
+C67	Cin#25	Cin#31	4.93772e-18	$X=8.3495 $Y=1.0485
+C68	A	XI0/net14#8	1.78014e-18	$X=1.1035 $Y=1.2785
+C69	A	XI0/net6#8	8.47334e-19	$X=0.7095 $Y=1.2985
+C70	gnd!#10	net5#3	1.03968e-17	$X=9.95 $Y=0.6675
+C71	XI1/net4#6	S#6	7.31513e-18	$X=5.6585 $Y=1.438
+C72	Cin#31	net7#3	2.89233e-18	$X=8.657 $Y=0.934
+C73	XI1/net4#4	XI1/net6	2.38745e-18	$X=5.1635 $Y=1.413
+C74	gnd!#1	net2#2	9.86572e-19	$X=12.014 $Y=0.8025
+C75	S#1	net3#2	6.24303e-18	$X=5.8985 $Y=0.6455
+C76	net2#4	vdd!	5.83169e-18	$X=12.0465 $Y=1.186
+C77	XI1/net14#10	XI1/net4#6	4.49932e-18	$X=5.46 $Y=1.2095
+C78	vdd!#20	net4#4	1.73848e-18	$X=8.9905 $Y=1.1895
+C79	B#27	net4#13	1.07714e-16	$X=9.786 $Y=0.736
+C80	vdd!#39	vdd!#37	9.24122e-18	$X=3.2365 $Y=1.392
+C81	net2#11	net2#8	1.98263e-18	$X=10.3055 $Y=1.1175
+C82	net10	vdd!	4.8276e-18	$X=11.8415 $Y=1.179
+C83	XI1/net9#4	gnd!#27	1.5405e-17	$X=5.7995 $Y=0.42
+C84	B#23	XI0/net14#5	9.0321e-18	$X=0.803 $Y=0.71
+C85	net4#8	gnd!#25	2.62546e-18	$X=7.4095 $Y=0.4155
+C86	Cin#16	vdd!	4.18889e-18	$X=11.0485 $Y=1.186
+C87	S#3	XI1/net6	5.25898e-19	$X=5.2335 $Y=1.219
+C88	B	B#23	3.4949e-18	$X=0.951 $Y=0.51
+C89	B#13	vdd!	4.39549e-18	$X=10.8435 $Y=1.179
+C90	A#3	B#6	9.11094e-18	$X=1.4245 $Y=0.493
+C91	net5	vdd!	8.36573e-18	$X=10.0745 $Y=1.1955
+C92	A	XI0/net6#6	1.1423e-18	$X=0.6235 $Y=0.9515
+C93	gnd!#14	XI1/net14#4	9.80818e-19	$X=5.631 $Y=0.481
+C94	XI0/net14#5	A#3	3.58383e-18	$X=1.0445 $Y=0.51
+C95	net4#4	vdd!	3.8757e-18	$X=9.052 $Y=1.186
+C96	A	net3#9	1.55173e-18	$X=2.465 $Y=0.992
+C97	A	net3#10	1.64093e-18	$X=2.0735 $Y=0.9895
+C98	XI0/net1	XI0/net14#4	2.68088e-18	$X=2.4385 $Y=0.478
+C99	net5#6	net4	4.59989e-17	$X=9.14 $Y=0.837
+C100	net7	vdd!	4.72218e-18	$X=8.847 $Y=1.179
+C101	Cin#29	XI1/net6#8	3.05057e-18	$X=3.683 $Y=1.3445
+C102	Cin#12	vdd!	4.2225e-18	$X=8.0535 $Y=1.186
+C103	gnd!#19	net3#8	4.92073e-18	$X=3.1775 $Y=0.5125
+C104	XI1/net14#10	vdd!#29	7.36643e-19	$X=5.2115 $Y=0.849
+C105	A#21	XI0/net6#6	2.02443e-18	$X=0.2525 $Y=0.9285
+C106	A#11	vdd!	4.78832e-18	$X=7.8485 $Y=1.179
+C107	B	XI1/net6#5	1.68264e-18	$X=3.667 $Y=0.836
+C108	S#2	net3#2	2.44767e-18	$X=5.6675 $Y=0.726
+C109	XI0/net9#2	XI0/net1	2.45967e-18	$X=2.1185 $Y=0.4075
+C110	net4#7	vdd!#24	2.13739e-17	$X=7.0545 $Y=1.164
+C111	XI0/net4#2	XI0/net14#8	4.36935e-19	$X=1.4005 $Y=1.463
+C112	B#12	vdd!	4.18241e-18	$X=7.055 $Y=1.186
+C113	B	XI0/net9#4	2.1428e-17	$X=2.5745 $Y=0.3325
+C114	net10#6	B#14	2.54801e-18	$X=10.9045 $Y=0.7845
+C115	B	XI0/net14#10	6.19972e-18	$X=2.135 $Y=0.675
+C116	B#30	Cin#31	7.45771e-18	$X=7.4865 $Y=1.1305
+C117	A#7	vdd!	4.58121e-18	$X=6.8505 $Y=1.179
+C118	B	XI0/net6#9	3.50543e-18	$X=1.7 $Y=0.8215
+C119	B	XI0/net9#2	1.60849e-17	$X=1.855 $Y=0.3315
+C120	A#29	A#23	4.04322e-18	$X=6.62 $Y=0.8015
+C121	gnd!#9	Cin#15	1.47102e-18	$X=10.8735 $Y=0.4365
+C122	net3#5	vdd!#37	7.97294e-18	$X=3.455 $Y=1.186
+C123	net3	vdd!	1.32538e-17	$X=6.127 $Y=1.2455
+C124	XI1/net14#10	S#2	1.67091e-18	$X=5.5955 $Y=0.8995
+C125	B	XI0/net14#5	1.23672e-17	$X=1.372 $Y=0.6695
+C126	B	XI0/net6#5	5.17206e-18	$X=1.0315 $Y=0.836
+C127	XI1/net14	vdd!	7.72211e-18	$X=5.663 $Y=1.318
+C128	vdd!#19	net7	1.66452e-18	$X=8.92 $Y=1.1845
+C129	XI1/net6	vdd!	5.01887e-18	$X=5.1985 $Y=1.36
+C130	A#27	Cin	9.25844e-18	$X=0.4565 $Y=1.1595
+C131	net2#7	net10#6	1.17442e-18	$X=10.518 $Y=0.6505
+C132	Cin#1	vdd!	5.22511e-18	$X=4.7345 $Y=1.376
+C133	A#3	B#8	1.29466e-17	$X=0.84 $Y=0.449
+C134	Cin#7	vdd!	6.69695e-18	$X=4.016 $Y=1.372
+C135	XI0/net14#5	vdd!#41	6.07906e-19	$X=1.3045 $Y=1.1765
+C136	net2#11	vdd!#18	1.74748e-18	$X=10.2615 $Y=1.1315
+C137	B#18	A#3	1.92485e-18	$X=0.669 $Y=0.6505
+C138	XI1/net4#6	XI1/net4#5	7.58241e-19	$X=5.562 $Y=1.4385
+C139	XI0/net14#7	gnd!#32	3.47347e-18	$X=1.159 $Y=0.484
+C140	net3#11	XI0/net14#4	1.62546e-18	$X=2.36 $Y=0.5025
+C141	net3#6	vdd!	7.10273e-18	$X=3.552 $Y=1.367
+C142	Cin#13	vdd!#6	2.77703e-18	$X=11.1745 $Y=1.093
+C143	A#4	B#5	2.48082e-18	$X=0.511 $Y=0.882
+C144	net3#2	XI1/net14#3	1.88267e-18	$X=5.5665 $Y=0.6725
+C145	XI1/net4#4	Cin#1	4.84039e-19	$X=4.843 $Y=1.4215
+C146	XI1/net4#2	XI1/net6	5.90847e-19	$X=5.044 $Y=1.4325
+C147	A#1	vdd!	1.47009e-17	$X=2.937 $Y=1.2455
+C148	B#23	B#18	4.43814e-18	$X=0.58 $Y=0.7205
+C149	B	gnd!#14	6.55024e-18	$X=2.398 $Y=0.2225
+C150	net5#7	net7	2.85247e-18	$X=8.875 $Y=1.1655
+C151	XI1/net4#4	XI1/net4#6	2.51901e-18	$X=5.3065 $Y=1.5245
+C152	S#3	net3#2	4.97706e-19	$X=5.3495 $Y=0.7525
+C153	XI0/net14	vdd!	7.50401e-18	$X=2.471 $Y=1.318
+C154	B#23	Cin	3.31521e-18	$X=0.709 $Y=0.9775
+C155	net2#17	net2#9	5.87135e-19	$X=12.383 $Y=0.9095
+C156	Cin	A#21	2.11137e-18	$X=0.238 $Y=1.0075
+C157	gnd!#29	gnd!#28	2.16969e-18	$X=4.2745 $Y=0.4555
+C158	vdd!#10	vdd!#3	7.91578e-18	$X=9.418 $Y=1.777
+C159	XI1/net9#4	XI1/net1	5.8884e-18	$X=5.696 $Y=0.408
+C160	Cin#31	vdd!#23	6.83305e-18	$X=7.369 $Y=1.625
+C161	XI0/net6	vdd!	5.01887e-18	$X=2.0055 $Y=1.36
+C162	B#1	vdd!	5.20545e-18	$X=1.5405 $Y=1.376
+C163	B#7	vdd!	6.90809e-18	$X=0.822 $Y=1.372
+C164	vdd!#3	net2#4	1.30372e-18	$X=12.023 $Y=1.194
+C165	A#6	vdd!	1.07045e-17	$X=0.358 $Y=1.367
+C166	vdd!#20	net7	3.97445e-18	$X=8.8295 $Y=1.1845
+C167	A#21	vdd!#45	1.82167e-18	$X=0.154 $Y=1.0195
+C168	net10#8	B#16	1.90942e-18	$X=10.926 $Y=0.449
+C169	gnd!#3	Cin#15	2.5669e-18	$X=10.9665 $Y=0.4005
+C170	gnd!#19	A#2	1.18805e-18	$X=2.782 $Y=0.1435
+C171	net2#17	Cout	6.60442e-19	$X=12.584 $Y=0.786
+C172	XI1/net9#4	XI1/net14#3	1.45578e-18	$X=5.669 $Y=0.671
+C173	net3#2	XI1/net6#3	1.6477e-18	$X=5.2035 $Y=0.7615
+C174	net10	net2#2	5.74786e-19	$X=11.9325 $Y=1.0355
+C175	XI0/net6#5	vdd!#43	2.54347e-18	$X=0.758 $Y=1.2555
+C176	net2#13	Cout	7.93218e-19	$X=12.477 $Y=0.8435
+C177	vdd!#21	net7	9.82191e-19	$X=8.6945 $Y=1.1845
+C178	gnd!#14	XI1/net6#4	9.555e-19	$X=5.166 $Y=0.5215
+C179	XI0/net6#2	XI0/net14	1.18524e-18	$X=2.193 $Y=1.0935
+C180	XI0/net9#2	net3#11	2.2204e-18	$X=1.9775 $Y=0.4715
+C181	XI0/net4#2	vdd!#44	4.77323e-19	$X=1.3185 $Y=1.4835
+C182	XI1/net14#10	S#3	2.30952e-17	$X=5.309 $Y=0.9065
+C183	gnd!#8	Cout#3	8.87741e-18	$X=11.902 $Y=0.4155
+C184	Cin	XI0/net4#4	6.27273e-18	$X=1.711 $Y=1.545
+C185	Cin	XI0/net6#9	5.70949e-18	$X=1.435 $Y=1.1455
+C186	XI0/net14#10	gnd!#21	6.32279e-19	$X=1.95 $Y=0.47
+C187	Cin	XI0/net4#2	6.03196e-18	$X=1.5445 $Y=1.546
+C188	vdd!#26	vdd!#24	6.66873e-18	$X=6.9545 $Y=1.206
+C189	Cin	XI0/net6#5	7.28852e-18	$X=0.856 $Y=1.128
+C190	gnd!#16	XI1/net6#3	8.26098e-19	$X=4.9965 $Y=0.777
+C191	B#23	XI0/net6#5	2.28114e-17	$X=0.6855 $Y=0.827
+C192	B	XI1/net6#7	2.46056e-18	$X=3.466 $Y=0.499
+C193	A#1	net3#4	2.58143e-18	$X=3.3205 $Y=1.0575
+C194	B	gnd!#30	1.40794e-18	$X=3.303 $Y=0.433
+C195	XI1/net4#6	S#7	4.3856e-18	$X=5.428 $Y=1.438
+C196	B	net3#12	1.46376e-18	$X=2.9335 $Y=0.4855
+C197	A	Cin#29	2.77151e-17	$X=2.7215 $Y=1.233
+C198	gnd!#20	A#2	1.70617e-17	$X=2.389 $Y=0.1995
+C199	Cin#23	net3#8	3.34043e-18	$X=3.422 $Y=0.763
+C200	Cout	net2#9	1.2328e-17	$X=12.4765 $Y=0.8575
+C201	XI1/net4#2	Cin#1	2.20607e-18	$X=4.773 $Y=1.439
+C202	XI1/net14#10	XI1/net4#4	5.69999e-18	$X=5.1845 $Y=1.24
+C203	XI0/net9	XI0/net14#4	2.97706e-19	$X=2.1895 $Y=0.4935
+C204	B	XI0/net14#7	2.46056e-18	$X=1.0395 $Y=0.484
+C205	S#2	XI1/net4#5	4.27601e-18	$X=5.6675 $Y=1.1585
+C206	XI1/net4#4	vdd!#29	6.97682e-18	$X=5.0285 $Y=1.534
+C207	XI0/net1	XI0/net6#4	1.13276e-18	$X=2.1005 $Y=0.5065
+C208	XI1/net4#6	XI1/net14#3	9.10546e-19	$X=5.5815 $Y=1.0185
+C209	XI1/net9#2	gnd!#14	1.90104e-18	$X=4.8855 $Y=0.3335
+C210	gnd!#9	B#16	3.29818e-18	$X=10.815 $Y=0.429
+C211	B#14	Cin#14	1.26541e-17	$X=10.924 $Y=0.8175
+C212	B	net3#8	3.8912e-18	$X=3 $Y=0.71
+C213	B	net3#9	1.28621e-18	$X=2.505 $Y=0.8645
+C214	net3#14	vdd!#40	5.90294e-18	$X=2.0145 $Y=1.487
+C215	gnd!#20	net3#8	1.83177e-18	$X=3.0005 $Y=0.6245
+C216	net7#3	net5#6	1.75609e-17	$X=8.886 $Y=0.769
+C217	gnd!#21	A#2	4.12613e-18	$X=1.9965 $Y=0.1495
+C218	Cin#25	net4#13	3.82024e-18	$X=8.6475 $Y=0.9215
+C219	net7#6	Cin#9	4.59715e-17	$X=8.1365 $Y=0.83
+C220	vdd!#25	vdd!#23	7.11805e-18	$X=6.942 $Y=1.661
+C221	vdd!#11	vdd!#3	6.37644e-18	$X=8.8225 $Y=1.6665
+C222	net2	vdd!	1.76149e-18	$X=12.1645 $Y=0.911
+C223	net2#7	B#16	9.11479e-19	$X=10.5845 $Y=0.522
+C224	A#8	B#11	6.25577e-18	$X=6.8955 $Y=0.673
+C225	XI0/net6#6	vdd!#43	1.76789e-18	$X=0.524 $Y=1.1535
+C226	XI0/net6#3	vdd!#40	2.32516e-18	$X=1.89 $Y=1.1455
+C227	net10#6	Cin#14	8.79671e-18	$X=11.0575 $Y=0.768
+C228	net10#3	vdd!	4.2107e-18	$X=11.6775 $Y=0.858
+C229	net3#11	XI0/net6#4	4.12607e-18	$X=2.0285 $Y=0.5335
+C230	B#30	net4#11	1.71551e-16	$X=7.213 $Y=0.5655
+C231	gnd!#33	gnd!#32	2.16969e-18	$X=1.074 $Y=0.4555
+C232	XI0/net6#6	B#3	2.63084e-18	$X=0.7645 $Y=0.9985
+C233	A#23	S	1.72362e-18	$X=6.461 $Y=0.797
+C234	vdd!#3	net10	1.33312e-18	$X=11.82 $Y=1.1875
+C235	XI0/net9#2	XI0/net1#2	1.85947e-17	$X=1.848 $Y=0.4075
+C236	vdd!#14	net2#2	1.68341e-18	$X=12.087 $Y=0.937
+C237	gnd!#29	XI1/net14#7	1.26099e-17	$X=4.0165 $Y=0.484
+C238	net5#3	vdd!	4.32085e-18	$X=9.867 $Y=0.851
+C239	vdd!#21	Cin#12	3.97445e-18	$X=8.078 $Y=1.1895
+C240	vdd!#31	XI1/net4#2	1.6111e-17	$X=4.7925 $Y=1.57
+C241	Cin	XI0/net6#8	1.22507e-18	$X=0.601 $Y=1.41
+C242	XI0/net4#7	vdd!#39	1.5655e-17	$X=2.919 $Y=1.3765
+C243	gnd!#5	gnd!#9	1.31308e-18	$X=10.497 $Y=0.3145
+C244	Cin	vdd!#45	5.36789e-18	$X=0.555 $Y=1.5165
+C245	B#27	net5#6	8.38826e-19	$X=9.326 $Y=0.6835
+C246	S#4	XI1/net14#2	1.75564e-18	$X=5.5415 $Y=0.746
+C247	net7#3	vdd!	3.24443e-18	$X=8.69 $Y=0.858
+C248	A#21	XI0/net6#5	5.66248e-18	$X=0.312 $Y=0.9375
+C249	A#34	XI1/net14#5	4.94977e-18	$X=4.733 $Y=0.8465
+C250	XI1/net14#10	XI1/net6#9	2.29938e-17	$X=5.042 $Y=0.879
+C251	gnd!#1	Cout	4.58318e-18	$X=12.5885 $Y=0.746
+C252	gnd!#33	B#5	5.45342e-18	$X=0.726 $Y=0.645
+C253	A#13	vdd!	1.6506e-18	$X=7.7695 $Y=0.881
+C254	A#27	B#23	2.06778e-18	$X=0.3375 $Y=0.826
+C255	vdd!#26	net4#7	2.13739e-17	$X=6.854 $Y=1.164
+C256	net7#7	Cin#12	2.61492e-18	$X=8.0345 $Y=1.1715
+C257	B#2	XI0/net6	7.04944e-19	$X=1.814 $Y=1.2085
+C258	A#9	vdd!	1.52611e-18	$X=6.7715 $Y=0.881
+C259	net10#8	Cout#3	1.2664e-18	$X=11.5545 $Y=0.4425
+C260	B	gnd!#19	6.41067e-18	$X=2.9715 $Y=0.1125
+C261	B	gnd!#20	6.35487e-18	$X=2.4265 $Y=0.1885
+C262	S	A#18	9.57006e-18	$X=6.4555 $Y=0.797
+C263	B	gnd!#21	4.99267e-18	$X=1.839 $Y=0.118
+C264	XI0/net1#2	XI0/net6#4	4.2573e-18	$X=1.969 $Y=0.5065
+C265	XI1/net6#3	vdd!	3.86187e-18	$X=5.107 $Y=0.961
+C266	B	gnd!#23	4.1962e-18	$X=1.089 $Y=0.1795
+C267	Cout#1	net2#3	3.45014e-18	$X=11.989 $Y=0.538
+C268	Cin	vdd!#29	6.21574e-18	$X=1.3505 $Y=1.6395
+C269	A#34	XI1/net4#8	2.93981e-18	$X=5.9915 $Y=1.466
+C270	net3#5	vdd!	7.71447e-18	$X=3.4735 $Y=1.007
+C271	S#3	XI1/net4#5	2.7204e-18	$X=5.4165 $Y=1.1425
+C272	Cin#31	A#25	1.96917e-18	$X=7.683 $Y=0.84
+C273	gnd!#23	gnd!#21	2.40671e-18	$X=1.2255 $Y=0.1095
+C274	Cout#1	net10#2	2.3002e-18	$X=11.9025 $Y=0.7855
+C275	B#30	S#4	7.51039e-19	$X=5.366 $Y=0.5525
+C276	XI0/net6#3	vdd!	3.86187e-18	$X=1.918 $Y=0.961
+C277	A#5	vdd!	5.11562e-18	$X=0.291 $Y=1.0055
+C278	gnd!#3	B#16	3.83513e-18	$X=10.8765 $Y=0.3945
+C279	net3#8	XI1/net6#7	1.56552e-18	$X=3.4385 $Y=0.6425
+C280	net2#17	vdd!	2.38468e-17	$X=12.25 $Y=0.9165
+C281	XI1/net6#6	XI1/net14#8	2.03652e-18	$X=3.8145 $Y=1.067
+C282	B#27	net2#6	4.97314e-18	$X=10.305 $Y=0.834
+C283	net2#15	vdd!	8.14275e-18	$X=10.578 $Y=1.1065
+C284	gnd!#9	net5#4	7.37844e-19	$X=10.2875 $Y=0.536
+C285	net4#13	net5#7	5.147e-19	$X=9.0795 $Y=1.013
+C286	net4#13	net5#4	5.12761e-19	$X=10.0145 $Y=0.6165
+C287	B#30	S#1	3.26059e-18	$X=6.0675 $Y=0.787
+C288	A#31	vdd!	2.55902e-18	$X=7.486 $Y=0.8955
+C289	XI1/net14#10	XI1/net6#3	3.04575e-18	$X=5.176 $Y=0.904
+C290	A#27	A#21	1.02178e-17	$X=0.1555 $Y=0.941
+C291	A#27	vdd!	1.57159e-17	$X=0.2585 $Y=0.981
+C292	A#21	A#16	1.08026e-17	$X=0.1345 $Y=0.9295
+C293	net4#6	B#9	3.77943e-17	$X=7.132 $Y=0.822
+C294	Cin#29	vdd!#37	2.10604e-18	$X=3.513 $Y=1.3905
+C295	net2#13	vdd!	6.02461e-19	$X=12.337 $Y=0.9105
+C296	Cin#27	vdd!	2.8493e-17	$X=11.2475 $Y=1.0935
+C297	XI1/net9#2	XI1/net14#10	1.92983e-17	$X=5.145 $Y=0.5605
+C298	XI1/net6#9	XI1/net4#4	1.35877e-18	$X=4.967 $Y=1.291
+C299	vdd!#6	vdd!#5	5.15099e-18	$X=11.393 $Y=1.7255
+C300	vdd!#12	vdd!#3	1.39647e-17	$X=8.2665 $Y=1.666
+C301	A#18	A#8	1.56566e-18	$X=6.769 $Y=0.812
+C302	gnd!#13	XI1/net9#4	1.30062e-17	$X=5.904 $Y=0.192
+C303	A#8	B#10	1.26541e-17	$X=6.924 $Y=0.8175
+C304	net4#13	vdd!	1.8878e-18	$X=9.3075 $Y=0.7875
+C305	A#25	Cin#25	2.87957e-18	$X=7.831 $Y=0.8515
+C306	net2#7	net5#4	2.94761e-18	$X=10.1135 $Y=0.609
+C307	Cin#25	vdd!	3.0157e-18	$X=8.337 $Y=0.986
+C308	XI1/net14#10	XI1/net4#3	5.79293e-19	$X=5.191 $Y=1.1315
+C309	XI1/net6#6	XI1/net14#5	7.18592e-18	$X=3.8235 $Y=0.8975
+C310	gnd!#20	XI0/net14#4	9.80818e-19	$X=2.472 $Y=0.454
+C311	net7#7	A#11	2.85247e-18	$X=7.875 $Y=1.1655
+C312	B#25	vdd!	2.66986e-18	$X=7.326 $Y=0.969
+C313	net2	vdd!#14	1.54804e-17	$X=12.172 $Y=0.9945
+C314	Cout#2	net10#2	8.07124e-19	$X=11.872 $Y=0.877
+C315	XI1/net1	XI1/net14#10	5.16796e-18	$X=5.4695 $Y=0.585
+C316	gnd!#20	XI0/net1	2.23192e-17	$X=2.416 $Y=0.372
+C317	net3#11	B#6	1.1097e-18	$X=1.734 $Y=0.5535
+C318	XI1/net14#3	S#1	8.10994e-19	$X=5.7875 $Y=0.7915
+C319	XI1/net6#3	XI1/net4#4	6.74958e-18	$X=5.0995 $Y=1.2035
+C320	XI1/net6#7	XI1/net14#7	2.16142e-18	$X=3.8955 $Y=0.52
+C321	gnd!#33	XI0/net14#7	1.26099e-17	$X=0.8165 $Y=0.484
+C322	A#13	net7#6	1.37631e-17	$X=7.8745 $Y=0.8115
+C323	net4#13	vdd!#20	1.00786e-18	$X=8.9425 $Y=1.0705
+C324	XI0/net6#6	B#4	1.66117e-18	$X=0.7105 $Y=0.8285
+C325	XI1/net4#4	S#7	6.98033e-18	$X=5.1845 $Y=1.4455
+C326	Cin#23	XI1/net6#6	3.85251e-18	$X=3.707 $Y=0.8605
+C327	XI1/net6#9	S#2	7.29039e-19	$X=5.3605 $Y=0.965
+C328	A#21	vdd!	1.77125e-18	$X=0.1465 $Y=0.9305
+C329	gnd!#10	net5#4	4.23537e-18	$X=10.0555 $Y=0.5905
+C330	Cin#31	vdd!#25	6.94523e-18	$X=7.005 $Y=1.6285
+C331	XI0/net14#5	B#2	2.73713e-18	$X=1.4155 $Y=0.9335
+C332	net2#9	vdd!	5.46024e-18	$X=12.381 $Y=0.91
+C333	vdd!#22	A#11	3.97445e-18	$X=7.8295 $Y=1.1845
+C334	Cin#31	net7#6	6.76229e-19	$X=8.092 $Y=0.7745
+C335	Cin#21	vdd!	2.07043e-18	$X=11.348 $Y=0.91
+C336	gnd!#20	net3#9	1.28045e-18	$X=2.5645 $Y=0.7655
+C337	net3#9	A#1	2.71085e-18	$X=2.7755 $Y=1.1295
+C338	B#22	vdd!	2.35551e-18	$X=10.6365 $Y=0.8355
+C339	Cin#29	XI1/net4#2	7.47218e-18	$X=4.7705 $Y=1.523
+C340	net4#11	net7#8	4.72973e-18	$X=7.942 $Y=0.46
+C341	net2#5	vdd!	5.49754e-18	$X=10.3445 $Y=1.082
+C342	Cin#27	net10#6	3.97451e-18	$X=11.114 $Y=0.766
+C343	net4#9	vdd!	2.4607e-18	$X=9.357 $Y=0.91
+C344	XI0/net4#5	XI0/net14#3	4.03362e-19	$X=2.3825 $Y=0.9815
+C345	gnd!#17	Cin#5	1.25116e-18	$X=3.9805 $Y=0.5955
+C346	Cin#19	vdd!	2.23978e-18	$X=8.358 $Y=0.905
+C347	gnd!#32	XI0/net9#2	1.18276e-17	$X=1.5495 $Y=0.42
+C348	gnd!#11	net7#3	6.09811e-18	$X=8.736 $Y=0.5575
+C349	Cin#25	net5#7	1.23673e-18	$X=8.6385 $Y=1.0495
+C350	gnd!#26	net4#8	8.87741e-18	$X=6.902 $Y=0.4155
+C351	A#20	vdd!	2.14488e-18	$X=7.641 $Y=0.806
+C352	net4#11	Cin#25	9.37836e-18	$X=8.0855 $Y=0.849
+C353	Cout#2	net2	1.25187e-17	$X=12.1145 $Y=0.97
+C354	XI1/net6#6	net3#4	3.80965e-18	$X=3.5825 $Y=0.942
+C355	B#19	vdd!	2.07043e-18	$X=7.351 $Y=0.91
+C356	XI1/net14#3	S#2	2.62181e-17	$X=5.652 $Y=0.852
+C357	A#18	vdd!	1.81427e-18	$X=6.643 $Y=0.806
+C358	XI1/net6#9	XI1/net6#3	5.96567e-18	$X=4.993 $Y=0.9595
+C359	B#30	XI1/net14#5	1.23751e-17	$X=4.606 $Y=0.7945
+C360	XI1/net4#8	vdd!	5.42677e-18	$X=5.957 $Y=1.5245
+C361	Cin	vdd!#40	5.28347e-18	$X=1.5125 $Y=1.7125
+C362	B#30	gnd!#6	4.0251e-18	$X=8.198 $Y=0.255
+C363	Cin	vdd!#43	8.44344e-18	$X=0.8275 $Y=1.6805
+C364	XI1/net4#6	vdd!	5.93153e-18	$X=5.5625 $Y=1.5245
+C365	net10	net2#4	1.19138e-17	$X=11.956 $Y=1.182
+C366	net4#13	net7#4	1.02864e-18	$X=8.9115 $Y=0.492
+C367	net3#9	net3#5	5.17296e-18	$X=2.987 $Y=0.9855
+C368	XI1/net14#10	S#4	8.902e-18	$X=5.306 $Y=0.629
+C369	XI1/net4#4	vdd!	3.49365e-18	$X=5.099 $Y=1.5245
+C370	net3#3	Cin#5	2.50704e-18	$X=3.997 $Y=0.661
+C371	XI0/net4#8	net3#6	7.89731e-19	$X=3.269 $Y=1.422
+C372	gnd!#14	net3#3	4.29719e-18	$X=4.143 $Y=0.22
+C373	net3#8	net3#3	1.14138e-18	$X=3.5385 $Y=0.589
+C374	XI1/net6#9	vdd!	1.02076e-18	$X=4.795 $Y=0.963
+C375	net2#13	net2#9	5.30446e-18	$X=12.3735 $Y=0.9095
+C376	XI1/net4#4	XI1/net4#3	7.75016e-19	$X=5.0965 $Y=1.4455
+C377	Cout#2	net2#2	1.31618e-18	$X=12.025 $Y=0.911
+C378	XI1/net6#9	S#3	1.31053e-18	$X=5.108 $Y=0.9655
+C379	XI1/net4#2	vdd!	3.13339e-18	$X=4.838 $Y=1.533
+C380	XI0/net9	B#6	3.33411e-18	$X=1.572 $Y=0.5375
+C381	XI1/net14#5	vdd!	9.26647e-19	$X=4.307 $Y=0.822
+C382	net3#13	XI0/net4#7	1.24478e-17	$X=2.703 $Y=1.356
+C383	Cout#1	net10#4	4.53221e-19	$X=11.9105 $Y=0.5195
+C384	XI0/net14#5	B#3	5.17416e-18	$X=1.022 $Y=1
+C385	net2#11	net2#6	1.02042e-18	$X=10.3225 $Y=1.016
+C386	XI1/net6#5	vdd!	1.31624e-18	$X=4.001 $Y=0.9625
+C387	Cin#25	vdd!#20	1.98071e-18	$X=8.5435 $Y=1.0895
+C388	Cin#16	net10	8.26107e-19	$X=11.447 $Y=1.182
+C389	B#25	Cin#25	2.87359e-18	$X=8.0145 $Y=0.976
+C390	XI0/net4#8	vdd!	5.04593e-18	$X=2.7685 $Y=1.5245
+C391	net4#11	A#25	1.40261e-18	$X=7.6205 $Y=0.7685
+C392	A#9	net4#6	1.37631e-17	$X=6.8865 $Y=0.8035
+C393	Cout#1	net2#2	9.25433e-18	$X=12.0575 $Y=0.769
+C394	XI0/net4#6	vdd!	5.93053e-18	$X=2.379 $Y=1.5245
+C395	XI1/net4#2	XI1/net4#4	1.26572e-17	$X=4.937 $Y=1.5295
+C396	gnd!#14	Cin#18	1.25237e-18	$X=3.787 $Y=0.7325
+C397	XI0/net4#4	vdd!	3.49364e-18	$X=1.913 $Y=1.5245
+C398	XI0/net6#5	vdd!#44	1.77709e-18	$X=0.752 $Y=1.1735
+C399	vdd!#27	net3	1.76758e-18	$X=6.108 $Y=1.4555
+C400	XI0/net6#9	vdd!	1.02077e-18	$X=1.615 $Y=0.963
+C401	XI1/net14#5	vdd!#33	7.45205e-19	$X=4.182 $Y=1.3765
+C402	XI1/net1	gnd!#13	2.51965e-18	$X=5.738 $Y=0.2655
+C403	net10#3	Cout#2	7.79503e-18	$X=11.8245 $Y=0.981
+C404	gnd!#32	B#6	3.01934e-18	$X=1.4935 $Y=0.5185
+C405	B#30	B#25	1.21771e-17	$X=7.1405 $Y=0.909
+C406	XI1/net6#6	Cin#18	2.6988e-17	$X=3.743 $Y=0.809
+C407	net10#8	gnd!#8	3.0168e-18	$X=11.4095 $Y=0.4155
+C408	XI0/net4#2	vdd!	3.18004e-18	$X=1.647 $Y=1.533
+C409	net2	net2#2	6.38334e-18	$X=12.121 $Y=0.8655
+C410	vdd!#24	B#12	3.9881e-18	$X=7.078 $Y=1.1895
+C411	XI1/net6#7	gnd!#29	1.03884e-17	$X=3.7835 $Y=0.4925
+C412	XI0/net14#5	vdd!	9.26647e-19	$X=1.1355 $Y=0.822
+C413	B#13	Cin#16	1.18414e-17	$X=10.956 $Y=1.182
+C414	XI0/net6#7	XI0/net14#7	2.16142e-18	$X=0.6955 $Y=0.52
+C415	gnd!#24	A#5	5.73027e-18	$X=0.2705 $Y=0.8515
+C416	XI0/net6#5	vdd!	3.78801e-18	$X=0.818 $Y=0.9625
+C417	XI1/net14#10	XI1/net1#2	1.96509e-18	$X=5.1905 $Y=0.585
+C418	A#16	vdd!	7.51481e-18	$X=0.1485 $Y=0.9305
+C419	net4#11	gnd!#25	2.14867e-18	$X=7.7005 $Y=0.4165
+C420	XI0/net4#8	A#1	1.40933e-18	$X=2.848 $Y=1.374
+C421	net4#7	B#12	2.57361e-18	$X=7.0345 $Y=1.1715
+C422	vdd!#14	vdd!	1.52144e-17	$X=12.118 $Y=1.208
+C423	XI0/net14#3	net3#8	8.10994e-19	$X=2.6465 $Y=0.791
+C424	Cin#25	net7#6	2.56307e-18	$X=8.187 $Y=0.818
+C425	Cout#2	vdd!	2.24601e-18	$X=11.919 $Y=1.1245
+C426	net5#8	net4#3	3.61116e-18	$X=8.996 $Y=0.4585
+C427	net3#9	XI0/net14	3.72069e-18	$X=2.499 $Y=1.1915
+C428	vdd!#15	vdd!	3.81261e-18	$X=11.7205 $Y=1.208
+C429	B#25	A#25	1.06388e-17	$X=7.598 $Y=0.828
+C430	vdd!#16	vdd!	3.64149e-18	$X=11.124 $Y=1.208
+C431	XI0/net14#7	B#6	1.01621e-18	$X=1.273 $Y=0.539
+C432	net10#7	vdd!	1.07902e-18	$X=10.925 $Y=1.1245
+C433	net10#3	vdd!#15	1.28419e-17	$X=11.73 $Y=1.021
+C434	net3#5	XI1/net6#6	2.83307e-17	$X=3.572 $Y=0.959
+C435	gnd!#5	net5#4	5.17443e-19	$X=10.031 $Y=0.537
+C436	net5	B#13	1.15919e-18	$X=10.475 $Y=1.1865
+C437	vdd!#17	vdd!	4.91572e-18	$X=10.7265 $Y=1.208
+C438	net3#8	XI0/net4#8	4.80603e-18	$X=2.9305 $Y=1.2065
+C439	XI0/net14#5	B#4	3.24649e-18	$X=0.847 $Y=0.793
+C440	Cout#2	vdd!#14	2.14395e-17	$X=12.0545 $Y=1.164
+C441	B#27	net10#6	8.55411e-18	$X=10.9805 $Y=0.684
+C442	vdd!#18	vdd!	6.39689e-18	$X=9.9615 $Y=1.2295
+C443	vdd!#28	vdd!#26	7.21359e-18	$X=6.4745 $Y=1.3055
+C444	A#23	S#1	1.3477e-18	$X=6.415 $Y=0.8005
+C445	net4#9	vdd!#10	1.99379e-18	$X=9.3615 $Y=0.988
+C446	vdd!#27	vdd!#25	3.0321e-18	$X=6.361 $Y=1.7295
+C447	vdd!#19	vdd!	5.7531e-18	$X=9.136 $Y=1.208
+C448	net4#13	net5#6	1.1812e-17	$X=9.1395 $Y=0.713
+C449	net3#10	XI0/net14	9.90279e-19	$X=2.3165 $Y=1.178
+C450	net5#7	vdd!	2.21671e-18	$X=8.937 $Y=1.1245
+C451	XI1/net6#9	XI1/net4#2	4.64337e-18	$X=4.8195 $Y=1.352
+C452	vdd!#23	vdd!#3	1.19198e-17	$X=7.335 $Y=1.6665
+C453	XI1/net14#2	net3#2	4.46369e-18	$X=5.6295 $Y=0.741
+C454	XI1/net1	S#3	5.00955e-19	$X=5.417 $Y=0.738
+C455	XI1/net6#6	net3#3	7.88743e-19	$X=3.81 $Y=0.7255
+C456	vdd!#20	vdd!	3.63707e-18	$X=8.7385 $Y=1.208
+C457	net5#3	vdd!#9	5.58496e-18	$X=9.83 $Y=1.277
+C458	net3#8	vdd!#39	4.72657e-18	$X=3.095 $Y=1.073
+C459	XI0/net9#2	gnd!#33	1.0038e-18	$X=1.0715 $Y=0.42
+C460	vdd!#21	vdd!	3.68931e-18	$X=8.142 $Y=1.208
+C461	Cin#27	Cin#21	3.26685e-18	$X=11.3515 $Y=0.917
+C462	vdd!#3	net5	1.09408e-18	$X=10.0785 $Y=1.204
+C463	net7#7	vdd!	1.19892e-18	$X=7.9435 $Y=1.1245
+C464	B#30	S#2	4.33625e-18	$X=5.808 $Y=0.9445
+C465	A#2	XI0/net14#3	1.85206e-18	$X=2.3665 $Y=0.6725
+C466	XI1/net14#5	XI1/net6#3	2.76006e-18	$X=4.8845 $Y=0.9205
+C467	vdd!#22	vdd!	5.00506e-18	$X=7.7445 $Y=1.208
+C468	gnd!#2	gnd!#1	1.60353e-17	$X=11.3965 $Y=0.07
+C469	XI0/net14#3	net3#9	2.62181e-17	$X=2.452 $Y=0.852
+C470	vdd!#24	vdd!	5.18096e-18	$X=7.148 $Y=1.208
+C471	net4#4	net5	8.37539e-19	$X=9.5485 $Y=1.19
+C472	net4#11	net4#8	5.55431e-18	$X=7.1325 $Y=0.46
+C473	net3#8	A#2	6.5133e-18	$X=2.849 $Y=0.599
+C474	net4#7	vdd!	1.24226e-18	$X=6.9495 $Y=1.1245
+C475	XI0/net9	B#8	4.4122e-19	$X=1.079 $Y=0.4935
+C476	XI1/net14#10	XI1/net9	1.00891e-18	$X=4.978 $Y=0.5915
+C477	XI0/net14#5	XI0/net9	8.72912e-19	$X=1.4965 $Y=0.583
+C478	vdd!#26	vdd!	5.04261e-18	$X=6.7505 $Y=1.208
+C479	Cin#25	net7#7	1.20566e-18	$X=8.16 $Y=1.0495
+C480	net4#11	B#25	1.45732e-17	$X=7.397 $Y=0.765
+C481	gnd!#11	net4#3	1.78657e-18	$X=8.8735 $Y=0.4365
+C482	vdd!#28	vdd!	2.26576e-18	$X=6.224 $Y=1.395
+C483	XI0/net4#8	XI0/net14	9.85592e-19	$X=2.581 $Y=1.401
+C484	S#6	vdd!	1.07044e-18	$X=5.7615 $Y=1.3515
+C485	net5#3	vdd!#10	7.19606e-19	$X=9.678 $Y=1.234
+C486	XI0/net6#3	XI0/net4#3	7.49797e-18	$X=1.902 $Y=1.1265
+C487	S#7	vdd!	2.29847e-18	$X=5.299 $Y=1.3515
+C488	Cin#14	net10#2	1.56903e-18	$X=11.571 $Y=0.8175
+C489	A#2	XI0/net6#3	1.6477e-18	$X=2.0035 $Y=0.7615
+C490	net4#7	A#7	2.71969e-18	$X=6.875 $Y=1.1655
+C491	A#5	XI0/net6#6	2.4676e-17	$X=0.3485 $Y=0.9725
+C492	XI1/net6#3	S#3	2.43366e-17	$X=5.1965 $Y=0.964
+C493	Cin#14	net10#3	1.82919e-18	$X=11.272 $Y=0.8295
+C494	A#23	S#2	8.0562e-19	$X=6.366 $Y=0.8565
+C495	XI0/net9#2	gnd!#20	1.46679e-18	$X=2.0345 $Y=0.285
+C496	net7	net4#4	1.18589e-17	$X=8.956 $Y=1.182
+C497	XI0/net4#8	net3#9	9.2712e-19	$X=2.669 $Y=1.2715
+C498	net3#9	A#2	2.15067e-18	$X=2.4675 $Y=0.726
+C499	XI1/net6#9	XI1/net4	1.15547e-18	$X=4.811 $Y=1.189
+C500	gnd!#30	gnd!#29	3.88823e-18	$X=3.682 $Y=0.4555
+C501	gnd!#32	B#8	1.322e-18	$X=1.0025 $Y=0.477
+C502	XI0/net14#5	XI0/net6#2	7.29398e-19	$X=1.8455 $Y=0.9105
+C503	XI1/net14#8	vdd!	3.64702e-18	$X=4.1215 $Y=1.317
+C504	vdd!#15	vdd!#14	7.35441e-18	$X=11.9545 $Y=1.206
+C505	XI1/net14#5	XI1/net6#9	5.54941e-17	$X=4.5845 $Y=0.901
+C506	net3#2	A#8	1.22975e-18	$X=6.6535 $Y=0.733
+C507	XI1/net6#8	vdd!	2.23716e-18	$X=3.658 $Y=1.3385
+C508	XI1/net6#5	XI1/net6#6	7.30959e-18	$X=3.7795 $Y=0.94
+C509	vdd!#26	A#7	4.11786e-18	$X=6.8295 $Y=1.1845
+C510	Cin#31	vdd!#27	2.48734e-18	$X=6.3545 $Y=1.7405
+C511	XI0/net6#7	gnd!#33	1.03827e-17	$X=0.5835 $Y=0.4925
+C512	net2#5	vdd!#3	3.77808e-18	$X=10.3445 $Y=1.0945
+C513	net5#8	net7#4	1.58628e-18	$X=8.926 $Y=0.449
+C514	Cin#29	XI1/net14#5	2.87199e-18	$X=4.2225 $Y=0.9295
+C515	Cin#5	XI1/net14#5	2.44312e-17	$X=4.0115 $Y=0.795
+C516	vdd!#7	vdd!#6	8.02671e-18	$X=10.95 $Y=1.661
+C517	net3#13	vdd!	1.33473e-18	$X=2.578 $Y=1.3515
+C518	XI0/net4#6	XI0/net14	2.51712e-18	$X=2.4285 $Y=1.384
+C519	A#31	B#30	6.95871e-18	$X=7.292 $Y=0.853
+C520	gnd!#3	gnd!#1	1.57497e-17	$X=10.9385 $Y=0.0705
+C521	net3#14	vdd!	2.29847e-18	$X=2.1155 $Y=1.3515
+C522	Cin#12	net7	8.26107e-19	$X=8.447 $Y=1.182
+C523	net4#11	A#14	1.34221e-18	$X=7.805 $Y=0.4625
+C524	A#34	B	4.28513e-18	$X=3.991 $Y=0.5665
+C525	A#23	gnd!#12	2.15008e-18	$X=6.7085 $Y=0.677
+C526	XI0/net4#5	net3#13	1.63836e-17	$X=2.4555 $Y=1.356
+C527	net3#8	XI1/net6#6	5.61967e-18	$X=3.4445 $Y=0.872
+C528	net3#10	net3#9	6.38433e-18	$X=2.3125 $Y=0.969
+C529	XI0/net14#5	gnd!#32	3.11583e-18	$X=1.3435 $Y=0.5505
+C530	XI0/net14#7	B#8	2.97505e-18	$X=0.8435 $Y=0.4945
+C531	vdd!#25	vdd!#3	4.62771e-18	$X=6.93 $Y=1.666
+C532	Cin#13	vdd!#16	1.54804e-17	$X=11.172 $Y=0.9935
+C533	A#25	net7#6	2.97575e-18	$X=7.7745 $Y=0.768
+C534	gnd!#1	net7#6	4.58548e-18	$X=8.121 $Y=0.6685
+C535	XI0/net14#8	vdd!	3.63912e-18	$X=0.9405 $Y=1.317
+C536	net7#6	A#12	2.17685e-18	$X=7.904 $Y=0.785
+C537	XI0/net9#4	net3#8	4.59873e-18	$X=2.9535 $Y=0.606
+C538	XI0/net6#8	vdd!	2.45098e-18	$X=0.4755 $Y=1.3385
+C539	Cin#27	vdd!#5	2.31475e-18	$X=11.5235 $Y=1.6015
+C540	vdd!#45	vdd!	3.53525e-17	$X=0.306 $Y=1.4535
+C541	vdd!#3	vdd!	3.88119e-17	$X=9.5245 $Y=1.729
+C542	B#27	B#22	7.66601e-18	$X=10.6385 $Y=0.822
+C543	XI1/net6#9	vdd!#32	1.83932e-18	$X=4.7055 $Y=1.191
+C544	gnd!#21	XI0/net9#2	1.5367e-17	$X=1.7565 $Y=0.231
+C545	A#11	Cin#12	1.18415e-17	$X=7.956 $Y=1.182
+C546	net10#3	net2#2	1.25618e-18	$X=11.9415 $Y=0.8295
+C547	net3#8	XI0/net4#7	4.30176e-18	$X=2.992 $Y=1.0795
+C548	A#34	B#25	1.35731e-17	$X=7.0665 $Y=0.9605
+C549	XI1/net9#2	XI1/net14#5	1.40076e-18	$X=4.692 $Y=0.543
+C550	gnd!#11	net7#4	2.66571e-18	$X=8.815 $Y=0.429
+C551	gnd!#33	B#8	3.73088e-18	$X=0.782 $Y=0.477
+C552	net10#7	Cin#13	1.24837e-17	$X=11.1155 $Y=0.9695
+C553	A#23	B#25	4.50572e-18	$X=6.7495 $Y=0.828
+C554	vdd!#15	Cout#2	2.14395e-17	$X=11.854 $Y=1.164
+C555	gnd!#20	XI0/net1#2	9.45246e-18	$X=2.0715 $Y=0.372
+C556	B#25	net4#6	2.09304e-18	$X=7.1285 $Y=0.756
+C557	XI0/net9#3	net3#8	9.42386e-18	$X=2.956 $Y=0.619
+C558	XI0/net4#6	XI0/net6	1.05545e-18	$X=2.1005 $Y=1.407
+C559	vdd!#26	net3	2.88134e-18	$X=6.3395 $Y=1.2315
+C560	XI1/net9#2	XI1/net1	2.45967e-18	$X=5.3185 $Y=0.4075
+C561	vdd!#27	vdd!#29	4.08373e-18	$X=5.966 $Y=1.7795
+C562	S#6	vdd!#26	8.92402e-19	$X=6.2215 $Y=1.283
+C563	B#10	A#12	1.57308e-18	$X=7.571 $Y=0.8175
+C564	gnd!#6	net4#3	2.14199e-18	$X=8.9295 $Y=0.425
+C565	Cin#27	vdd!#6	9.54403e-18	$X=11.212 $Y=1.492
+C566	B#30	A#23	6.22649e-18	$X=6.63 $Y=0.799
+C567	gnd!#30	XI1/net6#7	1.47957e-17	$X=3.5435 $Y=0.4925
+C568	XI1/net6#5	Cin#5	3.01298e-18	$X=3.952 $Y=0.8425
+C569	XI0/net6#7	B#8	1.70207e-18	$X=0.704 $Y=0.5
+C570	gnd!#21	B#6	1.63783e-18	$X=1.5695 $Y=0.4645
+C571	net5#8	Cin#11	4.48851e-19	$X=8.3995 $Y=0.4585
+C572	XI0/net9#4	net3#9	3.69485e-18	$X=2.6105 $Y=0.718
+C573	A#16	vdd!#45	2.5424e-18	$X=0.1565 $Y=1.031
+C574	net5#8	gnd!#5	4.92114e-19	$X=9.199 $Y=0.353
+C575	Cout#1	vdd!#3	5.65375e-19	$X=11.9715 $Y=0.731
+C576	vdd!	vdd!#29	4.24319e-17	$X=3.676 $Y=1.756
+C577	XI0/net6#3	net3#10	2.43366e-17	$X=1.9965 $Y=0.964
+C578	net4	vdd!#10	2.77703e-18	$X=9.2225 $Y=1.0985
+C579	net3#14	net3#13	2.16993e-18	$X=2.327 $Y=1.3505
+C580	gnd!#24	gnd!#33	3.43875e-18	$X=0.5715 $Y=0.4335
+C581	vdd!#28	net3	4.39802e-18	$X=6.1625 $Y=1.2995
+C582	XI0/net6#6	A#4	5.14865e-18	$X=0.3825 $Y=0.942
+C583	gnd!#25	A#13	4.70655e-18	$X=7.765 $Y=0.6605
+C584	A#34	B#30	5.12429e-17	$X=6.2975 $Y=0.845
+C585	XI0/net4#4	XI0/net6	2.38588e-18	$X=1.9635 $Y=1.413
+C586	A#7	B#12	1.18415e-17	$X=6.956 $Y=1.182
+C587	XI0/net14#5	A#4	5.9201e-19	$X=0.47 $Y=0.9275
+C588	XI0/net14#7	A#3	1.66132e-18	$X=0.934 $Y=0.437
+C589	B#15	net10#7	7.79503e-18	$X=10.825 $Y=0.948
+C590	Cin#27	vdd!#7	8.7542e-18	$X=10.9175 $Y=1.4965
+C591	B#25	Cin#31	2.94183e-17	$X=7.5865 $Y=1.084
+C592	net10#7	B#14	9.25248e-19	$X=10.872 $Y=0.877
+C593	XI1/net9#2	S#4	2.2204e-18	$X=5.1775 $Y=0.4715
+C594	net5#7	vdd!#10	1.60064e-18	$X=9.1275 $Y=1.39
+C595	XI1/net6#5	vdd!#33	2.16968e-18	$X=4.0415 $Y=1.3325
+C596	net2#11	net2#5	9.07185e-18	$X=10.3545 $Y=1.0905
+C597	Cin#13	Cin#14	4.67472e-18	$X=11.1215 $Y=0.866
+C598	XI1/net4#2	XI1/net4	8.01011e-19	$X=4.8325 $Y=1.4685
+C599	net4#11	net7#6	1.28868e-18	$X=7.91 $Y=0.6495
+C600	S#6	net3	1.80666e-18	$X=5.9905 $Y=1.284
+C601	gnd!#11	Cin#11	1.14934e-18	$X=8.2845 $Y=0.4365
+C602	net3#8	vdd!#38	3.64509e-18	$X=3.012 $Y=1.0575
+C603	B#30	S#3	8.8852e-19	$X=5.37 $Y=0.9485
+C604	Cin#29	vdd!#31	9.36635e-18	$X=4.47 $Y=1.6405
+C605	net7#6	Cin#10	8.33684e-18	$X=8.0575 $Y=0.768
+C606	gnd!#5	gnd!#1	9.75078e-18	$X=9.678 $Y=0.0705
+C607	XI1/net6#5	net3#5	2.41631e-18	$X=3.7115 $Y=0.983
+C608	gnd!#9	net10#8	8.87741e-18	$X=10.902 $Y=0.4155
+C609	XI1/net14#10	gnd!#16	6.32279e-19	$X=5.0635 $Y=0.548
+C610	net3	A#7	2.59488e-18	$X=6.589 $Y=1.2025
+C611	XI1/net4#7	vdd!#28	1.5655e-17	$X=6.119 $Y=1.3765
+C612	gnd!#2	net10#3	8.55768e-18	$X=11.617 $Y=0.5345
+C613	gnd!#33	A#3	2.52296e-18	$X=0.796 $Y=0.392
+C614	B#15	vdd!#17	8.74935e-18	$X=10.768 $Y=0.9725
+C615	Cin#19	vdd!#12	1.97632e-18	$X=8.338 $Y=0.987
+C616	XI0/net6#5	B#3	2.30893e-18	$X=0.9345 $Y=1.022
+C617	gnd!#21	XI0/net1#2	1.43465e-17	$X=1.84 $Y=0.3175
+C618	net7#8	Cin#11	3.17935e-18	$X=7.996 $Y=0.4585
+C619	A#23	net4#6	2.0739e-18	$X=6.7905 $Y=0.7635
+C620	XI0/net4#2	XI0/net6	5.90847e-19	$X=1.844 $Y=1.4325
+C621	XI0/net6#6	vdd!	5.00977e-18	$X=0.4685 $Y=0.93
+C622	A#34	XI1/net14#8	1.53456e-18	$X=4.4565 $Y=1.2585
+C623	net3#14	XI0/net4#5	1.24478e-17	$X=2.238 $Y=1.356
+C624	net3#12	XI1/net6#7	1.89295e-18	$X=3.3115 $Y=0.5215
+C625	gnd!#6	net5#8	6.64374e-18	$X=8.999 $Y=0.386
+C626	XI1/net14	net3	5.18492e-18	$X=5.867 $Y=1.2855
+C627	XI1/net9#2	XI1/net1#2	1.86116e-17	$X=5.048 $Y=0.4075
+C628	XI0/net6#7	A#3	5.90521e-18	$X=0.6095 $Y=0.443
+C629	net10#7	Cout#2	4.5049e-19	$X=11.4545 $Y=1.122
+C630	vdd!#16	vdd!#15	7.75951e-18	$X=11.4545 $Y=1.206
+C631	net10#7	Cin#14	1.16295e-18	$X=11.025 $Y=0.911
+C632	vdd!#32	XI1/net4#2	1.37951e-17	$X=4.7655 $Y=1.485
+C633	XI1/net4#7	XI1/net14	6.37566e-19	$X=5.789 $Y=1.3325
+C634	net3#9	XI0/net4#6	4.26594e-18	$X=2.4705 $Y=1.2225
+C635	net3#9	vdd!	3.29948e-18	$X=2.58 $Y=0.971
+C636	net5#7	vdd!#11	1.61288e-18	$X=8.862 $Y=1.3645
+C637	net3#10	vdd!	7.16742e-18	$X=2.114 $Y=0.9715
+C638	gnd!#24	XI0/net6#7	1.42272e-17	$X=0.3815 $Y=0.4845
+C639	gnd!#20	XI0/net14#3	1.47227e-18	$X=2.418 $Y=0.6925
+C640	XI1/net6#6	vdd!	5.10081e-18	$X=3.6575 $Y=0.93
+C641	gnd!#6	gnd!#1	1.5162e-17	$X=8.8655 $Y=0.1275
+C642	B#30	A#29	2.38575e-17	$X=6.5325 $Y=0.783
+C643	gnd!#6	net7#4	2.62835e-18	$X=8.84 $Y=0.416
+C644	XI1/net6#5	vdd!#29	1.03554e-18	$X=3.9615 $Y=0.9985
+C645	Cin#31	vdd!#3	1.15413e-17	$X=8.724 $Y=1.528
+C646	S#6	XI1/net14	3.44997e-18	$X=5.693 $Y=1.3275
+C647	XI1/net14#10	XI1/net6#2	1.30228e-18	$X=5.2235 $Y=0.9005
+C648	A#3	B#5	2.52641e-18	$X=0.797 $Y=0.661
+C649	gnd!#25	Cin#11	1.23655e-18	$X=7.8735 $Y=0.4365
+C650	XI1/net6	XI1/net14	3.96681e-18	$X=5.4095 $Y=1.3405
+C651	B#5	vdd!#44	4.22963e-18	$X=0.7285 $Y=0.9755
+C652	gnd!#24	A#3	7.83569e-18	$X=0.6035 $Y=0.3125
+C653	net5#2	B#15	1.25821e-18	$X=10.302 $Y=0.872
+C654	B#30	XI1/net6#5	4.12832e-18	$X=4.2215 $Y=0.931
+C655	S#2	vdd!	3.49642e-18	$X=5.766 $Y=0.971
+C656	Cin#18	XI1/net14#5	4.31228e-18	$X=3.878 $Y=0.7565
+C657	B#30	gnd!#12	8.82356e-18	$X=6.8945 $Y=0.171
+C658	S#3	vdd!	7.09025e-18	$X=5.3025 $Y=0.9715
+C659	A#31	Cin#31	1.46492e-17	$X=7.689 $Y=1.016
+C660	net2#7	net10#8	7.17036e-19	$X=10.5895 $Y=0.5405
+C661	XI1/net4#5	XI1/net14	1.95687e-18	$X=5.628 $Y=1.3325
+C662	net4#13	net4#9	4.62247e-18	$X=9.359 $Y=0.901
+C663	XI1/net6#4	XI1/net14#2	1.22097e-18	$X=5.43 $Y=0.6875
+C664	A#20	vdd!#3	1.88668e-18	$X=7.6895 $Y=0.8235
+C665	S#7	XI1/net14	1.68136e-18	$X=5.545 $Y=1.3275
+C666	XI1/net4#2	XI1/net14#8	4.36936e-19	$X=4.6005 $Y=1.463
+C667	gnd!#24	gnd!#14	5.52075e-18	$X=0.4525 $Y=0.364
+C668	vdd!#31	vdd!#29	8.85026e-18	$X=4.5145 $Y=1.721
+C669	net7#3	vdd!#11	4.03749e-18	$X=8.7225 $Y=1.1895
+C670	net7#8	A#14	1.18433e-18	$X=7.926 $Y=0.449
+C671	Cin#1	XI1/net6	4.0265e-18	$X=4.9555 $Y=1.368
+C672	net3#10	XI0/net4#6	4.2369e-18	$X=2.2075 $Y=1.2
+C673	net2#6	vdd!	2.50568e-18	$X=10.249 $Y=0.8645
+C674	gnd!#1	A#20	3.29802e-18	$X=7.683 $Y=0.792
+C675	net3#9	vdd!#38	2.21541e-18	$X=2.577 $Y=1.173
+C676	gnd!#31	net3#9	3.90791e-18	$X=2.5615 $Y=0.674
+C677	net2#6	net10#6	4.73782e-19	$X=10.6305 $Y=0.782
+C678	XI1/net14#5	vdd!#32	6.07906e-19	$X=4.5045 $Y=1.1765
+C679	A#34	XI1/net6#5	6.02416e-18	$X=4.3245 $Y=0.9585
+C680	net3#12	gnd!#30	5.83272e-18	$X=3.228 $Y=0.485
+C681	B#30	Cin#23	1.37118e-17	$X=4.1555 $Y=0.7095
+C682	XI0/net9#4	XI0/net14#3	1.45578e-18	$X=2.469 $Y=0.671
+C683	gnd!#1	net2#6	3.16402e-18	$X=10.2555 $Y=0.84
+C684	XI1/net6#5	XI1/net14#5	2.6602e-17	$X=4.102 $Y=0.9055
+C685	gnd!#14	A#3	6.35431e-18	$X=1.175 $Y=0.22
+C686	gnd!#23	B#8	1.4109e-18	$X=0.7975 $Y=0.4405
+C687	XI0/net6#6	A#3	9.66669e-19	$X=0.61 $Y=0.7255
+C688	vdd!#5	vdd!	1.67289e-17	$X=11.5535 $Y=1.778
+C689	net10#2	net2#2	1.26534e-17	$X=11.924 $Y=0.8175
+C690	vdd!#6	vdd!	1.84278e-17	$X=11.122 $Y=1.66
+C691	A#34	XI1/net4#6	3.79768e-18	$X=5.663 $Y=1.4445
+C692	vdd!#31	Cin#1	2.44835e-18	$X=4.7165 $Y=1.426
+C693	net5#3	vdd!#18	1.08101e-17	$X=9.9385 $Y=1.0415
+C694	vdd!#7	vdd!	1.89787e-17	$X=10.7165 $Y=1.66
+C695	S#6	XI1/net4#7	1.24478e-17	$X=5.903 $Y=1.356
+C696	XI0/net6#6	XI0/net14#8	2.30558e-18	$X=0.6145 $Y=1.067
+C697	gnd!#28	XI1/net9#2	1.18276e-17	$X=4.7495 $Y=0.42
+C698	vdd!#29	B#2	2.21714e-18	$X=1.586 $Y=0.999
+C699	vdd!#9	vdd!	2.03674e-17	$X=9.7335 $Y=1.7775
+C700	gnd!#1	Cout#3	7.13848e-18	$X=12.0055 $Y=0.434
+C701	XI0/net14#10	net3#9	1.67091e-18	$X=2.3955 $Y=0.8995
+C702	vdd!#10	vdd!	2.28942e-17	$X=9.351 $Y=1.777
+C703	XI1/net4#5	XI1/net6	6.37566e-19	$X=5.3105 $Y=1.36
+C704	vdd!#11	vdd!	1.84205e-17	$X=8.73 $Y=1.66
+C705	gnd!#25	A#14	3.20606e-18	$X=7.815 $Y=0.429
+C706	XI0/net6#7	B#18	1.54645e-17	$X=0.542 $Y=0.6705
+C707	vdd!#12	vdd!	1.77776e-17	$X=8.145 $Y=1.66
+C708	B#25	net4#7	2.87102e-18	$X=7.0895 $Y=1.066
+C709	XI0/net14#5	gnd!#21	1.05767e-18	$X=1.4145 $Y=0.436
+C710	vdd!#23	vdd!	1.91261e-17	$X=7.152 $Y=1.66
+C711	vdd!#25	vdd!	1.82319e-17	$X=6.7455 $Y=1.66
+C712	XI0/net4#6	XI0/net14#3	9.10546e-19	$X=2.3815 $Y=1.0185
+C713	vdd!#27	vdd!	1.32131e-17	$X=6.08 $Y=1.778
+C714	net2#5	net10#7	1.75334e-18	$X=10.519 $Y=1.092
+C715	net10#7	vdd!#16	2.14395e-17	$X=11.0545 $Y=1.164
+C716	S#7	XI1/net6	3.13261e-18	$X=5.2245 $Y=1.357
+C717	gnd!#1	net4#5	8.84036e-18	$X=7.421 $Y=0.6275
+C718	vdd!#31	vdd!	2.75752e-17	$X=4.646 $Y=1.713
+C719	Cin#25	Cin#19	3.94778e-18	$X=8.3585 $Y=0.915
+C720	vdd!#33	vdd!	1.5641e-17	$X=4.1175 $Y=1.7775
+C721	net3#6	Cin#7	3.47e-18	$X=3.782 $Y=1.3695
+C722	net7	net4#2	5.74786e-19	$X=8.9325 $Y=1.0355
+C723	gnd!#12	gnd!#1	9.17346e-18	$X=7.2155 $Y=0.0705
+C724	XI0/net4#3	net3#14	1.85693e-17	$X=1.9905 $Y=1.356
+C725	Cin#29	vdd!#33	7.21487e-18	$X=4.0805 $Y=1.722
+C726	vdd!#36	vdd!	1.07231e-17	$X=3.456 $Y=1.7125
+C727	gnd!#16	XI1/net1#2	9.40045e-18	$X=4.9635 $Y=0.3635
+C728	net3#9	XI0/net4#5	4.27601e-18	$X=2.4675 $Y=1.1585
+C729	vdd!#38	vdd!	3.13242e-17	$X=2.66 $Y=1.776
+C730	XI1/net6#5	Cin#18	1.88883e-18	$X=3.8435 $Y=0.7985
+C731	net4#2	net5#3	1.07293e-18	$X=9.3085 $Y=0.826
+C732	XI1/net4#3	XI1/net6	1.95687e-18	$X=5.1665 $Y=1.36
+C733	vdd!#40	vdd!	2.78607e-17	$X=1.8925 $Y=1.7765
+C734	XI0/net14#8	vdd!#43	6.3368e-18	$X=0.8255 $Y=1.482
+C735	vdd!#33	vdd!#29	4.15245e-18	$X=4.065 $Y=1.779
+C736	XI1/net6#9	Cin#2	5.35147e-18	$X=4.7505 $Y=0.97
+C737	XI0/net6#5	gnd!#33	1.32435e-18	$X=0.7425 $Y=0.644
+C738	A#21	B#23	2.93849e-18	$X=0.2015 $Y=0.8705
+C739	vdd!#43	vdd!	1.99055e-17	$X=0.7545 $Y=1.712
+C740	gnd!#21	A#3	7.20904e-18	$X=1.355 $Y=0.153
+C741	B#25	vdd!#26	2.05568e-18	$X=6.959 $Y=1.1205
+C742	XI1/net4	XI1/net6	6.45978e-19	$X=5.0835 $Y=1.3605
+C743	net4#5	A#14	2.08693e-18	$X=7.681 $Y=0.5175
+C744	Cin#6	XI1/net6#2	1.21503e-18	$X=4.981 $Y=0.758
+C745	net2#17	net10#3	4.72617e-19	$X=11.9025 $Y=0.8715
+C746	XI0/net14#10	net3#10	2.30968e-17	$X=2.109 $Y=0.9065
+C747	XI1/net14#8	Cin#3	3.24822e-18	$X=4.175 $Y=1.1305
+C748	vdd!#9	vdd!#7	3.7912e-18	$X=10.26 $Y=1.7195
+C749	net2#5	vdd!#17	9.78064e-18	$X=10.464 $Y=1.115
+C750	A#1	net3#6	2.81551e-18	$X=3.307 $Y=1.3195
+C751	gnd!#21	XI0/net6#3	8.60767e-19	$X=1.855 $Y=0.7135
+C752	net3#11	net3#8	1.1024e-18	$X=2.5625 $Y=0.6535
+C753	A#12	Cin#10	1.26541e-17	$X=7.924 $Y=0.8175
+C754	A#5	vdd!#45	6.37789e-18	$X=0.2715 $Y=1.0925
+C755	Cin#23	Cin#6	3.22549e-18	$X=4.5315 $Y=0.5935
+C756	B#30	net3#2	6.49118e-18	$X=5.599 $Y=0.3015
+C757	vdd!#17	vdd!#16	7.07648e-18	$X=10.9545 $Y=1.206
+C758	vdd!#29	B#3	2.16219e-18	$X=1.058 $Y=1.0685
+C759	net3#10	vdd!#38	1.32469e-18	$X=2.2135 $Y=1.149
+C760	Cin#31	net5#6	1.15154e-18	$X=8.9695 $Y=0.7855
+C761	XI0/net6#6	XI0/net14#5	7.46656e-18	$X=0.6235 $Y=0.8975
+C762	net4	vdd!#19	1.54804e-17	$X=9.172 $Y=0.9945
+C763	Cin#29	XI1/net6#5	5.99806e-18	$X=3.9835 $Y=1.015
+C764	gnd!#26	A#9	4.70655e-18	$X=6.765 $Y=0.6605
+C765	Cout#2	vdd!#3	3.8101e-18	$X=11.8445 $Y=1.155
+C766	A#27	gnd!#24	1.21869e-18	$X=0.2345 $Y=0.7045
+C767	XI1/net9#2	gnd!#29	1.0038e-18	$X=4.2715 $Y=0.42
+C768	Cin#9	vdd!#12	2.77703e-18	$X=8.174 $Y=1.101
+C769	XI0/net14	A#1	5.18492e-18	$X=2.667 $Y=1.2855
+C770	XI1/net4#3	Cin#1	6.98587e-19	$X=4.8395 $Y=1.3715
+C771	net3#10	XI0/net4#5	2.7204e-18	$X=2.2165 $Y=1.1425
+C772	B#30	gnd!#13	3.31445e-18	$X=5.9575 $Y=0.126
+C773	gnd!#23	A#3	1.3028e-17	$X=0.862 $Y=0.193
+C774	XI0/net14#10	XI0/net6#3	3.04575e-18	$X=1.976 $Y=0.904
+C775	net2#8	net2#5	2.88732e-17	$X=10.3005 $Y=1.1065
+C776	A#34	net3#3	1.13751e-18	$X=4.632 $Y=0.3795
+C777	net4#8	B#11	3.05661e-18	$X=6.996 $Y=0.4585
+C778	B#30	S	2.53323e-18	$X=6.3815 $Y=0.792
+C779	A#25	A#20	7.89562e-18	$X=7.6445 $Y=0.8045
+C780	XI1/net14#5	XI1/net9	8.72912e-19	$X=4.6965 $Y=0.583
+C781	net5#7	net4	1.25018e-17	$X=9.1145 $Y=0.97
+C782	vdd!#33	Cin#7	1.98481e-18	$X=4.033 $Y=1.4655
+C783	XI1/net4	Cin#1	2.24446e-18	$X=4.7605 $Y=1.372
+C784	XI0/net4#8	vdd!#38	1.55771e-17	$X=2.725 $Y=1.58
+C785	gnd!#3	B#15	1.25248e-18	$X=10.82 $Y=0.722
+C786	gnd!#3	gnd!#2	1.55108e-18	$X=11.2765 $Y=0.0695
+C787	XI1/net4#5	S#6	1.63836e-17	$X=5.6555 $Y=1.356
+C788	B#30	net4#8	2.20622e-18	$X=7.0085 $Y=0.4565
+C789	vdd!#32	Cin#1	3.94137e-18	$X=4.706 $Y=1.3805
+C790	vdd!#17	net10#7	2.14395e-17	$X=10.854 $Y=1.164
+C791	XI0/net6	XI0/net14	3.96681e-18	$X=2.2095 $Y=1.3405
+C792	XI1/net9#3	S#5	1.53187e-17	$X=6.1265 $Y=0.5105
+C793	XI0/net6#3	XI0/net4#4	6.74958e-18	$X=1.8995 $Y=1.2035
+C794	XI0/net9#3	net3#12	1.53187e-17	$X=2.9265 $Y=0.5105
+C795	XI0/net1	net3#10	5.00955e-19	$X=2.217 $Y=0.738
+C796	XI1/net14#8	Cin#1	1.09096e-18	$X=4.58 $Y=1.361
+C797	A#25	net4#5	1.86083e-18	$X=7.5375 $Y=0.7445
+C798	gnd!#26	B#11	1.24499e-18	$X=6.8735 $Y=0.4365
+C799	B#2	vdd!	1.33143e-17	$X=1.5465 $Y=0.9775
+C800	B#30	gnd!#1	1.17406e-17	$X=7.279 $Y=0.519
+C801	B#3	vdd!	1.06938e-17	$X=1.016 $Y=1.053
+C802	XI1/net14#5	gnd!#28	3.11583e-18	$X=4.5435 $Y=0.5505
+C803	net2#13	net2	2.01755e-18	$X=12.2725 $Y=0.9095
+C804	gnd!#10	gnd!#9	2.32071e-18	$X=10.4045 $Y=0.4695
+C805	XI0/net6#2	vdd!	6.43362e-18	$X=2.004 $Y=0.931
+C806	A#27	XI0/net6#6	1.10278e-18	$X=0.3695 $Y=0.9455
+C807	XI0/net14#2	vdd!	4.2556e-18	$X=2.4685 $Y=0.846
+C808	net4	net4#2	4.52647e-18	$X=9.121 $Y=0.8655
+C809	S#1	vdd!#27	1.42402e-18	$X=6.063 $Y=1.1875
+C810	XI0/net4	XI0/net4#3	1.01828e-17	$X=1.7645 $Y=1.362
+C811	XI0/net6#6	B#18	2.76192e-17	$X=0.543 $Y=0.809
+C812	A#4	vdd!	9.69031e-18	$X=0.357 $Y=0.951
+C813	B#1	XI0/net6	4.0265e-18	$X=1.7555 $Y=1.368
+C814	net3#10	vdd!#40	1.13119e-18	$X=2.0365 $Y=1.169
+C815	net7#3	net5#7	7.79503e-18	$X=8.8205 $Y=0.9785
+C816	gnd!#13	gnd!#14	6.10461e-18	$X=5.8095 $Y=0.0695
+C817	Cin#2	vdd!	1.32753e-17	$X=4.7365 $Y=0.9775
+C818	XI0/net6#9	XI0/net6#3	5.96567e-18	$X=1.793 $Y=0.9595
+C819	Cin#3	vdd!	1.06172e-17	$X=4.2075 $Y=1.053
+C820	Cin#31	net5#7	1.51925e-18	$X=8.864 $Y=1.172
+C821	XI1/net6#2	vdd!	6.43362e-18	$X=5.1985 $Y=0.931
+C822	XI1/net14#2	vdd!	4.12846e-18	$X=5.6625 $Y=0.846
+C823	net4#8	A#10	1.08873e-18	$X=6.926 $Y=0.449
+C824	XI0/net6#9	net3#9	7.29039e-19	$X=2.1605 $Y=0.965
+C825	B#30	XI1/net14#7	2.46056e-18	$X=4.2345 $Y=0.52
+C826	net3#4	vdd!	6.54547e-18	$X=3.5515 $Y=0.951
+C827	S#2	XI1/net6#2	6.68131e-19	$X=5.363 $Y=0.941
+C828	A#8	vdd!	2.90292e-18	$X=6.8505 $Y=0.8185
+C829	Cin#27	net2	8.35219e-19	$X=12.078 $Y=0.9305
+C830	Cin#2	XI1/net6#2	6.72896e-18	$X=5.0295 $Y=0.9465
+C831	B#10	vdd!	4.23743e-18	$X=7.0545 $Y=0.819
+C832	A#12	vdd!	1.68246e-18	$X=7.849 $Y=0.8185
+C833	vdd!#36	vdd!#29	4.08244e-18	$X=3.443 $Y=1.716
+C834	net4#11	net4#5	6.89199e-18	$X=7.377 $Y=0.6195
+C835	gnd!#17	gnd!#16	2.40671e-18	$X=4.298 $Y=0.0995
+C836	Cin#10	vdd!	4.29893e-18	$X=8.0515 $Y=0.819
+C837	net2#13	net10#3	7.66208e-19	$X=12.1775 $Y=0.8945
+C838	net7#2	vdd!	1.59544e-18	$X=8.8475 $Y=0.8185
+C839	net4#2	vdd!	4.22589e-18	$X=9.049 $Y=0.819
+C840	net7#3	vdd!#20	1.28419e-17	$X=8.7275 $Y=1.018
+C841	XI1/net6#5	vdd!#34	1.6926e-18	$X=3.952 $Y=1.1735
+C842	gnd!#1	net2#3	2.36099e-18	$X=11.925 $Y=0.463
+C843	net5#2	vdd!	1.89143e-18	$X=10.0775 $Y=0.869
+C844	B#14	vdd!	2.53964e-18	$X=10.845 $Y=0.8185
+C845	gnd!#16	XI1/net9#2	1.49328e-17	$X=4.852 $Y=0.2785
+C846	Cin#14	vdd!	4.2973e-18	$X=11.0435 $Y=0.819
+C847	net10#2	vdd!	1.71743e-18	$X=11.8435 $Y=0.8185
+C848	gnd!#3	B#22	2.52543e-18	$X=10.6995 $Y=0.7205
+C849	XI1/net14#8	Cin#7	4.01349e-18	$X=4.0355 $Y=1.358
+C850	net2#17	Cout#3	2.50622e-18	$X=12.11 $Y=0.539
+C851	net2#2	vdd!	5.19593e-18	$X=12.0405 $Y=0.819
+C852	A#16	A#4	2.5835e-18	$X=0.2545 $Y=0.941
+C853	Cin#27	net10#3	4.73924e-18	$X=11.6215 $Y=0.9085
+C854	gnd!#26	A#10	3.18207e-18	$X=6.815 $Y=0.429
+C855	vdd!#34	Cin#7	4.51555e-18	$X=3.9865 $Y=1.3765
+C856	A#34	XI1/net14#10	6.5488e-18	$X=5.501 $Y=0.8185
+C857	gnd!#23	B#18	2.44747e-18	$X=0.614 $Y=0.643
+C858	net3#3	Cin#2	2.30811e-18	$X=4.583 $Y=0.7665
+C859	gnd!#24	A#16	2.68895e-18	$X=0.162 $Y=0.7965
+C860	XI0/net6#9	net3#10	1.31053e-18	$X=1.908 $Y=0.9655
+C861	gnd!#10	net2#7	1.26099e-17	$X=10.095 $Y=0.6005
+C862	Cin#10	net7#3	1.83799e-18	$X=8.276 $Y=0.83
+C863	B#25	net4#5	2.39951e-18	$X=7.3505 $Y=0.717
+C864	A#6	B#7	3.47e-18	$X=0.582 $Y=1.3695
+C865	Cout#1	net2	4.56304e-17	$X=12.1375 $Y=0.832
+C866	net2#8	vdd!#17	2.50189e-18	$X=10.4435 $Y=1.1835
+C867	XI1/net6#8	Cin#7	1.95957e-18	$X=3.916 $Y=1.363
+C868	S#7	XI1/net4#5	1.24478e-17	$X=5.438 $Y=1.356
+C869	Cin#29	XI0/net4#8	8.20826e-18	$X=2.863 $Y=1.5125
+C870	gnd!#23	B#5	1.25955e-18	$X=0.7295 $Y=0.6515
+C871	XI0/net6#8	vdd!#43	6.3545e-18	$X=0.5495 $Y=1.4865
+C872	XI0/net6#5	XI0/net6#6	8.12907e-18	$X=0.5795 $Y=0.94
+C873	net5#6	Cin#10	4.92678e-19	$X=8.408 $Y=0.772
+C874	gnd!#1	net10#4	1.91059e-18	$X=11.826 $Y=0.4475
+C875	gnd!#14	XI0/net14#5	4.61834e-18	$X=1.271 $Y=0.757
+C876	net3#3	Cin#3	1.99973e-18	$X=4.203 $Y=0.858
+C877	Cin#27	Cin#13	4.85756e-18	$X=11.198 $Y=0.93
+C878	A#34	Cin#23	6.73275e-18	$X=4.2915 $Y=0.759
+C879	vdd!#19	net4#2	1.68341e-18	$X=9.087 $Y=0.937
+C880	XI1/net14#8	vdd!#33	6.3368e-18	$X=4.107 $Y=1.539
+C881	vdd!#38	vdd!#29	1.33033e-17	$X=2.7 $Y=1.779
+C882	net4#13	vdd!#10	2.51422e-18	$X=9.367 $Y=1.3765
+C883	XI1/net6#3	vdd!#29	1.02296e-18	$X=5.053 $Y=0.9835
+C884	XI0/net14#5	XI0/net6#3	2.76006e-18	$X=1.6845 $Y=0.9205
+C885	S#5	A#10	1.22948e-18	$X=6.615 $Y=0.475
+C886	B#25	B#19	3.24707e-18	$X=7.3515 $Y=0.913
+C887	S#2	XI1/net14#2	5.36613e-18	$X=5.692 $Y=0.881
+C888	XI1/net9#4	net3#2	7.92086e-18	$X=5.708 $Y=0.301
+C889	net3#3	Cin#4	1.72523e-18	$X=4.038 $Y=0.713
+C890	net2#17	gnd!#8	1.36661e-18	$X=11.869 $Y=0.4945
+C891	XI0/net4#6	XI0/net4#8	2.52028e-18	$X=2.5925 $Y=1.5245
+C892	net7#7	vdd!#12	1.04701e-18	$X=8.0485 $Y=1.3695
+C893	gnd!#12	net4#6	4.21533e-18	$X=7.0465 $Y=0.516
+C894	gnd!#5	net5#3	9.42597e-18	$X=9.7995 $Y=0.5435
+C895	Cin#9	vdd!#21	1.54804e-17	$X=8.172 $Y=0.9945
+C896	gnd!#27	XI1/net9#3	8.61407e-18	$X=5.9 $Y=0.483
+C897	gnd!#16	gnd!#14	1.83742e-17	$X=4.507 $Y=0.143
+C898	vdd!#34	net3#6	2.33754e-18	$X=3.6445 $Y=1.373
+C899	net7#3	net4#2	1.11729e-18	$X=8.937 $Y=0.83
+C900	gnd!#12	B#11	2.08079e-18	$X=6.967 $Y=0.3975
+C901	vdd!#18	vdd!#17	3.3293e-18	$X=10.367 $Y=1.217
+C902	vdd!#41	XI0/net4	1.59912e-17	$X=1.539 $Y=1.3775
+C903	gnd!#26	net3#2	1.58557e-18	$X=6.4295 $Y=0.3495
+C904	XI0/net14#2	A#2	4.46369e-18	$X=2.4295 $Y=0.741
+C905	gnd!#31	XI0/net9#3	8.61407e-18	$X=2.7 $Y=0.483
+C906	XI1/net6#8	net3#6	3.41205e-18	$X=3.5725 $Y=1.359
+C907	S#3	XI1/net6#2	3.72571e-18	$X=5.2305 $Y=0.9425
+C908	net10#4	net2#3	3.83427e-17	$X=11.9005 $Y=0.4605
+C909	net7#7	Cin#9	1.24998e-17	$X=8.1145 $Y=0.97
+C910	XI1/net1	XI1/net14#3	6.98918e-18	$X=5.5825 $Y=0.6745
+C911	XI1/net9#4	XI1/net14#4	7.27496e-19	$X=5.7015 $Y=0.462
+C912	B#5	XI0/net14#5	2.44312e-17	$X=0.8115 $Y=0.795
+C913	XI1/net14#10	net3#2	2.2693e-18	$X=5.39 $Y=0.545
+C914	vdd!#37	net3#6	4.16763e-18	$X=3.521 $Y=1.373
+C915	gnd!#1	net2#7	3.49045e-18	$X=10.1745 $Y=0.616
+C916	XI0/net4#6	vdd!#38	1.82719e-17	$X=2.4325 $Y=1.597
+C917	Cin#10	net7#2	1.57193e-18	$X=8.571 $Y=0.8175
+C918	net5#7	net7#2	7.38568e-19	$X=8.872 $Y=0.877
+C919	net2#6	vdd!#3	7.20714e-19	$X=10.252 $Y=0.8915
+C920	Cin#29	XI1/net4#8	8.38361e-18	$X=5.7755 $Y=1.5125
+C921	A#16	XI0/net6#6	6.93669e-18	$X=0.2635 $Y=0.9285
+C922	XI0/net6#5	gnd!#23	1.14687e-18	$X=0.759 $Y=0.6545
+C923	vdd!#40	vdd!#29	1.05501e-17	$X=1.9925 $Y=1.779
+C924	vdd!#45	vdd!#29	5.51025e-18	$X=0.51 $Y=1.4795
+C925	Cin#19	net5#7	8.47816e-19	$X=8.4345 $Y=0.9315
+C926	S#5	net3#2	2.73907e-18	$X=6.035 $Y=0.442
+C927	net5#6	net7#2	2.28049e-18	$X=8.899 $Y=0.788
+C928	gnd!#17	gnd!#14	9.12167e-18	$X=4.061 $Y=0.0695
+C929	B#30	net4#6	1.43197e-18	$X=7.0045 $Y=0.6875
+C930	vdd!#18	net2#8	2.1577e-17	$X=10.089 $Y=1.194
+C931	net10#3	Cout#1	1.78236e-17	$X=11.8995 $Y=0.7635
+C932	Cin#15	net10#4	1.09339e-18	$X=11.438 $Y=0.4605
+C933	vdd!#45	vdd!#43	3.32393e-18	$X=0.4965 $Y=1.593
+C934	Cin#29	vdd!#36	4.00188e-18	$X=3.4975 $Y=1.679
+C935	A#23	A#18	8.0414e-18	$X=6.644 $Y=0.8045
+C936	vdd!#10	vdd!#9	3.50618e-18	$X=9.5875 $Y=1.7795
+C937	B#9	vdd!#23	2.70858e-18	$X=7.1745 $Y=1.093
+C938	Cin#9	Cin#10	4.73974e-18	$X=8.121 $Y=0.8655
+C939	XI0/net4#8	vdd!#37	9.51691e-19	$X=3.0335 $Y=1.4705
+C940	B#27	net5#3	7.97386e-18	$X=10.0325 $Y=0.8075
+C941	B#30	XI1/net9#4	2.39589e-17	$X=5.9275 $Y=0.389
+C942	A#34	XI1/net6#8	6.13571e-19	$X=4.0345 $Y=1.281
+C943	XI1/net4#3	S#7	1.85693e-17	$X=5.1905 $Y=1.356
+C944	XI1/net6#8	A#1	6.78615e-19	$X=3.187 $Y=1.2785
+C945	XI1/net9#3	net3#2	2.84934e-18	$X=5.889 $Y=0.439
+C946	vdd!#38	A#1	1.75329e-18	$X=2.866 $Y=1.3485
+C947	vdd!#31	Cin#2	2.52623e-18	$X=4.709 $Y=1.141
+C948	A#13	net7#7	7.79503e-18	$X=7.825 $Y=0.948
+C949	XI0/net4#6	vdd!#40	1.45414e-18	$X=2.197 $Y=1.6045
+C950	net5#8	gnd!#10	2.7002e-18	$X=9.4835 $Y=0.499
+C951	XI0/net9#4	XI0/net14#10	5.13193e-18	$X=2.414 $Y=0.561
+C952	XI1/net6#7	Cin#18	1.54905e-17	$X=3.742 $Y=0.6705
+C953	XI0/net6#9	vdd!#29	1.61598e-18	$X=1.6855 $Y=1.004
+C954	vdd!#5	net10	9.58077e-19	$X=11.793 $Y=1.312
+C955	net2#15	net10#8	2.50622e-18	$X=10.962 $Y=0.5845
+C956	gnd!#23	XI0/net14#7	4.95515e-18	$X=0.86 $Y=0.4215
+C957	net5#7	net4#2	1.26734e-18	$X=9.025 $Y=0.911
+C958	net3#10	B#2	1.73943e-18	$X=1.7955 $Y=0.9725
+C959	B#23	gnd!#23	3.72122e-18	$X=0.611 $Y=0.373
+C960	XI0/net6#5	B#5	3.06243e-18	$X=0.752 $Y=0.8425
+C961	XI1/net9#2	net3#2	3.77255e-18	$X=5.184 $Y=0.3005
+C962	B#16	Cin#15	3.83427e-17	$X=10.9005 $Y=0.4605
+C963	Cin#29	net3#8	1.56489e-18	$X=3.246 $Y=0.8625
+C964	S#3	XI1/net14#2	1.87344e-18	$X=5.5425 $Y=0.8855
+C965	gnd!#12	A#10	2.6877e-18	$X=6.8775 $Y=0.392
+C966	vdd!#39	A#1	3.65307e-18	$X=2.9625 $Y=1.2995
+C967	A#13	vdd!#22	8.74935e-18	$X=7.768 $Y=0.9725
+C968	net10#2	net2#3	6.25577e-18	$X=11.8955 $Y=0.673
+C969	XI0/net4#8	vdd!#39	1.22816e-17	$X=2.8635 $Y=1.472
+C970	net2#8	vdd!#19	6.06681e-19	$X=9.708 $Y=1.1835
+C971	XI1/net6#5	gnd!#29	8.62669e-19	$X=3.9425 $Y=0.644
+C972	XI1/net14#5	Cin#2	2.73678e-18	$X=4.6155 $Y=0.9335
+C973	gnd!#1	net5#4	1.08496e-18	$X=10.0805 $Y=0.595
+C974	net4#13	net5#3	3.73603e-18	$X=9.7155 $Y=0.8245
+C975	Cin#23	XI1/net14#7	1.15888e-18	$X=4.0295 $Y=0.5685
+C976	B#23	A#3	2.32291e-18	$X=0.77 $Y=0.406
+C977	XI0/net4#7	A#1	1.95687e-18	$X=2.8875 $Y=1.2915
+C978	A#18	vdd!#25	1.87908e-18	$X=6.671 $Y=1.021
+C979	XI1/net14#5	gnd!#16	3.45499e-18	$X=4.44 $Y=0.5225
+C980	B#30	gnd!#16	8.40542e-18	$X=4.9475 $Y=0.252
+C981	XI0/net14#10	XI0/net4#6	4.49932e-18	$X=2.26 $Y=1.2095
+C982	XI0/net14#8	vdd!#41	5.36052e-18	$X=1.1845 $Y=1.357
+C983	net5#4	B#16	1.61876e-18	$X=10.408 $Y=0.5375
+C984	net2#8	vdd!#3	3.5103e-18	$X=10.166 $Y=1.1915
+C985	Cin#29	vdd!	6.45707e-17	$X=4.023 $Y=1.4
+C986	net3#13	A#1	1.44159e-18	$X=2.7905 $Y=1.284
+C987	S#4	net3#2	1.87967e-18	$X=5.3465 $Y=0.451
+C988	S#4	XI1/net9#3	2.13122e-18	$X=5.703 $Y=0.524
+C989	gnd!#5	gnd!#3	1.74115e-18	$X=10.3275 $Y=0.0695
+C990	gnd!#17	XI1/net14#7	4.95515e-18	$X=4.1075 $Y=0.3755
+C991	XI1/net1	gnd!#27	1.86421e-17	$X=5.679 $Y=0.453
+C992	Cin#31	vdd!	7.51723e-17	$X=8.275 $Y=1.46
+C993	XI0/net6#5	A#5	8.31446e-19	$X=0.434 $Y=0.9905
+C994	net5#6	net4#2	8.74891e-18	$X=9.0575 $Y=0.772
+C995	Cin#25	vdd!#12	1.98353e-18	$X=8.266 $Y=1.28
+C996	B#30	gnd!#26	1.45889e-18	$X=6.727 $Y=0.407
+C997	XI1/net9#3	XI1/net14#4	1.71289e-18	$X=5.781 $Y=0.494
+C998	net2#15	gnd!#9	1.35173e-18	$X=10.7275 $Y=0.54
+C999	A#34	S#2	4.76016e-18	$X=5.8285 $Y=0.967
+C1000	A#13	A#12	2.05125e-18	$X=7.822 $Y=0.841
+C1001	net4#13	net4	5.31517e-18	$X=9.206 $Y=0.8885
+C1002	XI0/net4#8	XI0/net4#7	1.40476e-18	$X=2.7885 $Y=1.4525
+C1003	XI1/net1#2	XI1/net6#3	5.62903e-18	$X=5.102 $Y=0.746
+C1004	A#34	XI1/net4#4	2.50694e-18	$X=5.2395 $Y=1.4555
+C1005	XI1/net14#5	Cin#3	5.3374e-18	$X=4.222 $Y=1
+C1006	vdd!#19	vdd!#18	5.46762e-18	$X=9.572 $Y=1.217
+C1007	net3#11	XI0/net9#3	2.13122e-18	$X=2.503 $Y=0.524
+C1008	XI0/net1	gnd!#31	1.86421e-17	$X=2.479 $Y=0.453
+C1009	gnd!#19	gnd!#14	7.57747e-18	$X=3.221 $Y=0.0695
+C1010	gnd!#17	XI1/net14#5	2.43284e-18	$X=4.1835 $Y=0.387
+C1011	gnd!#27	XI1/net14#4	2.45732e-18	$X=5.6915 $Y=0.477
+C1012	vdd!#38	XI0/net14	1.62823e-18	$X=2.486 $Y=1.391
+C1013	XI0/net4#4	XI0/net4#6	2.51901e-18	$X=2.1065 $Y=1.5245
+C1014	A#2	net3#4	1.19721e-18	$X=3.332 $Y=0.829
+C1015	XI0/net14#10	vdd!#40	6.54767e-19	$X=2.0195 $Y=1.1655
+C1016	Cin#31	vdd!#9	8.96606e-18	$X=9.5145 $Y=1.7235
+C1017	XI0/net4#7	XI0/net14	6.37566e-19	$X=2.589 $Y=1.3325
+C1018	XI1/net4	XI1/net4#3	1.01828e-17	$X=4.9645 $Y=1.362
+C1019	vdd!#43	vdd!#29	7.28524e-18	$X=0.903 $Y=1.718
+C1020	B#9	vdd!#24	1.54804e-17	$X=7.172 $Y=0.9935
+C1021	XI1/net1	XI1/net14#4	2.68088e-18	$X=5.6385 $Y=0.478
+C1022	net4#13	net7#3	3.80334e-18	$X=8.889 $Y=0.8325
+C1023	Cin#23	XI1/net6#7	3.30045e-18	$X=3.7045 $Y=0.5905
+C1024	Cin#31	vdd!#21	1.82605e-18	$X=8.1835 $Y=1.243
+C1025	net3#13	XI0/net14	3.44997e-18	$X=2.493 $Y=1.3275
+C1026	net2#17	Cout#1	1.75328e-18	$X=12.1325 $Y=0.7495
+C1027	XI0/net4#8	net3#13	4.52431e-18	$X=2.676 $Y=1.4535
+C1028	XI1/net14#5	Cin#4	3.24649e-18	$X=4.047 $Y=0.793
+C1029	net7#4	net4#3	3.85941e-17	$X=8.9005 $Y=0.4605
+C1030	S#4	XI1/net14#4	1.62546e-18	$X=5.56 $Y=0.5025
+C1031	Cin#29	vdd!#38	8.05686e-18	$X=2.9605 $Y=1.679
+C1032	XI0/net4#5	XI0/net14	1.95687e-18	$X=2.428 $Y=1.3325
+C1033	gnd!#19	gnd!#17	4.02145e-18	$X=3.681 $Y=0.0695
+C1034	net3#11	XI0/net14#2	1.75564e-18	$X=2.3415 $Y=0.746
+C1035	XI1/net4#8	vdd!#25	9.08426e-19	$X=6.2375 $Y=1.5725
+C1036	Cin#25	net7#3	4.39841e-18	$X=8.5315 $Y=0.917
+C1037	net4#7	B#9	1.24837e-17	$X=7.1155 $Y=0.9695
+C1038	gnd!#6	net7#6	2.49366e-18	$X=8.225 $Y=0.5545
+C1039	XI0/net14#10	XI0/net4#4	5.69999e-18	$X=1.9845 $Y=1.24
+C1040	gnd!#20	gnd!#14	2.0154e-17	$X=2.655 $Y=0.142
+C1041	gnd!#6	net7#3	7.12269e-18	$X=8.7165 $Y=0.655
+C1042	net3#9	XI0/net6#2	6.68131e-19	$X=2.163 $Y=0.941
+C1043	vdd!#29	XI1/net14	1.62823e-18	$X=5.6115 $Y=1.3275
+C1044	gnd!#13	net3#2	7.31897e-18	$X=5.762 $Y=0.127
+C1045	net3#14	XI0/net14	1.68136e-18	$X=2.345 $Y=1.3275
+C1046	A#34	XI1/net14#3	9.82059e-19	$X=5.6405 $Y=0.8005
+C1047	A#34	Cin#29	5.40774e-17	$X=5.207 $Y=1.1585
+C1048	XI0/net6#4	XI0/net14#2	1.22097e-18	$X=2.23 $Y=0.6875
+C1049	B#9	B#10	4.33094e-18	$X=7.1215 $Y=0.866
+C1050	net4#5	net7#8	2.3362e-18	$X=7.7235 $Y=0.5365
+C1051	Cin#27	gnd!#2	2.98343e-18	$X=11.44 $Y=0.3825
+C1052	XI1/net14#5	XI1/net6#2	7.29398e-19	$X=5.0455 $Y=0.9105
+C1053	vdd!#11	vdd!#10	8.02671e-18	$X=9.0375 $Y=1.715
+C1054	net3#4	Cin#3	3.14436e-18	$X=3.818 $Y=0.992
+C1055	Cin#11	net7#4	1.09326e-18	$X=8.438 $Y=0.4605
+C1056	Cin#25	Cin#9	4.52159e-18	$X=8.231 $Y=0.9315
+C1057	net2#17	gnd!#1	6.55618e-18	$X=12.1255 $Y=0.8405
+C1058	XI1/net9	XI1/net14#4	2.97706e-19	$X=5.3895 $Y=0.4935
+C1059	XI1/net14#2	net3	2.07153e-18	$X=5.832 $Y=0.991
+C1060	XI1/net4#8	vdd!#27	1.25572e-17	$X=6.0095 $Y=1.634
+C1061	vdd!#44	XI0/net14#8	2.37627e-17	$X=0.807 $Y=1.3545
+C1062	Cin#29	XI0/net4#6	1.24839e-17	$X=2.555 $Y=1.5085
+C1063	XI1/net1	XI1/net6#4	1.13276e-18	$X=5.3005 $Y=0.5065
+C1064	gnd!#1	Cin#11	2.08079e-18	$X=7.9885 $Y=0.463
+C1065	XI0/net14#10	XI0/net6#9	2.29938e-17	$X=1.842 $Y=0.879
+C1066	net5#7	vdd!#19	2.1577e-17	$X=9.0545 $Y=1.164
+C1067	B#2	XI0/net6#2	6.72896e-18	$X=1.8295 $Y=0.9465
+C1068	gnd!#17	Cin#18	1.17987e-18	$X=3.861 $Y=0.5985
+C1069	gnd!#16	net3#2	3.34994e-18	$X=5.102 $Y=0.1965
+C1070	net7#2	net4#2	1.26542e-17	$X=8.924 $Y=0.8175
+C1071	XI1/net14#5	Cin#6	2.23976e-18	$X=4.6485 $Y=0.6075
+C1072	net4#11	net7#3	9.0573e-19	$X=8.348 $Y=0.7625
+C1073	A#9	net4#7	7.79503e-18	$X=6.825 $Y=0.948
+C1074	B#30	gnd!#17	5.28197e-18	$X=4.3705 $Y=0.1435
+C1075	net10#3	Cin#21	9.03865e-18	$X=11.399 $Y=0.902
+C1076	XI0/net4#4	vdd!#40	1.65737e-17	$X=1.8805 $Y=1.5955
+C1077	XI0/net4#5	XI0/net6	6.37566e-19	$X=2.1105 $Y=1.36
+C1078	gnd!#21	gnd!#14	1.27776e-17	$X=1.854 $Y=0.0695
+C1079	Cin#27	vdd!#3	3.7233e-18	$X=11.134 $Y=1.1795
+C1080	gnd!#1	net7#8	6.64374e-18	$X=8.098 $Y=0.434
+C1081	gnd!#11	net5#8	8.55744e-18	$X=8.902 $Y=0.4155
+C1082	S#4	XI1/net6#4	4.12607e-18	$X=5.2285 $Y=0.5335
+C1083	XI1/net1	S#4	9.97164e-18	$X=5.415 $Y=0.501
+C1084	net7#7	A#12	8.07124e-19	$X=7.872 $Y=0.877
+C1085	net2#17	vdd!#14	2.45224e-18	$X=12.2115 $Y=1.1055
+C1086	vdd!#40	XI0/net6	2.03182e-18	$X=1.973 $Y=1.425
+C1087	A#14	Cin#11	3.83089e-17	$X=7.9005 $Y=0.4605
+C1088	net3#14	XI0/net6	3.13261e-18	$X=2.0245 $Y=1.357
+C1089	XI0/net14#5	vdd!#29	1.13161e-18	$X=1.269 $Y=0.89
+C1090	vdd!#29	XI1/net6	2.03182e-18	$X=5.163 $Y=1.3675
+C1091	Cin#29	net3#5	1.65729e-18	$X=3.517 $Y=1.05
+C1092	gnd!#23	XI0/net6#7	4.95311e-18	$X=0.518 $Y=0.426
+C1093	A#9	vdd!#26	8.74935e-18	$X=6.768 $Y=0.9725
+C1094	vdd!#32	XI1/net4	1.59912e-17	$X=4.739 $Y=1.3775
+C1095	net2#15	gnd!#1	1.46331e-18	$X=10.5745 $Y=1.021
+C1096	gnd!#1	Cout#1	7.99422e-18	$X=11.988 $Y=0.668
+C1097	net3#9	XI0/net14#2	5.36613e-18	$X=2.492 $Y=0.881
+C1098	XI1/net1#2	XI1/net6#4	4.2573e-18	$X=5.169 $Y=0.5065
+C1099	XI0/net4#3	XI0/net6	1.95687e-18	$X=1.9665 $Y=1.36
+C1100	gnd!#1	A#14	2.69521e-18	$X=7.8805 $Y=0.4475
+C1101	S#6	vdd!#29	5.87576e-18	$X=5.6495 $Y=1.3705
+C1102	B#14	Cin#15	6.25577e-18	$X=10.8955 $Y=0.673
+C1103	vdd!#36	vdd!#33	3.14605e-18	$X=3.712 $Y=1.74
+C1104	XI1/net9#2	net3#3	1.24049e-18	$X=4.6385 $Y=0.298
+C1105	XI0/net9#2	XI0/net14#10	1.92983e-17	$X=1.945 $Y=0.5605
+C1106	XI0/net6#9	XI0/net4#4	1.35877e-18	$X=1.767 $Y=1.291
+C1107	XI0/net1	net3#11	9.97164e-18	$X=2.215 $Y=0.501
+C1108	net2#17	Cout#2	2.99832e-18	$X=12.0795 $Y=1.0495
+C1109	A#27	XI0/net14#5	1.75907e-18	$X=0.577 $Y=0.9115
+C1110	vdd!#20	vdd!#19	7.10142e-18	$X=8.9545 $Y=1.206
+C1111	XI0/net6#8	XI0/net14#8	3.05679e-18	$X=0.6665 $Y=1.327
+C1112	XI0/net4#6	net3#13	7.31513e-18	$X=2.4585 $Y=1.438
+C1113	gnd!#14	XI1/net1	1.97995e-17	$X=5.4725 $Y=0.4335
+C1114	XI0/net4	XI0/net6	6.45978e-19	$X=1.8835 $Y=1.3605
+C1115	B#6	XI0/net6#2	1.21503e-18	$X=1.781 $Y=0.758
+C1116	A#9	A#8	1.85253e-18	$X=6.822 $Y=0.841
+C1117	Cin#31	vdd!#10	1.05201e-17	$X=9.1705 $Y=1.714
+C1118	net3#10	XI0/net6#2	3.72571e-18	$X=2.0305 $Y=0.9425
+C1119	Cout#1	net2#9	1.73451e-17	$X=12.314 $Y=0.8585
+C1120	net7#7	Cin#10	1.21386e-18	$X=8.025 $Y=0.911
+C1121	net2#5	B#13	1.04758e-18	$X=10.6355 $Y=1.136
+C1122	Cin#29	XI1/net4#6	1.25217e-17	$X=5.36 $Y=1.5085
+C1123	net7#8	net5#8	1.2664e-18	$X=8.5545 $Y=0.4425
+C1124	Cin#31	net7#7	1.54325e-18	$X=8.013 $Y=1.172
+C1125	net2#6	net5#2	3.6457e-18	$X=10.1245 $Y=0.8665
+C1126	gnd!#29	Cin#5	7.42168e-18	$X=3.926 $Y=0.645
+C1127	net2#17	vdd!#15	2.04394e-18	$X=11.947 $Y=1.1055
+C1128	XI0/net9#4	gnd!#30	4.65865e-18	$X=3.19 $Y=0.42
+C1129	XI1/net14#5	net3#3	3.55713e-18	$X=4.2445 $Y=0.51
+C1130	XI1/net6#2	XI1/net14	1.18524e-18	$X=5.393 $Y=1.0935
+C1131	XI1/net6#2	XI1/net14#3	3.25335e-18	$X=5.368 $Y=0.869
+C1132	XI1/net6#6	vdd!#29	1.76789e-18	$X=3.642 $Y=0.9535
+C1133	B#30	XI1/net14#10	8.86403e-18	$X=5.4485 $Y=0.7755
+C1134	net3#4	Cin#4	1.74424e-18	$X=3.816 $Y=0.857
+C1135	net4#8	net4#5	6.1761e-18	$X=7.196 $Y=0.5365
+C1136	XI1/net6#2	XI1/net14#2	3.81724e-18	$X=5.4295 $Y=0.8875
+C1137	A#34	S#3	1.51905e-18	$X=5.403 $Y=0.9675
+C1138	XI0/net4#6	XI0/net4#5	7.58241e-19	$X=2.362 $Y=1.4385
+C1139	XI0/net6#9	vdd!#40	2.2002e-18	$X=1.678 $Y=1.25
+C1140	XI1/net6#5	gnd!#17	7.18409e-19	$X=4.0405 $Y=0.561
+C1141	A#34	XI1/net6#9	6.69555e-18	$X=5.033 $Y=0.9585
+C1142	A#10	B#11	3.78712e-17	$X=6.9005 $Y=0.4605
+C1143	vdd!#20	net5#7	2.1577e-17	$X=8.854 $Y=1.164
+C1144	net2#5	net5	6.61861e-19	$X=10.203 $Y=1.144
+C1145	B#27	gnd!#3	5.81612e-18	$X=10.8775 $Y=0.2475
+C1146	gnd!#12	net4#8	6.64415e-18	$X=7.0445 $Y=0.3515
+C1147	net4#7	vdd!#23	1.60064e-18	$X=7.0465 $Y=1.3645
+C1148	Cin#18	net3#3	1.76714e-18	$X=3.869 $Y=0.6505
+C1149	A#27	XI0/net6#5	4.61195e-18	$X=0.5255 $Y=0.968
+C1150	vdd!#40	B#1	2.44835e-18	$X=1.5775 $Y=1.435
+C1151	XI0/net6#8	vdd!#44	1.59981e-17	$X=0.5795 $Y=1.3635
+C1152	gnd!#14	XI1/net14#3	1.47227e-18	$X=5.5435 $Y=0.7735
+C1153	Cin#2	XI1/net6#3	4.40419e-18	$X=4.9145 $Y=0.9675
+C1154	XI1/net6#5	Cin#3	1.90578e-18	$X=4.1345 $Y=1.022
+C1155	gnd!#23	gnd!#14	1.31714e-17	$X=0.9185 $Y=0.145
+C1156	net7#6	vdd!#12	4.82986e-19	$X=8.0975 $Y=1.059
+C1157	net4#5	A#20	8.0126e-18	$X=7.53 $Y=0.7405
+C1158	gnd!#24	gnd!#23	3.97835e-18	$X=0.456 $Y=0.2795
+C1159	vdd!#41	B#1	3.94606e-18	$X=1.506 $Y=1.3805
+C1160	vdd!#9	net5	5.21791e-19	$X=10.0165 $Y=1.313
+C1161	net2#11	vdd!#3	1.67443e-18	$X=10.346 $Y=1.111
+C1162	XI0/net4#2	XI0/net4#4	1.26572e-17	$X=1.737 $Y=1.5295
+C1163	B#25	B#9	4.63457e-18	$X=7.2075 $Y=0.9185
+C1164	net2	vdd!#3	7.4052e-19	$X=12.1285 $Y=0.928
+C1165	XI0/net4#6	net3#14	4.3856e-18	$X=2.228 $Y=1.438
+C1166	net3#2	A#10	2.44544e-18	$X=6.6185 $Y=0.4155
+C1167	net3#10	XI0/net14#2	1.87344e-18	$X=2.3425 $Y=0.8855
+C1168	XI0/net14#8	B#1	1.09096e-18	$X=1.38 $Y=1.361
+C1169	XI1/net14#8	vdd!#32	5.36052e-18	$X=4.3845 $Y=1.357
+C1170	gnd!#28	Cin#6	3.01934e-18	$X=4.6935 $Y=0.5185
+C1171	XI1/net1#2	S#4	2.0081e-17	$X=5.207 $Y=0.501
+C1172	gnd!#5	net5#6	2.77977e-18	$X=9.2625 $Y=0.478
+C1173	Cin#2	XI1/net6	7.04944e-19	$X=5.014 $Y=1.2085
+C1174	net2#15	vdd!#16	1.94874e-18	$X=10.9695 $Y=1.169
+C1175	B#19	A#20	7.12725e-18	$X=7.4315 $Y=0.8805
+C1176	gnd!#14	XI1/net1#2	1.43985e-17	$X=5.027 $Y=0.4335
+C1177	XI0/net6#5	vdd!#29	1.08086e-18	$X=0.914 $Y=0.9985
+C1178	vdd!#12	vdd!#11	5.15646e-18	$X=8.4485 $Y=1.661
+C1179	net4#7	vdd!#25	1.61288e-18	$X=6.856 $Y=1.3805
+C1180	net2#6	B#14	6.02713e-19	$X=10.6845 $Y=0.83
+C1181	Cin#23	XI1/net14#5	1.16419e-17	$X=4.037 $Y=0.7595
+C1182	B#30	S#5	3.38491e-18	$X=6.2285 $Y=0.522
+C1183	XI1/net14#7	Cin#6	1.01621e-18	$X=4.473 $Y=0.539
+C1184	net10#6	Cout#1	1.32506e-18	$X=11.5475 $Y=0.6885
+C1185	B#27	gnd!#5	1.12956e-17	$X=9.9245 $Y=0.2445
+C1186	vdd!#45	vdd!#44	2.92693e-18	$X=0.547 $Y=1.4125
+C1187	net10#6	Cin#15	3.43694e-18	$X=10.99 $Y=0.5405
+C1188	XI0/net9#4	net3#3	4.55921e-19	$X=3.346 $Y=0.2985
+C1189	S#7	vdd!#29	5.90294e-18	$X=5.206 $Y=1.3705
+C1190	XI0/net6#9	XI0/net4#2	4.64337e-18	$X=1.6195 $Y=1.352
+C1191	Cin#29	vdd!#32	1.94836e-18	$X=4.5455 $Y=1.3945
+C1192	net2#6	B#22	1.18378e-17	$X=10.5225 $Y=0.843
+C1193	net3#2	XI1/net14#4	1.32169e-17	$X=5.6355 $Y=0.4515
+C1194	XI1/net6#3	vdd!#31	1.3007e-18	$X=4.995 $Y=1.132
+C1195	net2#15	net10#7	3.62041e-18	$X=10.8395 $Y=1.1145
+C1196	XI0/net1#2	net3#11	2.0081e-17	$X=2.007 $Y=0.501
+C1197	net4#9	net5#3	4.16296e-18	$X=9.425 $Y=0.9015
+C1198	Cin#23	Cin#18	3.70325e-18	$X=3.802 $Y=0.738
+C1199	net4#5	B#19	1.21e-17	$X=7.3525 $Y=0.857
+C1200	Cin#21	net10#2	6.21055e-19	$X=11.5325 $Y=0.876
+C1201	A#31	net7#6	3.335e-18	$X=7.888 $Y=0.75
+C1202	XI1/net6#3	XI1/net6#2	2.59797e-18	$X=5.164 $Y=0.94
+C1203	A#1	net3#5	3.31249e-18	$X=3.135 $Y=1.151
+C1204	net7#7	net5#7	4.5049e-19	$X=8.4545 $Y=1.122
+C1205	net3#2	XI1/net6#4	8.94072e-18	$X=5.2435 $Y=0.479
+C1206	B#27	net10#8	1.67895e-18	$X=10.9965 $Y=0.468
+C1207	vdd!#21	vdd!#20	7.76106e-18	$X=8.4545 $Y=1.206
+C1208	A#3	B#2	2.30811e-18	$X=1.383 $Y=0.7665
+C1209	B#27	gnd!#6	8.778e-18	$X=9.4265 $Y=0.33
+C1210	XI0/net14#8	B#7	4.01349e-18	$X=0.8355 $Y=1.358
+C1211	gnd!#30	net3#5	6.04684e-18	$X=3.4535 $Y=0.674
+C1212	Cin#31	vdd!#11	9.26783e-18	$X=8.6785 $Y=1.625
+C1213	net7#8	gnd!#11	2.81027e-18	$X=8.4095 $Y=0.4155
+C1214	XI0/net9#4	gnd!#31	1.53372e-17	$X=2.5995 $Y=0.42
+C1215	A#34	net3#2	1.25003e-18	$X=5.6515 $Y=0.389
+C1216	Cin#29	XI1/net14#10	2.98422e-18	$X=5.1085 $Y=0.885
+C1217	gnd!#28	Cin#8	1.322e-18	$X=4.2025 $Y=0.477
+C1218	B#25	vdd!#23	3.25926e-18	$X=7.231 $Y=1.383
+C1219	XI0/net9#4	A#2	8.16413e-18	$X=2.508 $Y=0.301
+C1220	net2#15	vdd!#17	1.66967e-18	$X=10.71 $Y=1.169
+C1221	net5#6	vdd!#10	1.3413e-18	$X=9.1755 $Y=1.0845
+C1222	vdd!#44	B#7	4.70865e-18	$X=0.7865 $Y=1.3765
+C1223	XI1/net9	S#4	3.44295e-18	$X=5.0345 $Y=0.523
+C1224	net2#13	gnd!#1	2.69708e-18	$X=12.313 $Y=0.8965
+C1225	XI1/net6#4	XI1/net14#4	3.11536e-18	$X=5.457 $Y=0.5055
+C1226	XI0/net14#5	XI0/net6#9	5.54941e-17	$X=1.3845 $Y=0.901
+C1227	Cin#29	vdd!#29	7.40671e-18	$X=3.808 $Y=1.4925
+C1228	XI1/net4#5	XI1/net14#3	4.03362e-19	$X=5.5825 $Y=0.9815
+C1229	vdd!#29	net3#6	1.34977e-18	$X=3.5445 $Y=1.374
+C1230	A#3	B#3	1.99973e-18	$X=1.003 $Y=0.858
+C1231	net4#2	net5#2	4.13537e-19	$X=9.78 $Y=0.853
+C1232	vdd!#10	net4#4	1.07751e-18	$X=9.109 $Y=1.2815
+C1233	vdd!#45	XI0/net6#8	2.1577e-17	$X=0.374 $Y=1.379
+C1234	Cin#23	XI1/net6#5	2.60755e-17	$X=3.9225 $Y=0.855
+C1235	net4#2	net5#4	4.23677e-19	$X=9.746 $Y=0.6715
+C1236	XI0/net6#8	B#7	2.02465e-18	$X=0.716 $Y=1.363
+C1237	net2#17	net2#13	9.88388e-18	$X=12.3455 $Y=0.9095
+C1238	XI1/net14#7	Cin#8	2.97505e-18	$X=4.0435 $Y=0.4945
+C1239	gnd!#6	net5#6	6.03033e-18	$X=8.977 $Y=0.5405
+C1240	net2#15	net2#6	7.33453e-19	$X=10.355 $Y=0.9215
+C1241	net7#7	vdd!#3	2.16651e-18	$X=8.0575 $Y=1.155
+C1242	A#29	A#31	7.98265e-18	$X=6.879 $Y=0.8265
+C1243	gnd!#20	gnd!#19	1.78605e-18	$X=2.977 $Y=0.099
+C1244	XI0/net14#10	XI0/net4#3	5.79293e-19	$X=1.991 $Y=1.1315
+C1245	net10#6	Cin#21	9.67601e-18	$X=11.305 $Y=0.8735
+C1246	net4#7	A#8	9.59078e-19	$X=6.872 $Y=0.877
+C1247	vdd!#14	net2#4	4.51626e-18	$X=12.078 $Y=1.1895
+C1248	net2#15	net2#8	1.96614e-18	$X=10.321 $Y=1.145
+C1249	A#3	B#4	1.72523e-18	$X=0.838 $Y=0.713
+C1250	XI0/net9#4	XI0/net1	5.89098e-18	$X=2.496 $Y=0.408
+C1251	vdd!#34	XI1/net14#8	2.28593e-17	$X=4.007 $Y=1.3545
+C1252	Cout#2	net2#4	2.81083e-18	$X=12.0345 $Y=1.1715
+C1253	XI0/net4#4	net3#14	6.98033e-18	$X=1.9845 $Y=1.4455
+C1254	net10#6	B#16	4.84025e-19	$X=10.9125 $Y=0.5215
+C1255	S#1	A#18	3.03996e-18	$X=6.4 $Y=0.8
+C1256	gnd!#29	Cin#8	3.73088e-18	$X=3.982 $Y=0.477
+C1257	XI0/net9#4	XI0/net14#4	5.97561e-19	$X=2.5015 $Y=0.462
+C1258	XI0/net9	net3#11	3.44295e-18	$X=1.8345 $Y=0.523
+C1259	XI0/net14#10	A#2	2.23914e-18	$X=2.19 $Y=0.545
+C1260	B#30	net3#3	6.5348e-18	$X=4.507 $Y=0.297
+C1261	Cin#6	XI1/net6#4	5.02857e-18	$X=4.9805 $Y=0.543
+C1262	net2#6	net2#5	7.06798e-18	$X=10.32 $Y=0.997
+C1263	vdd!#15	net2#4	1.72939e-18	$X=11.9905 $Y=1.1895
+C1264	B#27	gnd!#9	2.12594e-18	$X=10.732 $Y=0.421
+C1265	Cin#27	net2#17	4.03259e-18	$X=11.931 $Y=0.9795
+C1266	XI0/net9#2	XI0/net14#5	1.40076e-18	$X=1.492 $Y=0.543
+C1267	net5#4	B#14	5.28008e-19	$X=10.445 $Y=0.7025
+C1268	gnd!#8	net10#3	6.09811e-18	$X=11.738 $Y=0.554
+C1269	S#2	vdd!#26	1.54281e-18	$X=6.177 $Y=1.0675
+C1270	B#30	net4#13	1.06219e-17	$X=8.693 $Y=0.7565
+C1271	Cin#29	XI0/net4#4	3.07306e-18	$X=2.1115 $Y=1.5105
+C1272	vdd!#44	A#6	2.90379e-18	$X=0.4445 $Y=1.373
+C1273	net2#15	vdd!#18	2.14985e-18	$X=10.2085 $Y=1.184
+C1274	Cin#5	Cin#4	1.95846e-18	$X=3.985 $Y=0.7895
+C1275	net7#6	Cin#19	1.35139e-17	$X=8.31 $Y=0.8685
+C1276	XI1/net6#7	Cin#8	1.5546e-18	$X=3.904 $Y=0.5
+C1277	vdd!#40	XI0/net4#2	1.6111e-17	$X=1.6765 $Y=1.5825
+C1278	net2#13	Cout#2	4.36926e-19	$X=12.251 $Y=0.962
+C1279	XI1/net9	XI1/net1#2	8.61407e-18	$X=4.9345 $Y=0.4845
+C1280	gnd!#16	Cin#6	1.63783e-18	$X=4.716 $Y=0.496
+C1281	net4#6	net4#5	6.00756e-18	$X=7.212 $Y=0.664
+C1282	net7#3	Cin#19	1.00692e-17	$X=8.4085 $Y=0.897
+C1283	vdd!#14	net10	1.66537e-18	$X=11.92 $Y=1.1845
+C1284	XI0/net6#8	A#6	4.42416e-18	$X=0.3725 $Y=1.359
+C1285	S#2	A#18	1.1145e-18	$X=6.345 $Y=0.86
+C1286	net4#7	B#10	1.23313e-18	$X=7.025 $Y=0.911
+C1287	B#27	net2#7	3.98297e-18	$X=10.219 $Y=0.631
+C1288	net2#15	Cin#27	3.86473e-17	$X=10.9015 $Y=1.0955
+C1289	XI0/net4#4	XI0/net4#3	7.75016e-19	$X=1.8965 $Y=1.4455
+C1290	Cin#31	net5#3	3.96492e-18	$X=9.655 $Y=0.94
+C1291	Cout#2	net10	2.81285e-18	$X=11.875 $Y=1.1655
+C1292	net7#7	vdd!#21	2.1577e-17	$X=8.0545 $Y=1.164
+C1293	B#30	XI1/net9#3	7.45148e-19	$X=6.0445 $Y=0.5185
+C1294	XI1/net14#7	net3#3	1.60092e-18	$X=4.134 $Y=0.437
+C1295	A#34	vdd!	2.59335e-17	$X=6.2945 $Y=0.9725
+C1296	XI1/net6#8	XI1/net14#8	2.75368e-18	$X=3.8665 $Y=1.327
+C1297	net5#6	net4#9	2.12155e-17	$X=9.315 $Y=0.8765
+C1298	vdd!#45	A#6	5.87967e-18	$X=0.3305 $Y=1.3815
+C1299	vdd!#15	net10	3.99277e-18	$X=11.8295 $Y=1.1845
+C1300	A#34	XI1/net6#6	9.19172e-19	$X=3.902 $Y=0.9305
+C1301	B#27	gnd!#1	5.39548e-18	$X=10.4685 $Y=0.5745
+C1302	vdd!#38	vdd!#36	3.79119e-18	$X=3.2335 $Y=1.73
+C1303	net10#6	vdd!#6	4.82986e-19	$X=11.096 $Y=1.0475
+C1304	B#23	gnd!#32	1.16533e-18	$X=1.1935 $Y=0.4935
+C1305	Cin#29	XI1/net14#8	3.67158e-18	$X=4.086 $Y=1.327
+C1306	vdd!#16	net10	9.81871e-19	$X=11.6945 $Y=1.1845
+C1307	A#4	B#3	3.14635e-18	$X=0.618 $Y=0.992
+C1308	net7#2	net4#3	6.25577e-18	$X=8.8955 $Y=0.673
+C1309	B#22	net10#6	4.38023e-18	$X=10.7635 $Y=0.7925
+C1310	net3#3	Cin#6	9.11094e-18	$X=4.6245 $Y=0.493
+C1311	gnd!#29	net3#3	2.15542e-18	$X=3.996 $Y=0.392
+C1312	vdd!#11	net7	1.36398e-18	$X=8.832 $Y=1.271
+C1313	XI0/net9#2	A#2	3.77076e-18	$X=1.984 $Y=0.3005
+C1314	vdd!#5	vdd!#3	9.49629e-18	$X=11.496 $Y=1.7775
+C1315	B#27	net2#15	1.40972e-17	$X=10.606 $Y=0.9585
+C1316	B#27	gnd!#10	2.75196e-18	$X=10.0615 $Y=0.5775
+C1317	XI1/net6#3	XI1/net4#3	7.49797e-18	$X=5.102 $Y=1.1265
+C1318	net5#6	net4#3	3.4504e-18	$X=8.987 $Y=0.5335
+C1319	XI0/net9	XI0/net1#2	8.61407e-18	$X=1.7345 $Y=0.4845
+C1320	net4#6	A#8	1.97733e-18	$X=6.911 $Y=0.7805
+C1321	S#1	XI1/net4#8	4.79632e-18	$X=6.0075 $Y=1.1355
+C1322	Cin#31	vdd!#12	8.61305e-18	$X=8.1915 $Y=1.626
+C1323	net3#3	Cin#8	1.29466e-17	$X=4.04 $Y=0.449
+C1324	XI1/net6#7	net3#3	5.35854e-18	$X=3.8095 $Y=0.443
+C1325	XI0/net6#2	XI0/net14#3	3.25335e-18	$X=2.168 $Y=0.869
+C1326	vdd!#22	vdd!#21	7.43617e-18	$X=7.9545 $Y=1.206
+C1327	B#23	XI0/net14#7	2.29052e-18	$X=0.8125 $Y=0.5325
+C1328	Cin#29	XI1/net4#4	9.41366e-18	$X=4.9725 $Y=1.5105
+C1329	net4#13	gnd!#5	1.89705e-18	$X=9.5255 $Y=0.372
+C1330	net2#15	net2#11	8.58292e-18	$X=10.396 $Y=1.0995
+C1331	net2#11	gnd!#1	6.69373e-19	$X=10.348 $Y=1.084
+C1332	A#20	net7#6	6.70521e-18	$X=7.784 $Y=0.765
+C1333	B#27	net5#8	8.22094e-19	$X=9.2305 $Y=0.468
+C1334	net3#4	Cin#5	2.48082e-18	$X=3.711 $Y=0.882
+C1335	Cin#27	vdd!#15	3.25376e-18	$X=11.649 $Y=1.175
+C1336	net7#6	net5#6	1.32506e-18	$X=8.5255 $Y=0.6885
+C1337	XI1/net6#8	vdd!#34	1.60081e-17	$X=3.7795 $Y=1.3635
+C1338	vdd!#16	Cin#16	3.99277e-18	$X=11.078 $Y=1.1895
+C1339	gnd!#2	net10#6	3.07733e-18	$X=11.2095 $Y=0.4695
+C1340	gnd!#30	net3#3	3.56434e-18	$X=3.6625 $Y=0.392
+C1341	B#2	XI0/net6#3	4.40419e-18	$X=1.7145 $Y=0.9675
+C1342	A#34	Cin#31	1.86989e-17	$X=7.278 $Y=1.1945
+C1343	XI0/net14#10	XI0/net6#2	1.30286e-18	$X=2.0235 $Y=0.9005
+C1344	B#30	XI1/net6#9	3.50543e-18	$X=4.9585 $Y=0.9275
+C1345	XI1/net4#8	S#2	9.2712e-19	$X=5.869 $Y=1.2715
+C1346	net10#7	Cin#16	2.52937e-18	$X=11.0345 $Y=1.1715
+C1347	S#1	vdd!#28	4.60056e-18	$X=6.116 $Y=1.016
+C1348	B#27	net5#2	4.36229e-19	$X=10.104 $Y=0.8585
+C1349	net10#7	vdd!#6	1.60064e-18	$X=11.0465 $Y=1.3645
+C1350	net5#6	gnd!#10	1.56881e-18	$X=9.5985 $Y=0.616
+C1351	vdd!#6	vdd!#3	6.26118e-18	$X=11.078 $Y=1.6665
+C1352	XI0/net1	XI0/net14#3	6.98918e-18	$X=2.3825 $Y=0.6745
+C1353	B#23	gnd!#33	1.25039e-18	$X=0.661 $Y=0.4935
+C1354	net4#13	gnd!#6	2.51075e-18	$X=9.058 $Y=0.464
+C1355	gnd!#3	net10#8	7.13848e-18	$X=11.045 $Y=0.3545
+C1356	A#2	net3#3	3.95284e-18	$X=3.2745 $Y=0.232
+C1357	net3#12	net3#3	1.123e-18	$X=3.338 $Y=0.4375
+C1358	XI0/net1	XI0/net14#10	5.16796e-18	$X=2.2695 $Y=0.585
+C1359	Cin#27	vdd!#16	3.19418e-18	$X=11.201 $Y=1.175
+C1360	gnd!#25	net7#8	8.55744e-18	$X=7.902 $Y=0.4155
+C1361	XI1/net4#8	vdd!#28	1.2409e-17	$X=6.0635 $Y=1.472
+C1362	XI0/net6#9	XI0/net4	1.15547e-18	$X=1.611 $Y=1.189
+C1363	B#18	XI0/net14#5	4.31228e-18	$X=0.678 $Y=0.7565
+C1364	vdd!#22	net7#7	2.1577e-17	$X=7.854 $Y=1.164
+C1365	Cout#3	net2#3	3.54398e-18	$X=11.996 $Y=0.4585
+C1366	gnd!#19	net3#12	3.38149e-18	$X=3.0775 $Y=0.3855
+C1367	gnd!#17	Cin#8	1.4109e-18	$X=4.028 $Y=0.413
+C1368	XI1/net4#8	vdd!#29	2.99857e-18	$X=5.873 $Y=1.5325
+C1369	XI1/net9#4	gnd!#14	3.45859e-18	$X=5.7355 $Y=0.3345
+C1370	net4#6	B#10	8.19311e-18	$X=7.058 $Y=0.7625
+C1371	XI1/net9#4	S#1	4.59873e-18	$X=5.9945 $Y=0.6465
+C1372	net5#6	net7#4	4.53221e-19	$X=8.9065 $Y=0.5145
+C1373	gnd!#20	XI0/net9#4	1.86764e-17	$X=2.6415 $Y=0.2855
+C1374	gnd!#14	XI1/net6#7	4.95515e-18	$X=3.636 $Y=0.517
+C1375	vdd!#37	vdd!#34	2.90824e-18	$X=3.682 $Y=1.3895
+C1376	S#2	net3	3.17577e-18	$X=5.9755 $Y=1.1295
+C1377	S#1	vdd!#29	5.0013e-19	$X=5.9765 $Y=0.8225
+C1378	gnd!#28	XI1/net9	1.23671e-17	$X=4.7365 $Y=0.4825
+C1379	B#23	XI0/net6#7	6.97402e-18	$X=0.462 $Y=0.551
+C1380	net2#13	Cout#1	2.61334e-18	$X=12.2605 $Y=0.8415
+C1381	net10#7	B#13	2.69191e-18	$X=10.875 $Y=1.1655
+C1382	Cin#27	net2#13	1.18172e-18	$X=12.2475 $Y=0.927
+C1383	Cin#27	net10#7	3.68759e-18	$X=11.052 $Y=1.1125
+C1384	net10#7	vdd!#7	1.61288e-18	$X=10.86 $Y=1.37
+C1385	A#4	B#4	1.74424e-18	$X=0.616 $Y=0.857
+C1386	XI0/net6#2	XI0/net14#2	3.81724e-18	$X=2.2295 $Y=0.8875
+C1387	XI1/net4#4	vdd!#31	9.5091e-18	$X=4.9635 $Y=1.578
+C1388	XI1/net9#4	gnd!#26	3.18211e-18	$X=6.474 $Y=0.3775
+C1389	A#2	XI0/net14#4	1.32169e-17	$X=2.4355 $Y=0.4515
+C1390	vdd!#17	B#13	4.00303e-18	$X=10.8295 $Y=1.1845
+C1391	gnd!#8	net2#3	1.83483e-18	$X=11.8735 $Y=0.4365
+C1392	XI1/net4#8	XI1/net4#7	1.40476e-18	$X=5.9885 $Y=1.4525
+C1393	XI0/net14#10	net3#11	8.902e-18	$X=2.106 $Y=0.629
+C1394	net4#13	Cin#31	9.03169e-18	$X=9.075 $Y=0.964
+C1395	net3#13	vdd!#38	5.87576e-18	$X=2.5755 $Y=1.4745
+C1396	gnd!#30	A#2	1.56948e-18	$X=3.1345 $Y=0.3955
+C1397	net7#6	Cin#11	3.42562e-18	$X=7.99 $Y=0.54
+C1398	net4#5	net7#6	1.64995e-18	$X=7.6635 $Y=0.662
+C1399	XI0/net6#9	vdd!#41	1.83932e-18	$X=1.5055 $Y=1.191
+C1400	XI0/net6#5	XI0/net14#5	2.70959e-17	$X=0.902 $Y=0.9055
+C1401	vdd!#7	vdd!#3	6.1921e-18	$X=10.696 $Y=1.666
+C1402	net5#2	B#14	8.92028e-19	$X=10.415 $Y=0.846
+C1403	A#18	net4#6	6.733e-18	$X=6.8005 $Y=0.7605
+C1404	net3#5	vdd!#36	3.73416e-18	$X=3.452 $Y=1.3765
+C1405	gnd!#3	net10#6	4.89601e-18	$X=11.0455 $Y=0.501
+C1406	A#31	Cin#25	7.8393e-18	$X=8.044 $Y=0.949
+C1407	XI1/net9#4	S#2	3.91627e-18	$X=5.8105 $Y=0.718
+C1408	XI0/net6#9	B#2	5.35147e-18	$X=1.5505 $Y=0.97
+C1409	net2#17	net2#3	6.57019e-19	$X=12.0115 $Y=0.5355
+C1410	net4#13	gnd!#10	2.49351e-18	$X=9.8475 $Y=0.6105
+C1411	net4#5	B#9	7.93265e-18	$X=7.2515 $Y=0.799
+C1412	S#1	XI1/net4#7	4.30176e-18	$X=6.043 $Y=1.025
+C1413	A#2	XI0/net6#4	8.94072e-18	$X=2.0435 $Y=0.479
+C1414	XI0/net6#3	XI0/net6#2	2.59797e-18	$X=1.964 $Y=0.94
+C1415	B#23	gnd!#24	3.49778e-18	$X=0.364 $Y=0.4805
+C1416	net2#6	B#15	6.87146e-19	$X=10.5725 $Y=0.8725
+C1417	Cin#29	vdd!#34	2.80139e-18	$X=3.918 $Y=1.3905
+C1418	XI0/net9#2	B#6	1.588e-18	$X=1.592 $Y=0.5075
+C1419	net3#8	net3#4	1.00138e-18	$X=3.4395 $Y=0.907
+C1420	net3#12	A#2	2.52502e-18	$X=2.835 $Y=0.442
+C1421	Cout#3	net10#4	1.58333e-18	$X=11.926 $Y=0.449
+C1422	XI1/net4#6	XI1/net4#8	2.52028e-18	$X=5.7925 $Y=1.5245
+C1423	gnd!#9	B#15	4.70655e-18	$X=10.765 $Y=0.6605
+C1424	net3#5	net3#4	3.15734e-18	$X=3.5235 $Y=0.9645
+C1425	gnd!#20	net3#12	1.59985e-18	$X=2.9395 $Y=0.4455
+C1426	net10#6	Cin#13	4.57331e-17	$X=11.1365 $Y=0.8305
+C1427	XI1/net4#8	S#6	4.52127e-18	$X=5.876 $Y=1.4535
+C1428	vdd!#37	XI1/net6#8	2.1577e-17	$X=3.5465 $Y=1.3635
+C1429	gnd!#32	XI0/net9	1.23671e-17	$X=1.5365 $Y=0.4825
+C1430	gnd!#16	net3#3	1.21008e-17	$X=4.3815 $Y=0.198
+C1431	XI0/net14#10	XI0/net1#2	1.96509e-18	$X=1.9905 $Y=0.585
+C1432	XI0/net6#4	XI0/net14#4	3.11536e-18	$X=2.257 $Y=0.5055
+C1433	XI1/net6#6	Cin#3	2.51726e-18	$X=3.9645 $Y=0.9985
+C1434	Cin#25	gnd!#6	1.76924e-18	$X=8.464 $Y=0.739
+C1435	A#31	A#25	5.64515e-18	$X=7.62 $Y=0.8185
+C1436	XI0/net9#3	A#2	2.47478e-18	$X=2.689 $Y=0.439
+C1437	vdd!#17	net5	2.32321e-18	$X=10.2385 $Y=1.1975
+C1438	S#2	vdd!#29	2.21541e-18	$X=5.673 $Y=1
+C1439	net4#13	net5#8	4.32826e-18	$X=9.1105 $Y=0.506
+C1440	XI0/net14#8	B#3	3.47538e-18	$X=0.975 $Y=1.1305
+C1441	net2#11	vdd!#16	6.19833e-19	$X=10.553 $Y=1.1255
+C1442	B#27	Cin#27	8.8817e-18	$X=11.0005 $Y=0.901
+C1443	XI1/net4#8	XI1/net14	9.85592e-19	$X=5.781 $Y=1.401
+C1444	Cin#27	net2#8	6.96747e-19	$X=10.439 $Y=1.147
+C1445	XI1/net14#7	XI1/net9	1.38562e-18	$X=4.4685 $Y=0.509
+C1446	XI0/net6#5	B#18	1.90282e-18	$X=0.6435 $Y=0.7985
+C1447	net2#8	net5	3.90798e-18	$X=10.1075 $Y=1.187
+C1448	Cin#29	XI1/net6#9	5.7505e-18	$X=4.6655 $Y=1.022
+C1449	gnd!#8	net10#4	2.52019e-18	$X=11.815 $Y=0.429
+C1450	Cin#5	vdd!#34	4.22963e-18	$X=3.9285 $Y=0.9755
+C1451	A#25	gnd!#1	2.15008e-18	$X=7.6795 $Y=0.7935
+C1452	S#2	XI1/net14	3.72069e-18	$X=5.699 $Y=1.1915
+C1453	gnd!#17	net3#3	9.40371e-18	$X=4.1485 $Y=0.142
+C1454	Cin#31	net4#7	1.07358e-18	$X=7.162 $Y=1.172
+C1455	net4#7	net7#7	4.5049e-19	$X=7.4545 $Y=1.122
+C1456	A#34	XI1/net4#2	1.38111e-18	$X=4.9545 $Y=1.485
+C1457	vdd!#24	vdd!#22	8.44336e-18	$X=7.4545 $Y=1.206
+C1458	vdd!#18	net5	5.87271e-18	$X=10.059 $Y=1.2025
+C1459	XI0/net14#5	B#6	2.23976e-18	$X=1.4485 $Y=0.6075
+C1460	A#12	Cin#11	6.25577e-18	$X=7.8955 $Y=0.673
+C1461	S#3	XI1/net14	9.90279e-19	$X=5.5165 $Y=1.178
+C1462	net10#3	vdd!#5	4.52974e-18	$X=11.651 $Y=1.2895
+C1463	B#30	XI1/net9#2	1.61064e-17	$X=5.1315 $Y=0.3885
+C1464	A#31	net4#11	1.49053e-17	$X=7.484 $Y=0.736
+C1465	vdd!#19	net5	1.71705e-18	$X=9.8655 $Y=1.1975
+C1466	XI1/net4#6	XI1/net14	2.51983e-18	$X=5.6285 $Y=1.384
+C1467	XI0/net4#2	XI0/net4	8.01011e-19	$X=1.6325 $Y=1.4685
+C1468	XI0/net1#2	XI0/net6#3	5.62903e-18	$X=1.902 $Y=0.746
+C1469	XI1/net6#9	vdd!#31	3.82307e-18	$X=4.7305 $Y=1.229
+C1470	gnd!#16	gnd!	2.65846e-17	$X=4.6295 $Y=0.1515
+C1471	gnd!#9	gnd!	2.10696e-18	$X=10.754 $Y=0.39
+C1472	gnd!#10	gnd!	3.82026e-18	$X=9.984 $Y=0.565
+C1473	net2#17	vdd!#2	2.57163e-18	$X=12.322 $Y=1.2705
+C1474	gnd!#20	gnd!	3.06537e-17	$X=2.5645 $Y=0.1515
+C1475	gnd!#2	gnd!	2.21093e-17	$X=11.4845 $Y=0.0695
+C1476	gnd!#32	gnd!	2.39122e-18	$X=1.4345 $Y=0.4555
+C1477	vdd!#2	vdd!	3.25021e-17	$X=12.2305 $Y=1.717
+C1478	gnd!#6	gnd!	3.4173e-17	$X=8.749 $Y=0.1325
+C1479	gnd!#33	gnd!	1.37781e-18	$X=0.7145 $Y=0.4555
+C1480	gnd!#25	gnd!	2.07744e-18	$X=7.754 $Y=0.39
+C1481	gnd!	gnd!#14	4.02087e-17	$X=3.38 $Y=0.0695
+C1482	gnd!#12	gnd!	2.53158e-17	$X=7.014 $Y=0.0695
+C1483	gnd!#24	gnd!	3.5375e-17	$X=0.2495 $Y=0.3845
+C1484	gnd!#8	gnd!	3.87774e-18	$X=11.754 $Y=0.39
+C1485	gnd!#17	gnd!	1.53886e-17	$X=4.1045 $Y=0.0695
+C1486	gnd!#19	gnd!	1.73665e-17	$X=3.21 $Y=0.0695
+C1487	gnd!#1	gnd!	7.39244e-17	$X=9.9535 $Y=0.0855
+C1488	gnd!#21	gnd!	2.05856e-17	$X=1.728 $Y=0.0695
+C1489	gnd!#3	gnd!	2.65343e-17	$X=11.014 $Y=0.0695
+C1490	gnd!#11	gnd!	3.21574e-18	$X=8.754 $Y=0.39
+C1491	Cout	vdd!#2	2.22959e-18	$X=12.593 $Y=0.902
+C1492	vdd!#2	vdd!#3	1.2878e-17	$X=12.03 $Y=1.7235
+C1493	gnd!#23	gnd!	2.06311e-17	$X=0.7095 $Y=0.1515
+C1494	gnd!#5	gnd!	2.6378e-17	$X=9.657 $Y=0.0695
+C1495	gnd!#28	gnd!	2.42213e-18	$X=4.6345 $Y=0.4555
+C1496	vdd!#5	vdd!#2	8.13882e-18	$X=11.804 $Y=1.7615
+C1497	net2#9	vdd!#2	2.78861e-18	$X=12.384 $Y=0.9775
+C1498	gnd!#29	gnd!	2.22483e-18	$X=3.9145 $Y=0.4555
+C1499	net2#13	vdd!#2	3.21671e-18	$X=12.346 $Y=1.0065
+C1500	net2	vdd!#2	2.30954e-18	$X=12.1995 $Y=1.025
+C1501	gnd!#13	gnd!	1.18662e-17	$X=5.9235 $Y=0.0695
+C1502	gnd!#30	gnd!	2.06503e-18	$X=3.4495 $Y=0.4555
+C1503	gnd!#26	gnd!	1.41232e-18	$X=6.754 $Y=0.39
+C1504	A#29	A#18	3.43882e-19	$X=6.6185 $Y=0.801
+C1505	A#27	A#4	3.77245e-19	$X=0.319 $Y=0.956
+C1506	A#27	A#6	4.00655e-19	$X=0.3165 $Y=1.273
+C1507	A#31	A#20	4.71457e-19	$X=7.6175 $Y=0.82
+C1508	A#5	A#4	6.05672e-19	$X=0.317 $Y=0.973
+C1509	A#21	A#4	6.82002e-19	$X=0.2465 $Y=0.94
+C1510	A#29	A#25	7.19996e-19	$X=7.34 $Y=0.8015
+C1511	A	A#1	7.20049e-19	$X=2.8115 $Y=1.231
+C1512	A#27	A#5	7.57375e-19	$X=0.262 $Y=0.997
+C1513	A#31	A#23	1.01026e-18	$X=6.7875 $Y=0.8185
+C1514	A#23	A#25	1.12761e-18	$X=7.1445 $Y=0.8045
+C1515	A	A#3	1.16981e-18	$X=1.227 $Y=0.4545
+C1516	A#34	A#23	1.23771e-18	$X=6.6235 $Y=0.813
+C1517	A	A#2	1.25003e-18	$X=2.1735 $Y=0.468
+C1518	A#20	A#12	1.43773e-18	$X=7.769 $Y=0.812
+C1519	B#10	A#14	1.80627e-19	$X=7.535 $Y=0.598
+C1520	A#34	B#12	1.89795e-19	$X=7.018 $Y=1.1735
+C1521	A#27	B#18	1.90414e-19	$X=0.5095 $Y=0.7975
+C1522	B#25	A#12	2.05718e-19	$X=7.792 $Y=0.834
+C1523	A#29	B#9	2.20149e-19	$X=6.9815 $Y=0.8725
+C1524	A#34	B#10	2.26808e-19	$X=6.997 $Y=0.828
+C1525	A#18	B#11	2.47131e-19	$X=6.8055 $Y=0.631
+C1526	A#27	B#3	2.70585e-19	$X=0.7765 $Y=1.0305
+C1527	A#18	B#10	2.74144e-19	$X=6.8305 $Y=0.81
+C1528	B#30	A#20	2.74884e-19	$X=7.584 $Y=0.7985
+C1529	A#5	B#3	3.42707e-19	$X=0.628 $Y=1.027
+C1530	B#9	A#8	3.46081e-19	$X=6.9765 $Y=0.8525
+C1531	A	B#7	3.65211e-19	$X=0.891 $Y=1.354
+C1532	A	B#1	3.6839e-19	$X=1.5585 $Y=1.3575
+C1533	A#9	B#10	4.01492e-19	$X=6.907 $Y=0.85
+C1534	B#18	A#4	4.07281e-19	$X=0.469 $Y=0.848
+C1535	B#23	A#16	4.17892e-19	$X=0.2105 $Y=0.863
+C1536	B#19	A#13	4.62475e-19	$X=7.4605 $Y=0.9015
+C1537	A#21	B#18	4.67803e-19	$X=0.375 $Y=0.8325
+C1538	B#30	A#9	4.76379e-19	$X=6.7505 $Y=0.8695
+C1539	A#20	B#10	4.91703e-19	$X=7.379 $Y=0.81
+C1540	A#25	B#19	5.50242e-19	$X=7.438 $Y=0.8785
+C1541	B#30	A#25	5.56982e-19	$X=7.59 $Y=0.799
+C1542	A#7	B#10	5.74786e-19	$X=6.9325 $Y=1.0355
+C1543	A	B#3	6.05642e-19	$X=1.087 $Y=1.0585
+C1544	B#19	A#12	6.21055e-19	$X=7.5325 $Y=0.876
+C1545	A#23	B#9	6.95174e-19	$X=6.8875 $Y=0.852
+C1546	B#25	A#7	7.83619e-19	$X=6.918 $Y=1.149
+C1547	A	B#2	8.12918e-19	$X=1.5745 $Y=0.993
+C1548	B#25	A#20	8.21026e-19	$X=7.594 $Y=0.8305
+C1549	B#12	A#11	8.26107e-19	$X=7.447 $Y=1.182
+C1550	B#11	A#14	1.06953e-18	$X=7.438 $Y=0.4605
+C1551	B#25	A#9	1.25912e-18	$X=6.8735 $Y=0.894
+C1552	B#10	A#13	1.49229e-18	$X=7.4355 $Y=0.85
+C1553	Cin#31	A#9	2.71498e-19	$X=6.876 $Y=0.917
+C1554	Cin#29	A#1	3.49808e-19	$X=3.0065 $Y=1.2565
+C1555	A#31	Cin#9	3.6279e-19	$X=8.045 $Y=0.9055
+C1556	A#34	Cin#1	3.66881e-19	$X=4.8215 $Y=1.3515
+C1557	Cin	A#6	3.71709e-19	$X=0.425 $Y=1.395
+C1558	Cin#9	A#12	3.77541e-19	$X=7.975 $Y=0.852
+C1559	A#13	Cin#10	4.01492e-19	$X=7.907 $Y=0.85
+C1560	Cin	A#5	4.45078e-19	$X=0.3785 $Y=1.085
+C1561	A#11	Cin#10	5.74786e-19	$X=7.9325 $Y=1.0355
+C1562	Cin#31	A#18	6.1003e-19	$X=6.7475 $Y=0.8435
+C1563	Cin#31	A#13	6.23166e-19	$X=7.811 $Y=0.917
+C1564	Cin#23	A#2	6.41031e-19	$X=3.1275 $Y=0.4965
+C1565	A#25	Cin#9	6.72775e-19	$X=7.885 $Y=0.8515
+C1566	Cin#25	A#13	7.99174e-19	$X=7.9475 $Y=0.9105
+C1567	A#34	Cin#2	8.12918e-19	$X=4.8755 $Y=0.974
+C1568	Cin#31	A#23	1.10404e-18	$X=6.7375 $Y=0.84
+C1569	B	B#5	4.94323e-19	$X=0.8615 $Y=0.7425
+C1570	B#4	B#2	9.12658e-19	$X=1.02 $Y=0.8435
+C1571	B#4	B#6	9.3154e-19	$X=1.089 $Y=0.701
+C1572	B#3	B#2	9.44593e-19	$X=1.2365 $Y=1.018
+C1573	B#22	B#14	1.06385e-18	$X=10.7565 $Y=0.825
+C1574	B#18	B#4	1.15839e-18	$X=0.7215 $Y=0.771
+C1575	B#8	B#6	1.22397e-18	$X=1.1045 $Y=0.516
+C1576	B#15	B#14	1.33459e-18	$X=10.822 $Y=0.841
+C1577	B#23	B#6	1.46679e-18	$X=1.343 $Y=0.567
+C1578	B#7	B#1	1.57975e-18	$X=1.171 $Y=1.3735
+C1579	S#2	A#8	1.79233e-19	$X=6.575 $Y=0.856
+C1580	S	A#8	2.49534e-19	$X=6.5545 $Y=0.8025
+C1581	S#2	A#9	2.6654e-19	$X=6.412 $Y=0.9115
+C1582	S#2	A#7	3.6034e-19	$X=6.537 $Y=1.1175
+C1583	S#1	A#8	4.50616e-19	$X=6.5975 $Y=0.81
+C1584	Cin	B#1	3.39767e-19	$X=1.479 $Y=1.4025
+C1585	B#22	Cin#14	3.58288e-19	$X=10.806 $Y=0.8275
+C1586	B#15	Cin#14	4.01492e-19	$X=10.907 $Y=0.85
+C1587	Cin	B#7	4.75596e-19	$X=0.838 $Y=1.399
+C1588	B#13	Cin#14	5.74786e-19	$X=10.9325 $Y=1.0355
+C1589	B#30	Cin#25	6.20025e-19	$X=8.135 $Y=0.951
+C1590	Cin#31	B#9	6.79667e-19	$X=7.255 $Y=0.945
+C1591	B#27	Cin#13	9.0163e-19	$X=11.121 $Y=0.886
+C1592	Cin#27	B#15	1.39249e-18	$X=10.8405 $Y=0.904
+C1593	A#29	gnd!#12	3.26811e-19	$X=6.718 $Y=0.5405
+C1594	gnd!#26	A#14	3.74264e-19	$X=7.4405 $Y=0.429
+C1595	gnd!#32	A#3	3.88538e-19	$X=1.312 $Y=0.392
+C1596	gnd!#31	A#2	6.0882e-19	$X=2.482 $Y=0.3955
+C1597	gnd!#23	A#5	7.24188e-19	$X=0.368 $Y=0.825
+C1598	gnd!#1	A#13	9.31035e-19	$X=7.813 $Y=0.865
+C1599	gnd!#12	A#9	9.38646e-19	$X=6.822 $Y=0.716
+C1600	Cin#23	Cin#3	5.87756e-19	$X=4.107 $Y=0.9645
+C1601	Cin#31	Cin#9	7.61174e-19	$X=8.1905 $Y=0.9455
+C1602	Cin#4	Cin#2	9.12658e-19	$X=4.22 $Y=0.8435
+C1603	Cin#4	Cin#6	9.3154e-19	$X=4.289 $Y=0.701
+C1604	Cin#3	Cin#2	9.44593e-19	$X=4.4365 $Y=1.018
+C1605	Cin#23	Cin#5	1.01498e-18	$X=3.909 $Y=0.7705
+C1606	Cin#18	Cin#4	1.15839e-18	$X=3.9215 $Y=0.771
+C1607	Cin#23	Cin#2	1.18887e-18	$X=4.4565 $Y=0.896
+C1608	Cin#8	Cin#6	1.22397e-18	$X=4.3045 $Y=0.516
+C1609	Cin#29	Cin#1	1.39583e-18	$X=4.6925 $Y=1.3765
+C1610	Cin#7	Cin#1	1.57975e-18	$X=4.371 $Y=1.3735
+C1611	Cin#23	Cin#29	1.65025e-18	$X=3.8505 $Y=0.827
+C1612	A#31	vdd!#24	3.42858e-19	$X=7.285 $Y=1.086
+C1613	A#3	vdd!	3.7365e-19	$X=1.0445 $Y=0.2425
+C1614	A#2	vdd!	4.02595e-19	$X=2.305 $Y=0.2435
+C1615	vdd!#28	A#7	4.03139e-19	$X=6.6975 $Y=1.2315
+C1616	A#5	vdd!#43	5.1959e-19	$X=0.373 $Y=1.1615
+C1617	A#9	vdd!#25	7.84256e-19	$X=6.767 $Y=1.089
+C1618	A#13	vdd!#3	8.10616e-19	$X=7.8195 $Y=0.8985
+C1619	vdd!#24	A#11	1.06042e-18	$X=7.6945 $Y=1.1845
+C1620	vdd!#37	A#1	1.15198e-18	$X=3.117 $Y=1.2975
+C1621	vdd!#43	A#6	1.22424e-18	$X=0.416 $Y=1.433
+C1622	vdd!#3	A#11	1.36398e-18	$X=7.8845 $Y=1.1875
+C1623	vdd!#25	A#7	1.36398e-18	$X=6.83 $Y=1.28
+C1624	A#25	vdd!#3	1.46471e-18	$X=7.685 $Y=0.8215
+C1625	A#23	vdd!#25	1.46471e-18	$X=6.6685 $Y=1.004
+C1626	vdd!#24	A#7	1.47169e-18	$X=6.92 $Y=1.1845
+C1627	vdd!#21	A#11	1.48079e-18	$X=7.92 $Y=1.1845
+C1628	S#5	B#11	2.53702e-19	$X=6.654 $Y=0.487
+C1629	net4#11	A#10	2.51346e-19	$X=6.9255 $Y=0.4625
+C1630	net4#6	A#10	2.7825e-19	$X=6.9195 $Y=0.53
+C1631	A#31	net4#5	2.87621e-19	$X=7.3915 $Y=0.7055
+C1632	net4#7	A#11	3.11497e-19	$X=7.6495 $Y=1.1655
+C1633	A#23	net4#5	3.65291e-19	$X=6.906 $Y=0.7445
+C1634	net4#5	A#12	4.58413e-19	$X=7.702 $Y=0.7645
+C1635	net4#11	A#13	4.83681e-19	$X=7.725 $Y=0.8255
+C1636	A#34	net4#7	5.64075e-19	$X=6.849 $Y=1.095
+C1637	net4#6	A#20	5.69306e-19	$X=7.4235 $Y=0.7605
+C1638	net4#8	A#14	5.77315e-19	$X=7.5585 $Y=0.449
+C1639	A#31	net4#7	5.78058e-19	$X=7.161 $Y=1.0335
+C1640	A#25	net4#6	7.15134e-19	$X=7.438 $Y=0.7635
+C1641	B#25	gnd!#1	3.22146e-19	$X=7.5475 $Y=0.893
+C1642	B#25	gnd!#12	3.70457e-19	$X=7.1635 $Y=0.48
+C1643	B#30	gnd!#29	4.31938e-19	$X=4.064 $Y=0.4695
+C1644	B	gnd!#32	4.78023e-19	$X=1.517 $Y=0.433
+C1645	B#30	gnd!#28	4.79137e-19	$X=4.7385 $Y=0.4695
+C1646	gnd!#24	B#8	4.84823e-19	$X=0.7195 $Y=0.47
+C1647	gnd!#33	B#6	4.86957e-19	$X=1.2115 $Y=0.5185
+C1648	gnd!#5	B#16	5.02874e-19	$X=10.6665 $Y=0.3935
+C1649	B#27	gnd!#11	5.08129e-19	$X=8.9605 $Y=0.421
+C1650	B	gnd!#31	5.3698e-19	$X=2.514 $Y=0.433
+C1651	B#30	gnd!#25	5.49353e-19	$X=7.6685 $Y=0.407
+C1652	gnd!#14	B#2	6.23028e-19	$X=1.5865 $Y=0.949
+C1653	gnd!#14	B#3	6.46975e-19	$X=1.059 $Y=1.0285
+C1654	B#30	gnd!#27	7.52786e-19	$X=5.793 $Y=0.4695
+C1655	gnd!#10	B#16	7.56362e-19	$X=10.563 $Y=0.49
+C1656	gnd!#12	B#10	7.9041e-19	$X=7.0475 $Y=0.652
+C1657	gnd!#32	B#2	8.63648e-19	$X=1.483 $Y=0.7165
+C1658	gnd!#25	B#11	1.11527e-18	$X=7.2845 $Y=0.4365
+C1659	net3#10	A#1	3.50648e-19	$X=2.5475 $Y=1.1185
+C1660	A#34	net3#4	3.98582e-19	$X=3.6935 $Y=0.95
+C1661	A#34	net3#6	4.1485e-19	$X=3.7075 $Y=1.3425
+C1662	net3	A#9	4.3072e-19	$X=6.4905 $Y=1.039
+C1663	net3#10	A#2	4.97706e-19	$X=2.1495 $Y=0.7525
+C1664	A#34	net3	5.26785e-19	$X=6.142 $Y=1.219
+C1665	A#18	net3#2	6.8647e-19	$X=6.4075 $Y=0.689
+C1666	net3#5	A#2	7.29687e-19	$X=3.038 $Y=0.73
+C1667	net3#2	A#9	7.43971e-19	$X=6.4935 $Y=0.74
+C1668	net3	A#8	8.7536e-19	$X=6.618 $Y=0.955
+C1669	B#25	vdd!#3	4.18974e-19	$X=7.58 $Y=1.037
+C1670	B#5	vdd!#43	4.82734e-19	$X=0.7295 $Y=0.9995
+C1671	vdd!#44	B#1	5.16129e-19	$X=1.318 $Y=1.3795
+C1672	B#27	vdd!	5.30308e-19	$X=10.4595 $Y=0.682
+C1673	vdd!#18	B#13	5.33031e-19	$X=10.654 $Y=1.1895
+C1674	vdd!#45	B#7	5.39963e-19	$X=0.7185 $Y=1.385
+C1675	vdd!#43	B#3	5.46778e-19	$X=0.934 $Y=1.206
+C1676	B#4	vdd!	6.88621e-19	$X=0.8185 $Y=0.7905
+C1677	B#18	vdd!#43	7.02762e-19	$X=0.615 $Y=0.919
+C1678	B#15	vdd!#7	8.10616e-19	$X=10.767 $Y=1.077
+C1679	B#30	vdd!#28	9.85388e-19	$X=6.2315 $Y=1.3215
+C1680	B#25	vdd!#22	9.91397e-19	$X=7.609 $Y=1.1205
+C1681	B#27	vdd!#18	1.03979e-18	$X=10.102 $Y=1.112
+C1682	vdd!#22	B#12	1.06042e-18	$X=7.21 $Y=1.1895
+C1683	vdd!#23	B#12	1.07751e-18	$X=7.076 $Y=1.274
+C1684	vdd!#7	B#13	1.36398e-18	$X=10.8315 $Y=1.274
+C1685	vdd!#41	B#7	1.46551e-18	$X=0.9745 $Y=1.3775
+C1686	vdd!#16	B#13	1.47723e-18	$X=10.92 $Y=1.1845
+C1687	vdd!#26	B#12	1.58376e-18	$X=6.9905 $Y=1.1895
+C1688	B#19	vdd!#23	1.60312e-18	$X=7.333 $Y=0.985
+C1689	B#25	vdd!#25	1.60831e-18	$X=6.967 $Y=1.403
+C1690	B#15	vdd!	1.64658e-18	$X=10.762 $Y=0.881
+C1691	vdd!#24	B#10	1.68341e-18	$X=7.087 $Y=0.937
+C1692	B#30	vdd!	1.69114e-18	$X=6.2875 $Y=0.719
+C1693	B#27	vdd!#7	1.71292e-18	$X=10.705 $Y=1.4265
+C1694	B#25	vdd!#24	1.71854e-18	$X=7.219 $Y=1.1205
+C1695	vdd!#41	B#2	1.73015e-18	$X=1.4955 $Y=1.131
+C1696	B#22	vdd!#7	1.86925e-18	$X=10.665 $Y=0.997
+C1697	vdd!#43	B#7	1.98481e-18	$X=0.7925 $Y=1.436
+C1698	XI0/net6#5	A#16	2.8495e-19	$X=0.3325 $Y=0.9385
+C1699	XI0/net6#9	A#3	4.20856e-19	$X=1.3355 $Y=0.646
+C1700	XI0/net6#9	A#2	4.67835e-19	$X=1.868 $Y=0.66
+C1701	A	XI0/net6	4.72298e-19	$X=1.9895 $Y=1.3415
+C1702	XI0/net6#5	A#3	5.6393e-19	$X=0.874 $Y=0.6705
+C1703	A	XI0/net14	3.9971e-19	$X=2.411 $Y=1.2995
+C1704	A#21	XI0/net14#5	4.33157e-19	$X=0.309 $Y=0.9085
+C1705	XI0/net14#8	A#4	4.37942e-19	$X=0.476 $Y=1.034
+C1706	XI0/net14#8	A#6	4.56962e-19	$X=0.486 $Y=1.354
+C1707	net4#11	B#19	4.71123e-19	$X=7.359 $Y=0.887
+C1708	net4#5	B#10	5.82153e-19	$X=7.188 $Y=0.74
+C1709	B#30	net4#7	6.45517e-19	$X=6.88 $Y=1.072
+C1710	net4#5	B#11	7.6174e-19	$X=7.107 $Y=0.5345
+C1711	net4#11	B#11	8.09751e-19	$X=7.0265 $Y=0.478
+C1712	XI0/net4#8	A#2	1.4138e-19	$X=2.615 $Y=1.1485
+C1713	XI0/net4#6	A#2	1.82141e-19	$X=2.3265 $Y=1.0475
+C1714	XI0/net4	A#2	1.85988e-19	$X=1.851 $Y=0.972
+C1715	XI0/net4	A#3	2.03025e-19	$X=1.4015 $Y=0.952
+C1716	XI0/net4#6	A#1	2.14772e-19	$X=2.7135 $Y=1.35
+C1717	XI0/net4#7	A#2	2.49089e-19	$X=2.637 $Y=0.9725
+C1718	Cin#25	gnd!#1	4.45801e-19	$X=8.415 $Y=0.946
+C1719	gnd!#30	Cin#8	4.47775e-19	$X=3.8395 $Y=0.477
+C1720	gnd!#29	Cin#6	4.86957e-19	$X=4.4115 $Y=0.5185
+C1721	Cin#23	gnd!#29	4.88755e-19	$X=3.889 $Y=0.535
+C1722	gnd!#17	Cin#3	4.98347e-19	$X=4.1755 $Y=0.7805
+C1723	Cin#23	gnd!#14	5.71456e-19	$X=3.8025 $Y=0.6725
+C1724	Cin#27	gnd!#3	6.10348e-19	$X=11.131 $Y=0.434
+C1725	gnd!#16	Cin#2	7.09885e-19	$X=4.709 $Y=0.7945
+C1726	Cin#23	gnd!#17	7.45157e-19	$X=3.974 $Y=0.377
+C1727	Cin#31	gnd!#10	7.8984e-19	$X=9.8305 $Y=0.6485
+C1728	gnd!#1	Cin#10	7.9041e-19	$X=8.0955 $Y=0.8025
+C1729	gnd!#28	Cin#2	8.63648e-19	$X=4.683 $Y=0.7165
+C1730	gnd!#3	Cin#14	9.86572e-19	$X=11.0475 $Y=0.658
+C1731	net2#15	B#13	3.55633e-19	$X=10.821 $Y=1.168
+C1732	net2#5	B#14	3.71546e-19	$X=10.657 $Y=0.9205
+C1733	net2#8	B#13	3.79567e-19	$X=10.68 $Y=1.175
+C1734	net2#7	B#14	4.73211e-19	$X=10.615 $Y=0.7505
+C1735	Cin#25	vdd!#11	4.19724e-19	$X=8.521 $Y=1.2735
+C1736	Cin#13	vdd!	4.43508e-19	$X=11.167 $Y=0.911
+C1737	Cin#5	vdd!#33	4.82734e-19	$X=3.9815 $Y=1.0615
+C1738	vdd!#34	Cin#1	5.13184e-19	$X=4.518 $Y=1.3795
+C1739	Cin#25	vdd!#22	5.33322e-19	$X=8.064 $Y=1.0895
+C1740	Cin#18	vdd!#33	5.70094e-19	$X=3.8625 $Y=0.973
+C1741	Cin#31	vdd!#28	6.22333e-19	$X=6.511 $Y=1.403
+C1742	Cin#4	vdd!	6.82191e-19	$X=4.0145 $Y=0.7905
+C1743	Cin#25	vdd!#19	7.30767e-19	$X=8.735 $Y=1.0895
+C1744	Cin	vdd!#44	7.78107e-19	$X=0.801 $Y=1.449
+C1745	Cin#23	vdd!	7.90567e-19	$X=3.8485 $Y=0.7205
+C1746	Cin	vdd!#41	8.02406e-19	$X=1.3355 $Y=1.452
+C1747	Cin#29	vdd!#27	8.96221e-19	$X=5.8335 $Y=1.735
+C1748	vdd!#15	Cin#16	9.81871e-19	$X=11.21 $Y=1.1895
+C1749	vdd!#20	Cin#12	9.82191e-19	$X=8.21 $Y=1.1895
+C1750	Cin#31	vdd!#19	1.01658e-18	$X=9.0345 $Y=1.243
+C1751	Cin#31	vdd!#22	1.07698e-18	$X=7.843 $Y=1.243
+C1752	vdd!#6	Cin#16	1.07751e-18	$X=11.076 $Y=1.274
+C1753	vdd!#12	Cin#12	1.07751e-18	$X=8.0765 $Y=1.277
+C1754	Cin#29	vdd!#40	1.08433e-18	$X=2.337 $Y=1.689
+C1755	vdd!#31	Cin#3	1.20664e-18	$X=4.282 $Y=1.1745
+C1756	Cin#27	vdd!#2	1.39714e-18	$X=11.8775 $Y=1.4335
+C1757	vdd!#32	Cin#7	1.45877e-18	$X=4.1745 $Y=1.3775
+C1758	Cin#25	vdd!#21	1.47088e-18	$X=8.256 $Y=1.0895
+C1759	vdd!#22	Cin#12	1.48079e-18	$X=7.9905 $Y=1.1895
+C1760	vdd!#33	Cin#3	1.49917e-18	$X=4.175 $Y=1.257
+C1761	vdd!#17	Cin#16	1.51287e-18	$X=10.9905 $Y=1.1895
+C1762	Cin#27	vdd!#14	1.53309e-18	$X=11.948 $Y=1.175
+C1763	Cin#27	vdd!#17	1.55256e-18	$X=10.9025 $Y=1.175
+C1764	Cin#21	vdd!#6	1.60312e-18	$X=11.333 $Y=0.985
+C1765	Cin#29	vdd!#39	1.60808e-18	$X=3.1425 $Y=1.3945
+C1766	Cin#31	vdd!#20	1.68075e-18	$X=8.694 $Y=1.243
+C1767	vdd!#16	Cin#14	1.68341e-18	$X=11.087 $Y=0.937
+C1768	vdd!#21	Cin#10	1.68341e-18	$X=8.087 $Y=0.937
+C1769	vdd!#32	Cin#2	1.73015e-18	$X=4.6955 $Y=1.131
+C1770	net3#11	B#4	2.5221e-19	$X=1.145 $Y=0.7255
+C1771	B	net3#10	2.72974e-19	$X=2.1075 $Y=0.8785
+C1772	net3#14	B#1	4.85703e-19	$X=1.6825 $Y=1.369
+C1773	XI1/net6#6	A#1	3.88531e-19	$X=3.275 $Y=1.092
+C1774	A#34	XI1/net6	4.72298e-19	$X=5.2645 $Y=1.335
+C1775	XI1/net6#7	A#2	5.89521e-19	$X=3.26 $Y=0.448
+C1776	Cin#25	net4#4	2.00827e-19	$X=8.891 $Y=1.138
+C1777	net4#11	Cin#10	2.5595e-19	$X=7.9555 $Y=0.769
+C1778	net4#5	Cin#11	5.49206e-19	$X=7.729 $Y=0.5345
+C1779	net4#13	Cin#19	6.61303e-19	$X=8.4215 $Y=0.8965
+C1780	net4#11	Cin#9	6.95567e-19	$X=8.067 $Y=0.8505
+C1781	net4#11	Cin#11	8.7141e-19	$X=7.889 $Y=0.478
+C1782	Cin#31	net4	9.08445e-19	$X=9.1245 $Y=0.9455
+C1783	Cin#25	net4	9.13947e-19	$X=8.926 $Y=0.9315
+C1784	A#34	XI1/net14	4.74095e-19	$X=5.7075 $Y=1.291
+C1785	XI0/net6#6	B#2	1.64229e-19	$X=1.0025 $Y=0.9525
+C1786	B#23	XI0/net6#4	1.8336e-19	$X=1.752 $Y=0.541
+C1787	XI0/net6#6	B#5	2.40003e-19	$X=0.6145 $Y=0.8475
+C1788	XI0/net6#3	B#3	2.44417e-19	$X=1.3935 $Y=1.0115
+C1789	XI0/net6#3	B#4	2.44417e-19	$X=1.12 $Y=0.8375
+C1790	XI0/net6#8	B#3	2.77335e-19	$X=0.826 $Y=1.142
+C1791	XI0/net6#5	B#4	4.12917e-19	$X=0.8075 $Y=0.8225
+C1792	XI0/net6#9	B#3	4.8356e-19	$X=1.1725 $Y=1.025
+C1793	XI0/net14#8	B#2	4.73853e-19	$X=1.315 $Y=1.0945
+C1794	net2#15	Cin#21	2.00528e-19	$X=11.302 $Y=0.9225
+C1795	Cin#21	net2#2	2.0145e-19	$X=11.518 $Y=0.8875
+C1796	net2#13	Cin#21	2.04817e-19	$X=11.645 $Y=0.9095
+C1797	net2#15	Cin#16	2.39155e-19	$X=11 $Y=1.174
+C1798	net2#7	Cin#15	2.80038e-19	$X=10.6195 $Y=0.538
+C1799	Cin#27	net2#5	3.07695e-19	$X=10.4665 $Y=1.0815
+C1800	Cin#31	net2#8	3.63001e-19	$X=9.9425 $Y=1.2025
+C1801	Cin#27	net2#6	5.2695e-19	$X=10.4495 $Y=0.9
+C1802	Cin#18	net3#4	2.27318e-19	$X=3.669 $Y=0.848
+C1803	net3#8	Cin#4	2.97762e-19	$X=3.8265 $Y=0.7905
+C1804	Cin#29	net3	3.80853e-19	$X=5.956 $Y=1.2565
+C1805	Cin#23	net3#12	3.84075e-19	$X=3.2585 $Y=0.571
+C1806	net3#5	Cin#3	4.45134e-19	$X=3.9485 $Y=1.0355
+C1807	Cin#23	net3#3	5.77359e-19	$X=4.0065 $Y=0.487
+C1808	net3#8	Cin#5	6.07303e-19	$X=3.669 $Y=0.791
+C1809	Cin#23	net3#5	6.66651e-19	$X=3.609 $Y=0.888
+C1810	Cin#29	net3#6	8.31449e-19	$X=3.567 $Y=1.368
+C1811	A#25	net7#3	2.00926e-19	$X=7.936 $Y=0.818
+C1812	A#25	net7#7	2.28581e-19	$X=7.721 $Y=0.883
+C1813	net7#6	A#14	4.11924e-19	$X=7.912 $Y=0.521
+C1814	gnd!#27	gnd!	9.86267e-19	$X=5.7595 $Y=0.4555
+C1815	gnd!#25	gnd!#11	9.89328e-19	$X=8.2545 $Y=0.39
+C1816	gnd!#26	gnd!#25	9.938e-19	$X=7.254 $Y=0.39
+C1817	gnd!#31	gnd!	1.0051e-18	$X=2.5595 $Y=0.4555
+C1818	gnd!#9	gnd!#8	1.09754e-18	$X=11.2545 $Y=0.39
+C1819	gnd!#13	gnd!#12	1.12418e-18	$X=6.2925 $Y=0.0695
+C1820	gnd!#10	net4#3	6.66906e-19	$X=9.334 $Y=0.5045
+C1821	net4#11	gnd!#6	7.524e-19	$X=8.0885 $Y=0.339
+C1822	gnd!#6	net4#2	7.9041e-19	$X=9.0065 $Y=0.7055
+C1823	gnd!#5	net4#3	8.75055e-19	$X=9.08 $Y=0.399
+C1824	net4#11	gnd!#26	8.90548e-19	$X=6.886 $Y=0.4165
+C1825	vdd!#34	vdd!#32	1.41986e-18	$X=4.2745 $Y=1.392
+C1826	vdd!#37	vdd!	1.44997e-18	$X=3.464 $Y=1.3905
+C1827	vdd!#39	vdd!	1.536e-18	$X=3.041 $Y=1.395
+C1828	vdd!#32	vdd!	1.59429e-18	$X=4.6425 $Y=1.395
+C1829	vdd!#41	vdd!	1.62375e-18	$X=1.46 $Y=1.395
+C1830	vdd!#44	vdd!	1.72091e-18	$X=0.744 $Y=1.3905
+C1831	vdd!#44	vdd!#41	1.73543e-18	$X=1.0745 $Y=1.392
+C1832	vdd!#28	vdd!#25	1.96246e-18	$X=6.461 $Y=1.5145
+C1833	vdd!#33	vdd!#31	2.01259e-18	$X=4.297 $Y=1.7555
+C1834	vdd!#43	vdd!#40	2.01295e-18	$X=1.1915 $Y=1.7415
+C1835	S#3	net3	3.96069e-19	$X=5.7475 $Y=1.1185
+C1836	Cin#29	XI1/net6#3	1.32039e-19	$X=5.008 $Y=0.995
+C1837	XI1/net6#7	Cin#4	1.42863e-19	$X=3.911 $Y=0.719
+C1838	XI1/net6#6	Cin#2	1.68501e-19	$X=4.2025 $Y=0.9525
+C1839	Cin#23	XI1/net6#4	1.8336e-19	$X=4.925 $Y=0.566
+C1840	Cin#29	XI1/net6#6	2.03152e-19	$X=3.674 $Y=0.967
+C1841	XI1/net6#6	Cin#5	2.40003e-19	$X=3.8145 $Y=0.8475
+C1842	XI1/net6#3	Cin#3	2.44417e-19	$X=4.5935 $Y=1.0115
+C1843	XI1/net6#3	Cin#4	2.44417e-19	$X=4.32 $Y=0.8375
+C1844	XI1/net6#8	Cin#3	2.8344e-19	$X=4.026 $Y=1.142
+C1845	XI1/net6#5	Cin#4	3.72488e-19	$X=4.0075 $Y=0.8225
+C1846	XI1/net6#9	Cin#3	4.8356e-19	$X=4.3725 $Y=1.025
+C1847	net2#15	gnd!#3	4.3782e-19	$X=10.8315 $Y=0.557
+C1848	Cin#29	XI1/net14#3	3.03768e-19	$X=5.493 $Y=0.8255
+C1849	XI1/net14#8	Cin#2	4.73853e-19	$X=4.515 $Y=1.0945
+C1850	net4#13	vdd!#19	4.13348e-19	$X=9.216 $Y=1.0705
+C1851	net4#11	vdd!#22	4.19942e-19	$X=7.6625 $Y=0.9935
+C1852	net4#6	vdd!#23	4.61052e-19	$X=7.0925 $Y=1.011
+C1853	net4	vdd!	7.72041e-19	$X=9.172 $Y=0.911
+C1854	B#27	net5#4	3.37491e-19	$X=10.1075 $Y=0.6035
+C1855	B#22	net5#2	3.89711e-19	$X=10.3025 $Y=0.855
+C1856	Cin#29	XI1/net4	1.72876e-19	$X=4.7295 $Y=1.3665
+C1857	XI1/net4	Cin#7	2.04314e-19	$X=4.25 $Y=1.369
+C1858	gnd!#20	net3#3	6.55831e-19	$X=3.5735 $Y=0.201
+C1859	gnd!#27	net3#2	6.72788e-19	$X=5.682 $Y=0.3955
+C1860	gnd!#12	net3#2	7.33844e-19	$X=6.2115 $Y=0.154
+C1861	gnd!#19	net3#5	7.88765e-19	$X=3.361 $Y=0.633
+C1862	net2#8	vdd!	5.39448e-19	$X=10.1585 $Y=1.1665
+C1863	B#27	net10#3	3.25478e-19	$X=11.489 $Y=0.8175
+C1864	XI0/net6#9	gnd!#14	3.54492e-19	$X=1.6865 $Y=0.9095
+C1865	gnd!#23	XI0/net6#6	4.33135e-19	$X=0.5205 $Y=0.7155
+C1866	gnd!#20	XI0/net6#4	4.679e-19	$X=2.0655 $Y=0.4835
+C1867	gnd!#21	XI0/net6#4	4.7775e-19	$X=1.9505 $Y=0.45
+C1868	XI0/net6#9	gnd!#32	5.19049e-19	$X=1.4865 $Y=0.628
+C1869	vdd!#32	net3#3	2.9276e-19	$X=4.462 $Y=0.9305
+C1870	net3#3	vdd!	3.7365e-19	$X=4.2185 $Y=0.2425
+C1871	net3#2	vdd!	4.57311e-19	$X=5.4765 $Y=0.2435
+C1872	net3#13	vdd!#37	6.02303e-19	$X=2.9975 $Y=1.3695
+C1873	net3#5	vdd!#29	6.10215e-19	$X=3.458 $Y=1.038
+C1874	vdd!#36	net3#6	6.44399e-19	$X=3.515 $Y=1.474
+C1875	vdd!#25	net3	6.83535e-19	$X=6.3265 $Y=1.378
+C1876	vdd!#39	net3#6	8.79127e-19	$X=3.4075 $Y=1.374
+C1877	Cin#25	net7#2	2.2827e-19	$X=8.7465 $Y=0.852
+C1878	Cin#19	net7#2	2.92644e-19	$X=8.5425 $Y=0.872
+C1879	net5#7	Cin#12	2.83648e-19	$X=8.2535 $Y=1.1715
+C1880	Cin#25	net5#6	3.50911e-19	$X=8.7225 $Y=0.828
+C1881	S#1	XI1/net6#4	1.73042e-19	$X=5.507 $Y=0.6255
+C1882	S#6	XI1/net6	2.94476e-19	$X=5.3555 $Y=1.357
+C1883	XI0/net14#10	vdd!#38	1.87253e-19	$X=2.297 $Y=1.134
+C1884	S#1	XI1/net14#2	3.84881e-19	$X=5.803 $Y=0.8265
+C1885	XI1/net14#3	S#3	3.85256e-19	$X=5.478 $Y=0.8595
+C1886	Cin#27	net10#2	2.40568e-19	$X=11.8125 $Y=0.8375
+C1887	XI0/net4#4	vdd!#41	2.14235e-19	$X=1.6895 $Y=1.4665
+C1888	gnd!#14	XI1/net6#6	4.33135e-19	$X=3.641 $Y=0.901
+C1889	XI1/net6#5	gnd!#14	4.71118e-19	$X=3.9595 $Y=0.9155
+C1890	XI1/net6#9	gnd!#28	5.19049e-19	$X=4.6865 $Y=0.628
+C1891	XI1/net6#9	gnd!#16	5.91968e-19	$X=4.731 $Y=0.6745
+C1892	net3#9	net3#4	7.28065e-19	$X=3.2605 $Y=0.9555
+C1893	net3#13	XI0/net6	2.94476e-19	$X=2.1555 $Y=1.357
+C1894	net3#10	XI0/net6	5.25898e-19	$X=2.0335 $Y=1.219
+C1895	net3#8	XI0/net14#2	3.8513e-19	$X=2.654 $Y=0.831
+C1896	XI0/net14#3	net3#10	3.85256e-19	$X=2.278 $Y=0.8595
+C1897	net3#5	XI0/net14#2	5.27265e-19	$X=2.7315 $Y=0.888
+C1898	vdd!#26	XI1/net14	3.34295e-19	$X=5.9765 $Y=1.285
+C1899	XI1/net14#5	vdd!#31	5.51274e-19	$X=4.4415 $Y=1.217
+C1900	XI1/net4#2	vdd!#34	3.53645e-19	$X=4.5185 $Y=1.4835
+C1901	XI1/net4#8	vdd!#26	3.56746e-19	$X=6.2545 $Y=1.405
+C1902	XI0/net6#3	XI0/net14#2	2.37985e-19	$X=2.265 $Y=0.885
+C1903	XI0/net14#5	XI0/net6#4	2.65989e-19	$X=1.8445 $Y=0.5775
+C1904	XI0/net6#7	XI0/net14#5	3.1681e-19	$X=0.623 $Y=0.6105
+C1905	XI0/net14#8	XI0/net6	3.24782e-19	$X=1.7165 $Y=1.3485
+C1906	gnd!#25	net7#4	3.66249e-19	$X=8.4405 $Y=0.429
+C1907	XI0/net9#3	net3#3	2.60734e-19	$X=3.1945 $Y=0.435
+C1908	XI0/net4#4	XI0/net14	1.99093e-19	$X=2.257 $Y=1.392
+C1909	XI0/net14#10	XI0/net4	2.3321e-19	$X=1.83 $Y=1.1315
+C1910	XI0/net4#4	XI0/net14#8	2.39283e-19	$X=1.4795 $Y=1.4365
+C1911	net7#3	vdd!#12	3.4733e-19	$X=8.472 $Y=1.1975
+C1912	XI1/net6#9	net3#2	4.67835e-19	$X=5.068 $Y=0.66
+C1913	XI1/net6#5	net3#3	5.85836e-19	$X=4.074 $Y=0.6705
+C1914	gnd!#9	net10#4	4.18294e-19	$X=11.4405 $Y=0.429
+C1915	XI1/net14#8	net3#4	3.39423e-19	$X=3.676 $Y=1.034
+C1916	XI1/net14#5	net3#4	4.98174e-19	$X=3.67 $Y=0.9275
+C1917	vdd!#16	net5	2.40705e-19	$X=10.332 $Y=1.1975
+C1918	net4#5	net7#4	1.70608e-19	$X=8.3385 $Y=0.5175
+C1919	net7#6	net4#3	1.92294e-19	$X=8.668 $Y=0.54
+C1920	net7#8	net4#3	2.20373e-19	$X=8.5925 $Y=0.4585
+C1921	net4#13	net7#2	3.36754e-19	$X=8.902 $Y=0.813
+C1922	net4	net7#2	4.14881e-19	$X=8.975 $Y=0.852
+C1923	net10#3	vdd!#6	4.34162e-19	$X=11.475 $Y=1.1965
+C1924	net4#3	net5#4	2.95739e-19	$X=9.646 $Y=0.5495
+C1925	net2#6	net5#4	3.8626e-19	$X=10.1295 $Y=0.669
+C1926	net2#6	net10#7	1.66455e-19	$X=10.526 $Y=0.9605
+C1927	net10#6	net2#3	2.2054e-19	$X=11.666 $Y=0.5405
+C1928	net10#8	net2#3	2.37315e-19	$X=11.5925 $Y=0.4585
+C1929	net2	net10#2	4.30635e-19	$X=11.975 $Y=0.852
+C1930	XI1/net6#3	XI1/net14#2	2.37985e-19	$X=5.465 $Y=0.885
+C1931	XI1/net14#5	XI1/net6#4	2.65989e-19	$X=5.0445 $Y=0.5775
+C1932	XI1/net6#7	XI1/net14#5	3.1681e-19	$X=3.823 $Y=0.6105
+C1933	XI1/net14#8	XI1/net6	3.24782e-19	$X=4.9165 $Y=1.3485
+C1934	XI1/net4#4	XI1/net14	1.99093e-19	$X=5.457 $Y=1.392
+C1935	XI1/net14#10	XI1/net4	2.3321e-19	$X=5.03 $Y=1.1315
+C1936	XI1/net4#4	XI1/net14#8	2.39283e-19	$X=4.6795 $Y=1.4365
+C1937	A	gnd!	1.13749e-18	$X=1.9025 $Y=1.1245
+C1938	B	gnd!	5.31789e-17	$X=2.1625 $Y=0.2595
+C1939	Cin	gnd!	5.80025e-18	$X=1.0505 $Y=1.6195
+C1940	Cout	gnd!	3.36741e-17	$X=12.6405 $Y=0.7595
+C1941	S	gnd!	1.01712e-17	$X=6.383 $Y=0.7945
+C1942	vdd!	gnd!	2.47206e-18	$X=6.1515 $Y=1.545
+C1943	XI2/net9	gnd!	2.82381e-20	$X=6.904 $Y=0.4145
+C1944	XI3/net9	gnd!	1.21921e-18	$X=7.904 $Y=0.4145
+C1945	XI5/net9	gnd!	1.21921e-18	$X=8.904 $Y=0.4145
+C1946	XI4/net9	gnd!	1.03029e-19	$X=10.904 $Y=0.4145
+C1947	XI7/net9	gnd!	1.03029e-19	$X=11.904 $Y=0.4145
+C1948	net2#4	gnd!	8.77987e-20	$X=12.0565 $Y=1.1855
+C1949	net10	gnd!	4.16554e-19	$X=11.8515 $Y=1.1785
+C1950	Cin#16	gnd!	4.88793e-19	$X=11.0565 $Y=1.1855
+C1951	B#13	gnd!	2.73136e-19	$X=10.8515 $Y=1.1785
+C1952	net5	gnd!	7.67225e-19	$X=10.0815 $Y=1.195
+C1953	net4#4	gnd!	4.75984e-19	$X=9.0565 $Y=1.1855
+C1954	net7	gnd!	2.91103e-19	$X=8.8515 $Y=1.1785
+C1955	Cin#12	gnd!	1.91653e-19	$X=8.0565 $Y=1.1855
+C1956	A#11	gnd!	3.14572e-19	$X=7.8515 $Y=1.1785
+C1957	B#12	gnd!	7.67983e-19	$X=7.0565 $Y=1.1855
+C1958	A#7	gnd!	5.12079e-19	$X=6.8515 $Y=1.1785
+C1959	net3	gnd!	5.77091e-18	$X=6.127 $Y=1.245
+C1960	XI1/net14	gnd!	2.39755e-19	$X=5.662 $Y=1.3175
+C1961	XI1/net6	gnd!	4.22539e-19	$X=5.197 $Y=1.36
+C1962	Cin#1	gnd!	8.388e-19	$X=4.732 $Y=1.376
+C1963	Cin#7	gnd!	1.39911e-18	$X=4.012 $Y=1.372
+C1964	net3#6	gnd!	1.1245e-18	$X=3.547 $Y=1.367
+C1965	A#1	gnd!	3.29882e-19	$X=2.927 $Y=1.245
+C1966	XI0/net14	gnd!	8.67119e-19	$X=2.462 $Y=1.3175
+C1967	XI0/net6	gnd!	4.18169e-19	$X=1.997 $Y=1.36
+C1968	B#1	gnd!	5.9913e-18	$X=1.532 $Y=1.376
+C1969	B#7	gnd!	5.98399e-19	$X=0.812 $Y=1.372
+C1970	A#6	gnd!	4.1924e-19	$X=0.347 $Y=1.367
+C1971	net2#3	gnd!	1.56365e-17	$X=11.9565 $Y=0.4695
+C1972	net10#4	gnd!	7.59471e-18	$X=11.8515 $Y=0.453
+C1973	Cin#15	gnd!	1.12959e-17	$X=10.9565 $Y=0.4695
+C1974	B#16	gnd!	8.5137e-18	$X=10.8515 $Y=0.453
+C1975	net5#4	gnd!	6.37543e-18	$X=10.0815 $Y=0.6005
+C1976	net4#3	gnd!	1.45476e-17	$X=8.9565 $Y=0.4695
+C1977	net7#4	gnd!	7.90852e-18	$X=8.8515 $Y=0.453
+C1978	Cin#11	gnd!	1.08367e-17	$X=7.9565 $Y=0.4695
+C1979	A#14	gnd!	6.38326e-18	$X=7.8515 $Y=0.453
+C1980	B#11	gnd!	1.14782e-17	$X=6.9565 $Y=0.4695
+C1981	A#10	gnd!	7.34508e-18	$X=6.8515 $Y=0.453
+C1982	net3#2	gnd!	6.13024e-17	$X=5.471 $Y=0.232
+C1983	XI1/net14#4	gnd!	7.1085e-18	$X=5.662 $Y=0.487
+C1984	XI1/net6#4	gnd!	1.20037e-17	$X=5.197 $Y=0.5295
+C1985	Cin#6	gnd!	1.77193e-17	$X=4.732 $Y=0.5595
+C1986	Cin#8	gnd!	8.00837e-18	$X=4.012 $Y=0.487
+C1987	net3#3	gnd!	3.84918e-17	$X=4.203 $Y=0.232
+C1988	A#2	gnd!	5.62843e-17	$X=2.271 $Y=0.232
+C1989	XI0/net14#4	gnd!	7.06913e-18	$X=2.462 $Y=0.487
+C1990	XI0/net6#4	gnd!	1.21755e-17	$X=1.997 $Y=0.5295
+C1991	B#6	gnd!	1.17098e-17	$X=1.532 $Y=0.5595
+C1992	B#8	gnd!	7.30428e-18	$X=0.812 $Y=0.487
+C1993	A#3	gnd!	4.72008e-17	$X=1.003 $Y=0.232
+C1994	net2	gnd!	1.07711e-18	$X=12.179 $Y=0.9095
+C1995	net10#3	gnd!	1.06656e-17	$X=11.7075 $Y=0.8545
+C1996	Cin#13	gnd!	1.14874e-18	$X=11.179 $Y=0.9095
+C1997	B#15	gnd!	2.47802e-18	$X=10.773 $Y=0.8795
+C1998	net5#3	gnd!	9.15004e-18	$X=9.89 $Y=0.847
+C1999	net4	gnd!	7.48464e-19	$X=9.179 $Y=0.9095
+C2000	net7#3	gnd!	7.05627e-18	$X=8.7035 $Y=0.8545
+C2001	Cin#9	gnd!	1.18614e-18	$X=8.179 $Y=0.9095
+C2002	A#13	gnd!	2.11059e-18	$X=7.773 $Y=0.8795
+C2003	B#9	gnd!	1.06761e-18	$X=7.179 $Y=0.9095
+C2004	A#9	gnd!	2.34669e-18	$X=6.773 $Y=0.8795
+C2005	XI1/net14#3	gnd!	6.95731e-18	$X=5.592 $Y=0.7895
+C2006	XI1/net6#3	gnd!	1.55817e-18	$X=5.104 $Y=0.9595
+C2007	Cin#5	gnd!	4.91864e-18	$X=3.9355 $Y=0.7895
+C2008	net3#5	gnd!	1.68335e-18	$X=3.4605 $Y=1.0045
+C2009	XI0/net14#3	gnd!	7.11112e-18	$X=2.392 $Y=0.7895
+C2010	XI0/net6#3	gnd!	1.65592e-18	$X=1.904 $Y=0.9595
+C2011	B#5	gnd!	5.14403e-18	$X=0.7355 $Y=0.7895
+C2012	net2#17	gnd!	1.04924e-17	$X=12.3225 $Y=0.9095
+C2013	net2#15	gnd!	2.1107e-18	$X=10.6275 $Y=1.102
+C2014	A#31	gnd!	3.46256e-18	$X=7.499 $Y=0.8895
+C2015	A#29	gnd!	2.47707e-18	$X=6.558 $Y=0.7945
+C2016	A#27	gnd!	9.81942e-18	$X=0.222 $Y=0.978
+C2017	net2#13	gnd!	1.04738e-19	$X=12.349 $Y=0.9095
+C2018	Cin#27	gnd!	2.7434e-18	$X=11.339 $Y=1.0855
+C2019	B#27	gnd!	5.14478e-17	$X=10.56 $Y=0.662
+C2020	net2#11	gnd!	3.67173e-19	$X=10.354 $Y=1.0995
+C2021	net4#13	gnd!	1.52224e-17	$X=9.349 $Y=0.778
+C2022	Cin#25	gnd!	1.14475e-18	$X=8.349 $Y=0.983
+C2023	A#25	gnd!	8.46393e-19	$X=7.644 $Y=0.8045
+C2024	net4#11	gnd!	1.21866e-17	$X=7.464 $Y=0.5345
+C2025	B#25	gnd!	2.42931e-18	$X=7.339 $Y=0.963
+C2026	A#23	gnd!	1.02703e-18	$X=6.644 $Y=0.8045
+C2027	Cin#23	gnd!	6.95929e-18	$X=3.832 $Y=0.7145
+C2028	B#23	gnd!	2.10147e-17	$X=0.5095 $Y=0.602
+C2029	A#21	gnd!	1.2829e-18	$X=0.1345 $Y=0.9295
+C2030	net2#9	gnd!	1.85897e-18	$X=12.3895 $Y=0.9095
+C2031	Cin#21	gnd!	1.29392e-18	$X=11.352 $Y=0.9095
+C2032	B#22	gnd!	3.84073e-18	$X=10.644 $Y=0.8345
+C2033	net2#5	gnd!	6.41925e-19	$X=10.354 $Y=1.081
+C2034	net4#9	gnd!	1.73832e-18	$X=9.3595 $Y=0.9095
+C2035	Cin#19	gnd!	6.34231e-19	$X=8.3595 $Y=0.9045
+C2036	A#20	gnd!	4.19015e-18	$X=7.644 $Y=0.8045
+C2037	net4#5	gnd!	9.65667e-18	$X=7.354 $Y=0.642
+C2038	B#19	gnd!	2.05653e-18	$X=7.352 $Y=0.9095
+C2039	A#18	gnd!	4.6141e-18	$X=6.644 $Y=0.8045
+C2040	XI1/net4#8	gnd!	2.87349e-18	$X=5.9565 $Y=1.5245
+C2041	XI1/net9#4	gnd!	1.11993e-17	$X=5.879 $Y=0.351
+C2042	XI1/net4#6	gnd!	1.84269e-18	$X=5.5595 $Y=1.5245
+C2043	XI1/net14#10	gnd!	4.89549e-18	$X=5.3275 $Y=0.7895
+C2044	XI1/net4#4	gnd!	9.116e-19	$X=5.0945 $Y=1.5245
+C2045	XI1/net6#9	gnd!	3.89472e-18	$X=4.787 $Y=0.9595
+C2046	XI1/net9#2	gnd!	1.65254e-17	$X=4.9775 $Y=0.35
+C2047	XI1/net4#2	gnd!	7.97374e-19	$X=4.8345 $Y=1.533
+C2048	XI1/net14#5	gnd!	1.16515e-17	$X=4.2905 $Y=0.816
+C2049	Cin#18	gnd!	2.32415e-18	$X=3.7945 $Y=0.7445
+C2050	XI1/net6#5	gnd!	4.92453e-19	$X=3.9895 $Y=0.9595
+C2051	XI0/net4#8	gnd!	1.61617e-18	$X=2.7565 $Y=1.5245
+C2052	XI0/net9#4	gnd!	7.25331e-18	$X=2.679 $Y=0.351
+C2053	XI0/net4#6	gnd!	1.42818e-18	$X=2.3595 $Y=1.5245
+C2054	XI0/net14#10	gnd!	7.73298e-18	$X=2.1275 $Y=0.7895
+C2055	XI0/net4#4	gnd!	1.1814e-18	$X=1.8945 $Y=1.5245
+C2056	XI0/net6#9	gnd!	3.70983e-18	$X=1.587 $Y=0.9595
+C2057	XI0/net9#2	gnd!	1.27252e-17	$X=1.7775 $Y=0.35
+C2058	XI0/net4#2	gnd!	3.03077e-18	$X=1.6345 $Y=1.533
+C2059	XI0/net14#5	gnd!	1.48516e-17	$X=1.0905 $Y=0.816
+C2060	B#18	gnd!	2.2573e-18	$X=0.5945 $Y=0.7445
+C2061	XI0/net6#5	gnd!	1.21194e-19	$X=0.7895 $Y=0.9595
+C2062	A#16	gnd!	6.30962e-18	$X=0.1345 $Y=0.9295
+C2063	vdd!#14	gnd!	1.26835e-19	$X=12.154 $Y=1.206
+C2064	Cout#2	gnd!	2.67538e-18	$X=11.954 $Y=1.122
+C2065	net10#7	gnd!	9.38964e-19	$X=10.954 $Y=1.122
+C2066	vdd!#17	gnd!	1.26835e-19	$X=10.754 $Y=1.206
+C2067	net2#8	gnd!	4.60924e-19	$X=10.179 $Y=1.165
+C2068	vdd!#18	gnd!	4.64343e-19	$X=9.984 $Y=1.228
+C2069	vdd!#19	gnd!	1.26835e-19	$X=9.154 $Y=1.206
+C2070	net5#7	gnd!	2.13444e-19	$X=8.954 $Y=1.122
+C2071	vdd!#20	gnd!	1.59592e-19	$X=8.754 $Y=1.206
+C2072	vdd!#21	gnd!	7.39774e-19	$X=8.154 $Y=1.206
+C2073	net7#7	gnd!	2.62183e-18	$X=7.954 $Y=1.122
+C2074	vdd!#22	gnd!	1.00947e-19	$X=7.754 $Y=1.206
+C2075	vdd!#24	gnd!	5.21659e-19	$X=7.154 $Y=1.206
+C2076	net4#7	gnd!	1.31043e-18	$X=6.954 $Y=1.122
+C2077	vdd!#26	gnd!	8.02608e-19	$X=6.754 $Y=1.206
+C2078	vdd!#28	gnd!	1.25816e-19	$X=6.2245 $Y=1.3945
+C2079	XI1/net4#7	gnd!	3.06159e-18	$X=6.0295 $Y=1.3615
+C2080	S#6	gnd!	1.55222e-19	$X=5.7595 $Y=1.3505
+C2081	XI1/net4#5	gnd!	4.40615e-19	$X=5.5645 $Y=1.3615
+C2082	S#7	gnd!	9.02209e-19	$X=5.2945 $Y=1.3505
+C2083	XI1/net4#3	gnd!	7.6431e-20	$X=5.0995 $Y=1.3615
+C2084	XI1/net4	gnd!	2.02058e-18	$X=4.8295 $Y=1.363
+C2085	vdd!#32	gnd!	8.99863e-19	$X=4.6345 $Y=1.3945
+C2086	XI1/net14#8	gnd!	7.8985e-19	$X=4.1095 $Y=1.316
+C2087	vdd!#34	gnd!	1.442e-18	$X=3.9145 $Y=1.39
+C2088	XI1/net6#8	gnd!	6.89415e-19	$X=3.6445 $Y=1.3375
+C2089	vdd!#37	gnd!	4.70527e-19	$X=3.4495 $Y=1.39
+C2090	vdd!#39	gnd!	1.14129e-19	$X=3.0245 $Y=1.3945
+C2091	XI0/net4#7	gnd!	6.58303e-19	$X=2.8295 $Y=1.3615
+C2092	net3#13	gnd!	2.80131e-19	$X=2.5595 $Y=1.3505
+C2093	XI0/net4#5	gnd!	4.40615e-19	$X=2.3645 $Y=1.3615
+C2094	net3#14	gnd!	3.90266e-19	$X=2.0945 $Y=1.3505
+C2095	XI0/net4#3	gnd!	7.75018e-19	$X=1.8995 $Y=1.3615
+C2096	XI0/net4	gnd!	4.08034e-18	$X=1.6295 $Y=1.363
+C2097	vdd!#41	gnd!	1.12731e-18	$X=1.4345 $Y=1.3945
+C2098	XI0/net14#8	gnd!	1.77068e-18	$X=0.9095 $Y=1.316
+C2099	vdd!#44	gnd!	5.77988e-20	$X=0.7145 $Y=1.39
+C2100	XI0/net6#8	gnd!	3.16464e-19	$X=0.4445 $Y=1.3375
+C2101	vdd!#45	gnd!	2.37283e-20	$X=0.2495 $Y=1.453
+C2102	vdd!#3	gnd!	5.98944e-19	$X=9.8915 $Y=1.7495
+C2103	Cout#3	gnd!	1.02742e-17	$X=12.054 $Y=0.4425
+C2104	net10#8	gnd!	3.12571e-18	$X=11.054 $Y=0.4425
+C2105	net2#7	gnd!	1.51368e-18	$X=10.179 $Y=0.6275
+C2106	net5#8	gnd!	1.87169e-18	$X=9.054 $Y=0.4425
+C2107	net7#8	gnd!	3.55508e-18	$X=8.054 $Y=0.4425
+C2108	net4#8	gnd!	3.40098e-18	$X=7.054 $Y=0.4425
+C2109	vdd!#29	gnd!	3.20683e-19	$X=3.409 $Y=1.7795
+C2110	S#5	gnd!	1.10877e-17	$X=6.2245 $Y=0.5125
+C2111	XI1/net9#3	gnd!	3.35253e-18	$X=6.0295 $Y=0.509
+C2112	XI1/net1	gnd!	1.49987e-17	$X=5.5645 $Y=0.4495
+C2113	S#4	gnd!	5.43922e-18	$X=5.2945 $Y=0.543
+C2114	XI1/net1#2	gnd!	1.38555e-17	$X=5.0995 $Y=0.4495
+C2115	XI1/net9	gnd!	1.0277e-17	$X=4.8295 $Y=0.5075
+C2116	XI1/net14#7	gnd!	1.74916e-18	$X=4.1095 $Y=0.5105
+C2117	XI1/net6#7	gnd!	1.87004e-18	$X=3.6445 $Y=0.532
+C2118	net3#12	gnd!	1.99683e-18	$X=3.0245 $Y=0.5125
+C2119	XI0/net9#3	gnd!	3.20487e-18	$X=2.8295 $Y=0.509
+C2120	XI0/net1	gnd!	1.46161e-17	$X=2.3645 $Y=0.4495
+C2121	net3#11	gnd!	4.16288e-18	$X=2.0945 $Y=0.543
+C2122	XI0/net1#2	gnd!	1.38513e-17	$X=1.8995 $Y=0.4495
+C2123	XI0/net9	gnd!	6.50166e-18	$X=1.6295 $Y=0.5075
+C2124	XI0/net14#7	gnd!	1.74916e-18	$X=0.9095 $Y=0.5105
+C2125	XI0/net6#7	gnd!	2.85658e-18	$X=0.4445 $Y=0.532
+C2126	XI0/net6#6	gnd!	2.4137e-18	$X=0.4495 $Y=0.928
+C2127	net3#8	gnd!	1.17608e-17	$X=3.157 $Y=0.7945
+C2128	net3#9	gnd!	3.70616e-18	$X=2.5645 $Y=0.969
+C2129	net3#10	gnd!	2.66125e-18	$X=2.0995 $Y=0.9695
+C2130	XI1/net6#6	gnd!	2.20685e-18	$X=3.6495 $Y=0.928
+C2131	S#1	gnd!	9.55974e-18	$X=6.0525 $Y=0.7945
+C2132	S#2	gnd!	9.19568e-18	$X=5.7645 $Y=0.969
+C2133	S#3	gnd!	4.40076e-18	$X=5.2995 $Y=0.9695
+C2134	net4#6	gnd!	6.63828e-18	$X=7.059 $Y=0.6885
+C2135	net7#6	gnd!	5.46113e-18	$X=8.059 $Y=0.6885
+C2136	net5#6	gnd!	8.69007e-18	$X=9.059 $Y=0.6885
+C2137	net2#6	gnd!	8.45739e-18	$X=10.264 $Y=0.862
+C2138	net10#6	gnd!	7.43314e-18	$X=11.059 $Y=0.6885
+C2139	vdd!#2	gnd!	6.57723e-20	$X=12.3205 $Y=1.72
+C2140	vdd!#6	gnd!	1.48821e-19	$X=11.159 $Y=1.661
+C2141	vdd!#7	gnd!	3.24646e-19	$X=10.749 $Y=1.661
+C2142	vdd!#10	gnd!	3.73108e-19	$X=9.379 $Y=1.7795
+C2143	vdd!#11	gnd!	8.45899e-20	$X=8.749 $Y=1.661
+C2144	vdd!#12	gnd!	1.04687e-19	$X=8.159 $Y=1.661
+C2145	vdd!#23	gnd!	3.47906e-19	$X=7.159 $Y=1.661
+C2146	vdd!#25	gnd!	3.93268e-19	$X=6.749 $Y=1.661
+C2147	vdd!#27	gnd!	5.43882e-20	$X=6.08 $Y=1.7795
+C2148	vdd!#31	gnd!	5.18524e-19	$X=4.6295 $Y=1.715
+C2149	vdd!#33	gnd!	2.96154e-19	$X=4.1045 $Y=1.7795
+C2150	vdd!#36	gnd!	1.86026e-20	$X=3.4445 $Y=1.7135
+C2151	vdd!#38	gnd!	1.75566e-19	$X=2.615 $Y=1.7795
+C2152	vdd!#40	gnd!	4.48955e-19	$X=1.8445 $Y=1.7795
+C2153	vdd!#43	gnd!	2.82777e-19	$X=0.7095 $Y=1.7135
+C2154	Cout#1	gnd!	7.87499e-18	$X=12.059 $Y=0.6885
+C2155	B#2	gnd!	3.53633e-18	$X=1.532 $Y=0.976
+C2156	B#3	gnd!	4.68975e-19	$X=1.003 $Y=1.052
+C2157	B#4	gnd!	6.20862e-18	$X=0.812 $Y=0.79
+C2158	XI0/net6#2	gnd!	5.51452e-18	$X=1.997 $Y=0.93
+C2159	XI0/net14#2	gnd!	7.88004e-18	$X=2.462 $Y=0.845
+C2160	A#4	gnd!	5.30261e-18	$X=0.347 $Y=0.95
+C2161	Cin#2	gnd!	4.89504e-18	$X=4.732 $Y=0.976
+C2162	Cin#3	gnd!	8.23266e-19	$X=4.203 $Y=1.052
+C2163	Cin#4	gnd!	6.15587e-18	$X=4.012 $Y=0.79
+C2164	XI1/net6#2	gnd!	5.51776e-18	$X=5.197 $Y=0.93
+C2165	XI1/net14#2	gnd!	8.52721e-18	$X=5.662 $Y=0.845
+C2166	net3#4	gnd!	3.78876e-18	$X=3.547 $Y=0.95
+C2167	A#8	gnd!	2.76755e-18	$X=6.8515 $Y=0.8175
+C2168	B#10	gnd!	1.19258e-17	$X=7.0565 $Y=0.8175
+C2169	A#12	gnd!	4.54272e-18	$X=7.8515 $Y=0.8175
+C2170	Cin#10	gnd!	1.26513e-17	$X=8.0565 $Y=0.8175
+C2171	net7#2	gnd!	4.09952e-18	$X=8.8515 $Y=0.8175
+C2172	net4#2	gnd!	1.34491e-17	$X=9.0565 $Y=0.8175
+C2173	net5#2	gnd!	3.85134e-18	$X=10.0815 $Y=0.8685
+C2174	B#14	gnd!	4.57506e-18	$X=10.8515 $Y=0.8175
+C2175	Cin#14	gnd!	1.30178e-17	$X=11.0565 $Y=0.8175
+C2176	net10#2	gnd!	3.9745e-18	$X=11.8515 $Y=0.8175
+C2177	net2#2	gnd!	1.45491e-17	$X=12.0565 $Y=0.8175
+C2178	B#30	gnd!	9.05198e-17	$X=6.294 $Y=0.6795
+C2179	Cin#29	gnd!	4.04108e-18	$X=3.9445 $Y=1.395
+C2180	Cin#31	gnd!	2.79761e-18	$X=8.349 $Y=1.4575
+C2181	A#34	gnd!	8.33984e-18	$X=6.299 $Y=0.9545
+*
+*
+.ENDS 1_bit_Full_Adder_ver2
+*

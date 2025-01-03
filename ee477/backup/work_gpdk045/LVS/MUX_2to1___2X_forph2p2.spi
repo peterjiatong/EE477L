@@ -1,0 +1,61 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : MUX_2to1___2X_forph2p2                       *
+* Netlisted  : Sun Nov 24 15:20:42 2024                     *
+* Pegasus Version: 22.21-s012 Fri Mar 10 17:36:33 PST 2023  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pmos1v_CDNS_8                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pmos1v_CDNS_8 S_source_0 D_drain_1 3 B
+** N=5 EP=4 FDC=1
+M0 D_drain_1 3 S_source_0 B g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=22.1619 scb=0.0210888 scc=0.00150925 $X=0 $Y=0 $dt=1
+.ends pmos1v_CDNS_8
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_9                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_9 S_source_0 D_drain_1 3
+** N=3 EP=3 FDC=1
+M0 D_drain_1 3 S_source_0 S_source_0 g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=9.22651 scb=0.00772413 scc=0.000211444 $X=0 $Y=0 $dt=0
+.ends nmos1v_CDNS_9
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pmos1v_CDNS_11                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pmos1v_CDNS_11 S_source_0 D_drain_1 3 B
+** N=5 EP=4 FDC=1
+M0 D_drain_1 3 S_source_0 B g45p1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=14.4542 scb=0.0129422 scc=0.000231427 $X=0 $Y=0 $dt=1
+.ends pmos1v_CDNS_11
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_12                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_12 S_source_0 D_drain_1 3
+** N=3 EP=3 FDC=1
+M0 D_drain_1 3 S_source_0 S_source_0 g45n1svt L=4.5e-08 W=1.2e-07 AD=1.68e-14 AS=1.68e-14 PD=5.2e-07 PS=5.2e-07 fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=9.04018 scb=0.00737277 scc=0.00014625 $X=0 $Y=0 $dt=0
+.ends nmos1v_CDNS_12
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: MUX_2to1___2X_forph2p2                          *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt MUX_2to1___2X_forph2p2 A B S gnd! out vdd!
+** N=12 EP=6 FDC=12
+X15 vdd! out 4 vdd! pmos1v_CDNS_8 $T=4760 2040 0 0 $X=4340 $Y=1840
+X16 gnd! out 4 nmos1v_CDNS_9 $T=4760 720 0 0 $X=4340 $Y=520
+X17 vdd! 5 S vdd! pmos1v_CDNS_11 $T=930 2370 0 0 $X=510 $Y=2170
+X18 gnd! 5 S nmos1v_CDNS_12 $T=930 850 0 0 $X=510 $Y=650
+M0 9 A 4 gnd! g45n1svt L=4.5e-08 W=2.4e-07 AD=1.44e-14 AS=3.36e-14 PD=6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=2.45e-07 sca=10.8836 scb=0.0102333 scc=0.000414887 $X=1960 $Y=800 $dt=0
+M1 gnd! 5 9 gnd! g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=1.44e-14 PD=7.6e-07 PS=6e-07 fw=2.4e-07 sa=2.45e-07 sb=1.4e-07 sca=10.8836 scb=0.0102333 scc=0.000414887 $X=2170 $Y=800 $dt=0
+M2 10 S gnd! gnd! g45n1svt L=4.5e-08 W=2.4e-07 AD=1.44e-14 AS=3.36e-14 PD=6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=2.45e-07 sca=10.6427 scb=0.00988663 scc=0.000381704 $X=3340 $Y=790 $dt=0
+M3 4 B 10 gnd! g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=1.44e-14 PD=7.6e-07 PS=6e-07 fw=2.4e-07 sa=2.45e-07 sb=1.4e-07 sca=10.6427 scb=0.00988663 scc=0.000381704 $X=3550 $Y=790 $dt=0
+M4 11 A 4 vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=2.88e-14 AS=6.72e-14 PD=1.08e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=2.45e-07 sca=14.8977 scb=0.0131425 scc=0.000918217 $X=1960 $Y=2100 $dt=1
+M5 vdd! S 11 vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=2.88e-14 PD=1.24e-06 PS=1.08e-06 fw=4.8e-07 sa=2.45e-07 sb=1.4e-07 sca=14.8592 scb=0.0131351 scc=0.000918216 $X=2170 $Y=2100 $dt=1
+M6 12 5 vdd! vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=2.88e-14 AS=6.72e-14 PD=1.08e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=2.45e-07 sca=17.927 scb=0.0149618 scc=0.00151035 $X=3340 $Y=2030 $dt=1
+M7 4 B 12 vdd! g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=2.88e-14 PD=1.24e-06 PS=1.08e-06 fw=4.8e-07 sa=2.45e-07 sb=1.4e-07 sca=17.927 scb=0.0149618 scc=0.00151035 $X=3550 $Y=2030 $dt=1
+.ends MUX_2to1___2X_forph2p2

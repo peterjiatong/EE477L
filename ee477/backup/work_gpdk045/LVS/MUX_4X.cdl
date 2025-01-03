@@ -1,0 +1,614 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  project_demo
+* Top Cell Name: ph3_sytolic_array
+* View Name:     schematic
+* Netlisted on:  Dec  8 18:32:46 2024
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        gnd!
+
+*.PIN vdd!
+*+    gnd!
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    INV_1X_new
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV_1X_new in out
+*.PININFO in:I out:O
+MNM0 out in gnd! gnd! g45n1svt m=1 l=45n w=120n
+MPM0 out in vdd! vdd! g45p1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    NAND2_1X
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND2_1X in_A in_B out
+*.PININFO in_A:I in_B:I out:O
+MPM1 out in_B vdd! vdd! g45p1svt m=1 l=45n w=240n
+MPM0 out in_A vdd! vdd! g45p1svt m=1 l=45n w=240n
+MNM0 net3 in_A gnd! gnd! g45n1svt m=1 l=45n w=120n
+MNM1 out in_B net3 gnd! g45n1svt m=1 l=45n w=120n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    AND
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT AND in_A in_B out
+*.PININFO in_A:I in_B:I out:O
+XI2 net1 out / INV_1X_new
+XI1 in_A in_B net1 / NAND2_1X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    NAND2_2X
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND2_2X in_A in_B out
+*.PININFO in_A:I in_B:I out:O
+MPM1 out in_B vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM0 out in_A vdd! vdd! g45p1svt m=1 l=45n w=480n
+MNM0 net3 in_A gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM1 out in_B net3 gnd! g45n1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    INV_2X
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV_2X in out
+*.PININFO in:I out:O
+MNM0 out in gnd! gnd! g45n1svt m=1 l=45n w=240n
+MPM0 out in vdd! vdd! g45p1svt m=1 l=45n w=480n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    XOR
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT XOR in_A in_B out
+*.PININFO in_A:I in_B:I out:O
+MPM3 out in_A net4 vdd! g45p1svt m=1 l=45n w=480n
+MPM2 net4 net10 vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM1 out in_B net4 vdd! g45p1svt m=1 l=45n w=480n
+MPM0 net4 net3 vdd! vdd! g45p1svt m=1 l=45n w=480n
+MNM3 net25 in_B gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM2 out in_A net25 gnd! g45n1svt m=1 l=45n w=240n
+MNM1 net17 net3 gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM0 out net10 net17 gnd! g45n1svt m=1 l=45n w=240n
+XI2 in_B net3 / INV_2X
+XI1 in_A net10 / INV_2X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    1bitFulladder1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 1bitFulladder1 Cout S cin in_A in_B
+*.PININFO cin:I in_A:I in_B:I Cout:O S:O
+XI2 net3 cin net9 / NAND2_2X
+XI4 net9 net12 Cout / NAND2_1X
+XI3 in_A in_B net12 / NAND2_1X
+XI1 net3 cin S / XOR
+XI0 in_A in_B net3 / XOR
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    half_adder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT half_adder C S inA inB
+*.PININFO inA:I inB:I C:O S:O
+XI0 inA inB S / XOR
+XI4 inA inB C / AND
+.ENDS
+
+************************************************************************
+* Library Name: project_p1
+* Cell Name:    multiplier
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT multiplier a0 a1 a2 a3 b0 b1 b2 b3 z0 z1 z2 z3 z4 z5 z6 z7
+*.PININFO a0:I a1:I a2:I a3:I b0:I b1:I b2:I b3:I z0:O z1:O z2:O z3:O z4:O 
+*.PININFO z5:O z6:O z7:O
+XI23 a1 b3 net84 / AND
+XI22 a2 b3 net81 / AND
+XI21 a3 b3 net78 / AND
+XI20 a0 b3 net75 / AND
+XI11 a1 b2 net36 / AND
+XI10 a2 b2 net33 / AND
+XI9 a3 b2 net30 / AND
+XI8 a0 b2 net27 / AND
+XI7 b1 a0 net24 / AND
+XI6 b1 a3 net21 / AND
+XI5 b1 a2 net18 / AND
+XI4 b1 a1 net15 / AND
+XI3 b0 a3 net12 / AND
+XI2 b0 a2 net9 / AND
+XI1 b0 a1 net6 / AND
+XI0 b0 a0 z0 / AND
+XI28 z7 z6 net3 net78 net10 / 1bitFulladder1
+XI25 net3 z5 net5 net81 net11 / 1bitFulladder1
+XI24 net5 z4 net87 net84 net2 / 1bitFulladder1
+XI29 net10 net11 net63 net30 net54 / 1bitFulladder1
+XI17 net63 net2 net58 net33 net53 / 1bitFulladder1
+XI16 net58 net1 net57 net36 net46 / 1bitFulladder1
+XI13 net45 net46 net40 net18 net12 / 1bitFulladder1
+XI12 net40 net41 net39 net15 net9 / 1bitFulladder1
+XI26 net87 z3 net75 net1 / half_adder
+XI18 net57 z2 net27 net41 / half_adder
+XI15 net54 net53 net45 net21 / half_adder
+XI14 net39 z1 net24 net6 / half_adder
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    NAND_1X_small
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND_1X_small in_1 in_2 out
+*.PININFO in_1:I in_2:I out:O
+MNM1 out in_1 net1 gnd! g45n1svt m=1 l=45n w=240n
+MNM0 net1 in_2 gnd! gnd! g45n1svt m=1 l=45n w=240n
+MPM1 out in_2 vdd! vdd! g45p1svt m=1 l=45n w=240n
+MPM0 out in_1 vdd! vdd! g45p1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    NAND_2X_small1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NAND_2X_small1 in_1 in_2 out
+*.PININFO in_1:I in_2:I out:O
+MNM1 out in_1 net1 gnd! g45n1svt m=1 l=45n w=480n
+MNM0 net1 in_2 gnd! gnd! g45n1svt m=1 l=45n w=480n
+MPM1 out in_2 vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM0 out in_1 vdd! vdd! g45p1svt m=1 l=45n w=480n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    INV_1X_in_buffer_small
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV_1X_in_buffer_small in out
+*.PININFO in:I out:O
+MNM1 out in gnd! gnd! g45n1svt m=1 l=45n w=120n
+MPM0 out in vdd! vdd! g45p1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    XOR1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT XOR1 in_A in_B out
+*.PININFO in_A:I in_B:I out:O
+XI2 in_B B_INV / INV_1X_in_buffer_small
+XI0 in_A A_INV / INV_1X_in_buffer_small
+MNM1 out in_A net16 gnd! g45n1svt m=1 l=45n w=240n
+MNM0 out A_INV net1 gnd! g45n1svt m=1 l=45n w=240n
+MNM3 net16 in_B gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM2 net1 B_INV gnd! gnd! g45n1svt m=1 l=45n w=240n
+MPM1 net3 in_A vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM0 net3 in_B vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM3 out B_INV net3 vdd! g45p1svt m=1 l=45n w=480n
+MPM2 out A_INV net3 vdd! g45p1svt m=1 l=45n w=480n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    full_adder1_small
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT full_adder1_small Cin_ Cout S inA inB
+*.PININFO Cin_:I inA:I inB:I Cout:O S:O
+XI19 net2 net6 Cout / NAND_1X_small
+XI18 inB inA net6 / NAND_1X_small
+XI20 Cin_ net4 net2 / NAND_2X_small1
+XI22 inA inB net4 / XOR1
+XI21 net4 Cin_ S / XOR1
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    FA_4bit
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT FA_4bit A0 A1 A2 A3 B0 B1 B2 B3 Cin_rrr Cout3 S0 S1 S2 S3
+*.PININFO A0:I A1:I A2:I A3:I B0:I B1:I B2:I B3:I Cin_rrr:I Cout3:O S0:O S1:O 
+*.PININFO S2:O S3:O
+XI3 Cin_rrr net16 S0 A0 B0 / full_adder1_small
+XI2 net16 net11 S1 A1 B1 / full_adder1_small
+XI1 net11 net5 S2 A2 B2 / full_adder1_small
+XI0 net5 Cout3 S3 A3 B3 / full_adder1_small
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    INV_1X_small
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV_1X_small in out
+*.PININFO in:I out:O
+MNM1 out in gnd! gnd! g45n1svt m=1 l=45n w=120n
+MPM0 out in vdd! vdd! g45p1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    MUX_2to1___2X
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT MUX_2to1___2X A B S out
+*.PININFO A:I B:I S:I out:O
+MPM5 net10 S vdd! vdd! g45p1svt m=1 l=45n w=240n
+MPM4 out net2 vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM3 net2 B net12 vdd! g45p1svt m=1 l=45n w=480n
+MPM2 net12 net10 vdd! vdd! g45p1svt m=1 l=45n w=480n
+MPM1 net2 A net4 vdd! g45p1svt m=1 l=45n w=480n
+MPM0 net4 S vdd! vdd! g45p1svt m=1 l=45n w=480n
+MNM5 net10 S gnd! gnd! g45n1svt m=1 l=45n w=120n
+MNM4 out net2 gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM3 net9 S gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM2 net1 net10 gnd! gnd! g45n1svt m=1 l=45n w=240n
+MNM1 net2 B net9 gnd! g45n1svt m=1 l=45n w=240n
+MNM0 net2 A net1 gnd! g45n1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    carry_skip_adder_4bits
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT carry_skip_adder_4bits A0 A1 A2 A3 B0 B1 B2 B3 Cin Cout S0 S1 S2 S3
+*.PININFO A0:I A1:I A2:I A3:I B0:I B1:I B2:I B3:I Cin:I Cout:O S0:O S1:O S2:O 
+*.PININFO S3:O
+XI5 A0 B0 net15 / XOR1
+XI4 A1 B1 net12 / XOR1
+XI3 A2 B2 net9 / XOR1
+XI2 A3 B3 net6 / XOR1
+XI1 A0 A1 A2 A3 B0 B1 B2 B3 Cin net19 S0 S1 S2 S3 / FA_4bit
+XI18 net10 net11 / INV_1X_small
+XI11 net7 net8 / INV_1X_small
+XI19 net4 net5 / INV_1X_small
+XI14 net11 net5 net7 / NAND_1X_small
+XI12 net12 net15 net4 / NAND_1X_small
+XI13 net6 net9 net10 / NAND_1X_small
+XI0 net19 Cin net8 Cout / MUX_2to1___2X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    carry_skip_adder_8bits_project
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT carry_skip_adder_8bits_project A0 A1 A2 A3 A4 A5 A6 A7 B0 B1 B2 B3 B4 
++ B5 B6 B7 Cin Cout S0 S1 S2 S3 S4 S5 S6 S7
+*.PININFO A0:I A1:I A2:I A3:I A4:I A5:I A6:I A7:I B0:I B1:I B2:I B3:I B4:I 
+*.PININFO B5:I B6:I B7:I Cin:I Cout:O S0:O S1:O S2:O S3:O S4:O S5:O S6:O S7:O
+XI1 A4 A5 A6 A7 B4 B5 B6 B7 net14 Cout S4 S5 S6 S7 / carry_skip_adder_4bits
+XI0 A0 A1 A2 A3 B0 B1 B2 B3 Cin net14 S0 S1 S2 S3 / carry_skip_adder_4bits
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    10badder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT 10badder Cin Cout S0 S1 S2 S3 S4 S5 S6 S7 S8 S9 in_A_0 in_A_1 in_A_2 
++ in_A_3 in_A_4 in_A_5 in_A_6 in_A_7 in_A_8 in_A_9 in_B_0 in_B_1 in_B_2 in_B_3 
++ in_B_4 in_B_5 in_B_6 in_B_7 in_B_8 in_B_9
+*.PININFO Cin:I in_A_0:I in_A_1:I in_A_2:I in_A_3:I in_A_4:I in_A_5:I in_A_6:I 
+*.PININFO in_A_7:I in_A_8:I in_A_9:I in_B_0:I in_B_1:I in_B_2:I in_B_3:I 
+*.PININFO in_B_4:I in_B_5:I in_B_6:I in_B_7:I in_B_8:I in_B_9:I Cout:O S0:O 
+*.PININFO S1:O S2:O S3:O S4:O S5:O S6:O S7:O S8:O S9:O
+XI3 net1 net7 S8 in_B_8 in_A_8 / full_adder1_small
+XI4 net7 Cout S9 in_A_9 in_B_9 / full_adder1_small
+XI0 in_A_0 in_A_1 in_A_2 in_A_3 in_A_4 in_A_5 in_A_6 in_A_7 in_B_0 in_B_1 
++ in_B_2 in_B_3 in_B_4 in_B_5 in_B_6 in_B_7 Cin net1 S0 S1 S2 S3 S4 S5 S6 S7 / 
++ carry_skip_adder_8bits_project
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    INV_1X
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV_1X in out
+*.PININFO in:I out:O
+MNM0 out in gnd! gnd! g45n1svt m=1 l=45n w=120n
+MPM0 out in vdd! vdd! g45p1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph1p3_clk_part
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph1p3_clk_part CLK D Out
+*.PININFO CLK:I D:I Out:O
+MNM0 Out net2 D gnd! g45n1svt m=1 l=45n w=120n
+MPM0 Out CLK D vdd! g45p1svt m=1 l=45n w=120n
+XI0 CLK net2 / INV_1X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph1p3_MSDFF
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph1p3_MSDFF CLK D Q RST
+*.PININFO CLK:I D:I RST:I Q:O
+XI11 net6 net3 net1 / NAND2_1X
+XI13 net4 net11 net3 / ph1p3_clk_part
+XI18 net4 net1 net2 / ph1p3_clk_part
+XI9 CLK D net3 / ph1p3_clk_part
+XI15 CLK net13 net2 / ph1p3_clk_part
+XI19 CLK net4 / INV_1X
+XI12 net1 net11 / INV_1X
+XI22 RST net6 / INV_1X
+XI17 net2 Q / INV_1X
+XI16 Q net13 / INV_1X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph2p1_MAC
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph2p1_MAC A0 A1 A2 A3 A8 A9 B0 B1 B2 B3 CLK Cin RST Z0 Z1 Z2 Z3 Z4 Z5 
++ Z6 Z7 Z8 Z9
+*.PININFO A0:I A1:I A2:I A3:I A8:I A9:I B0:I B1:I B2:I B3:I CLK:I Cin:I RST:I 
+*.PININFO Z0:O Z1:O Z2:O Z3:O Z4:O Z5:O Z6:O Z7:O Z8:O Z9:O
+XI0 A0 A1 A2 A3 B0 B1 B2 B3 net16 net15 net14 net13 net12 net11 net10 net9 / 
++ multiplier
+XI1 Cin net48 net47 net46 net45 net44 net43 net42 net41 net40 net39 net38 
++ net16 net15 net14 net13 net12 net11 net10 net9 A8 A9 Z0 Z1 Z2 Z3 Z4 Z5 Z6 Z7 
++ Z8 Z9 / 10badder
+XI11 CLK net38 Z9 RST / ph1p3_MSDFF
+XI10 CLK net39 Z8 RST / ph1p3_MSDFF
+XI9 CLK net40 Z7 RST / ph1p3_MSDFF
+XI8 CLK net41 Z6 RST / ph1p3_MSDFF
+XI7 CLK net42 Z5 RST / ph1p3_MSDFF
+XI6 CLK net43 Z4 RST / ph1p3_MSDFF
+XI5 CLK net44 Z3 RST / ph1p3_MSDFF
+XI4 CLK net45 Z2 RST / ph1p3_MSDFF
+XI3 CLK net46 Z1 RST / ph1p3_MSDFF
+XI2 CLK net47 Z0 RST / ph1p3_MSDFF
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph2p2_processing_element
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph2p2_processing_element A0 A1 A2 A3 A8 A9 A_reg0 A_reg1 A_reg2 A_reg3 
++ B0 B1 B2 B3 B_reg0 B_reg1 B_reg2 B_reg3 CLK Cin RST Sel Sel_reg Sum_in0 
++ Sum_in1 Sum_in2 Sum_in3 Sum_in4 Sum_in5 Sum_in6 Sum_in7 Sum_in8 Sum_in9 
++ Sum_out0 Sum_out1 Sum_out2 Sum_out3 Sum_out4 Sum_out5 Sum_out6 Sum_out7 
++ Sum_out8 Sum_out9
+*.PININFO A0:I A1:I A2:I A3:I A8:I A9:I B0:I B1:I B2:I B3:I CLK:I Cin:I RST:I 
+*.PININFO Sel:I Sum_in0:I Sum_in1:I Sum_in2:I Sum_in3:I Sum_in4:I Sum_in5:I 
+*.PININFO Sum_in6:I Sum_in7:I Sum_in8:I Sum_in9:I A_reg0:O A_reg1:O A_reg2:O 
+*.PININFO A_reg3:O B_reg0:O B_reg1:O B_reg2:O B_reg3:O Sel_reg:O Sum_out0:O 
+*.PININFO Sum_out1:O Sum_out2:O Sum_out3:O Sum_out4:O Sum_out5:O Sum_out6:O 
+*.PININFO Sum_out7:O Sum_out8:O Sum_out9:O
+XI0 A0 A1 A2 A3 A8 A9 B0 B1 B2 B3 CLK Cin RST net23 net22 net21 net20 net19 
++ net18 net17 net16 net15 net14 / ph2p1_MAC
+XI9 CLK B0 B_reg0 RST / ph1p3_MSDFF
+XI8 CLK B1 B_reg1 RST / ph1p3_MSDFF
+XI7 CLK B2 B_reg2 RST / ph1p3_MSDFF
+XI6 CLK B3 B_reg3 RST / ph1p3_MSDFF
+XI5 CLK A3 A_reg3 RST / ph1p3_MSDFF
+XI4 CLK A2 A_reg2 RST / ph1p3_MSDFF
+XI3 CLK A1 A_reg1 RST / ph1p3_MSDFF
+XI2 CLK A0 A_reg0 RST / ph1p3_MSDFF
+XI1 CLK Sel Sel_reg RST / ph1p3_MSDFF
+XI19 net14 Sum_in9 Sel_reg Sum_out9 / MUX_2to1___2X
+XI18 net15 Sum_in8 Sel_reg Sum_out8 / MUX_2to1___2X
+XI17 net16 Sum_in7 Sel_reg Sum_out7 / MUX_2to1___2X
+XI16 net17 Sum_in6 Sel_reg Sum_out6 / MUX_2to1___2X
+XI15 net18 Sum_in5 Sel_reg Sum_out5 / MUX_2to1___2X
+XI14 net19 Sum_in4 Sel_reg Sum_out4 / MUX_2to1___2X
+XI13 net20 Sum_in3 Sel_reg Sum_out3 / MUX_2to1___2X
+XI12 net21 Sum_in2 Sel_reg Sum_out2 / MUX_2to1___2X
+XI11 net22 Sum_in1 Sel_reg Sum_out1 / MUX_2to1___2X
+XI10 net23 Sum_in0 Sel_reg Sum_out0 / MUX_2to1___2X
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph2p3_Matrix_vector_Multiplication
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph2p3_Matrix_vector_Multiplication A0_0 A0_1 A0_2 A0_3 A0_8 A0_9 
++ A0_reg0 A0_reg1 A0_reg2 A0_reg3 A1_0 A1_1 A1_2 A1_3 A1_8 A1_9 A1_reg0 
++ A1_reg1 A1_reg2 A1_reg3 A2_0 A2_1 A2_2 A2_3 A2_8 A2_9 A2_reg0 A2_reg1 
++ A2_reg2 A2_reg3 A3_0 A3_1 A3_2 A3_3 A3_8 A3_9 A3_reg0 A3_reg1 A3_reg2 
++ A3_reg3 B0_0 B0_1 B0_2 B0_3 B_reg0 B_reg1 B_reg2 B_reg3 CLK Cin0 Cin1 Cin2 
++ Cin3 RST Sel0 Sel0_reg Sel1 Sel1_reg Sel2 Sel2_reg Sel3 Sel3_reg Sum_in0 
++ Sum_in1 Sum_in2 Sum_in3 Sum_in4 Sum_in5 Sum_in6 Sum_in7 Sum_in8 Sum_in9 
++ Sum_out0 Sum_out1 Sum_out2 Sum_out3 Sum_out4 Sum_out5 Sum_out6 Sum_out7 
++ Sum_out8 Sum_out9
+*.PININFO A0_0:I A0_1:I A0_2:I A0_3:I A0_8:I A0_9:I A1_0:I A1_1:I A1_2:I 
+*.PININFO A1_3:I A1_8:I A1_9:I A2_0:I A2_1:I A2_2:I A2_3:I A2_8:I A2_9:I 
+*.PININFO A3_0:I A3_1:I A3_2:I A3_3:I A3_8:I A3_9:I B0_0:I B0_1:I B0_2:I 
+*.PININFO B0_3:I CLK:I Cin0:I Cin1:I Cin2:I Cin3:I RST:I Sel0:I Sel1:I Sel2:I 
+*.PININFO Sel3:I Sum_in0:I Sum_in1:I Sum_in2:I Sum_in3:I Sum_in4:I Sum_in5:I 
+*.PININFO Sum_in6:I Sum_in7:I Sum_in8:I Sum_in9:I A0_reg0:O A0_reg1:O 
+*.PININFO A0_reg2:O A0_reg3:O A1_reg0:O A1_reg1:O A1_reg2:O A1_reg3:O 
+*.PININFO A2_reg0:O A2_reg1:O A2_reg2:O A2_reg3:O A3_reg0:O A3_reg1:O 
+*.PININFO A3_reg2:O A3_reg3:O B_reg0:O B_reg1:O B_reg2:O B_reg3:O Sel0_reg:O 
+*.PININFO Sel1_reg:O Sel2_reg:O Sel3_reg:O Sum_out0:O Sum_out1:O Sum_out2:O 
+*.PININFO Sum_out3:O Sum_out4:O Sum_out5:O Sum_out6:O Sum_out7:O Sum_out8:O 
+*.PININFO Sum_out9:O
+XI23 A2_0 A2_1 A2_2 A2_3 A2_8 A2_9 A2_reg0 A2_reg1 A2_reg2 A2_reg3 net92 net93 
++ net94 net95 net196 net195 net194 net193 CLK Cin2 RST Sel2 Sel2_reg net214 
++ net213 net212 net211 net210 net209 net208 net207 net206 net205 net105 net104 
++ net103 net102 net101 net100 net99 net98 net97 net96 / 
++ ph2p2_processing_element
+XI20 A1_0 A1_1 A1_2 A1_3 A1_8 A1_9 A1_reg0 A1_reg1 A1_reg2 A1_reg3 net6 net7 
++ net8 net9 net92 net93 net94 net95 CLK Cin1 RST Sel1 Sel1_reg net105 net104 
++ net103 net102 net101 net100 net99 net98 net97 net96 net19 net18 net17 net44 
++ net15 net14 net13 net12 net11 net48 / ph2p2_processing_element
+XI18 A0_0 A0_1 A0_2 A0_3 A0_8 A0_9 A0_reg0 A0_reg1 A0_reg2 A0_reg3 B0_0 B0_1 
++ B0_2 B0_3 net6 net7 net8 net9 CLK Cin0 RST Sel0 Sel0_reg net19 net18 net17 
++ net44 net15 net14 net13 net12 net11 net48 Sum_out0 Sum_out1 Sum_out2 
++ Sum_out3 Sum_out4 Sum_out5 Sum_out6 Sum_out7 Sum_out8 Sum_out9 / 
++ ph2p2_processing_element
+XI22 A3_0 A3_1 A3_2 A3_3 A3_8 A3_9 A3_reg0 A3_reg1 A3_reg2 A3_reg3 net196 
++ net195 net194 net193 B_reg0 B_reg1 B_reg2 B_reg3 CLK Cin3 RST Sel3 Sel3_reg 
++ Sum_in0 Sum_in1 Sum_in2 Sum_in3 Sum_in4 Sum_in5 Sum_in6 Sum_in7 Sum_in8 
++ Sum_in9 net214 net213 net212 net211 net210 net209 net208 net207 net206 
++ net205 / ph2p2_processing_element
+.ENDS
+
+************************************************************************
+* Library Name: project_demo
+* Cell Name:    ph3_sytolic_array
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT ph3_sytolic_array A0_0 A0_0_8 A0_0_9 A0_1 A0_1_8 A0_1_9 A0_2 A0_2_8 
++ A0_2_9 A0_3 A0_3_8 A0_3_9 A0_reg0 A0_reg1 A0_reg2 A0_reg3 A1_0 A1_0_8 A1_0_9 
++ A1_1 A1_1_8 A1_1_9 A1_2 A1_2_8 A1_2_9 A1_3 A1_3_8 A1_3_9 A1_reg0 A1_reg1 
++ A1_reg2 A1_reg3 A2_0 A2_0_8 A2_0_9 A2_1 A2_1_8 A2_1_9 A2_2 A2_2_8 A2_2_9 
++ A2_3 A2_3_8 A2_3_9 A2_reg0 A2_reg1 A2_reg2 A2_reg3 A3_0 A3_0_8 A3_0_9 A3_1 
++ A3_1_8 A3_1_9 A3_2 A3_2_8 A3_2_9 A3_3 A3_3_8 A3_3_9 A3_reg0 A3_reg1 A3_reg2 
++ A3_reg3 B0_0 B0_1 B0_2 B0_3 B0_reg0 B0_reg1 B0_reg2 B0_reg3 B1_0 B1_1 B1_2 
++ B1_3 B1_reg0 B1_reg1 B1_reg2 B1_reg3 B2_0 B2_1 B2_2 B2_3 B2_reg0 B2_reg1 
++ B2_reg2 B2_reg3 B3_0 B3_1 B3_2 B3_3 B3_reg0 B3_reg1 B3_reg2 B3_reg3 CLK 
++ Cin0_0 Cin0_1 Cin0_2 Cin0_3 Cin1_0 Cin1_1 Cin1_2 Cin1_3 Cin2_0 Cin2_1 Cin2_2 
++ Cin2_3 Cin3_0 Cin3_1 Cin3_2 Cin3_3 RST Sel0 Sel1 Sel2 Sel3 Sum0_in0 Sum0_in1 
++ Sum0_in2 Sum0_in3 Sum0_in4 Sum0_in5 Sum0_in6 Sum0_in7 Sum0_in8 Sum0_in9 
++ Sum0_out0 Sum0_out1 Sum0_out2 Sum0_out3 Sum0_out4 Sum0_out5 Sum0_out6 
++ Sum0_out7 Sum0_out8 Sum0_out9 Sum1_in0 Sum1_in1 Sum1_in2 Sum1_in3 Sum1_in4 
++ Sum1_in5 Sum1_in6 Sum1_in7 Sum1_in8 Sum1_in9 Sum1_out0 Sum1_out1 Sum1_out2 
++ Sum1_out3 Sum1_out4 Sum1_out5 Sum1_out6 Sum1_out7 Sum1_out8 Sum1_out9 
++ Sum2_in0 Sum2_in1 Sum2_in2 Sum2_in3 Sum2_in4 Sum2_in5 Sum2_in6 Sum2_in7 
++ Sum2_in8 Sum2_in9 Sum2_out0 Sum2_out1 Sum2_out2 Sum2_out3 Sum2_out4 
++ Sum2_out5 Sum2_out6 Sum2_out7 Sum2_out8 Sum2_out9 Sum3_in0 Sum3_in1 Sum3_in2 
++ Sum3_in3 Sum3_in4 Sum3_in5 Sum3_in6 Sum3_in7 Sum3_in8 Sum3_in9 Sum3_out0 
++ Sum3_out1 Sum3_out2 Sum3_out3 Sum3_out4 Sum3_out5 Sum3_out6 Sum3_out7 
++ Sum3_out8 Sum3_out9 sel0_reg sel1_reg sel2_reg sel3_reg
+*.PININFO A0_0:I A0_0_8:I A0_0_9:I A0_1:I A0_1_8:I A0_1_9:I A0_2:I A0_2_8:I 
+*.PININFO A0_2_9:I A0_3:I A0_3_8:I A0_3_9:I A1_0:I A1_0_8:I A1_0_9:I A1_1:I 
+*.PININFO A1_1_8:I A1_1_9:I A1_2:I A1_2_8:I A1_2_9:I A1_3:I A1_3_8:I A1_3_9:I 
+*.PININFO A2_0:I A2_0_8:I A2_0_9:I A2_1:I A2_1_8:I A2_1_9:I A2_2:I A2_2_8:I 
+*.PININFO A2_2_9:I A2_3:I A2_3_8:I A2_3_9:I A3_0:I A3_0_8:I A3_0_9:I A3_1:I 
+*.PININFO A3_1_8:I A3_1_9:I A3_2:I A3_2_8:I A3_2_9:I A3_3:I A3_3_8:I A3_3_9:I 
+*.PININFO B0_0:I B0_1:I B0_2:I B0_3:I B1_0:I B1_1:I B1_2:I B1_3:I B2_0:I 
+*.PININFO B2_1:I B2_2:I B2_3:I B3_0:I B3_1:I B3_2:I B3_3:I CLK:I Cin0_0:I 
+*.PININFO Cin0_1:I Cin0_2:I Cin0_3:I Cin1_0:I Cin1_1:I Cin1_2:I Cin1_3:I 
+*.PININFO Cin2_0:I Cin2_1:I Cin2_2:I Cin2_3:I Cin3_0:I Cin3_1:I Cin3_2:I 
+*.PININFO Cin3_3:I RST:I Sel0:I Sel1:I Sel2:I Sel3:I Sum0_in0:I Sum0_in1:I 
+*.PININFO Sum0_in2:I Sum0_in3:I Sum0_in4:I Sum0_in5:I Sum0_in6:I Sum0_in7:I 
+*.PININFO Sum0_in8:I Sum0_in9:I Sum1_in0:I Sum1_in1:I Sum1_in2:I Sum1_in3:I 
+*.PININFO Sum1_in4:I Sum1_in5:I Sum1_in6:I Sum1_in7:I Sum1_in8:I Sum1_in9:I 
+*.PININFO Sum2_in0:I Sum2_in1:I Sum2_in2:I Sum2_in3:I Sum2_in4:I Sum2_in5:I 
+*.PININFO Sum2_in6:I Sum2_in7:I Sum2_in8:I Sum2_in9:I Sum3_in0:I Sum3_in1:I 
+*.PININFO Sum3_in2:I Sum3_in3:I Sum3_in4:I Sum3_in5:I Sum3_in6:I Sum3_in7:I 
+*.PININFO Sum3_in8:I Sum3_in9:I A0_reg0:O A0_reg1:O A0_reg2:O A0_reg3:O 
+*.PININFO A1_reg0:O A1_reg1:O A1_reg2:O A1_reg3:O A2_reg0:O A2_reg1:O 
+*.PININFO A2_reg2:O A2_reg3:O A3_reg0:O A3_reg1:O A3_reg2:O A3_reg3:O 
+*.PININFO B0_reg0:O B0_reg1:O B0_reg2:O B0_reg3:O B1_reg0:O B1_reg1:O 
+*.PININFO B1_reg2:O B1_reg3:O B2_reg0:O B2_reg1:O B2_reg2:O B2_reg3:O 
+*.PININFO B3_reg0:O B3_reg1:O B3_reg2:O B3_reg3:O Sum0_out0:O Sum0_out1:O 
+*.PININFO Sum0_out2:O Sum0_out3:O Sum0_out4:O Sum0_out5:O Sum0_out6:O 
+*.PININFO Sum0_out7:O Sum0_out8:O Sum0_out9:O Sum1_out0:O Sum1_out1:O 
+*.PININFO Sum1_out2:O Sum1_out3:O Sum1_out4:O Sum1_out5:O Sum1_out6:O 
+*.PININFO Sum1_out7:O Sum1_out8:O Sum1_out9:O Sum2_out0:O Sum2_out1:O 
+*.PININFO Sum2_out2:O Sum2_out3:O Sum2_out4:O Sum2_out5:O Sum2_out6:O 
+*.PININFO Sum2_out7:O Sum2_out8:O Sum2_out9:O Sum3_out0:O Sum3_out1:O 
+*.PININFO Sum3_out2:O Sum3_out3:O Sum3_out4:O Sum3_out5:O Sum3_out6:O 
+*.PININFO Sum3_out7:O Sum3_out8:O Sum3_out9:O sel0_reg:O sel1_reg:O sel2_reg:O 
+*.PININFO sel3_reg:O
+XI5 net32 net31 net30 net29 A3_0_8 A3_0_9 A0_reg0 A0_reg1 A0_reg2 A0_reg3 
++ net28 net27 net26 net25 A3_1_8 A3_1_9 A1_reg0 A1_reg1 A1_reg2 A1_reg3 net22 
++ net21 net20 net19 A3_2_8 A3_2_9 A2_reg0 A2_reg1 A2_reg2 A2_reg3 net16 net15 
++ net58 net57 A3_3_8 A3_3_9 A3_reg0 A3_reg1 A3_reg2 A3_reg3 B3_0 B3_1 B3_2 
++ B3_3 B3_reg0 B3_reg1 B3_reg2 B3_reg3 CLK Cin3_0 Cin3_1 Cin3_2 Cin3_3 RST 
++ net52 sel0_reg net51 sel1_reg net50 sel2_reg net49 sel3_reg Sum3_in0 
++ Sum3_in1 Sum3_in2 Sum3_in3 Sum3_in4 Sum3_in5 Sum3_in6 Sum3_in7 Sum3_in8 
++ Sum3_in9 Sum3_out0 Sum3_out1 Sum3_out2 Sum3_out3 Sum3_out4 Sum3_out5 
++ Sum3_out6 Sum3_out7 Sum3_out8 Sum3_out9 / ph2p3_Matrix_vector_Multiplication
+XI4 net96 net95 net94 net93 A2_0_8 A2_0_9 net32 net31 net30 net29 net92 net91 
++ net90 net89 A2_1_8 A2_1_9 net28 net27 net26 net25 net88 net87 net86 net85 
++ A2_2_8 A2_2_9 net22 net21 net20 net19 net84 net83 net130 net129 A2_3_8 
++ A2_3_9 net16 net15 net58 net57 B2_0 B2_1 B2_2 B2_3 B2_reg0 B2_reg1 B2_reg2 
++ B2_reg3 CLK Cin2_0 Cin2_1 Cin2_2 Cin2_3 RST net124 net52 net123 net51 net122 
++ net50 net121 net49 Sum2_in0 Sum2_in1 Sum2_in2 Sum2_in3 Sum2_in4 Sum2_in5 
++ Sum2_in6 Sum2_in7 Sum2_in8 Sum2_in9 Sum2_out0 Sum2_out1 Sum2_out2 Sum2_out3 
++ Sum2_out4 Sum2_out5 Sum2_out6 Sum2_out7 Sum2_out8 Sum2_out9 / 
++ ph2p3_Matrix_vector_Multiplication
+XI1 net14 net13 net12 net11 A1_0_8 A1_0_9 net96 net95 net94 net93 net104 
++ net107 net108 net109 A1_1_8 A1_1_9 net92 net91 net90 net89 net6 net5 net4 
++ net3 A1_2_8 A1_2_9 net88 net87 net86 net85 net2 net1 net48 net47 A1_3_8 
++ A1_3_9 net84 net83 net130 net129 B1_0 B1_1 B1_2 B1_3 B1_reg0 B1_reg1 B1_reg2 
++ B1_reg3 CLK Cin1_0 Cin1_1 Cin1_2 Cin1_3 RST net42 net124 net41 net123 net40 
++ net122 net39 net121 Sum1_in0 Sum1_in1 Sum1_in2 Sum1_in3 Sum1_in4 Sum1_in5 
++ Sum1_in6 Sum1_in7 Sum1_in8 Sum1_in9 Sum1_out0 Sum1_out1 Sum1_out2 Sum1_out3 
++ Sum1_out4 Sum1_out5 Sum1_out6 Sum1_out7 Sum1_out8 Sum1_out9 / 
++ ph2p3_Matrix_vector_Multiplication
+XI0 A0_0 A0_1 A0_2 A0_3 A0_0_8 A0_0_9 net14 net13 net12 net11 A1_0 A1_1 A1_2 
++ A1_3 A0_1_8 A0_1_9 net104 net107 net108 net109 A2_0 A2_1 A2_2 A2_3 A0_2_8 
++ A0_2_9 net6 net5 net4 net3 A3_0 A3_1 A3_2 A3_3 A0_3_8 A0_3_9 net2 net1 net48 
++ net47 B0_0 B0_1 B0_2 B0_3 B0_reg0 B0_reg1 B0_reg2 B0_reg3 CLK Cin0_0 Cin0_1 
++ Cin0_2 Cin0_3 RST Sel0 net42 Sel1 net41 Sel2 net40 Sel3 net39 Sum0_in0 
++ Sum0_in1 Sum0_in2 Sum0_in3 Sum0_in4 Sum0_in5 Sum0_in6 Sum0_in7 Sum0_in8 
++ Sum0_in9 Sum0_out0 Sum0_out1 Sum0_out2 Sum0_out3 Sum0_out4 Sum0_out5 
++ Sum0_out6 Sum0_out7 Sum0_out8 Sum0_out9 / ph2p3_Matrix_vector_Multiplication
+.ENDS
+

@@ -1,0 +1,13 @@
+#4                               
+M: M
+= D D
+= G G
+= S S
+= B B
+#5                               
+INV_1X: INV_1X
+= in in
+= out out
+= vdd! vdd!
+= vdd! X1/B
+= gnd! gnd!

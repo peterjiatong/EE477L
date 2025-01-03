@@ -1,0 +1,6 @@
+# 5
+fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=30.4634 scb=0.0324604 scc=0.00263539 
+fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=26.1818 scb=0.02439 scc=0.00221187 
+fw=1.2e-07 sa=2.45e-07 sb=1.4e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05 
+fw=1.2e-07 sa=1.4e-07 sb=2.45e-07 sca=7.31073 scb=0.00435535 scc=4.26584e-05 
+$This is end of the device boxl file$
