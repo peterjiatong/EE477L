@@ -1,0 +1,3 @@
+DEFINE qrc_tech_typical /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/typical
+DEFINE qrc_tech_best /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/best
+DEFINE qrc_tech_worst /home/viterbi/01/ee577/CDS_GPDK45/gpdk045_v_5_0/qrc/worst
